@@ -66,6 +66,13 @@
 # Tips and tricks
 
 - title: If Statements
-  url: /intro
+  url: /if_statements/intro
   not_numbered: true
   expand_sections: true
+  sections:
+  - title: Booleans
+    url: /if_statements/bools
+  - title: Comparison Operators
+    url: /if_statements/comparison_operators
+  - title: Logical Operators
+    url: /if_statements/logical_operators
