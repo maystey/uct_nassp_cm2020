@@ -8,4 +8,6 @@ next_page:
   title: 'Variables'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+# Python Basics
+
 In this chapter we shall discuss some of the basics of programming in Python, namely variables and operations.
