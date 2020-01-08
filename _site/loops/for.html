@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Strings</title>
-  <meta name="description" content="Strings">
+  <title>For Loops</title>
+  <meta name="description" content="For Loops">
 
-  <link rel="canonical" href="/YOUR%20URL//basics/strings.html">
+  <link rel="canonical" href="/YOUR%20URL//loops/for.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//basics/strings.html" />
+  <meta property="og:url"         content="/YOUR%20URL//loops/for.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Strings" />
-<meta property="og:description" content="Strings" />
+<meta property="og:title"       content="For Loops" />
+<meta property="og:description" content="For Loops" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//basics/strings.html",
+    "YOUR URL//loops/for.html",
   "headline":
-    "Strings",
+    "For Loops",
   "datePublished":
     "2020-01-08T17:04:59+02:00",
   "dateModified":
     "2020-01-08T17:04:59+02:00",
   "description":
-    "Strings",
+    "For Loops",
   "author": {
     "@type": "Person",
     "name": "YOUR AUTHOR NAME"
@@ -702,7 +702,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/basics/strings.html"
                 >
                   
@@ -836,7 +836,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
+                <a class="c-sidebar__entry c-sidebar__entry--active"
                   href="/loops/for.html"
                 >
                   
@@ -986,7 +986,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/basics/strings.ipynb" download>
+<a href="/content/loops/for.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -1000,408 +1000,146 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="strings">Strings</h1>
+              <h1 id="for-loops">For Loops</h1>
 
-<p>In this section we shall take a closer look at the string type and some of the operations associated with them. The following section makes heavy reference to Dr. Harrington’s online notes….</p>
+<p>For loops can be used to repeat a block of code by iterating through specified values.</p>
 
-<h2 id="concatenation-">Concatenation <code class="highlighter-rouge">+</code></h2>
-<p>For strings the <code class="highlighter-rouge">+</code> symbol is used to concatenate two strings together. For example:</p>
+<p>The structure of a for loop is as follows:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'One string'</span> <span class="o">+</span> <span class="s">' and another'</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>One string and another
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="duplication-">Duplication <code class="highlighter-rouge">*</code></h2>
-<p>The duplication <code class="highlighter-rouge">*</code> operator takes a string and an integer and repeats the string as many times as the integer value:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'hello '</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="s">'bye '</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello hello hello hello 
-bye bye 
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="indexing-">Indexing <code class="highlighter-rouge">[]</code></h2>
-<p>Strings can be seen as a collection of characters. Each of these character has an integer index associated with it, based on it’s position in the string. For example, take the string <code class="highlighter-rouge">'computer'</code>:</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>character</td>
-      <td>c</td>
-      <td>o</td>
-      <td>m</td>
-      <td>p</td>
-      <td>u</td>
-      <td>t</td>
-      <td>e</td>
-      <td>r</td>
-    </tr>
-    <tr>
-      <td>index</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>You can access individual characters in the string by index using:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[index]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in iterator:
+    code block to be repeated
 </code></pre></div></div>
-<p>for example:</p>
+
+<p>where <code class="highlighter-rouge">i</code> is the iteration variable and the iterator represents a collection of values that <code class="highlighter-rouge">i</code> will be set to each time the loop is repeated. Here <code class="highlighter-rouge">i</code> can be treated like a variable and can take on any allowed variable name.</p>
+
+<p>The code block to be repeated must be indented after the <code class="highlighter-rouge">:</code>. The loop repeats until <code class="highlighter-rouge">i</code> has run through all of the values in the iterator, or until the loop is broken.</p>
+
+<p>Be careful not to alter the iterator inside the code block being repeated.</p>
+
+<h2 id="worked-example">Worked Example</h2>
+<p>As a simple example, let’s say we wanted to print out the first $n$ integer squares starting with 0.</p>
+
+<p>This can be achieved manually for small $n$, for example $n = 5$:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">computer_string</span> <span class="o">=</span> <span class="s">'computer'</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Index 3:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Index 7:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'0 squared is'</span><span class="p">,</span> <span class="mi">0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'1 squared is'</span><span class="p">,</span> <span class="mi">1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2 squared is'</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'3 squared is'</span><span class="p">,</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'4 squared is'</span><span class="p">,</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'5 squared is'</span><span class="p">,</span> <span class="mi">5</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Index 3: p
-Index 7: r
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 squared is 0
+1 squared is 1
+2 squared is 4
+3 squared is 9
+4 squared is 16
+5 squared is 25
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>If you use an index that is too large for the given string, Python will return an error:</p>
+<p>This quickly becomes tedious and produces messy code. To achieve the same goal using a <code class="highlighter-rouge">for</code> loop we can do the following:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Index 11'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s">'squared is'</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    ---------------------------------------------------------------------------
-
-    IndexError                                Traceback (most recent call last)
-
-    &lt;ipython-input-8-abeba3add71f&gt; in &lt;module&gt;()
-    ----&gt; 1 print('Index 11', computer_string[11])
-    
-
-    IndexError: string index out of range
-
-
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 squared is 0
+1 squared is 1
+2 squared is 4
+3 squared is 9
+4 squared is 16
+5 squared is 25
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>You can find the number of characters in a string using the <code class="highlighter-rouge">len()</code> function:</p>
+<p>Here we have made use of the <code class="highlighter-rouge">range</code> function to create our iterator.</p>
+
+<h2 id="the-range-function">The <code class="highlighter-rouge">range()</code> Function</h2>
+
+<h2 id="looping-through-collections">Looping Through Collections</h2>
+<!--- I need to introduce lists somewhere else! Maybe in basics along with dictionaries? -->
+
+<p>Collections such as lists and strings can also be used as iterators. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'There are'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">),</span> <span class="s">'characters in the string'</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s">'This string'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There are 8 characters in the string
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>T
+h
+i
+s
+ 
+s
+t
+r
+i
+n
+g
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>Notice how the length of <code class="highlighter-rouge">computer_string</code> is one greater than its largest index. This is because Python indexes from <code class="highlighter-rouge">0</code>.</p>
-
-<p>Thus, if we don’t know how long a string is before hand (if a variable holding a string is subject to change for instance) and we want to index the last value of the string, we could use <code class="highlighter-rouge">len() - 1</code> as the index:</p>
+<p>and</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'The last character:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The last character: r
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+2
+3
+a
+b
+c
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
-
-<p>This method works, but Python gives us a far cleaner way of doing this: using an index of <code class="highlighter-rouge">-1</code>. This won’t work for most other programming languages.</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'The last character:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The last character: r
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>In general, negative indices in Python index the strings (and other objects) backwards:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Second last character'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Third last character'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Second last character e
-Third last character t
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Note that the index <code class="highlighter-rouge">-8</code> corresponds to the <code class="highlighter-rouge">0</code> index (<code class="highlighter-rouge">len(computer_string) - 8</code> is <code class="highlighter-rouge">0</code>) so anything less than this would be out of bounds.</p>
-
-<h2 id="slicing">Slicing</h2>
-<p>Slicing allows us to extract segments of the string, as apposed to individual characters. The syntax for string slicing is:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[start_index:stop_index]
-</code></pre></div></div>
-<p>where the <code class="highlighter-rouge">stop_index</code> is not included in the slice, rather the slice stops before this index. For example, consider the slice:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mpu
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>where the last character is <code class="highlighter-rouge">'r'</code>, but the character with index <code class="highlighter-rouge">5</code> is <code class="highlighter-rouge">'t'</code>.</p>
-
-<p>If we want to take a slice from the beginning of a string we could use <code class="highlighter-rouge">0</code> as the <code class="highlighter-rouge">start_index</code>:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Alternatively if we left the <code class="highlighter-rouge">start_index</code> blank Python will interprate this as starting from the beginning of the string:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Similarly if we wanted to take a slice up to and including the last character in the string, we can use:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puter
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>or simply leave the <code class="highlighter-rouge">stop_index</code> blank:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puter
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Notice the slice above is not the same as if we used <code class="highlighter-rouge">-1</code> as the <code class="highlighter-rouge">stop_index</code>:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pute
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>even though the same rules apply as with indexing, the slice always stops <strong>before</strong> the <code class="highlighter-rouge">stop_index</code>.</p>
-
-<p>We can use a third index when slicing as a step size:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[start_index: stop_index: step_size]
-</code></pre></div></div>
-<p>For example, we can get every second character from a string using a step size of <code class="highlighter-rouge">2</code>:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Starting from 0:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Starting from 1:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting from 0: cmue
-Starting from 1: optr
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>The step size can be any integer. Note that by default it is set to 1. As another example lets print out every second character from <code class="highlighter-rouge">computer_string</code> starting from the first:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cpe
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>The step size need not be positive. If a negative step size is used the string will be sliced backwards. For example if we want to print out the whole of <code class="highlighter-rouge">computer_string</code> backwards:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>retupmoc
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Note, when slicing with a negative step size you must ensure that <code class="highlighter-rouge">start_index</code> is greater than <code class="highlighter-rouge">stop_index</code>, otherwise your slice will be empty.</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Empty slice:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Not empty slice:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Empty slice: 
-Not empty slice: etupmo
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Also notice how, in the second slice above, the <code class="highlighter-rouge">0</code> index character is not present. Even when slicing with a negative step size the <code class="highlighter-rouge">stop_index</code> is <strong>not</strong> included in the slice.</p>
-
-<h2 id="string-formatting">String Formatting</h2>
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/basics/functions">
-      〈 <span class="u-margin-right-tiny"></span> Introduction to Functions
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/loops/intro">
+      〈 <span class="u-margin-right-tiny"></span> Loops
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/intro">
-      If Statements <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/for_examples">
+      For Loop Examples <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
