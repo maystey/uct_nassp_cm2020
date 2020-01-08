@@ -14,13 +14,24 @@ The current status of the chapters are recorded in this file.
     - Section: Formating
 - Type Conversion (types) - Not Started
 - Variables - Incomplete
+- Lists and dictionaries - Not Started
+- Execution priority - Not started
+- Tips and tricks - Not started
 
 ## If Statements - Incomplete
 
 - Comparison Operators - Incomplete
 - Logical Operators - Incomplete
+- if/else/elif statements - Not started
 
-## For and While Loops - Not Started
+## For and While Loops - Incomplete
+
+- For loops - Incomplete
+    - Finish range function subsection
+- List comprehension - Not started
+- While loops - Not started
+- For loop examples - Not started
+- While loop examples - Not started
 
 ## NumPy - Not Started
 
