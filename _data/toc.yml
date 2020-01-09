@@ -82,14 +82,14 @@
   sections:
   - title: For Loops
     url: /loops/for
-  - title: For Loop Examples
-    url: /loops/for_examples
+  # - title: For Loop Examples
+  #   url: /loops/for_examples
   - title: List Comprehension
     url: /loops/list_comp
   - title: While Loops
     url: /loops/while
-  - title: While Loop Examples
-    url: /loops/while_examples
+  # - title: While Loop Examples
+  #   url: /loops/while_examples
   - title: Breaking Out of Loops
     url: /loops/break
   - title: Else Statement and Loops
