@@ -7,8 +7,8 @@ prev_page:
   url: /loops/intro
   title: 'Loops'
 next_page:
-  url: /loops/for_examples
-  title: 'For Loop Examples'
+  url: /loops/list_comp
+  title: 'List Comprehension'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # For Loops
@@ -99,11 +99,112 @@ for i in range(6):
 
 Here we have made use of the `range` function to create our iterator.
 
+<!--- Give a more detailed breakdown of what's happening -->
+
 
 
 ## The `range()` Function
 
+The `range()` function takes integer arguments and produces a series of integers. As we shall see, the `range()` function's arguments are very similar to slicing.
+<!--- Maybe remove the latter sentence -->
 
+In the example above we used it with one argument,
+```
+range(stop)
+```
+Here `range()` will produce a series of integers starting at zero and ending just before the `stop` value.
+
+If we were to use range with 2 arguments:
+```
+range(start, stop)
+```
+`range()` will produce a series of integers starting with the `start` value and ending with the `stop` value. 
+
+For example:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+for i in range (2, 5):
+    print(i)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+2
+3
+4
+```
+</div>
+</div>
+</div>
+
+
+
+Lastly if we were to use `range()` with 3 arguments:
+```
+range(start, stop, step)
+```
+`range()` returns a series starting with the `start` value and with step sizes of `step` in between each value until it reaches the value before `stop`. 
+
+For example:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+for i in range(2, 10, 3):
+    print(i)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+2
+5
+8
+```
+</div>
+</div>
+</div>
+
+
+
+The default value for `step` is 1. If you want the series to descend, you can use a negative step size:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+for i in range(11, 3, -2):
+    print(i)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+11
+9
+7
+5
+```
+</div>
+</div>
+</div>
 
 
 

@@ -29,9 +29,9 @@
   "headline":
     "For Loops",
   "datePublished":
-    "2020-01-08T17:04:59+02:00",
+    "2020-01-09T23:49:15+02:00",
   "dateModified":
-    "2020-01-08T17:04:59+02:00",
+    "2020-01-09T23:49:15+02:00",
   "description":
     "For Loops",
   "author": {
@@ -854,23 +854,6 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/loops/for_examples.html"
-                >
-                  
-                  For Loop Examples
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
                   href="/loops/list_comp.html"
                 >
                   
@@ -892,23 +875,6 @@ initFunction(initQuery);
                 >
                   
                   While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/while_examples.html"
-                >
-                  
-                  While Loop Examples
                 </a>
 
                 
@@ -1071,7 +1037,88 @@ initFunction(initQuery);
 
 <p>Here we have made use of the <code class="highlighter-rouge">range</code> function to create our iterator.</p>
 
+<!--- Give a more detailed breakdown of what's happening -->
+
 <h2 id="the-range-function">The <code class="highlighter-rouge">range()</code> Function</h2>
+
+<p>The <code class="highlighter-rouge">range()</code> function takes integer arguments and produces a series of integers. As we shall see, the <code class="highlighter-rouge">range()</code> function’s arguments are very similar to slicing.
+<!--- Maybe remove the latter sentence --></p>
+
+<p>In the example above we used it with one argument,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>range(stop)
+</code></pre></div></div>
+<p>Here <code class="highlighter-rouge">range()</code> will produce a series of integers starting at zero and ending just before the <code class="highlighter-rouge">stop</code> value.</p>
+
+<p>If we were to use range with 2 arguments:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>range(start, stop)
+</code></pre></div></div>
+<p><code class="highlighter-rouge">range()</code> will produce a series of integers starting with the <code class="highlighter-rouge">start</code> value and ending with the <code class="highlighter-rouge">stop</code> value.</p>
+
+<p>For example:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+3
+4
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Lastly if we were to use <code class="highlighter-rouge">range()</code> with 3 arguments:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>range(start, stop, step)
+</code></pre></div></div>
+<p><code class="highlighter-rouge">range()</code> returns a series starting with the <code class="highlighter-rouge">start</code> value and with step sizes of <code class="highlighter-rouge">step</code> in between each value until it reaches the value before <code class="highlighter-rouge">stop</code>.</p>
+
+<p>For example:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+5
+8
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>The default value for <code class="highlighter-rouge">step</code> is 1. If you want the series to descend, you can use a negative step size:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>11
+9
+7
+5
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
 
 <h2 id="looping-through-collections">Looping Through Collections</h2>
 <!--- I need to introduce lists somewhere else! Maybe in basics along with dictionaries? -->
@@ -1138,8 +1185,8 @@ c
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/for_examples">
-      For Loop Examples <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/list_comp">
+      List Comprehension <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

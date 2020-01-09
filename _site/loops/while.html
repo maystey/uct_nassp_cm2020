@@ -29,9 +29,9 @@
   "headline":
     "While Loops",
   "datePublished":
-    "2020-01-08T17:04:59+02:00",
+    "2020-01-09T23:49:15+02:00",
   "dateModified":
-    "2020-01-08T17:04:59+02:00",
+    "2020-01-09T23:49:15+02:00",
   "description":
     "While Loops",
   "author": {
@@ -854,23 +854,6 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/loops/for_examples.html"
-                >
-                  
-                  For Loop Examples
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
                   href="/loops/list_comp.html"
                 >
                   
@@ -892,23 +875,6 @@ initFunction(initQuery);
                 >
                   
                   While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/while_examples.html"
-                >
-                  
-                  While Loop Examples
                 </a>
 
                 
@@ -1002,6 +968,32 @@ initFunction(initQuery);
             <div class="c-textbook__content">
               <h1 id="while-loops">While Loops</h1>
 
+<p>For loops are useful if you know what you want to iterate over, but what if you wanted to keep looping until a certain condition is met? <code class="highlighter-rouge">while</code> loops are the tool for this job.</p>
+
+<!--- Give an example problem that isn't exactly solvable using a for loop -->
+
+<p>The syntax for a <code class="highlighter-rouge">while</code> loop is:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while condition:
+    block of code to be repeated
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">condition</code> is/evaluates to a boolean value. The loop will keep repeating, executing the block of code indented after the <code class="highlighter-rouge">:</code> as long as <code class="highlighter-rouge">condition</code> evaluates to <code class="highlighter-rouge">True</code>. When <code class="highlighter-rouge">condition</code> evaluates to <code class="highlighter-rouge">False</code> the loop will no longer be repeated and control will progress to the code after the loop. <!--- is control the correct term here? --> Note that if <code class="highlighter-rouge">condition</code> starts as <code class="highlighter-rouge">False</code>, the code inside the loop will never be executed.</p>
+
+<!-- example -->
+
+<p>Something to be careful of when using <code class="highlighter-rouge">while</code> loops is a loop that doesn’t stop looping. If <code class="highlighter-rouge">condition</code> never evaluates to <code class="highlighter-rouge">False</code>, or if you never break out of the loop in another way, control will never leave the loop. Sometimes it is useful to use a maximum number of loop iterations to avoid this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>counter = 0
+
+while condition and counter &lt; max_count:
+    block of code
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">max_count</code> is the chosen maximum number of recursions (normally chosen as a very large number). <!--- rather give a concrete example --></p>
+
+<p><code class="highlighter-rouge">while</code> loops can be used to replace for <code class="highlighter-rouge">loops</code> (though this is more cumbersome, especially in the case of looping through a collection):</p>
+
+<!--- For loop followed by identical while loop -->
+
 
               <nav class="c-page__nav">
   
@@ -1013,8 +1005,8 @@ initFunction(initQuery);
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/while_examples">
-      While Loop Examples <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/break">
+      Breaking Out of Loops <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
