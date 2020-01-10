@@ -1,6 +1,6 @@
 # Chapters
 
-The current status of the chapters are recorded in this file.
+The current status of the chapters are recorded in this file. Subsections that are complete are not displayed.
 
 ## Introduction - Not Started
 
@@ -17,6 +17,7 @@ The current status of the chapters are recorded in this file.
 - Lists and dictionaries - Not Started
 - Execution priority - Not started
 - Tips and tricks - Not started
+- List and dictionary - Not started
 
 ## If Statements - Incomplete
 
@@ -26,10 +27,7 @@ The current status of the chapters are recorded in this file.
 
 ## For and While Loops - Incomplete
 
-- For loops - Incomplete
-    - Finish range function subsection
 - List comprehension - Not started
-- While loops - Not started
 - For loop examples - Not started
 - While loop examples - Not started
 
