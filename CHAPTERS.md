@@ -23,7 +23,8 @@ The current status of the chapters are recorded in this file. Subsections that a
 
 - Comparison Operators - Incomplete
 - Logical Operators - Incomplete
-- if/else/elif statements - Not started
+- if/else/elif statements - Incomplete
+    - Else and Elif
 
 ## For and While Loops - Incomplete
 
