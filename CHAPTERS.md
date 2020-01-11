@@ -7,8 +7,10 @@ The current status of the chapters are recorded in this file. Subsections that a
 ## Basics - Incomplete
 
 - Intro - Incomplete
-- Comments - Not started
+- Comments - Incomplete
+    - Needs better examples
 - Operators - Incomplete
+    - Make url to sections (is it possible for this to be relative?)
 - Assignment operators
 - Strings - Incomplete
     - Reference Dr. Harington's notes
