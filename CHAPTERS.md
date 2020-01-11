@@ -9,6 +9,7 @@ The current status of the chapters are recorded in this file. Subsections that a
 - Intro - Incomplete
 - Comments - Not started
 - Operators - Incomplete
+- Assignment operators
 - Strings - Incomplete
     - Reference Dr. Harington's notes
     - Section: Formating
@@ -21,10 +22,10 @@ The current status of the chapters are recorded in this file. Subsections that a
 
 ## If Statements - Incomplete
 
-- Comparison Operators - Incomplete
 - Logical Operators - Incomplete
 - if/else/elif statements - Incomplete
-    - Else and Elif
+    - else else else example
+    - flow charts
 
 ## For and While Loops - Incomplete
 
