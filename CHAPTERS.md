@@ -11,13 +11,12 @@ The current status of the chapters are recorded in this file. Subsections that a
     - Needs better examples
 - Operators - Incomplete
     - Make url to sections (is it possible for this to be relative?)
-- Assignment operators
 - Strings - Incomplete
-    - Reference Dr. Harington's notes
     - Section: Formating
-- Type Conversion (types) - Not Started
+- Type Conversion (types) - Not started
 - Variables - Incomplete
-- Lists and dictionaries - Not Started
+    - Assigning variable values to other variables
+- Lists and dictionaries - Not started
 - Execution priority - Not started
 - Tips and tricks - Not started
 - List and dictionary - Not started
@@ -25,6 +24,7 @@ The current status of the chapters are recorded in this file. Subsections that a
 ## If Statements - Incomplete
 
 - Logical Operators - Incomplete
+    - More examples needed
 - if/else/elif statements - Incomplete
     - else else else example
     - flow charts

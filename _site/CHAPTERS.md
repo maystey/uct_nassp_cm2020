@@ -1,35 +1,36 @@
 # Chapters
 
-The current status of the chapters are recorded in this file.
+The current status of the chapters are recorded in this file. Subsections that are complete are not displayed.
 
 ## Introduction - Not Started
 
 ## Basics - Incomplete
 
 - Intro - Incomplete
-- Comments - Not started
+- Comments - Incomplete
+    - Needs better examples
 - Operators - Incomplete
+    - Make url to sections (is it possible for this to be relative?)
 - Strings - Incomplete
-    - Reference Dr. Harington's notes
     - Section: Formating
 - Type Conversion (types) - Not Started
 - Variables - Incomplete
 - Lists and dictionaries - Not Started
 - Execution priority - Not started
 - Tips and tricks - Not started
+- List and dictionary - Not started
 
 ## If Statements - Incomplete
 
-- Comparison Operators - Incomplete
 - Logical Operators - Incomplete
-- if/else/elif statements - Not started
+    - More examples needed
+- if/else/elif statements - Incomplete
+    - else else else example
+    - flow charts
 
 ## For and While Loops - Incomplete
 
-- For loops - Incomplete
-    - Finish range function subsection
 - List comprehension - Not started
-- While loops - Not started
 - For loop examples - Not started
 - While loop examples - Not started
 
