@@ -57,11 +57,19 @@
     url: /basics/types
   - title: Operators
     url: /basics/operators
+  - title: Assignment Operators
+    url: /basics/assignment_operators
 #    not_numbered: true
   - title: Introduction to Functions
     url: /basics/functions
   - title: Strings
     url: /basics/strings
+  - title: Tuple
+    url: /basics/tuple
+  - title: Lists
+    url: /basics/lists
+  - title: Dictionaries
+    url: /basics/dictionaries
 
 - title: If Statements
   url: /if_statements/intro

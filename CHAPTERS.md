@@ -2,6 +2,12 @@
 
 The current status of the chapters are recorded in this file. Subsections that are complete are not displayed.
 
+## Misc.
+
+Items in this section are necessary to add, but I cannot place them at the moment.
+- Checking object types using `is`
+
+
 ## Introduction - Not Started
 
 ## Basics - Incomplete
@@ -13,10 +19,8 @@ The current status of the chapters are recorded in this file. Subsections that a
     - Make url to sections (is it possible for this to be relative?)
 - Strings - Incomplete
     - Section: Formating
-- Type Conversion (types) - Not started
-- Variables - Incomplete
-    - Assigning variable values to other variables
-- Lists and dictionaries - Not started
+- Tuples - Not started
+- Dictionaries - Not started
 - Execution priority - Not started
 - Tips and tricks - Not started
 - List and dictionary - Not started
