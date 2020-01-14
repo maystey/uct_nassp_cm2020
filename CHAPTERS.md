@@ -13,17 +13,18 @@ Items in this section are necessary to add, but I cannot place them at the momen
 ## Basics - Incomplete
 
 - Intro - Incomplete
+
 - Comments - Incomplete
     - Needs better examples
 - Operators - Incomplete
     - Make url to sections (is it possible for this to be relative?)
+
 - Strings - Incomplete
     - Section: Formating
 - Tuples - Not started
 - Dictionaries - Not started
 - Execution priority - Not started
 - Tips and tricks - Not started
-- List and dictionary - Not started
 
 ## If Statements - Incomplete
 
@@ -34,8 +35,7 @@ Items in this section are necessary to add, but I cannot place them at the momen
     - flow charts
 
 ## For and While Loops - Incomplete
-
-- List comprehension - Not started
+The remaining sections here are not a priority
 - For loop examples - Not started
 - While loop examples - Not started
 
