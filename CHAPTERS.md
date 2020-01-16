@@ -1,38 +1,70 @@
 # Chapters
 
-The current status of the chapters are recorded in this file. Subsections that are complete are not displayed.
+The current status of the chapters are recorded in this file.
 
 ## Misc.
 
 Items in this section are necessary to add, but I cannot place them at the moment.
 - Checking object types using `is`
-
+- Checking if object in collection using `in`
 
 ## Introduction - Not Started
 
 ## Basics - Incomplete
 
-- Intro - Incomplete
+### Complete
+
+- Variables
+- Comments
+- Type Conversion
+- Operators
+- Assignment Operators
+- Introduction to Functions
+
+### Incomplete
+
+- Intro
+- Strings
+    - Section: Formating
+
+### Not Started
+
+- Execution priority
+- Tips and tricks
+
+### Enhancements
 
 - Comments - Incomplete
     - Needs better examples
 - Operators - Incomplete
     - Make url to sections (is it possible for this to be relative?)
 
-- Strings - Incomplete
-    - Section: Formating
-- Tuples - Not started
-- Dictionaries - Not started
-- Execution priority - Not started
-- Tips and tricks - Not started
+## Data Structures
 
-## If Statements - Incomplete
+Removed this from Basics. Should I put this after if?
+
+### Complete
+- Lists
+
+### Incomplete
+
+### Not Started
+- Intro
+- Tuples
+- Dictionaries
+
+### Enhancements
+- Lists
+    - Should I make a forwards reference to list comprehension?
+
+## If Statements
+
+### Complete
+
+### Incomplete
 
 - Logical Operators - Incomplete
     - More examples needed
-- if/else/elif statements - Incomplete
-    - else else else example
-    - flow charts
 
 ## For and While Loops - Incomplete
 The remaining sections here are not a priority
