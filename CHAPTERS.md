@@ -7,10 +7,11 @@ The current status of the chapters are recorded in this file.
 Items in this section are necessary to add, but I cannot place them at the moment.
 - Checking object types using `is`
 - Checking if object in collection using `in`
+- *list to unpack
 
 ## Introduction - Not Started
 
-## Basics - Incomplete
+## Basics
 
 ### Complete
 
@@ -20,12 +21,11 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Operators
 - Assignment Operators
 - Introduction to Functions
+- Strings
 
 ### Incomplete
 
 - Intro
-- Strings
-    - Section: Formating
 
 ### Not Started
 
@@ -33,10 +33,11 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Tips and tricks
 
 ### Enhancements
-
-- Comments - Incomplete
+- Introduction to Functions
+    - Mention positional arguments and keyword arguments
+- Comments
     - Needs better examples
-- Operators - Incomplete
+- Operators
     - Make url to sections (is it possible for this to be relative?)
 
 ## Data Structures
