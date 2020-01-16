@@ -60,16 +60,32 @@ Removed this from Basics. Should I put this after if?
 ## If Statements
 
 ### Complete
+- Intro
+- Booleans
+- Comparison Operators
+
+### Incomplete
+- Logical Operators
+    - More examples needed
+
+## For and While Loops
+
+### Complete
+- Intro
+- For Loops
+- List Comprehension
+- While Loops
+- Breaking Out of Loops
 
 ### Incomplete
 
-- Logical Operators - Incomplete
-    - More examples needed
+### Not Started
+- Else Statement and Loops
+- Embedded Loops
 
-## For and While Loops - Incomplete
 The remaining sections here are not a priority
-- For loop examples - Not started
-- While loop examples - Not started
+- For loop examples
+- While loop examples
 
 ## NumPy - Not Started
 

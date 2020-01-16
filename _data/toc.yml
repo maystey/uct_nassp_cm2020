@@ -106,5 +106,5 @@
   #   url: /loops/while_examples
   - title: Breaking Out of Loops
     url: /loops/break
-  - title: Else Statement and Loops
-    url: /loops/else
+  # - title: Else Statement and Loops
+  #   url: /loops/else
