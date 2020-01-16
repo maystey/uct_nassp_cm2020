@@ -44,7 +44,7 @@
 
 # A chapter w/ a collection of sections beneath it
 - title: Python Basics
-  url: /basics/intro #Replace this with a short chapter introduction
+  url: /basics/intro
   not_numbered: true
   expand_sections: true
   sections:
@@ -64,6 +64,12 @@
     url: /basics/functions
   - title: Strings
     url: /basics/strings
+
+- title: Data Structures
+  url: /data_structures/intro
+  not_numbered: true
+  expand_sections: true
+  sections:
   - title: Tuple
     url: /basics/tuple
   - title: Lists
