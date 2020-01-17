@@ -45,12 +45,12 @@ Items in this section are necessary to add, but I cannot place them at the momen
 Removed this from Basics. Should I put this after if?
 
 ### Complete
+- Intro
 - Lists
 
 ### Incomplete
 
 ### Not Started
-- Intro
 - Tuples
 - Dictionaries
 
@@ -64,10 +64,14 @@ Removed this from Basics. Should I put this after if?
 - Intro
 - Booleans
 - Comparison Operators
-
-### Incomplete
 - Logical Operators
-    - More examples needed
+- If Statements
+
+### Enhancements
+- Logical Operators
+    - Give examples including comparison operators
+- If Statements 
+    - more examples
 
 ## For and While Loops
 
