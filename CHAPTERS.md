@@ -3,6 +3,7 @@
 The current status of the chapters are recorded in this file.
 
 ## Misc.
+Change all instances where I use the word collection to sequence.
 
 Items in this section are necessary to add, but I cannot place them at the moment.
 - Checking object types using `is`
@@ -46,17 +47,17 @@ Removed this from Basics. Should I put this after if?
 
 ### Complete
 - Intro
-- Lists
-
-### Incomplete
-
-### Not Started
 - Tuples
+- Lists
 - Dictionaries
 
 ### Enhancements
 - Lists
     - Should I make a forwards reference to list comprehension?
+- Dictionaries
+    - Make forwards reference to looping
+- Include sets? I've never used them...
+- Make embedded structures section with some examples.
 
 ## If Statements
 
