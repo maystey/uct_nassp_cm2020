@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Chapter: Basics.
-- Chapter: Data Structures.
 - Chapter: If Statements.
+- Chapter: Data Structures.
 - Chapter: Loops
 - This CHANGELOG file.
 - The README file.

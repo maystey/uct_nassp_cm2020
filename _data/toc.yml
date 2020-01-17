@@ -65,18 +65,6 @@
   - title: Strings
     url: /basics/strings
 
-- title: Data Structures
-  url: /data_structures/intro
-  not_numbered: true
-  expand_sections: true
-  sections:
-  - title: Tuple
-    url: /basics/tuple
-  - title: Lists
-    url: /basics/lists
-  - title: Dictionaries
-    url: /basics/dictionaries
-
 - title: If Statements
   url: /if_statements/intro
   not_numbered: true
@@ -88,6 +76,18 @@
     url: /if_statements/comparison_operators
   - title: Logical Operators
     url: /if_statements/logical_operators
+
+- title: Data Structures
+  url: /data_structures/intro
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: Tuple
+    url: /basics/tuple
+  - title: Lists
+    url: /basics/lists
+  - title: Dictionaries
+    url: /basics/dictionaries
 
 - title: Loops
   url: /loops/intro

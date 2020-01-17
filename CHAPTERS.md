@@ -41,6 +41,21 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Operators
     - Make url to sections (is it possible for this to be relative?)
 
+## If Statements
+
+### Complete
+- Intro
+- Booleans
+- Comparison Operators
+- Logical Operators
+- If Statements
+
+### Enhancements
+- Logical Operators
+    - Give examples including comparison operators
+- If Statements 
+    - more examples
+
 ## Data Structures
 
 Removed this from Basics. Should I put this after if?
@@ -59,20 +74,6 @@ Removed this from Basics. Should I put this after if?
 - Include sets? I've never used them...
 - Make embedded structures section with some examples.
 
-## If Statements
-
-### Complete
-- Intro
-- Booleans
-- Comparison Operators
-- Logical Operators
-- If Statements
-
-### Enhancements
-- Logical Operators
-    - Give examples including comparison operators
-- If Statements 
-    - more examples
 
 ## For and While Loops
 
