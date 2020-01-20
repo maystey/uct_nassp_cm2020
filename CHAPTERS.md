@@ -15,7 +15,7 @@ Items in this section are necessary to add, but I cannot place them at the momen
 ## Basics
 
 ### Complete
-
+- Intro
 - Variables
 - Comments
 - Type Conversion
@@ -25,8 +25,6 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Strings
 
 ### Incomplete
-
-- Intro
 
 ### Not Started
 
