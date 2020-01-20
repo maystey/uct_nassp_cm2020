@@ -9,15 +9,15 @@ prev_page:
   url: /if_statements/comparison_operators
   title: 'Comparison Operators'
 next_page:
-  url: 
-  title: ''
+  url: /data_structures/intro
+  title: 'Data Structures'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # Logical Operators
 
 Logical operators act on booleans and return booleans. The logical operators are `and`, `or` and `not`. 
 
-<--! Maybe mention bitwise operations? Python doesn't expose these in the Standard Library afaik, but just so that they are aware of the difference -->
+<!--- Maybe mention bitwise operations? Python doesn't expose these in the Standard Library afaik, but just so that they are aware of the difference -->
 
 
 
@@ -55,7 +55,7 @@ False and False is False
 
 
 
-<--! Add examples with comparison operators? Or do it all later? -->
+<!-- Add examples with comparison operators? Or do it all later? -->
 
 
 
@@ -127,9 +127,8 @@ Although logical operations only act on up to 2 booleans at a time, just like ar
 <div class="input_area" markdown="1">
 ```python
 print('True and False or True is ', True and False or True)
-print('True and False or True and False is', True and False or True and False)
-print(False and True or True)
-print(True or True and False)
+print('True or True and False is', True or True and False)
+print(not True or True and False)
 
 ```
 </div>
@@ -139,9 +138,8 @@ print(True or True and False)
 {:.output_stream}
 ```
 True and False or True is  True
-True and False or True and False is False
-True
-True
+True or True and False is True
+False
 ```
 </div>
 </div>
@@ -149,7 +147,11 @@ True
 
 
 
-not, and, then or evaluated. If you want to change order use brackets.
+<!---The order in which the logical operators are executed if no brackets are used is: `not`, `and`, `or`.
 
-Include some examples with comparison results
+If you want to control the order in which the operators execute you can use brackets: --->
+
+
+
+Although it isn't important for the cases above, if you need to ensure a specific order for the operations you can use brackets to group them.
 

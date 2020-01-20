@@ -83,11 +83,11 @@
   expand_sections: true
   sections:
   - title: Tuple
-    url: /basics/tuple
+    url: /data_structures/tuple
   - title: Lists
-    url: /basics/lists
+    url: /data_structures/lists
   - title: Dictionaries
-    url: /basics/dictionaries
+    url: /data_structures/dictionaries
 
 - title: Loops
   url: /loops/intro
@@ -104,7 +104,7 @@
     url: /loops/while
   # - title: While Loop Examples
   #   url: /loops/while_examples
-  - title: Breaking Out of Loops
-    url: /loops/break
+  # - title: Breaking Out of Loops
+  #   url: /loops/break
   # - title: Else Statement and Loops
   #   url: /loops/else

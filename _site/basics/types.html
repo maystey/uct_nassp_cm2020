@@ -29,14 +29,14 @@
   "headline":
     "Type Conversion",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
     "Type Conversion",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -686,6 +686,23 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
                   
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -883,40 +984,6 @@ initFunction(initQuery);
               </li>
               
             
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
           </ul>
         
       </li>
@@ -967,6 +1034,174 @@ initFunction(initQuery);
 
             <div class="c-textbook__content">
               <h1 id="type-conversion">Type Conversion</h1>
+
+<p>So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable is.</p>
+
+<p>Sometimes we want to convert between different variable types. To do this we can use the <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code> and <code class="highlighter-rouge">str</code> functions:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">int_var</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
+
+<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">int_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 &lt;class 'int'&gt;
+1.0 &lt;class 'float'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">float_var</span> <span class="o">=</span> <span class="mf">5.7</span>
+<span class="k">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
+
+<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">float_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5.7 &lt;class 'float'&gt;
+5 &lt;class 'int'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Note that when you convert a float to an integer Python does simply discards the decimal part (if you wish to round-off a float you can use the <code class="highlighter-rouge">round</code> function).<!--- link docs?--></p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str_var</span> <span class="o">=</span> <span class="s">'1.43'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
+
+<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.43 &lt;class 'str'&gt;
+1.43 &lt;class 'float'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str_var</span> <span class="o">=</span> <span class="s">'12'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
+
+<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>12 &lt;class 'str'&gt;
+12 &lt;class 'int'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Note that anything other than a number cannot be converted from a string to a float or int:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str_var</span> <span class="o">=</span> <span class="s">'not a number'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
+
+<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>not a number &lt;class 'str'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    &lt;ipython-input-9-4224f055b9d6&gt; in &lt;module&gt;
+          2 print(str_var, type(str_var))
+          3 
+    ----&gt; 4 float_var = float(str_var)
+          5 print(float_var, type(float_var))
+
+
+    ValueError: could not convert string to float: 'not a number'
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Even strings that contain a number with a decimal part cannot be converted to an integer:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str_var</span> <span class="o">=</span> <span class="s">'4.563'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
+
+<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4.563 &lt;class 'str'&gt;
+</code></pre></div>      </div>
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    &lt;ipython-input-10-a3094efdeb44&gt; in &lt;module&gt;
+          2 print(str_var, type(str_var))
+          3 
+    ----&gt; 4 int_var = int(str_var)
+          5 print(int_var, type(int_var))
+
+
+    ValueError: invalid literal for int() with base 10: '4.563'
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
 
 
               <nav class="c-page__nav">

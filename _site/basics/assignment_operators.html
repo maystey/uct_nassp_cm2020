@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>For Loop Examples</title>
-  <meta name="description" content="For Loop Examples">
+  <title>Assignment Operators</title>
+  <meta name="description" content="Compound Assignment Operators">
 
-  <link rel="canonical" href="/YOUR%20URL//loops/for_examples.html">
+  <link rel="canonical" href="/YOUR%20URL//basics/assignment_operators.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//loops/for_examples.html" />
+  <meta property="og:url"         content="/YOUR%20URL//basics/assignment_operators.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="For Loop Examples" />
-<meta property="og:description" content="For Loop Examples" />
+<meta property="og:title"       content="Assignment Operators" />
+<meta property="og:description" content="Compound Assignment Operators" />
 <meta property="og:image"       content="" />
 
 
@@ -25,18 +25,18 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//loops/for_examples.html",
+    "YOUR URL//basics/assignment_operators.html",
   "headline":
-    "For Loop Examples",
+    "Assignment Operators",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
-    "For Loop Examples",
+    "Compound Assignment Operators",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -685,6 +685,23 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -836,7 +937,7 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/loops/for.html"
                 >
                   
@@ -883,40 +984,6 @@ initFunction(initQuery);
               </li>
               
             
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
           </ul>
         
       </li>
@@ -952,7 +1019,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/loops/for_examples.ipynb" download>
+<a href="/content/basics/assignment_operators.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -966,21 +1033,39 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="for-loop-examples">For Loop Examples</h1>
+              <h1 id="compound-assignment-operators">Compound Assignment Operators</h1>
+
+<p>We’ve already discussed the <code class="highlighter-rouge">=</code> operator which sets the value of a variable. There are a few more assignment operators which are mostly used for convenience. These are the compound operators : <code class="highlighter-rouge">+=</code>, <code class="highlighter-rouge">-=</code>, <code class="highlighter-rouge">*=</code>, <code class="highlighter-rouge">/=</code>.</p>
+
+<p>These operators apply their respective operation between the variable being assigned to and the value on the right and assign that value to the variable. In other words:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var += 2
+</code></pre></div></div>
+<p>can be read as</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var = var + 2
+</code></pre></div></div>
+
+<p>and</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var /= 2
+</code></pre></div></div>
+<p>can be read as</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var = var / 2
+</code></pre></div></div>
+
+<p>etc..</p>
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/loops/for">
-      〈 <span class="u-margin-right-tiny"></span> For Loops
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/basics/operators">
+      〈 <span class="u-margin-right-tiny"></span> Operators
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/list_comp">
-      List Comprehension <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/basics/functions">
+      Introduction to Functions <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

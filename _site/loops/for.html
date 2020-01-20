@@ -29,14 +29,14 @@
   "headline":
     "For Loops",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
     "For Loops",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -686,6 +686,23 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
                   
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -883,40 +984,6 @@ initFunction(initQuery);
               </li>
               
             
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
           </ul>
         
       </li>
@@ -976,13 +1043,13 @@ initFunction(initQuery);
     code block to be repeated
 </code></pre></div></div>
 
-<p>where <code class="highlighter-rouge">i</code> is the iteration variable and the iterator represents a collection of values that <code class="highlighter-rouge">i</code> will be set to each time the loop is repeated. Here <code class="highlighter-rouge">i</code> can be treated like a variable and can take on any allowed variable name.</p>
+<p>where <code class="highlighter-rouge">i</code> is the iteration variable and the iterator represents a sequence of values that <code class="highlighter-rouge">i</code> will be set to each time the loop is repeated. Here <code class="highlighter-rouge">i</code> can be treated like a variable and can take on any allowed variable name.</p>
 
 <p>The code block to be repeated must be indented after the <code class="highlighter-rouge">:</code>. The loop repeats until <code class="highlighter-rouge">i</code> has run through all of the values in the iterator, or until the loop is broken.</p>
 
 <p>Be careful not to alter the iterator inside the code block being repeated.</p>
 
-<h2 id="worked-example">Worked Example</h2>
+<h3 id="worked-example">Worked Example</h3>
 <p>As a simple example, let’s say we wanted to print out the first $n$ integer squares starting with 0.</p>
 
 <p>This can be achieved manually for small $n$, for example $n = 5$:</p>
@@ -1120,10 +1187,10 @@ initFunction(initQuery);
   </div>
 </div>
 
-<h2 id="looping-through-collections">Looping Through Collections</h2>
+<h2 id="looping-through-sequences">Looping Through Sequences</h2>
 <!--- I need to introduce lists somewhere else! Maybe in basics along with dictionaries? -->
 
-<p>Collections such as lists and strings can also be used as iterators. For example:</p>
+<p>Sequences such as tuples, lists and strings can also be used as iterators. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
@@ -1169,6 +1236,127 @@ g
 a
 b
 c
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h3 id="enumerate-to-iterate-through-sequence-and-index"><code class="highlighter-rouge">enumerate()</code> To Iterate Through Sequence and Index</h3>
+
+<p>Sometimes you want to loop through a sequence but also want to keep track of the index. This can be achieved by using range:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">'string'</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 s
+1 t
+2 r
+3 i
+4 n
+5 g
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>but there is a far more convenient way using the <code class="highlighter-rouge">enumerate()</code> function:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s">'string'</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">char</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 s
+1 t
+2 r
+3 i
+4 n
+5 g
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h3 id="zip-to-iterate-through-more-than-one-sequence-simultaneously"><code class="highlighter-rouge">zip()</code> To Iterate Through More Than One Sequence Simultaneously</h3>
+
+<p>If you wanted to loop through more than one sequence at a time you could iterate through the index:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_a</span><span class="p">)):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">list_b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 a
+2 b
+3 c
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>but there is a cleaner way using the <code class="highlighter-rouge">zip</code> function:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 a
+2 b
+3 c
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Note that the loop will only iterate as much as the shortest sequence.</p>
+
+<h2 id="looping-through-dictionaries">Looping Through Dictionaries</h2>
+
+<p>To loop through the key-value pairs of a dictionary you can use the <code class="highlighter-rouge">dict.items()</code> method:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span> <span class="p">:</span> <span class="mi">54</span><span class="p">,</span> <span class="s">'b'</span> <span class="p">:</span> <span class="mi">754</span><span class="p">,</span> <span class="s">'c'</span> <span class="p">:</span> <span class="mi">42</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a 54
+b 754
+c 42
 </code></pre></div>      </div>
     </div>
   </div>

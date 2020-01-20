@@ -165,7 +165,3 @@ print("'apple' != 'banana' is", 'apple' != 'banana')
 </div>
 </div>
 
-
-
-## in
-

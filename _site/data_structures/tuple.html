@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>While Loop Examples</title>
-  <meta name="description" content="While Loop Examples">
+  <title>Tuple</title>
+  <meta name="description" content="Tuple">
 
-  <link rel="canonical" href="/YOUR%20URL//loops/while_examples.html">
+  <link rel="canonical" href="/YOUR%20URL//data_structures/tuple.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//loops/while_examples.html" />
+  <meta property="og:url"         content="/YOUR%20URL//data_structures/tuple.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="While Loop Examples" />
-<meta property="og:description" content="While Loop Examples" />
+<meta property="og:title"       content="Tuple" />
+<meta property="og:description" content="Tuple" />
 <meta property="og:image"       content="" />
 
 
@@ -25,18 +25,18 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//loops/while_examples.html",
+    "YOUR URL//data_structures/tuple.html",
   "headline":
-    "While Loop Examples",
+    "Tuple",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
-    "While Loop Examples",
+    "Tuple",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -686,6 +686,23 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
                   
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -870,45 +971,11 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
+                <a class="c-sidebar__entry "
                   href="/loops/while.html"
                 >
                   
                   While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
                 </a>
 
                 
@@ -952,7 +1019,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/loops/while_examples.ipynb" download>
+<a href="/content/data_structures/tuple.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -966,21 +1033,134 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="while-loop-examples">While Loop Examples</h1>
+              <h1 id="tuple">Tuple</h1>
+
+<p>Just as strings are a sequence of characters, tuples are a sequence of objects. This makes their use far more general.</p>
+
+<p>You can set a tuple by separating the objects using commas. For example:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1, 2, 3, 'a', 'b', 'c')
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>This is called tuple packing.</p>
+
+<p>You can also put brackets around the objects, which is useful if you need to instance a list and use it in the same line (for example as a function argument):</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">((</span><span class="s">'a'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>('a', 1, 'b', 2, 'c', 3)
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Like strings, tuples can be indexed and sliced:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Index 3:'</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Slice from index 3:'</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Index 3: a
+Slice from index 3: ('a', 'b', 'c')
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Tuples are also immutable (like strings):</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    &lt;ipython-input-5-5255d5d095a8&gt; in &lt;module&gt;
+    ----&gt; 1 t[2] = 5
+    
+
+    TypeError: 'tuple' object does not support item assignment
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>You can unpack a tuple into multiple variables, just like you can pack multiple values into a tuple:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'t is '</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'x is'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s">'y is'</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'z is'</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t is  (1, 2, 3)
+x is 1
+y is 2
+z is 3
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/loops/while">
-      〈 <span class="u-margin-right-tiny"></span> While Loops
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data_structures/intro">
+      〈 <span class="u-margin-right-tiny"></span> Data Structures
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/break">
-      Breaking Out of Loops <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/data_structures/lists">
+      Lists <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

@@ -29,7 +29,7 @@ a = 5
 
 
 
-tells python to assign 5 (an integer number) to the variable with the variable name `a`. Note that the `=` here is used for variable assignment, it does not have the same meaning as the mathematical symbol ("assign-variable-to" rather than "is-equal-to".
+tells python to assign 5 (an integer number) to the variable with the variable name `a`. Note that the `=` here is used for variable assignment, it does not have the same meaning as the mathematical symbol ("assign-variable-to" rather than "is-equal-to").
 
 If we wanted to access the value that our variable `a` holds, we can refer to it by it's name. For example, if we want to print the value to terminal:
 
@@ -228,6 +228,74 @@ The standard in Python is to use underscore seperations for variable and functio
 
 
 
-## Variable Assignment
-Basic, assign with other variables, etc
+## Assigning Variables to other Variables
+
+You can assign the value of one variable to another:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+var1 = 3
+var2 = var1
+
+print('Variable 1 is', var1)
+print('Variable 2 is', var2)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+Variable 1 is 3
+Variable 2 is 3
+```
+</div>
+</div>
+</div>
+
+
+
+When you assign assign a variable using another variable, in most cases it is only the value of the variable that is assigned:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+var1 = 3
+var2 = var1
+
+print('Variable 1 is', var1)
+print('Variable 2 is', var2)
+
+var1 = 2
+
+print('')
+print('Variable 1 is', var1)
+print('Variable 2 is', var2)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+Variable 1 is 3
+Variable 2 is 3
+
+Variable 1 is 2
+Variable 2 is 3
+```
+</div>
+</div>
+</div>
+
+
+
+Notice how, even though we change the value of `var1`, the value of `var2` remains the same.
 

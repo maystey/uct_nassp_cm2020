@@ -7,11 +7,12 @@ prev_page:
   url: /basics/types
   title: 'Type Conversion'
 next_page:
-  url: /basics/functions
-  title: 'Introduction to Functions'
+  url: /basics/assignment_operators
+  title: 'Assignment Operators'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-# Operators
+# Numerical Operators
+<!--- Rename to arithmatic operators? -->
 
 
 
@@ -292,5 +293,5 @@ print( (2 + 17//2)**5 )
 
 
 
-where the `//` is applied first, then the `+` and lastly the `**`. We shall discuss the order in which operations and function calls are executed in Section.... Make a url
+where the `//` is applied first, then the `+` and lastly the `**`. We shall discuss the order in which operations and function calls are executed later. <!--- in Section.... Make a url -->
 

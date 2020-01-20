@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Else Statement and Loops</title>
-  <meta name="description" content="Else Statement and Loops">
+  <title>Dictionaries</title>
+  <meta name="description" content="Dictionaries">
 
-  <link rel="canonical" href="/YOUR%20URL//loops/else.html">
+  <link rel="canonical" href="/YOUR%20URL//data_structures/dictionaries.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//loops/else.html" />
+  <meta property="og:url"         content="/YOUR%20URL//data_structures/dictionaries.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Else Statement and Loops" />
-<meta property="og:description" content="Else Statement and Loops" />
+<meta property="og:title"       content="Dictionaries" />
+<meta property="og:description" content="Dictionaries" />
 <meta property="og:image"       content="" />
 
 
@@ -25,18 +25,18 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//loops/else.html",
+    "YOUR URL//data_structures/dictionaries.html",
   "headline":
-    "Else Statement and Loops",
+    "Dictionaries",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
-    "Else Statement and Loops",
+    "Dictionaries",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -686,6 +686,23 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
                   
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -883,40 +984,6 @@ initFunction(initQuery);
               </li>
               
             
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
           </ul>
         
       </li>
@@ -952,7 +1019,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/loops/else.ipynb" download>
+<a href="/content/data_structures/dictionaries.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -966,21 +1033,153 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="else-statement-and-loops">Else Statement and Loops</h1>
+              <h1 id="dictionaries">Dictionaries</h1>
+
+<p>So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence. In dictionaries, however, the objects stored are referred to by a key. Keys must be an immutable type, for example a string, number or tuple containing only immutable types.</p>
+
+<p>You can create a dictionary using the <code class="highlighter-rouge">dict</code> function; and assign values using the subscript notation: <!--- Look this up. Introduce earlier. Make a glossary! --></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dictionary[key] = value
+</code></pre></div></div>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">'a'</span>
+<span class="n">d</span><span class="p">[</span><span class="s">'lst'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{1: 'a', 'lst': [1, 2, 3]}
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>You can also access dictionary values using the subscript notation:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>An alternative way to initialize a dictionary with key-value pairs is:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{key1 : value1, key2 : value2}
+</code></pre></div></div>
+<p>much like it appears in the print output:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span> <span class="p">:</span> <span class="s">'a'</span><span class="p">,</span>  <span class="s">'lst'</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{1: 'a', 'lst': [1, 2, 3]}
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Note that using a key that doesn’t exist in the dictionary will give you a <code class="highlighter-rouge">KeyError</code>:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    ---------------------------------------------------------------------------
+
+    KeyError                                  Traceback (most recent call last)
+
+    &lt;ipython-input-5-c8f93a31d4a2&gt; in &lt;module&gt;
+    ----&gt; 1 print(d[2])
+    
+
+    KeyError: 2
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="listing-the-keys-which-exist">Listing the Keys Which Exist</h2>
+
+<p>Often you will want a list of the keys which a dictionary has. For this you can use the <code class="highlighter-rouge">dict.keys()</code> method:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_keys([1, 'lst'])
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>One use for this is to check if a dictionary has the key you’re looking for if you want to avoid an error:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'not a key in d'</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 not a key in d
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/loops/break">
-      〈 <span class="u-margin-right-tiny"></span> Breaking Out of Loops
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data_structures/lists">
+      〈 <span class="u-margin-right-tiny"></span> Lists
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/loops/intro">
+      Loops <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

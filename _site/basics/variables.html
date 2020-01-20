@@ -29,14 +29,14 @@
   "headline":
     "Variables",
   "datePublished":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "dateModified":
-    "2020-01-12T15:57:46+02:00",
+    "2020-01-20T15:48:30+02:00",
   "description":
     "Variables",
   "author": {
     "@type": "Person",
-    "name": "YOUR AUTHOR NAME"
+    "name": "Mayhew Steyn"
   },
   "publisher": {
     "@type": "Organization",
@@ -686,6 +686,23 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
+                  href="/basics/assignment_operators.html"
+                >
+                  
+                  Assignment Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
                   href="/basics/functions.html"
                 >
                   
@@ -815,6 +832,90 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/data_structures/intro.html"
+        >
+          
+          Data Structures
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/tuple.html"
+                >
+                  
+                  Tuple
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/lists.html"
+                >
+                  
+                  Lists
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/data_structures/dictionaries.html"
+                >
+                  
+                  Dictionaries
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/loops/intro.html"
         >
           
@@ -875,40 +976,6 @@ initFunction(initQuery);
                 >
                   
                   While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/break.html"
-                >
-                  
-                  Breaking Out of Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/loops/else.html"
-                >
-                  
-                  Else Statement and Loops
                 </a>
 
                 
@@ -979,7 +1046,7 @@ initFunction(initQuery);
 
 </div>
 
-<p>tells python to assign 5 (an integer number) to the variable with the variable name <code class="highlighter-rouge">a</code>. Note that the <code class="highlighter-rouge">=</code> here is used for variable assignment, it does not have the same meaning as the mathematical symbol (“assign-variable-to” rather than “is-equal-to”.</p>
+<p>tells python to assign 5 (an integer number) to the variable with the variable name <code class="highlighter-rouge">a</code>. Note that the <code class="highlighter-rouge">=</code> here is used for variable assignment, it does not have the same meaning as the mathematical symbol (“assign-variable-to” rather than “is-equal-to”).</p>
 
 <p>If we wanted to access the value that our variable <code class="highlighter-rouge">a</code> holds, we can refer to it by it’s name. For example, if we want to print the value to terminal:</p>
 
@@ -1175,8 +1242,62 @@ line break"""</span>
 
 <p>The standard in Python is to use underscore seperations for variable and function names.</p>
 
-<h2 id="variable-assignment">Variable Assignment</h2>
-<p>Basic, assign with other variables, etc</p>
+<h2 id="assigning-variables-to-other-variables">Assigning Variables to other Variables</h2>
+
+<p>You can assign the value of one variable to another:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 1 is'</span><span class="p">,</span> <span class="n">var1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 2 is'</span><span class="p">,</span> <span class="n">var2</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Variable 1 is 3
+Variable 2 is 3
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>When you assign assign a variable using another variable, in most cases it is only the value of the variable that is assigned:</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 1 is'</span><span class="p">,</span> <span class="n">var1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 2 is'</span><span class="p">,</span> <span class="n">var2</span><span class="p">)</span>
+
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 1 is'</span><span class="p">,</span> <span class="n">var1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 2 is'</span><span class="p">,</span> <span class="n">var2</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Variable 1 is 3
+Variable 2 is 3
+
+Variable 1 is 2
+Variable 2 is 3
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<p>Notice how, even though we change the value of <code class="highlighter-rouge">var1</code>, the value of <code class="highlighter-rouge">var2</code> remains the same.</p>
 
 
               <nav class="c-page__nav">

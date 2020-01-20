@@ -1,38 +1,97 @@
 # Chapters
 
-The current status of the chapters are recorded in this file. Subsections that are complete are not displayed.
+The current status of the chapters are recorded in this file.
+
+## Misc.
+Change all instances where I use the word collection to sequence.
+
+Items in this section are necessary to add, but I cannot place them at the moment.
+- Checking object types using `is`
+- Checking if object in collection using `in`
+- *list to unpack
 
 ## Introduction - Not Started
 
-## Basics - Incomplete
+## Basics
 
-- Intro - Incomplete
-- Comments - Incomplete
+### Complete
+- Intro
+- Variables
+- Comments
+- Type Conversion
+- Operators
+- Assignment Operators
+- Introduction to Functions
+- Strings
+
+### Incomplete
+
+### Not Started
+
+- Execution priority
+- Tips and tricks
+
+### Enhancements
+- Strings put String Formatting in it's own section
+- Introduction to Functions
+    - Mention positional arguments and keyword arguments
+- Comments
     - Needs better examples
-- Operators - Incomplete
+- Operators
     - Make url to sections (is it possible for this to be relative?)
-- Strings - Incomplete
-    - Section: Formating
-- Type Conversion (types) - Not Started
-- Variables - Incomplete
-- Lists and dictionaries - Not Started
-- Execution priority - Not started
-- Tips and tricks - Not started
-- List and dictionary - Not started
 
-## If Statements - Incomplete
+## If Statements
 
-- Logical Operators - Incomplete
-    - More examples needed
-- if/else/elif statements - Incomplete
-    - else else else example
-    - flow charts
+### Complete
+- Intro
+- Booleans
+- Comparison Operators
+- Logical Operators
+- If Statements
 
-## For and While Loops - Incomplete
+### Enhancements
+- Logical Operators
+    - Give examples including comparison operators
+- If Statements 
+    - more examples
 
-- List comprehension - Not started
-- For loop examples - Not started
-- While loop examples - Not started
+## Data Structures
+
+Removed this from Basics. Should I put this after if?
+
+### Complete
+- Intro
+- Tuples
+- Lists
+- Dictionaries
+
+### Enhancements
+- Lists
+    - Should I make a forwards reference to list comprehension?
+- Dictionaries
+    - Make forwards reference to looping
+- Include sets? I've never used them...
+- Make embedded structures section with some examples.
+
+
+## For and While Loops
+
+### Complete
+- Intro
+- For Loops
+- List Comprehension
+- While Loops
+
+### Incomplete
+- Breaking Out of Loops
+
+### Not Started
+- Else Statement and Loops
+- Embedded Loops
+
+The remaining sections here are not a priority
+- For loop examples
+- While loop examples
 
 ## NumPy - Not Started
 

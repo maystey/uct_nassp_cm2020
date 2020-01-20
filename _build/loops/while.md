@@ -7,8 +7,8 @@ prev_page:
   url: /loops/list_comp
   title: 'List Comprehension'
 next_page:
-  url: /loops/break
-  title: 'Breaking Out of Loops'
+  url: 
+  title: ''
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # While Loops
@@ -31,6 +31,55 @@ where `condition` is/evaluates to a boolean value. The loop will keep repeating,
 
 
 
+## Worked Example
+
+Let's consider the following problem where we can make use of a `while` loop. Consider the recursive series: <!--- Introduce recursive series in For Loop Examples -->
+
+$$
+\begin{eqnarray}
+T_n & = & T_{n-1}^{3/4} \\
+T_0 & = & 100
+\end{eqnarray}
+$$
+
+We want to know when this series drops below 2 (what is the first value of $n$ for which $T_n < 2$). One solution is:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+T = 100 #T_0 term
+
+n = 0
+
+while T >= 2:
+    T = T**(3/4.) #T_{n+1} term
+    n += 1
+
+print('T_n is less than 2 for n =', n)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+T_n is less than 2 for n = 7
+```
+</div>
+</div>
+</div>
+
+
+
+Notice how the condition is `T >= 2` and not `T < 2`. That is because the loop continues **while** the condition is true and we want the loop to stop when `T < 2` is `True` (and the converse `T >= 2` is `False`).
+
+
+
+## Avoiding Infinite Recursion
+
 Something to be careful of when using `while` loops is a loop that doesn't stop looping. If `condition` never evaluates to `False`, or if you never break out of the loop in another way, control will never leave the loop. Sometimes it is useful to use a maximum number of loop iterations to avoid this:
 ```
 counter = 0
@@ -43,7 +92,111 @@ where `max_count` is the chosen maximum number of recursions (normally chosen as
 
 
 
-`while` loops can be used to replace for `loops` (though this is more cumbersome, especially in the case of looping through a collection):
+## Replacing For Loops
 
-<!--- For loop followed by identical while loop -->
+`while` loops can be used to replace for `loops`, for example:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+## For loop
+print('for loop')
+
+for i in range(5):
+    print(i)
+    
+## While loop
+print('')
+print('while loop')
+
+i = 0
+
+while i < 5:
+    print(i)
+    i+=1
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+for loop
+0
+1
+2
+3
+4
+
+while loop
+0
+1
+2
+3
+4
+```
+</div>
+</div>
+</div>
+
+
+
+As you can see the `while` loop is a bit less convenient than the `for` loop in this case. The `while` loop becomes even less convenient when looping through a collection:
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+string = 'a string'
+
+## For loop
+print('for loop')
+
+for char in string:
+    print(char)
+
+## While loop
+print('')
+print('while loop')
+
+index = 0
+
+while index < len(string):
+    print(string[index])
+    index += 1
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+for loop
+a
+ 
+s
+t
+r
+i
+n
+g
+
+while loop
+a
+ 
+s
+t
+r
+i
+n
+g
+```
+</div>
+</div>
+</div>
 

@@ -32,6 +32,7 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Tips and tricks
 
 ### Enhancements
+- Strings put String Formatting in it's own section
 - Introduction to Functions
     - Mention positional arguments and keyword arguments
 - Comments
@@ -80,9 +81,9 @@ Removed this from Basics. Should I put this after if?
 - For Loops
 - List Comprehension
 - While Loops
-- Breaking Out of Loops
 
 ### Incomplete
+- Breaking Out of Loops
 
 ### Not Started
 - Else Statement and Loops

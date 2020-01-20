@@ -4,14 +4,14 @@ kernel_name: python3
 has_widgets: false
 title: 'Introduction to Functions'
 prev_page:
-  url: /basics/operators
-  title: 'Operators'
+  url: /basics/assignment_operators
+  title: 'Assignment Operators'
 next_page:
   url: /basics/strings
   title: 'Strings'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-# Introduction to Functions
+# Introduction to Using Functions
 In this section we shall discuss some of the details on how to use functions from the Standard Library. We have already come across a few functions, namely `print()` and `type()`. We shall cover how to define your own functions in a later section.
 
 Python functions essentially take variables or values/objects as arguments, perform a task and them return values/objects. As we seen before the syntax of a function call is:
