@@ -64,6 +64,8 @@
     url: /basics/functions
   - title: Strings
     url: /basics/strings
+  - title: String Formating
+    url: /basics/string_formatting
 
 - title: If Statements
   url: /if-statements/intro
