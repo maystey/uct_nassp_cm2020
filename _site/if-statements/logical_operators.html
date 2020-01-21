@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Lists</title>
-  <meta name="description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...">
+  <title>Logical Operators</title>
+  <meta name="description" content="Logical Operators">
 
-  <link rel="canonical" href="/YOUR%20URL//data_structures/lists.html">
+  <link rel="canonical" href="/YOUR%20URL//if-statements/logical_operators.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//data_structures/lists.html" />
+  <meta property="og:url"         content="/YOUR%20URL//if-statements/logical_operators.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lists" />
-<meta property="og:description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob..." />
+<meta property="og:title"       content="Logical Operators" />
+<meta property="og:description" content="Logical Operators" />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//data_structures/lists.html",
+    "YOUR URL//if-statements/logical_operators.html",
   "headline":
-    "Lists",
+    "Logical Operators",
   "datePublished":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T10:31:31+02:00",
   "dateModified":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T10:31:31+02:00",
   "description":
-    "ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...",
+    "Logical Operators",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -748,7 +748,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/if_statements/intro.html"
+          href="/if-statements/intro.html"
         >
           
           If Statements
@@ -770,7 +770,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/bools.html"
+                  href="/if-statements/bools.html"
                 >
                   
                   Booleans
@@ -787,7 +787,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/comparison_operators.html"
+                  href="/if-statements/comparison_operators.html"
                 >
                   
                   Comparison Operators
@@ -803,8 +803,8 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/if_statements/logical_operators.html"
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/if-statements/logical_operators.html"
                 >
                   
                   Logical Operators
@@ -832,7 +832,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/data_structures/intro.html"
+          href="/data-structures/intro.html"
         >
           
           Data Structures
@@ -854,7 +854,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/tuple.html"
+                  href="/data-structures/tuple.html"
                 >
                   
                   Tuple
@@ -870,8 +870,8 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/data_structures/lists.html"
+                <a class="c-sidebar__entry "
+                  href="/data-structures/lists.html"
                 >
                   
                   Lists
@@ -888,7 +888,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/dictionaries.html"
+                  href="/data-structures/dictionaries.html"
                 >
                   
                   Dictionaries
@@ -1019,7 +1019,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/data_structures/lists.ipynb" download>
+<a href="/content/if-statements/logical_operators.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -1033,248 +1033,125 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="lists">Lists</h1>
-<p>Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the <code class="highlighter-rouge">list</code> function with another iterable object or square brackets <code class="highlighter-rouge">[]</code>:</p>
+              <h1 id="logical-operators">Logical Operators</h1>
+
+<p>Logical operators act on booleans and return booleans. The logical operators are <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code> and <code class="highlighter-rouge">not</code>.</p>
+
+<!--- Maybe mention bitwise operations? Python doesn't expose these in the Standard Library afaik, but just so that they are aware of the difference -->
+
+<h2 id="logical-and">Logical <code class="highlighter-rouge">and</code></h2>
+
+<p>This acts on 2 booleans. It returns <code class="highlighter-rouge">True</code> if both booleans are <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> otherwise. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list1'</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
-
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list2'</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'True and True is'</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'True and False is'</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'False and True is'</span><span class="p">,</span> <span class="bp">False</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'False and False is'</span><span class="p">,</span> <span class="bp">False</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list1 [1, 2, 3]
-list2 [4, 8, 9]
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True and True is True
+True and False is False
+False and True is False
+False and False is False
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>You can access elements of the list by indexing and slicing it:</p>
+<!-- Add examples with comparison operators? Or do it all later? -->
+
+<h2 id="logical-or">Logical <code class="highlighter-rouge">or</code></h2>
+
+<p>This operator acts on 2 booleans. It returns <code class="highlighter-rouge">True</code> if at least one of the booleans is <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> if both booleans are <code class="highlighter-rouge">False</code>. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Letters:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'First character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Last character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Every second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'True or True is'</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'True or False is'</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'False or True is'</span><span class="p">,</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'False or False is'</span><span class="p">,</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Letters: ['a', 'b', 'c', 'd', 'e']
-First character: a
-Second character: b
-Last character: e
-Every second character: ['a', 'c', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True or True is True
+True or False is True
+False or True is True
+False or False is False
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>Unlike tuples you can alter the elements of a list after instancing it:</p>
+<h2 id="logical-not">Logical <code class="highlighter-rouge">not</code></h2>
+<p>This operator acts on a single boolean. It returns the opposite of the boolean:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the third character'</span><span class="p">)</span>
-
-<span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">'z'</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'not True is'</span><span class="p">,</span> <span class="ow">not</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'not False is'</span><span class="p">,</span> <span class="ow">not</span> <span class="bp">False</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Changing the third character
-['a', 'b', 'z', 'd', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>not True is False
+not False is True
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>You can also assign new values to slices:</p>
+<h2 id="combining-logical-operations">Combining Logical Operations</h2>
+<p>Although logical operations only act on up to 2 booleans at a time, just like arithmetic operators they can be combined in a single statement. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the first three characters'</span><span class="p">)</span>
-<span class="n">letters</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">,</span> <span class="s">'z'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'True and False or True is '</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'True or True and False is'</span><span class="p">,</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Changing the first three characters
-['x', 'y', 'z', 'd', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True and False or True is  True
+True or True and False is True
+False
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<h2 id="concatenating-lists">Concatenating Lists</h2>
+<!---The order in which the logical operators are executed if no brackets are used is: `not`, `and`, `or`.
 
-<p>The <code class="highlighter-rouge">+</code> operator acts on lists in a similar way to strings, concatenating the two lists:</p>
+If you want to control the order in which the operators execute you can use brackets: --->
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 'a', 'b', 'c']
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listappend"><code class="highlighter-rouge">list.append()</code></h2>
-
-<p>You can add elements to the end of the list using the <code class="highlighter-rouge">.append()</code> method:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Appending an additional letter'</span><span class="p">)</span>
-
-<span class="n">letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'f'</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Appending an additional letter
-['a', 'b', 'c', 'd', 'e', 'f']
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listinsert"><code class="highlighter-rouge">list.insert()</code></h2>
-
-<p>If you want to insert an element into a specific place in the list you can use the <code class="highlighter-rouge">.insert()</code> method. This takes the index and the object you want to add as the arguments:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Inserting number 3 at index 2'</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 4, 5, 6]
-Inserting number 3 at index 2
-[1, 2, 3, 4, 5, 6]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listsremove">‘lists.remove()’</h2>
-
-<p>If you want to remove the first instance of an element of a list with a specific value you can use the <code class="highlighter-rouge">.remove()</code> method:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Removing first 1 from numbers'</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 1, 3, 4]
-Removing first 1 from numbers
-[2, 1, 3, 4]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listpop"><code class="highlighter-rouge">list.pop()</code></h2>
-
-<p>If you want to retrieve and remove an element at a particular index you can use the  <code class="highlighter-rouge">.remove()</code> method, which takes the index of the element you want to retrieve as the argument:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Retrieving number at index 2:'</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5]
-Retrieving number at index 2: 3
-[1, 2, 4, 5]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<!--- Talk about the map function?-->
+<p>Although it isn’t important for the cases above, if you need to ensure a specific order for the operations you can use brackets to group them.</p>
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data_structures/tuple">
-      〈 <span class="u-margin-right-tiny"></span> Tuple
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/if-statements/comparison_operators">
+      〈 <span class="u-margin-right-tiny"></span> Comparison Operators
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data_structures/dictionaries">
-      Dictionaries <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/data-structures/intro">
+      Data Structures <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

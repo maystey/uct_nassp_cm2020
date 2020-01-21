@@ -1,12 +1,10 @@
 ---
-redirect_from:
-  - "/data-structures/intro"
 title: 'Data Structures'
 prev_page:
-  url: /if_statements/logical_operators
+  url: /if-statements/logical_operators
   title: 'Logical Operators'
 next_page:
-  url: /data_structures/tuple
+  url: /data-structures/tuple
   title: 'Tuple'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

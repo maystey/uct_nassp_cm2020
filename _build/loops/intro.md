@@ -1,7 +1,7 @@
 ---
 title: 'Loops'
 prev_page:
-  url: /data_structures/dictionaries
+  url: /data-structures/dictionaries
   title: 'Dictionaries'
 next_page:
   url: /loops/for

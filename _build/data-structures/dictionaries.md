@@ -1,12 +1,10 @@
 ---
-redirect_from:
-  - "/data-structures/dictionaries"
-interact_link: content/data_structures/dictionaries.ipynb
+interact_link: content/data-structures/dictionaries.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'Dictionaries'
 prev_page:
-  url: /data_structures/lists
+  url: /data-structures/lists
   title: 'Lists'
 next_page:
   url: /loops/intro

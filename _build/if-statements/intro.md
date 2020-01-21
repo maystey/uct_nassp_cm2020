@@ -1,12 +1,10 @@
 ---
-redirect_from:
-  - "/if-statements/intro"
 title: 'If Statements'
 prev_page:
   url: /basics/strings
   title: 'Strings'
 next_page:
-  url: /if_statements/bools
+  url: /if-statements/bools
   title: 'Booleans'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

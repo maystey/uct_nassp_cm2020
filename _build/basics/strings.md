@@ -7,7 +7,7 @@ prev_page:
   url: /basics/functions
   title: 'Introduction to Functions'
 next_page:
-  url: /if_statements/intro
+  url: /if-statements/intro
   title: 'If Statements'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

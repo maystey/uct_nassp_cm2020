@@ -1,15 +1,15 @@
 ---
 redirect_from:
   - "/if-statements/comparison-operators"
-interact_link: content/if_statements/comparison_operators.ipynb
+interact_link: content/if-statements/comparison_operators.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'Comparison Operators'
 prev_page:
-  url: /if_statements/bools
+  url: /if-statements/bools
   title: 'Booleans'
 next_page:
-  url: /if_statements/logical_operators
+  url: /if-statements/logical_operators
   title: 'Logical Operators'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

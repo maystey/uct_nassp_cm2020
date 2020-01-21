@@ -1,15 +1,13 @@
 ---
-redirect_from:
-  - "/data-structures/tuple"
-interact_link: content/data_structures/tuple.ipynb
+interact_link: content/data-structures/tuple.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'Tuple'
 prev_page:
-  url: /data_structures/intro
+  url: /data-structures/intro
   title: 'Data Structures'
 next_page:
-  url: /data_structures/lists
+  url: /data-structures/lists
   title: 'Lists'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---

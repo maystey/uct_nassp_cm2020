@@ -66,28 +66,28 @@
     url: /basics/strings
 
 - title: If Statements
-  url: /if_statements/intro
+  url: /if-statements/intro
   not_numbered: true
   expand_sections: true
   sections:
   - title: Booleans
-    url: /if_statements/bools
+    url: /if-statements/bools
   - title: Comparison Operators
-    url: /if_statements/comparison_operators
+    url: /if-statements/comparison_operators
   - title: Logical Operators
-    url: /if_statements/logical_operators
+    url: /if-statements/logical_operators
 
 - title: Data Structures
-  url: /data_structures/intro
+  url: /data-structures/intro
   not_numbered: true
   expand_sections: true
   sections:
   - title: Tuple
-    url: /data_structures/tuple
+    url: /data-structures/tuple
   - title: Lists
-    url: /data_structures/lists
+    url: /data-structures/lists
   - title: Dictionaries
-    url: /data_structures/dictionaries
+    url: /data-structures/dictionaries
 
 - title: Loops
   url: /loops/intro
