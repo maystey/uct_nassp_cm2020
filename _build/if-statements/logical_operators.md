@@ -9,8 +9,8 @@ prev_page:
   url: /if-statements/comparison_operators
   title: 'Comparison Operators'
 next_page:
-  url: /data-structures/intro
-  title: 'Data Structures'
+  url: /if-statements/if
+  title: 'If Statements'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # Logical Operators

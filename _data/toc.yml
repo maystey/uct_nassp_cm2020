@@ -78,6 +78,8 @@
     url: /if-statements/comparison_operators
   - title: Logical Operators
     url: /if-statements/logical_operators
+  - title: If Statements
+    url: /if-statements/if
 
 - title: Data Structures
   url: /data-structures/intro

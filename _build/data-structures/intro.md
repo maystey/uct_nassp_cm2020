@@ -1,8 +1,8 @@
 ---
 title: 'Data Structures'
 prev_page:
-  url: /if-statements/logical_operators
-  title: 'Logical Operators'
+  url: /if-statements/if
+  title: 'If Statements'
 next_page:
   url: /data-structures/tuple
   title: 'Tuple'
