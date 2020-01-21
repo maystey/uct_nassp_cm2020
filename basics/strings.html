@@ -29,9 +29,9 @@
   "headline":
     "Strings",
   "datePublished":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "dateModified":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "description":
     "Strings",
   "author": {
@@ -732,6 +732,23 @@ initFunction(initQuery);
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/basics/string_formatting.html"
+                >
+                  
+                  String Formating
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -748,7 +765,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/if_statements/intro.html"
+          href="/if-statements/intro.html"
         >
           
           If Statements
@@ -770,7 +787,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/bools.html"
+                  href="/if-statements/bools.html"
                 >
                   
                   Booleans
@@ -787,7 +804,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/comparison_operators.html"
+                  href="/if-statements/comparison_operators.html"
                 >
                   
                   Comparison Operators
@@ -804,10 +821,27 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/logical_operators.html"
+                  href="/if-statements/logical_operators.html"
                 >
                   
                   Logical Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/if-statements/if.html"
+                >
+                  
+                  If Statements
                 </a>
 
                 
@@ -832,7 +866,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/data_structures/intro.html"
+          href="/data-structures/intro.html"
         >
           
           Data Structures
@@ -854,7 +888,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/tuple.html"
+                  href="/data-structures/tuple.html"
                 >
                   
                   Tuple
@@ -871,7 +905,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/lists.html"
+                  href="/data-structures/lists.html"
                 >
                   
                   Lists
@@ -888,7 +922,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/dictionaries.html"
+                  href="/data-structures/dictionaries.html"
                 >
                   
                   Dictionaries
@@ -1420,234 +1454,6 @@ Not empty slice: etupmo
 
 <p>Also notice how, in the second slice above, the <code class="highlighter-rouge">0</code> index character is not present. Even when slicing with a negative step size the <code class="highlighter-rouge">stop_index</code> is <strong>not</strong> included in the slice.</p>
 
-<h2 id="string-formatting">String Formatting</h2>
-
-<p>Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/or values in your string, you may be better off using string formatting. We will use this technique more extensively later on.</p>
-
-<p>There are a few ways to format strings. We will cover one of the ways introduced in Python 3. That is using the <code class="highlighter-rouge">string.format()</code> method.</p>
-
-<p>This method treats everything contained in curly braces<code class="highlighter-rouge">{}</code> in the string as a replacement field, everything in and including the braces are replaced with the arguments of format in the output string.</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Hello {}, how are you?'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'world'</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello world, how are you?
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>As you can see above, the blank curly braces were replaced with the string argument <code class="highlighter-rouge">'world'</code>.</p>
-
-<p>Note that the method does not change the string itself but returns a new string.</p>
-
-<p>You can make multiple replacements at a time if you have a string with multiple replacement fields:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{}, {}, {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1, 2, 3
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Sometimes you will want more control over how the arguments of format are placed into the string. There is a specific syntax for formatting which you can read in the <a href="https://docs.python.org/3.4/library/string.html#format-string-syntax">documentation</a>. We will cover a few examples.</p>
-
-<h3 id="specify-arguments-by-position">Specify Arguments by Position</h3>
-
-<p>If you want to specify the order in which the arguments of format are placed into the string, you can put numbers in the replacement fields to reference the positional arguments:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{0}, {2}, {1}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1, 3, 2
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Note that this also allows you to repeat elements:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{0}, {2}, {1}, {2}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1, 3, 2, 3
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h3 id="specify-arguments-by-name">Specify Arguments by Name</h3>
-
-<p>You can also specify arguments by name, the arguments must then be presented as keyword arguments:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'You can find the point at position ({x}, {y}).'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span> <span class="c1">#Arguments with names 'x' and 'y'
-</span>
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can find the point at position (2, 6).
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h3 id="specifying-numerical-types-and-precision">Specifying Numerical Types and Precision</h3>
-
-<p>To put it simply, when formatting numerical arguments the format specifier (to be placed in the replacement field) is of the structure:
-<code class="highlighter-rouge">[argument_reference]:[width][.precision][type]</code></p>
-
-<p>Where</p>
-<ul>
-  <li><code class="highlighter-rouge">argument_reference</code> is the position of or name of the argument.</li>
-  <li><code class="highlighter-rouge">width</code> specifies the minimum width that a replacement will take (look to the docs for alignment options)</li>
-  <li>For floats <code class="highlighter-rouge">precision</code> can be seen as the number of decimal places.</li>
-  <li><code class="highlighter-rouge">type</code> specifies what type you want to display the number as. Multiple types exist for both integers and floats, but the most commonly used types are <code class="highlighter-rouge">d</code> for decimal integer and <code class="highlighter-rouge">f</code> for fixed point number (which you can use for floats)</li>
-</ul>
-
-<p>Each of these parts of the format specifier are optional.</p>
-
-<p>As a first example, lets display an integer:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{:d}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>Now, lets see how the width affects the output:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{:d}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 0
-</span><span class="k">print</span><span class="p">(</span><span class="s">'{:1d}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 1
-</span><span class="k">print</span><span class="p">(</span><span class="s">'{:2d}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 2
-</span><span class="k">print</span><span class="p">(</span><span class="s">'{:3d}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 3
-</span>
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
-5
- 5
-  5
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>As you can see the first 2 outputs are the same. That is because the output is of length 1.</p>
-
-<p>If you want to display a float to 2 decimal places, specify precision:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{:.2f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mf">1.232435455</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.23
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>If you want to specify the position of the argument, include a reference to the argument position:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'{1:.3f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mf">1.232435455</span><span class="p">,</span> <span class="mf">5.35362</span><span class="p">))</span> <span class="c1">#argument position of 1
-</span>
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5.354
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h3 id="including-curly-braces-in-formatted-string">Including Curly Braces in Formatted String</h3>
-
-<p>If you want to include curly braces in a string you are formatting you can double them up:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Format a {} while keeping '</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'string'</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Format a string while keeping {}
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<p>You can also enclose the replacement field in double braces:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'Text inside braces'</span><span class="p">))</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{Text inside braces}
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
 
               <nav class="c-page__nav">
   
@@ -1659,8 +1465,8 @@ Not empty slice: etupmo
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/if_statements/intro">
-      If Statements <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/basics/string_formatting">
+      String Formating <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

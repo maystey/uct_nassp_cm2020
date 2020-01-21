@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Lists</title>
-  <meta name="description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...">
+  <title>Comparison Operators</title>
+  <meta name="description" content="Comparison OperatorsComparison operators operate on two variables and return a boolean result.">
 
-  <link rel="canonical" href="/YOUR%20URL//data_structures/lists.html">
+  <link rel="canonical" href="/YOUR%20URL//if-statements/comparison_operators.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="/YOUR%20URL//feed.xml">
 
-  <meta property="og:url"         content="/YOUR%20URL//data_structures/lists.html" />
+  <meta property="og:url"         content="/YOUR%20URL//if-statements/comparison_operators.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lists" />
-<meta property="og:description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob..." />
+<meta property="og:title"       content="Comparison Operators" />
+<meta property="og:description" content="Comparison OperatorsComparison operators operate on two variables and return a boolean result." />
 <meta property="og:image"       content="" />
 
 
@@ -25,15 +25,15 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "YOUR URL//data_structures/lists.html",
+    "YOUR URL//if-statements/comparison_operators.html",
   "headline":
-    "Lists",
+    "Comparison Operators",
   "datePublished":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "dateModified":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "description":
-    "ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...",
+    "Comparison OperatorsComparison operators operate on two variables and return a boolean result.",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -732,6 +732,23 @@ initFunction(initQuery);
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/basics/string_formatting.html"
+                >
+                  
+                  String Formating
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -748,7 +765,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/if_statements/intro.html"
+          href="/if-statements/intro.html"
         >
           
           If Statements
@@ -770,7 +787,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/bools.html"
+                  href="/if-statements/bools.html"
                 >
                   
                   Booleans
@@ -786,8 +803,8 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/if_statements/comparison_operators.html"
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/if-statements/comparison_operators.html"
                 >
                   
                   Comparison Operators
@@ -804,10 +821,27 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/logical_operators.html"
+                  href="/if-statements/logical_operators.html"
                 >
                   
                   Logical Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/if-statements/if.html"
+                >
+                  
+                  If Statements
                 </a>
 
                 
@@ -832,7 +866,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/data_structures/intro.html"
+          href="/data-structures/intro.html"
         >
           
           Data Structures
@@ -854,7 +888,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/tuple.html"
+                  href="/data-structures/tuple.html"
                 >
                   
                   Tuple
@@ -870,8 +904,8 @@ initFunction(initQuery);
               
 
               <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/data_structures/lists.html"
+                <a class="c-sidebar__entry "
+                  href="/data-structures/lists.html"
                 >
                   
                   Lists
@@ -888,7 +922,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/dictionaries.html"
+                  href="/data-structures/dictionaries.html"
                 >
                   
                   Dictionaries
@@ -1019,7 +1053,7 @@ initFunction(initQuery);
 
             
 <div class="buttons">
-<a href="/content/data_structures/lists.ipynb" download>
+<a href="/content/if-statements/comparison_operators.ipynb" download>
 <button id="interact-button-download" class="interact-button">Download</button>
 </a>
 
@@ -1033,248 +1067,134 @@ initFunction(initQuery);
 
 
             <div class="c-textbook__content">
-              <h1 id="lists">Lists</h1>
-<p>Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the <code class="highlighter-rouge">list</code> function with another iterable object or square brackets <code class="highlighter-rouge">[]</code>:</p>
+              <h1 id="comparison-operators">Comparison Operators</h1>
+<p>Comparison operators operate on two variables and return a boolean result.</p>
+
+<h2 id="less-than--and--greater-than-">Less-than <code class="highlighter-rouge">&lt;</code> and  Greater-than <code class="highlighter-rouge">&gt;</code></h2>
+<p>These operators act in the same way as the mathematical objects you are familiar with. If <code class="highlighter-rouge">a</code> is less than <code class="highlighter-rouge">b</code>, then <code class="highlighter-rouge">a &lt; b</code> will return <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">a &gt; b</code> will return <code class="highlighter-rouge">False</code>. For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list1'</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
-
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list2'</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'3 &gt; 2 is'</span><span class="p">,</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2.54 &lt; 1 is'</span><span class="p">,</span> <span class="mf">2.54</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'1 &lt; 1 is'</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list1 [1, 2, 3]
-list2 [4, 8, 9]
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 &gt; 2 is True
+2.54 &lt; 1 is False
+1 &lt; 1 is False
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>You can access elements of the list by indexing and slicing it:</p>
+<p>Note that these operators act on both integers and floats interchangeably.</p>
+
+<h2 id="less-than-equal-to--and-greater-than-equal-to-">Less-than-equal-to <code class="highlighter-rouge">&lt;=</code> and Greater-than-equal-to <code class="highlighter-rouge">&gt;=</code></h2>
+
+<p>As there names suggest, the <code class="highlighter-rouge">&lt;=</code> operator is related to the $\leq$ assertion in mathematics. Similarly <code class="highlighter-rouge">&gt;=</code> is related to $\geq$.</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Letters:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'First character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Last character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Every second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'3.3 &lt; 3.4 is'</span><span class="p">,</span> <span class="mf">3.3</span> <span class="o">&lt;=</span> <span class="mf">3.4</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2 &lt;= 2 is'</span><span class="p">,</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2 &gt;= 3.4 is'</span><span class="p">,</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mf">3.4</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Letters: ['a', 'b', 'c', 'd', 'e']
-First character: a
-Second character: b
-Last character: e
-Every second character: ['a', 'c', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.3 &lt; 3.4 is True
+2 &lt;= 2 is True
+2 &gt;= 3.4 is False
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>Unlike tuples you can alter the elements of a list after instancing it:</p>
+<h2 id="equals-to-">Equals-to <code class="highlighter-rouge">==</code></h2>
+<p>The <code class="highlighter-rouge">==</code> operator is used to check equality. When used on numbers, this is similar to the mathematical $=$.</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the third character'</span><span class="p">)</span>
-
-<span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">'z'</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'3 == 2 is'</span><span class="p">,</span> <span class="mi">3</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'5.3 == 5.3 is'</span><span class="p">,</span> <span class="mf">5.3</span> <span class="o">==</span> <span class="mf">5.3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'6 == 6.0 is'</span><span class="p">,</span> <span class="mi">6</span> <span class="o">==</span> <span class="mf">6.0</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Changing the third character
-['a', 'b', 'z', 'd', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 == 2 is False
+5.3 == 5.3 is True
+6 == 6.0 is True
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<p>You can also assign new values to slices:</p>
+<p>The <code class="highlighter-rouge">==</code> operator is used more generally to compare non-numerical values. For example, it can be used to compare two strings:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the first three characters'</span><span class="p">)</span>
-<span class="n">letters</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">,</span> <span class="s">'z'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"'apple' == 'apple' is"</span><span class="p">,</span> <span class="s">'apple'</span> <span class="o">==</span> <span class="s">'apple'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"'banana' == 'apple' is"</span><span class="p">,</span> <span class="s">'banana'</span> <span class="o">==</span> <span class="s">'apple'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'''"banana" == 'banana' is'''</span><span class="p">,</span> <span class="s">"banana"</span> <span class="o">==</span> <span class="s">'banana'</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Changing the first three characters
-['x', 'y', 'z', 'd', 'e']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'apple' == 'apple' is True
+'banana' == 'apple' is False
+"banana" == 'banana' is True
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
 
-<h2 id="concatenating-lists">Concatenating Lists</h2>
-
-<p>The <code class="highlighter-rouge">+</code> operator acts on lists in a similar way to strings, concatenating the two lists:</p>
+<h2 id="not-equal-to-">Not-equal-to <code class="highlighter-rouge">!=</code></h2>
+<p>This operator returns <code class="highlighter-rouge">True</code> if the two objects being compared aren’t equivalent (if <code class="highlighter-rouge">==</code> would return <code class="highlighter-rouge">False</code>). For example:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span><span class="p">)</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'3 != 2 is'</span><span class="p">,</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'7.3 != 7.3 is'</span><span class="p">,</span> <span class="mf">7.3</span> <span class="o">!=</span> <span class="mf">7.3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"'apple' != 'banana' is"</span><span class="p">,</span> <span class="s">'apple'</span> <span class="o">!=</span> <span class="s">'banana'</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 'a', 'b', 'c']
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 != 2 is True
+7.3 != 7.3 is False
+'apple' != 'banana' is True
 </code></pre></div>      </div>
     </div>
   </div>
 </div>
-
-<h2 id="listappend"><code class="highlighter-rouge">list.append()</code></h2>
-
-<p>You can add elements to the end of the list using the <code class="highlighter-rouge">.append()</code> method:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Appending an additional letter'</span><span class="p">)</span>
-
-<span class="n">letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'f'</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Appending an additional letter
-['a', 'b', 'c', 'd', 'e', 'f']
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listinsert"><code class="highlighter-rouge">list.insert()</code></h2>
-
-<p>If you want to insert an element into a specific place in the list you can use the <code class="highlighter-rouge">.insert()</code> method. This takes the index and the object you want to add as the arguments:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Inserting number 3 at index 2'</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 4, 5, 6]
-Inserting number 3 at index 2
-[1, 2, 3, 4, 5, 6]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listsremove">‘lists.remove()’</h2>
-
-<p>If you want to remove the first instance of an element of a list with a specific value you can use the <code class="highlighter-rouge">.remove()</code> method:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Removing first 1 from numbers'</span><span class="p">)</span>
-
-<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 1, 3, 4]
-Removing first 1 from numbers
-[2, 1, 3, 4]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<h2 id="listpop"><code class="highlighter-rouge">list.pop()</code></h2>
-
-<p>If you want to retrieve and remove an element at a particular index you can use the  <code class="highlighter-rouge">.remove()</code> method, which takes the index of the element you want to retrieve as the argument:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Retrieving number at index 2:'</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5]
-Retrieving number at index 2: 3
-[1, 2, 4, 5]
-</code></pre></div>      </div>
-    </div>
-  </div>
-</div>
-
-<!--- Talk about the map function?-->
 
 
               <nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/data_structures/tuple">
-      〈 <span class="u-margin-right-tiny"></span> Tuple
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/if-statements/bools">
+      〈 <span class="u-margin-right-tiny"></span> Booleans
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/data_structures/dictionaries">
-      Dictionaries <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/if-statements/logical_operators">
+      Logical Operators <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

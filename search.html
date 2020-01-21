@@ -29,9 +29,9 @@
   "headline":
     "Search the site",
   "datePublished":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "dateModified":
-    "2020-01-20T15:48:30+02:00",
+    "2020-01-21T12:37:24+02:00",
   "description":
     "Course notes for the NASSP Honours Computational Methods Module at the University of Cape Town.",
   "author": {
@@ -732,6 +732,23 @@ initFunction(initQuery);
               </li>
               
             
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/basics/string_formatting.html"
+                >
+                  
+                  String Formating
+                </a>
+
+                
+                
+
+              </li>
+              
+            
           </ul>
         
       </li>
@@ -748,7 +765,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/if_statements/intro.html"
+          href="/if-statements/intro.html"
         >
           
           If Statements
@@ -770,7 +787,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/bools.html"
+                  href="/if-statements/bools.html"
                 >
                   
                   Booleans
@@ -787,7 +804,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/comparison_operators.html"
+                  href="/if-statements/comparison_operators.html"
                 >
                   
                   Comparison Operators
@@ -804,10 +821,27 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/if_statements/logical_operators.html"
+                  href="/if-statements/logical_operators.html"
                 >
                   
                   Logical Operators
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/if-statements/if.html"
+                >
+                  
+                  If Statements
                 </a>
 
                 
@@ -832,7 +866,7 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/data_structures/intro.html"
+          href="/data-structures/intro.html"
         >
           
           Data Structures
@@ -854,7 +888,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/tuple.html"
+                  href="/data-structures/tuple.html"
                 >
                   
                   Tuple
@@ -871,7 +905,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/lists.html"
+                  href="/data-structures/lists.html"
                 >
                   
                   Lists
@@ -888,7 +922,7 @@ initFunction(initQuery);
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/data_structures/dictionaries.html"
+                  href="/data-structures/dictionaries.html"
                 >
                   
                   Dictionaries
@@ -1061,6 +1095,14 @@ initFunction(initQuery);
         "tags": [],
         "url": "YOUR%20URL/basics/operators.html",
         "teaser":null},{
+        "title": "String Formating",
+        
+        "excerpt":
+            "String Formatting Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/or values in your string, you may be better off using string formatting. We will use this technique more extensively later on. There are a few ways to format strings. We will cover one of the ways introduced in Python 3. That is using the string.format() method. This method treats everything contained in curly braces{} in the string as a replacement field, everything in and including the braces are replaced with the arguments of format in the output string. print('Hello {}, how...",
+        "categories": [],
+        "tags": [],
+        "url": "YOUR%20URL/basics/string_formatting.html",
+        "teaser":null},{
         "title": "Strings",
         
         "excerpt":
@@ -1091,7 +1133,7 @@ initFunction(initQuery);
             "Dictionaries So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence. In dictionaries, however, the objects stored are referred to by a key. Keys must be an immutable type, for example a string, number or tuple containing only immutable types. You can create a dictionary using the dict function; and assign values using the subscript notation: dictionary[key] = value d = dict() d[1] = 'a' d['lst'] = [1, 2, 3] print(d) {1: 'a', 'lst': [1, 2, 3]} You can also access dictionary values using the subscript notation: print(d[1]) a...",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/data_structures/dictionaries.html",
+        "url": "YOUR%20URL/data-structures/dictionaries.html",
         "teaser":null},{
         "title": "Data Structures",
         
@@ -1099,7 +1141,7 @@ initFunction(initQuery);
             "Data Structures   In this chapter we will present a brief overview of Python’s standard data structures, namely tuples, lists and dictionaries. For a more broad overview you can refer to the documentation.  ",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/data_structures/intro.html",
+        "url": "YOUR%20URL/data-structures/intro.html",
         "teaser":null},{
         "title": "Lists",
         
@@ -1107,7 +1149,7 @@ initFunction(initQuery);
             "Lists Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable object or square brackets []: list1 = list((1, 2, 3)) print('list1', list1) list2 = [4, 8, 9] print('list2', list2) list1 [1, 2, 3] list2 [4, 8, 9] You can access elements of the list by indexing and slicing it: letters = ['a', 'b', 'c', 'd', 'e'] print('Letters:', letters) print('First character:', letters[0]) print('Second character:', letters[1]) print('Last character:', letters[-1]) print('Every second character:', letters[::2]) Letters: ['a', 'b', 'c', 'd', 'e'] First character: a Second character: b...",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/data_structures/lists.html",
+        "url": "YOUR%20URL/data-structures/lists.html",
         "teaser":null},{
         "title": "Tuple",
         
@@ -1115,7 +1157,7 @@ initFunction(initQuery);
             "Tuple Just as strings are a sequence of characters, tuples are a sequence of objects. This makes their use far more general. You can set a tuple by separating the objects using commas. For example: t = 1, 2, 3, 'a', 'b', 'c' print(t) (1, 2, 3, 'a', 'b', 'c') This is called tuple packing. You can also put brackets around the objects, which is useful if you need to instance a list and use it in the same line (for example as a function argument): print(('a', 1, 'b', 2, 'c', 3)) ('a', 1, 'b', 2, 'c', 3) Like strings,...",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/data_structures/tuple.html",
+        "url": "YOUR%20URL/data-structures/tuple.html",
         "teaser":null},{
         "title": "Booleans",
         
@@ -1123,7 +1165,7 @@ initFunction(initQuery);
             "Booleans (bool)   The boolean data type (or bools) hold one of two values: True or False.           bool_var1 = True  print('Var 1', bool_var1, type(bool_var1))  bool_var2 = False  print('Var 2', bool_var2, type(bool_var2))                         Var 1 True &lt;class 'bool'&gt; Var 2 False &lt;class 'bool'&gt;                  ",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/if_statements/bools.html",
+        "url": "YOUR%20URL/if-statements/bools.html",
         "teaser":null},{
         "title": "Comparison Operators",
         
@@ -1131,7 +1173,15 @@ initFunction(initQuery);
             "Comparison Operators Comparison operators operate on two variables and return a boolean result. Less-than &lt; and Greater-than &gt; These operators act in the same way as the mathematical objects you are familiar with. If a is less than b, then a &lt; b will return True and a &gt; b will return False. For example: print('3 &gt; 2 is', 3 &gt; 2) print('2.54 &lt; 1 is', 2.54 &lt; 1) print('1 &lt; 1 is', 1 &lt; 1) 3 &gt; 2 is True 2.54 &lt; 1 is False 1 &lt; 1 is False Note that these operators act on both integers and...",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/if_statements/comparison_operators.html",
+        "url": "YOUR%20URL/if-statements/comparison_operators.html",
+        "teaser":null},{
+        "title": "If Statements",
+        
+        "excerpt":
+            "If Statement The if statement is used to execute a block of code if a condition is true. The syntax of an if statement is: if condition: block of code where condition must be/evaluate to a boolean value. If condition evaluates to True then control moves to the block of code indented after the : and it is executed. If condition evaluates to False, then the block of code is skipped and control moves on to the code after the if statement. Worked Example Let’s consider the case where we want to check if one variable is greater than the...",
+        "categories": [],
+        "tags": [],
+        "url": "YOUR%20URL/if-statements/if.html",
         "teaser":null},{
         "title": "If Statements",
         
@@ -1139,7 +1189,7 @@ initFunction(initQuery);
             "Control Flow: If Statements  Control flow dictates the order in which your lines of code are executed. In order to make complex programs, we need to make more than a list of statements to be executed sequentially. Control flow gives us tools to execute blocks of code conditionally (with if statements) and repeatedly (with loops).   In this chapter we shall cover if statements, but first we need to discuss Boolean data types and the logical operators which act on them.  ",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/if_statements/intro.html",
+        "url": "YOUR%20URL/if-statements/intro.html",
         "teaser":null},{
         "title": "Logical Operators",
         
@@ -1147,7 +1197,7 @@ initFunction(initQuery);
             "Logical Operators Logical operators act on booleans and return booleans. The logical operators are and, or and not. Logical and This acts on 2 booleans. It returns True if both booleans are True and False otherwise. For example: print('True and True is', True and True) print('True and False is', True and False) print('False and True is', False and True) print('False and False is', False and False) True and True is True True and False is False False and True is False False and False is False Logical or This operator acts on 2 booleans. It returns True if at least...",
         "categories": [],
         "tags": [],
-        "url": "YOUR%20URL/if_statements/logical_operators.html",
+        "url": "YOUR%20URL/if-statements/logical_operators.html",
         "teaser":null},{
         "title": "Home",
         
