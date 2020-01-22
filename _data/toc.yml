@@ -58,14 +58,14 @@
   - title: Operators
     url: /basics/operators
   - title: Assignment Operators
-    url: /basics/assignment_operators
+    url: /basics/assignment-operators
 #    not_numbered: true
   - title: Introduction to Functions
     url: /basics/functions
   - title: Strings
     url: /basics/strings
   - title: String Formating
-    url: /basics/string_formatting
+    url: /basics/string-formatting
 
 - title: If Statements
   url: /if-statements/intro
@@ -75,9 +75,9 @@
   - title: Booleans
     url: /if-statements/bools
   - title: Comparison Operators
-    url: /if-statements/comparison_operators
+    url: /if-statements/comparison-operators
   - title: Logical Operators
-    url: /if-statements/logical_operators
+    url: /if-statements/logical-operators
   - title: If Statements
     url: /if-statements/if
 
@@ -101,13 +101,13 @@
   - title: For Loops
     url: /loops/for
   # - title: For Loop Examples
-  #   url: /loops/for_examples
+  #   url: /loops/for-examples
   - title: List Comprehension
-    url: /loops/list_comp
+    url: /loops/list-comp
   - title: While Loops
     url: /loops/while
   # - title: While Loop Examples
-  #   url: /loops/while_examples
+  #   url: /loops/while-examples
   # - title: Breaking Out of Loops
   #   url: /loops/break
   # - title: Else Statement and Loops
