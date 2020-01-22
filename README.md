@@ -2,7 +2,7 @@
 
 This book serves as the post-lecture notes for the Computational Methods module from the National Astrophysics and Space Sciences Programme's Honours course at the University of Cape Town.
 
-This book was created using [Jupyter Books](https://jupyterbook.org).
+This book can be found [here](https://maystey.github.io/uct_nassp_cm/). It was created using [Jupyter Books](https://jupyterbook.org).
 
 For a record of changes to the book see the CHANGELOG file.
 
