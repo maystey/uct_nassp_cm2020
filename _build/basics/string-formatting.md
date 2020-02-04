@@ -7,8 +7,8 @@ prev_page:
   url: /basics/strings
   title: 'Strings'
 next_page:
-  url: /if-statements/intro
-  title: 'If Statements'
+  url: /data-structures/intro
+  title: 'Data Structures'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # String Formatting

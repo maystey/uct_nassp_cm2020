@@ -7,8 +7,8 @@ prev_page:
   url: /if-statements/logical-operators
   title: 'Logical Operators'
 next_page:
-  url: /data-structures/intro
-  title: 'Data Structures'
+  url: /loops/intro
+  title: 'Loops'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # If Statement

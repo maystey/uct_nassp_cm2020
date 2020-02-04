@@ -1,8 +1,8 @@
 ---
 title: 'If Statements'
 prev_page:
-  url: /basics/string-formatting
-  title: 'String Formating'
+  url: /data-structures/dictionaries
+  title: 'Dictionaries'
 next_page:
   url: /if-statements/bools
   title: 'Booleans'

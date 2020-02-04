@@ -1,8 +1,8 @@
 ---
 title: 'Data Structures'
 prev_page:
-  url: /if-statements/if
-  title: 'If Statements'
+  url: /basics/string-formatting
+  title: 'String Formating'
 next_page:
   url: /data-structures/tuple
   title: 'Tuple'

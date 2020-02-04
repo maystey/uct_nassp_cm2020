@@ -7,8 +7,8 @@ prev_page:
   url: /data-structures/lists
   title: 'Lists'
 next_page:
-  url: /loops/intro
-  title: 'Loops'
+  url: /if-statements/intro
+  title: 'If Statements'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # Dictionaries

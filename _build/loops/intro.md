@@ -1,8 +1,8 @@
 ---
 title: 'Loops'
 prev_page:
-  url: /data-structures/dictionaries
-  title: 'Dictionaries'
+  url: /if-statements/if
+  title: 'If Statements'
 next_page:
   url: /loops/for
   title: 'For Loops'
