@@ -32,7 +32,8 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Tips and tricks
 
 ### Enhancements
-- Strings put String Formatting in it's own section
+- Strings
+    - Include section on special characters
 - Introduction to Functions
     - Mention positional arguments and keyword arguments
 - Comments

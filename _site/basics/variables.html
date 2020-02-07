@@ -29,9 +29,9 @@
   "headline":
     "Variables",
   "datePublished":
-    "2020-02-04T15:08:57+02:00",
+    "2020-02-07T11:49:49+02:00",
   "dateModified":
-    "2020-02-04T15:08:57+02:00",
+    "2020-02-07T11:49:49+02:00",
   "description":
     "Variables",
   "author": {
@@ -580,6 +580,27 @@ initFunction(initQuery);
     
       
       
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/maystey/uct_nassp_cm"
+        >
+          
+          GitHub repository
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
         <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/uct_nassp_cm/search.html">Search</a></li>
         
       
@@ -1025,7 +1046,7 @@ initFunction(initQuery);
       
     
   </ul>
-  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a> <br> Go to book <a href="https://github.com/maystey/uct_nassp_cm">repository</a></p>
+  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
 </nav>
 
       
@@ -1102,7 +1123,7 @@ initFunction(initQuery);
 <h2 id="data-types">Data Types</h2>
 <p>The information stored in memory needs to be interprated if it’s to be of any use to us. To achieve this Python (and many other programming languages) uses variable types.</p>
 
-<p>In the example above we used an integer or <code class="highlighter-rouge">int</code> type. In order to check what type a variable has we can use the <code class="highlighter-rouge">type()</code> function:</p>
+<p>In the example above we used an integer or <code class="highlighter-rouge">int</code> type. In order to check what type a variable has, we can use the <code class="highlighter-rouge">type()</code> function:</p>
 
 <div class="cell code_cell">
   <div class="input_area">
@@ -1159,8 +1180,8 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">'String using single quotes, " does not break the string.'</span>
-<span class="s">"String using double qotes, ' doesn't break the string"</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'String using single quotes, " does not break the string.'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"String using double quotes, ' doesn't break the string."</span><span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
@@ -1179,26 +1200,31 @@ initFunction(initQuery);
 
 <div class="cell code_cell">
   <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">'''String with a
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span>
+<span class="s">'''String with a
 line break'''</span>
+<span class="p">)</span>
 
+<span class="k">print</span><span class="p">(</span>
 <span class="s">"""Another string with a
 line break"""</span>
+<span class="p">)</span>
 
 </code></pre></div>    </div>
   </div>
 
   <div class="output_wrapper">
     <div class="output_subarea">
-
-      <div class="output_data_text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Another string with a\nline break'
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String with a
+line break
+Another string with a
+line break
 </code></pre></div>      </div>
-
     </div>
   </div>
 </div>
 
-<p>You could also insert line breaks using a special character, but we will discuss this later.</p>
+<p>You could also insert line breaks using a the special character <code class="highlighter-rouge">'\n</code> <!--- , but we will discuss this later. #I'm not sure if I got to this --></p>
 
 <h2 id="variable-names">Variable Names</h2>
 <p>So far we have been using single letters (<code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">b</code>, <code class="highlighter-rouge">c</code>, <code class="highlighter-rouge">d</code>, …) as variable names, but this approach can be confusing for long segments of codes. Variable names should be as clear and descriptive as possible (describing what they are used for), while still being short enough to type out efficiently.</p>
@@ -1269,7 +1295,7 @@ line break"""</span>
 
 <p>Now, you may want to use a variable that is more than one word long, for example <code class="highlighter-rouge">price at opening</code>, but blanks are illegal! One poor option is just leaving out the blanks, like <code class="highlighter-rouge">priceatopening</code>. Then it may be hard to figure out where words split. Two practical options are:</p>
 <ul>
-  <li>Underscore separated: putting underscores (which are legal) in place of the blanks, like <code class="highlighter-rouge">price\_at\_opening</code>.</li>
+  <li>Underscore separated: putting underscores (which are legal) in place of the blanks, like <code class="highlighter-rouge">price_at_opening</code>.</li>
   <li>Using camel-case: omitting spaces and using all lowercase, except capitalizing all words after the first, like <code class="highlighter-rouge">priceAtOpening</code>.</li>
   <li>Using Pascal-case: similar to camel-case but capitalising the first word, <code class="highlighter-rouge">PrinceAtOpening</code>.</li>
 </ul>

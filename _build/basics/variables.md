@@ -58,7 +58,7 @@ print(a)
 ## Data Types
 The information stored in memory needs to be interprated if it's to be of any use to us. To achieve this Python (and many other programming languages) uses variable types. 
 
-In the example above we used an integer or `int` type. In order to check what type a variable has we can use the `type()` function:
+In the example above we used an integer or `int` type. In order to check what type a variable has, we can use the `type()` function:
 
 
 
@@ -139,8 +139,8 @@ You are not limited to single quotes. For single line strings you can use double
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-'String using single quotes, " does not break the string.'
-"String using double qotes, ' doesn't break the string"
+print('String using single quotes, " does not break the string.')
+print("String using double quotes, ' doesn't break the string.")
 
 ```
 </div>
@@ -168,32 +168,35 @@ For strings containing line breaks, you can use `'''` or `"""`:
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
+print(
 '''String with a
 line break'''
+)
 
+print(
 """Another string with a
 line break"""
+)
 
 ```
 </div>
 
 <div class="output_wrapper" markdown="1">
 <div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
+{:.output_stream}
 ```
-'Another string with a\nline break'
+String with a
+line break
+Another string with a
+line break
 ```
-
-
 </div>
 </div>
 </div>
 
 
 
-You could also insert line breaks using a special character, but we will discuss this later.
+You could also insert line breaks using a the special character `'\n` <!--- , but we will discuss this later. #I'm not sure if I got to this -->
 
 
 
@@ -220,7 +223,7 @@ To this end we should delve into some of the restrictions on the character seque
 * Python is case sensitive: The variable names `last`, `LAST`, and `LaSt` are all different.
 
 Now, you may want to use a variable that is more than one word long, for example `price at opening`, but blanks are illegal! One poor option is just leaving out the blanks, like `priceatopening`. Then it may be hard to figure out where words split. Two practical options are:
-*  Underscore separated: putting underscores (which are legal) in place of the blanks, like `price\_at\_opening`.
+*  Underscore separated: putting underscores (which are legal) in place of the blanks, like `price_at_opening`.
 *  Using camel-case: omitting spaces and using all lowercase, except capitalizing all words after the first, like `priceAtOpening`.
 * Using Pascal-case: similar to camel-case but capitalising the first word, `PrinceAtOpening`.
 

@@ -14,7 +14,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 # Comments
 <!--- Add a section about using comments as headers? -->
 
-Comments make it possible to write messages in our scripts that are not to be read by the computer but fellow humans.
+Comments make it possible to write messages in our scripts that are not to be read by the computer, but fellow humans.
 
 In Python you can write an in-line comment by using the `#` symbol. Everything after this symbol until the end of the line will be considered a part of the comment and the computer will not read this as code. For example:
 
@@ -40,7 +40,7 @@ Not a comment
 
 
 
-Comments can be useful for explaining what a script/section of a script does or why you've made the choices you have. It is not normally necessary to explain what the code does, as it should be easy enough to read the actual code to determine this.
+Comments can be useful for explaining what a script/section of a script does or why you've made the choices you have made in a particular line. It is not normally necessary to explain what each line of code does, as it should be easy enough to read the actual code to determine this.
 
 
 
@@ -97,5 +97,36 @@ some code
 
 ## Commenting Out Portions of Code
 
-Sometimes you may want to comment out code to temporarily remove it from the program without deleting it. It is especially useful when you want to isolate code snippets during debugging. <!--- Need to add debugging into the glossary --> <!--- Show example of this?-->
+Sometimes you may want to comment out code to temporarily remove it from the program without deleting it. It is especially useful when you want to isolate code snippets during debugging or print statements used in debugging during normal runtime. For example: <!--- Need to add debugging into the glossary --> <!--- Show example of this?-->
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+var1 = 3
+var2 = var1
+
+#print('Variable 1 is', var1)
+#print('Variable 2 is', var2)
+
+var1 = 2
+
+#print('')
+print('Variable 1 is', var1)
+print('Variable 2 is', var2)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+Variable 1 is 2
+Variable 2 is 3
+```
+</div>
+</div>
+</div>
 

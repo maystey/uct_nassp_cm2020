@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Edited Basics: Variables and Commentsq
 - Replaced the Jupyter Book logo with the UCT logo. Still need to replace the favicon.
 - Moved the Data Structures chapter to before the If Statements chapter.
 - Chapter contents are no longer expanded in the sidebar. The sidebar was already too long and that was only a quarter of the contents.

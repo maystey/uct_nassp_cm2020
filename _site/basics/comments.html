@@ -29,9 +29,9 @@
   "headline":
     "Comments",
   "datePublished":
-    "2020-02-04T15:08:57+02:00",
+    "2020-02-07T11:49:49+02:00",
   "dateModified":
-    "2020-02-04T15:08:57+02:00",
+    "2020-02-07T11:49:49+02:00",
   "description":
     "Comments",
   "author": {
@@ -580,6 +580,27 @@ initFunction(initQuery);
     
       
       
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/maystey/uct_nassp_cm"
+        >
+          
+          GitHub repository
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
         <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/uct_nassp_cm/search.html">Search</a></li>
         
       
@@ -1025,7 +1046,7 @@ initFunction(initQuery);
       
     
   </ul>
-  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a> <br> Go to book <a href="https://github.com/maystey/uct_nassp_cm">repository</a></p>
+  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
 </nav>
 
       
@@ -1070,7 +1091,7 @@ initFunction(initQuery);
               <h1 id="comments">Comments</h1>
 <!--- Add a section about using comments as headers? -->
 
-<p>Comments make it possible to write messages in our scripts that are not to be read by the computer but fellow humans.</p>
+<p>Comments make it possible to write messages in our scripts that are not to be read by the computer, but fellow humans.</p>
 
 <p>In Python you can write an in-line comment by using the <code class="highlighter-rouge">#</code> symbol. Everything after this symbol until the end of the line will be considered a part of the comment and the computer will not read this as code. For example:</p>
 
@@ -1089,7 +1110,7 @@ initFunction(initQuery);
   </div>
 </div>
 
-<p>Comments can be useful for explaining what a script/section of a script does or why you’ve made the choices you have. It is not normally necessary to explain what the code does, as it should be easy enough to read the actual code to determine this.</p>
+<p>Comments can be useful for explaining what a script/section of a script does or why you’ve made the choices you have made in a particular line. It is not normally necessary to explain what each line of code does, as it should be easy enough to read the actual code to determine this.</p>
 
 <h2 id="commenting-on-a-line-of-code">Commenting on a Line of Code</h2>
 
@@ -1130,7 +1151,33 @@ initFunction(initQuery);
 
 <h2 id="commenting-out-portions-of-code">Commenting Out Portions of Code</h2>
 
-<p>Sometimes you may want to comment out code to temporarily remove it from the program without deleting it. It is especially useful when you want to isolate code snippets during debugging. <!--- Need to add debugging into the glossary --> <!--- Show example of this?--></p>
+<p>Sometimes you may want to comment out code to temporarily remove it from the program without deleting it. It is especially useful when you want to isolate code snippets during debugging or print statements used in debugging during normal runtime. For example: <!--- Need to add debugging into the glossary --> <!--- Show example of this?--></p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span>
+
+<span class="c1">#print('Variable 1 is', var1)
+#print('Variable 2 is', var2)
+</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1">#print('')
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Variable 1 is'</span><span class="p">,</span> <span class="n">var1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Variable 2 is'</span><span class="p">,</span> <span class="n">var2</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Variable 1 is 2
+Variable 2 is 3
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
 
 
               <nav class="c-page__nav">
