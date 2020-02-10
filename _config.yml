@@ -23,23 +23,37 @@ description: >-
   Course notes for the NASSP Honours Computational Methods
   Module at the University of Cape Town.
 
-baseurl: /uct_nassp_cm              # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: https://maystey.github.io              # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /uct_nassp_cm # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: https://maystey.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################
 # Jupyter Book settings
 
+# Main page settings
+footer_text: This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
+  Jupyter Book Community</a>
+
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
-textbook_logo: images/logo/UCTcircular_logo.png               # A logo to be displayed at the top of your textbook sidebar
-textbook_logo_link: http://www.ast.uct.ac.za/ast/postgraduate/4007w                    # A link for the logo.
-sidebar_footer_text: Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a>
-number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
+collapse_inactive_sections: true  # Whether to collapse the sub-sections within a non-active section in the sidebar
+textbook_logo: images/logo/UCTcircular_logo.png   # A logo to be displayed at the top of your textbook sidebar. Should be square
+textbook_logo_link: http://www.ast.uct.ac.za/ast/postgraduate/4007w # A link for the logo.
+sidebar_footer_text: Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter
+  Book</a>
+number_toc_chapters: false         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
 
 # Search settings
 search_max_words_in_content: 100   # In the search function, use at most this many words (too many words will make search slow)
+
+# Controlling page information
+page_titles: None                      # Either `None`, `infer`, or `toc`
+page_authors: None                     # Either `None` or `infer`
+filename_title_split_character: _     # If inferring titles based on filename, splt on this character.
+
+# Math settings
+number_equations: false                 # Whether to automatically number all block equations with MathJax
 
 #######################################################################################
 # Interact link settings
@@ -72,6 +86,7 @@ use_show_widgets_button: true                # If 'true', display a button to al
 # Download settings
 use_download_button: true                # If 'true', display a button to download a zip file for the notebook
 download_button_text: Download                # The text that download buttons will contain
+download_page_header: Made with Jupyter Book                # A header that will be displayed at the top of and PDF-printed page
 
 #######################################################################################
 # Jupyter book extensions and additional features
@@ -86,10 +101,6 @@ scholar:
 # Navigate to https://analytics.google.com, add a new property for your jupyter book and copy the tracking id here.
 google_analytics:
   mytrackingcode:
-
-#######################################################################################
-# Jupyter book settings you probably don't need to change
-
 content_folder_name: content           # The folder where your raw content (notebooks/markdown files) are located
 images_url: /assets/images                   # Path to static image files
 css_url: /assets/css                      # Path to static CSS files
@@ -138,10 +149,12 @@ exclude:
 - vendor/cache/
 - vendor/gems/
 - vendor/ruby/
+- README.md
+- CHAPTERS.md
 
 plugins:
 - jekyll-redirect-from
 - jekyll-scholar
 
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
-jupyter_book_version: 0.5.1
+jupyter_book_version: 0.6.4

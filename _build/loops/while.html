@@ -1,0 +1,283 @@
+---
+interact_link: content/loops/while.ipynb
+kernel_name: python3
+kernel_path: content/loops
+has_widgets: false
+title: |-
+  While Loops
+pagenum: 21
+prev_page:
+  url: /loops/list-comp.html
+next_page:
+  url: 
+suffix: .ipynb
+search: loop while condition loops t example code evaluates false never want looping block where true control series useful keep give problem using repeated value after consider recursive eqnarray tn n stop maximum counter maxcount chosen less convenient iterate wanted until certain met tool job isnt exactly solvable syntax boolean repeating executing indented longer progress correct term here note starts inside executed worked lets following introduce examples begin end drops below solution notice not because continues converse avoiding infinite recursion something careful doesnt break another leave sometimes iterations avoid recursions normally very large rather concrete replacing used replace bit case becomes
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">While Loops</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-Loops">While Loops<a class="anchor-link" href="#While-Loops"> </a></h1><p>For loops are useful if you know what you want to iterate over, but what if you wanted to keep looping until a certain condition is met? <code>while</code> loops are the tool for this job.</p>
+<!--- Give an example problem that isn't exactly solvable using a for loop -->
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The syntax for a <code>while</code> loop is:</p>
+
+<pre><code>while condition:
+    block of code to be repeated</code></pre>
+<p>where <code>condition</code> is/evaluates to a boolean value. The loop will keep repeating, executing the block of code indented after the <code>:</code> as long as <code>condition</code> evaluates to <code>True</code>. When <code>condition</code> evaluates to <code>False</code> the loop will no longer be repeated and control will progress to the code after the loop. <!--- is control the correct term here? --> Note that if <code>condition</code> starts as <code>False</code>, the code inside the loop will never be executed.</p>
+<!-- example -->
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h2><p>Let's consider the following problem where we can make use of a <code>while</code> loop. Consider the recursive series: <!--- Introduce recursive series in For Loop Examples --></p>
+$$
+\begin{eqnarray}
+T_n &amp; = &amp; T_{n-1}^{3/4} \\
+T_0 &amp; = &amp; 100
+\end{eqnarray}
+$$<p>We want to know when this series drops below 2 (what is the first value of $n$ for which $T_n &lt; 2$). One solution is:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#T_0 term</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">T</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mf">4.</span><span class="p">)</span> <span class="c1">#T_{n+1} term</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;T_n is less than 2 for n =&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>T_n is less than 2 for n = 7
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice how the condition is <code>T &gt;= 2</code> and not <code>T &lt; 2</code>. That is because the loop continues <strong>while</strong> the condition is true and we want the loop to stop when <code>T &lt; 2</code> is <code>True</code> (and the converse <code>T &gt;= 2</code> is <code>False</code>).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Avoiding-Infinite-Recursion">Avoiding Infinite Recursion<a class="anchor-link" href="#Avoiding-Infinite-Recursion"> </a></h2><p>Something to be careful of when using <code>while</code> loops is a loop that doesn't stop looping. If <code>condition</code> never evaluates to <code>False</code>, or if you never break out of the loop in another way, control will never leave the loop. Sometimes it is useful to use a maximum number of loop iterations to avoid this:</p>
+
+<pre><code>counter = 0
+
+while condition and counter &lt; max_count:
+    block of code</code></pre>
+<p>where <code>max_count</code> is the chosen maximum number of recursions (normally chosen as a very large number). <!--- rather give a concrete example --></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Replacing-For-Loops">Replacing For Loops<a class="anchor-link" href="#Replacing-For-Loops"> </a></h2><p><code>while</code> loops can be used to replace for <code>loops</code>, for example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## For loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;for loop&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="c1">## While loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;while loop&#39;</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>for loop
+0
+1
+2
+3
+4
+
+while loop
+0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see the <code>while</code> loop is a bit less convenient than the <code>for</code> loop in this case. The <code>while</code> loop becomes even less convenient when looping through a collection:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;a string&#39;</span>
+
+<span class="c1">## For loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;for loop&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+
+<span class="c1">## While loop</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;while loop&#39;</span><span class="p">)</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>for loop
+a
+ 
+s
+t
+r
+i
+n
+g
+
+while loop
+a
+ 
+s
+t
+r
+i
+n
+g
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

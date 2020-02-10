@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Strings</title>
-  <meta name="description" content="Strings">
+  <meta name="description" content="        Strings    Strings In this section we shall take a closer look at the string type and some of the operations associated with them. The following sect...">
 
   <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/strings.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
@@ -16,24 +14,21 @@
   <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/strings.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Strings" />
-<meta property="og:description" content="Strings" />
-<meta property="og:image"       content="" />
+<meta property="og:description" content="        Strings    Strings In this section we shall take a closer look at the string type and some of the operations associated with them. The following sect..." />
+<meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
+
+<meta name="twitter:card" content="summary">
 
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage":
-    "https://maystey.github.io/uct_nassp_cm/basics/strings.html",
-  "headline":
-    "Strings",
-  "datePublished":
-    "2020-02-07T11:49:49+02:00",
-  "dateModified":
-    "2020-02-07T11:49:49+02:00",
-  "description":
-    "Strings",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/strings.html",
+  "headline": "Strings",
+  "datePublished": "2020-02-10T14:18:54+02:00",
+  "dateModified": "2020-02-10T14:18:54+02:00",
+  "description": "        Strings    Strings In this section we shall take a closer look at the string type and some of the operations associated with them. The following sect...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -58,16 +53,6 @@
 
   </script>
   <link rel="stylesheet" href="/uct_nassp_cm/assets/css/styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -80,6 +65,8 @@
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -88,35 +75,24 @@ MathJax.Hub.Config({
         processEscapes: true,
         processEnvironments: true
     },
-    CommonHTML: {
-        linebreaks: {
-            automatic: true,
-        },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
     },
+    
 });
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
 
   <!-- DOM updating function -->
-  <script>
-const runWhenDOMLoaded = cb => {
-  if (document.readyState != 'loading') {
-    cb()
-  } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', cb)
-  } else {
-    document.attachEvent('onreadystatechange', function() {
-      if (document.readyState == 'complete') cb()
-    })
-  }
-}
+  <script src="/uct_nassp_cm/assets/js/page/dom-update.js"></script>
 
-// Helper function to init things quickly
-initFunction = function(myfunc) {
-  runWhenDOMLoaded(myfunc);
-  document.addEventListener('turbolinks:load', myfunc);
-};
-</script>
+  <!-- Selectors for elements on the page -->
+  <script src="/uct_nassp_cm/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
@@ -124,18 +100,12 @@ initFunction = function(myfunc) {
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
-  <script src="/uct_nassp_cm/assets/js/anchor.min.js"  type="text/javascript"></script>
-  <script>
-
-initFunction(function () {
-    anchors.add("main h1, main h2, main h3, main h4")
-});
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
-  <script src="/uct_nassp_cm/assets/js/turbolinks.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
   <!-- Load nbinteract for widgets -->
@@ -153,13 +123,13 @@ initFunction(function () {
 
 const thebelabCellButton = id =>
   `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start interactive mode">
+    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
   </a>`
 
 
 const addThebelabButtonToCodeCells =  () => {
 
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
@@ -173,23 +143,7 @@ initFunction(addThebelabButtonToCodeCells);
 </script>
 
 
-
-<script type="text/x-thebe-config">
-    {
-      requestKernel: true,
-      binderOptions: {
-        repo: 'YOUR-ORG/YOUR-REPO',
-        ref: 'gh-pages',
-      },
-      codeMirrorConfig: {
-        theme: "abcdef"
-      },
-      kernelOptions: {
-        name: 'python3',
-      }
-    }
-</script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@latest/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks
@@ -214,20 +168,12 @@ initFunction(addThebelabButtonToCodeCells);
             const codeCells = document.querySelectorAll('.input_area pre')
             codeCells.forEach((codeCell, index) => {
                 const id = codeCellId(index)
-                codeCell.setAttribute('data-executable', 'true')
 
-                // Figure out the language it uses and add this too
-                var parentDiv = codeCell.parentElement.parentElement;
-                var arrayLength = parentDiv.classList.length;
-                for (var ii = 0; ii < arrayLength; ii++) {
-                    var parts = parentDiv.classList[ii].split('language-');
-                    if (parts.length === 2) {
-                        // If found, assign dataLanguage and break the loop
-                        var dataLanguage = parts[1];
-                        break;
-                    }
-                }
+                // Clean up the language to make it work w/ CodeMirror and add it to the cell
+                dataLanguage = ""
+                dataLanguage = detectLanguage(dataLanguage);
                 codeCell.setAttribute('data-language', dataLanguage)
+                codeCell.setAttribute('data-executable', 'true')
 
                 // If the code cell is hidden, show it
                 var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
@@ -255,6 +201,13 @@ initFunction(addThebelabButtonToCodeCells);
             outputs.forEach((output, index) => {
                 output.remove();
             });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
         }
 
         // Add event listener for the function to modify code cells
@@ -270,181 +223,28 @@ initFunction(addThebelabButtonToCodeCells);
 
     // Initialize Thebelab
     initFunction(initThebelab);
-</script>
 
-
-
-  <!-- Load the auto-generating TOC -->
-  <script src="/uct_nassp_cm/assets/js/tocbot.min.js"  type="text/javascript"></script>
-  <script>
-var initToc = function () {
-  tocbot.init({
-    tocSelector: 'nav.onthispage',
-    contentSelector: '.c-textbook__content',
-    headingSelector: 'h2, h3',
-    orderedList: false,
-    collapseDepth: 6,
-    listClass: 'toc__menu',
-    activeListItemClass: "",  // Not using
-    activeLinkClass: "", // Not using
-  });
-  tocbot.refresh();
+// Helper function to munge the language name
+var detectLanguage = (language) => {
+    if (language.indexOf('python') > -1) {
+        language = "python";
+    }
+    return language;
 }
-initFunction(initToc);
 </script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
-  <script src="/uct_nassp_cm/assets/js/ga.js" async></script>
+  
+
 
   <!-- Clipboard copy button -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-
-  <!-- Load JS that depends on site variables -->
-  <script>
-/**
- * Set up copy/paste for code blocks
- */
-const codeCellId = index => `codecell${index}`
-
-const clipboardButton = id =>
-  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/uct_nassp_cm/assets/images/copy-button.svg" alt="Copy to clipboard">
-  </a>`
-
-// Clears selected text since ClipboardJS will select the text when copying
-const clearSelection = () => {
-  if (window.getSelection) {
-    window.getSelection().removeAllRanges()
-  } else if (document.selection) {
-    document.selection.empty()
-  }
-}
-
-// Changes tooltip text for two seconds, then changes it back
-const temporarilyChangeTooltip = (el, newText) => {
-  const oldText = el.getAttribute('data-tooltip')
-  el.setAttribute('data-tooltip', newText)
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-}
-
-const addCopyButtonToCodeCells = () => {
-  // If ClipboardJS hasn't loaded, wait a bit and try again. This
-  // happens because we load ClipboardJS asynchronously.
-  if (window.ClipboardJS === undefined) {
-    setTimeout(addCopyButtonToCodeCells, 250)
-    return
-  }
-
-  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("copy-button" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
-    }
-  })
-
-  const clipboard = new ClipboardJS('.copybtn')
-  clipboard.on('success', event => {
-    clearSelection()
-    temporarilyChangeTooltip(event.trigger, 'Copied!')
-  })
-
-  clipboard.on('error', event => {
-    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
-  })
-
-  // Get rid of clipboard before the next page visit to avoid memory leak
-  document.addEventListener('turbolinks:before-visit', () =>
-    clipboard.destroy()
-  )
-}
-
-initFunction(addCopyButtonToCodeCells);
-</script>
-
-
-  <!-- Hide cell code -->
-  <script>
-    /**
-    Add buttons to hide code cells
-    */
-
-
-    var setCodeCellVisibility = function (inputField, kind) {
-        // Update the image and class for hidden
-        var id = inputField.getAttribute('data-id');
-        var codeCell = document.querySelector(`#${id} div.highlight`);
-
-        if (kind === "visible") {
-            codeCell.classList.remove('hidden');
-            inputField.checked = true;
-        } else {
-            codeCell.classList.add('hidden');
-            inputField.checked = false;
-        }
-    }
-
-    var toggleCodeCellVisibility = function (event) {
-        // The label is clicked, and now we decide what to do based on the input field's clicked status
-        if (event.target.tagName === "LABEL") {
-            var inputField = event.target.previousElementSibling;
-        } else {
-            // It is the span inside the target
-            var inputField = event.target.parentElement.previousElementSibling;
-        }
-
-        if (inputField.checked === true) {
-            setCodeCellVisibility(inputField, "visible");
-        } else {
-            setCodeCellVisibility(inputField, "hidden");
-        }
-    }
-
-
-    // Button constructor
-    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
-
-    var addHideButton = function () {
-        // If a hide button is already added, don't add another
-        if (document.querySelector('div.hidecode input') !== null) {
-            return;
-        }
-
-        // Find the input cells and add a hide button
-        document.querySelectorAll('div.input_area').forEach(function (item, index) {
-            if (!item.classList.contains("hidecode")) {
-                // Skip the cell if it doesn't have a hidecode class
-                return;
-            }
-
-            const id = codeCellId(index)
-            item.setAttribute('id', id);
-            // Insert the button just inside the end of the next div
-            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
-
-            // Set up the visibility toggle
-            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
-            hideLink.addEventListener('click', toggleCodeCellVisibility)
-        });
-    }
-
-
-    // Initialize the hide buttos
-    var initHiddenCells = function () {
-        // Add hide buttons to the cells
-        addHideButton();
-
-        // Toggle the code cells that should be hidden
-        document.querySelectorAll('div.hidecode input').forEach(function (item) {
-            setCodeCellVisibility(item, 'hidden');
-            item.checked = true;
-        })
-    }
-
-    initFunction(initHiddenCells);
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
   <script src="/uct_nassp_cm/assets/js/scripts.js" async></script>
@@ -457,7 +257,7 @@ initFunction(addCopyButtonToCodeCells);
   
 
   <!-- Lunr search code - will only be executed on the /search page -->
-  <script src="/uct_nassp_cm/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
   <script>var initQuery = function() {
   // See if we have a search box
   var searchInput = document.querySelector('input#lunr_search');
@@ -543,9 +343,68 @@ initFunction(addCopyButtonToCodeCells);
 
 initFunction(initQuery);
 </script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/uct_nassp_cm/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/uct_nassp_cm/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/uct_nassp_cm/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
 </head>
 
   <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "YOUR-ORG/YOUR-REPO",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: "content/basics"
+    }
+}
+</script>
+
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
       
@@ -553,7 +412,7 @@ initFunction(initQuery);
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="http://www.ast.uct.ac.za/ast/postgraduate/4007w"><img src="/uct_nassp_cm/images/logo/UCTcircular_logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.ast.uct.ac.za/ast/postgraduate/4007w"><img src="/uct_nassp_cm/images/logo/UCTcircular_logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">AST4007W Computational Methods</h2>
   <ul class="c-sidebar__chapters">
     
@@ -562,19 +421,29 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/intro.html"
         >
           
           Home
         </a>
-
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
 
       
     
@@ -583,26 +452,32 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="https://github.com/maystey/uct_nassp_cm">
+        <a class="c-sidebar__entry"
           href="https://github.com/maystey/uct_nassp_cm"
         >
           
           GitHub repository
         </a>
-
-        
       </li>
 
       
+      
+
+      
+
+      
+      
+
+      
+
+      
     
-      
-      
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/uct_nassp_cm/search.html">Search</a></li>
-        
       
       
         <li class="c-sidebar__divider"></li>
@@ -612,167 +487,170 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/basics/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/basics/intro.html"
         >
           
           Python Basics
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/variables.html"
-                >
-                  
-                  Variables
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/comments.html"
-                >
-                  
-                  Comments
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/types.html"
-                >
-                  
-                  Type Conversion
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/operators.html"
-                >
-                  
-                  Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/assignment-operators.html"
-                >
-                  
-                  Assignment Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/functions.html"
-                >
-                  
-                  Introduction to Functions
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/uct_nassp_cm/basics/strings.html"
-                >
-                  
-                  Strings
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/string-formatting.html"
-                >
-                  
-                  String Formating
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/variables">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/variables.html"
+              >
+                
+                Variables
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/comments">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/comments.html"
+              >
+                
+                Comments
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/types">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/types.html"
+              >
+                
+                Type Conversion
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/operators.html"
+              >
+                
+                Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/assignment-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/assignment-operators.html"
+              >
+                
+                Assignment Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/functions">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/functions.html"
+              >
+                
+                Introduction to Functions
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/strings">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/strings.html"
+              >
+                
+                Strings
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -781,82 +659,94 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/data-structures/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/data-structures/intro.html"
         >
           
           Data Structures
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/tuple.html"
-                >
-                  
-                  Tuple
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/lists.html"
-                >
-                  
-                  Lists
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/dictionaries.html"
-                >
-                  
-                  Dictionaries
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/tuple">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/tuple.html"
+              >
+                
+                Tuple
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/lists">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/lists.html"
+              >
+                
+                Lists
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/dictionaries">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/dictionaries.html"
+              >
+                
+                Dictionaries
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -865,99 +755,113 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/if-statements/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/if-statements/intro.html"
         >
           
           If Statements
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/bools.html"
-                >
-                  
-                  Booleans
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/comparison-operators.html"
-                >
-                  
-                  Comparison Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/logical-operators.html"
-                >
-                  
-                  Logical Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/if.html"
-                >
-                  
-                  If Statements
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/bools">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/bools.html"
+              >
+                
+                Booleans
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/comparison-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/comparison-operators.html"
+              >
+                
+                Comparison Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/logical-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/logical-operators.html"
+              >
+                
+                Logical Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/if">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/if.html"
+              >
+                
+                If Statements
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -966,82 +870,94 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/loops/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/loops/intro.html"
         >
           
           Loops
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/for.html"
-                >
-                  
-                  For Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/list-comp.html"
-                >
-                  
-                  List Comprehension
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/while.html"
-                >
-                  
-                  While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/for">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/for.html"
+              >
+                
+                For Loops
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/list-comp">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/list-comp.html"
+              >
+                
+                List Comprehension
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/while">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/while.html"
+              >
+                
+                While Loops
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -1050,453 +966,964 @@ initFunction(initQuery);
 </nav>
 
       
-      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
-      <aside class="sidebar__right">
-          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
-          <nav class="onthispage">
-          </nav>
-      </aside>
-      
-      <main class="c-textbook__page" tabindex="-1">
-          <div class="o-wrapper">
-            <div class="c-sidebar-toggle">
+      <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
-  <button
-    id="js-sidebar-toggle"
-    class="hamburger hamburger--arrowalt is-active"
-  >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
-  </button>
-</div>
-
-            
-<div class="buttons">
-<a href="/uct_nassp_cm/content/basics/strings.ipynb" download>
-<button id="interact-button-download" class="interact-button">Download</button>
-</a>
-
-<button id="interact-button-thebelab" class="interact-button">Thebelab</button>
-
-
-
-
-
-</div>
-
-
-            <div class="c-textbook__content">
-              <h1 id="strings">Strings</h1>
-
-<p>In this section we shall take a closer look at the string type and some of the operations associated with them. The following section makes heavy reference to online notes by Dr. Andrew N. Harrington, <a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html">Hands-on Python 3 Tutorial</a> released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.</p>
-
-<h2 id="concatenation-">Concatenation <code class="highlighter-rouge">+</code></h2>
-<p>For strings the <code class="highlighter-rouge">+</code> symbol is used to concatenate two strings together. For example:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'One string'</span> <span class="o">+</span> <span class="s">' and another'</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>One string and another
-</code></pre></div>      </div>
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        <a href="/uct_nassp_cm/content/basics/strings.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
     </div>
-  </div>
 </div>
 
-<h2 id="duplication-">Duplication <code class="highlighter-rouge">*</code></h2>
-<p>The duplication <code class="highlighter-rouge">*</code> operator takes a string and an integer and repeats the string as many times as the integer value:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'hello '</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="s">'bye '</span><span class="p">)</span>
+  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
 
-</code></pre></div>    </div>
+  
+  
+  
+
+
+</div>
+
   </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/uct_nassp_cm/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/uct_nassp_cm/search.html" class="topbar-right-button" id="search-button">
+    <img src="/uct_nassp_cm/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello hello hello hello 
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Strings</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Strings">Strings<a class="anchor-link" href="#Strings"> </a></h1><p>In this section we shall take a closer look at the string type and some of the operations associated with them. The following section makes heavy reference to online notes by Dr. Andrew N. Harrington, <a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html">Hands-on Python 3 Tutorial</a> released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Concatenation-+">Concatenation <code>+</code><a class="anchor-link" href="#Concatenation-+"> </a></h2><p>For strings the <code>+</code> symbol is used to concatenate two strings together. For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;One string&#39;</span> <span class="o">+</span> <span class="s1">&#39; and another&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>One string and another
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Duplication-*">Duplication <code>*</code><a class="anchor-link" href="#Duplication-*"> </a></h2><p>The duplication <code>*</code> operator takes a string and an integer and repeats the string as many times as the integer value:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello &#39;</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="s1">&#39;bye &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello hello hello hello 
 bye bye 
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h2 id="indexing-">Indexing <code class="highlighter-rouge">[]</code></h2>
-<p>Strings can be seen as a collection of characters. Each of these character has an integer index associated with it, based on it’s position in the string. For example, take the string <code class="highlighter-rouge">'computer'</code>:</p>
+</div>
+</div>
 
-<table>
-  <tbody>
-    <tr>
-      <td>character</td>
-      <td>c</td>
-      <td>o</td>
-      <td>m</td>
-      <td>p</td>
-      <td>u</td>
-      <td>t</td>
-      <td>e</td>
-      <td>r</td>
-    </tr>
-    <tr>
-      <td>index</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-  </tbody>
-</table>
+<div class="jb_cell">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Indexing-[]">Indexing <code>[]</code><a class="anchor-link" href="#Indexing-[]"> </a></h2><p>Strings can be seen as a collection of characters. Each of these character has an integer index associated with it, based on it's position in the string. For example, take the string <code>'computer'</code>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>|---------|-|-|-|-|-|-|-|-|
+character |c|o|m|p|u|t|e|r|
+index     |0|1|2|3|4|5|6|7|</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>You can access individual characters in the string by index using:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[index]
-</code></pre></div></div>
+
+<pre><code>string[index]</code></pre>
 <p>for example:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">computer_string</span> <span class="o">=</span> <span class="s">'computer'</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Index 3:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Index 7:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Index 3: p
-Index 7: r
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">computer_string</span> <span class="o">=</span> <span class="s1">&#39;computer&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Index 3:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Index 7:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index 3: p
+Index 7: r
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>If you use an index that is too large for the given string, Python will return an error:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Index 11'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_traceback_line highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    ---------------------------------------------------------------------------
-
-    IndexError                                Traceback (most recent call last)
-
-    &lt;ipython-input-8-abeba3add71f&gt; in &lt;module&gt;()
-    ----&gt; 1 print('Index 11', computer_string[11])
-    
-
-    IndexError: string index out of range
-
-
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
-<p>You can find the number of characters in a string using the <code class="highlighter-rouge">len()</code> function:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'There are'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">),</span> <span class="s">'characters in the string'</span><span class="p">)</span>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</code></pre></div>    </div>
-  </div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Index 11&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span>
+</pre></div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There are 8 characters in the string
-</code></pre></div>      </div>
     </div>
-  </div>
+</div>
 </div>
 
-<p>Notice how the length of <code class="highlighter-rouge">computer_string</code> is one greater than its largest index. This is because Python indexes from <code class="highlighter-rouge">0</code>.</p>
+<div class="output_wrapper">
+<div class="output">
 
-<p>Thus, if we don’t know how long a string is before hand (if a variable holding a string is subject to change for instance) and we want to index the last value of the string, we could use <code class="highlighter-rouge">len() - 1</code> as the index:</p>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'The last character:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-abeba3add71f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Index 11&#39;</span><span class="ansi-blue-fg">,</span> computer_string<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The last character: r
-</code></pre></div>      </div>
-    </div>
-  </div>
+<span class="ansi-red-fg">IndexError</span>: string index out of range</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<p>This method works, but Python gives us a far cleaner way of doing this: using an index of <code class="highlighter-rouge">-1</code>. This won’t work for most other programming languages.</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'The last character:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The last character: r
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can find the number of characters in a string using the <code>len()</code> function:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">),</span> <span class="s1">&#39;characters in the string&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>There are 8 characters in the string
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice how the length of <code>computer_string</code> is one greater than its largest index. This is because Python indexes from <code>0</code>.</p>
+<p>Thus, if we don't know how long a string is before hand (if a variable holding a string is subject to change for instance) and we want to index the last value of the string, we could use <code>len() - 1</code> as the index:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The last character:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The last character: r
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This method works, but Python gives us a far cleaner way of doing this: using an index of <code>-1</code>. This won't work for most other programming languages.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The last character:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The last character: r
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>In general, negative indices in Python index the strings (and other objects) backwards:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Second last character'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</div>
+</div>
+</div>
+</div>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Third last character'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<div class="jb_cell">
 
-</code></pre></div>    </div>
-  </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Second last character e
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Second last character&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Third last character&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Second last character e
 Third last character t
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<p>Note that the index <code class="highlighter-rouge">-8</code> corresponds to the <code class="highlighter-rouge">0</code> index (<code class="highlighter-rouge">len(computer_string) - 8</code> is <code class="highlighter-rouge">0</code>) so anything less than this would be out of bounds.</p>
-
-<h2 id="slicing">Slicing</h2>
-<p>Slicing allows us to extract segments of the string, as apposed to individual characters. The syntax for string slicing is:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[start_index:stop_index]
-</code></pre></div></div>
-<p>where the <code class="highlighter-rouge">stop_index</code> is not included in the slice, rather the slice stops before this index. For example, consider the slice:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mpu
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
 </div>
 
-<p>where the last character is <code class="highlighter-rouge">'r'</code>, but the character with index <code class="highlighter-rouge">5</code> is <code class="highlighter-rouge">'t'</code>.</p>
+<div class="jb_cell">
 
-<p>If we want to take a slice from the beginning of a string we could use <code class="highlighter-rouge">0</code> as the <code class="highlighter-rouge">start_index</code>:</p>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the index <code>-8</code> corresponds to the <code>0</code> index (<code>len(computer_string) - 8</code> is <code>0</code>) so anything less than this would be out of bounds.</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
-<p>Alternatively if we left the <code class="highlighter-rouge">start_index</code> blank Python will interprate this as starting from the beginning of the string:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Slicing">Slicing<a class="anchor-link" href="#Slicing"> </a></h2><p>Slicing allows us to extract segments of the string, as apposed to individual characters. The syntax for string slicing is:</p>
 
-</code></pre></div>    </div>
-  </div>
+<pre><code>string[start_index:stop_index]</code></pre>
+<p>where the <code>stop_index</code> is not included in the slice, rather the slice stops before this index. For example, consider the slice:</p>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mpu
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>where the last character is <code>'r'</code>, but the character with index <code>5</code> is <code>'t'</code>.</p>
+<p>If we want to take a slice from the beginning of a string we could use <code>0</code> as the <code>start_index</code>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>com
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alternatively if we left the <code>start_index</code> blank Python will interprate this as starting from the beginning of the string:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>com
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Similarly if we wanted to take a slice up to and including the last character in the string, we can use:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puter
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
-<p>or simply leave the <code class="highlighter-rouge">stop_index</code> blank:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</code></pre></div>    </div>
-  </div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">computer_string</span><span class="p">)])</span>
+</pre></div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puter
-</code></pre></div>      </div>
     </div>
-  </div>
+</div>
 </div>
 
-<p>Notice the slice above is not the same as if we used <code class="highlighter-rouge">-1</code> as the <code class="highlighter-rouge">stop_index</code>:</p>
+<div class="output_wrapper">
+<div class="output">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pute
-</code></pre></div>      </div>
-    </div>
-  </div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>puter
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<p>even though the same rules apply as with indexing, the slice always stops <strong>before</strong> the <code class="highlighter-rouge">stop_index</code>.</p>
+</div>
+</div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>or simply leave the <code>stop_index</code> blank:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>puter
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice the slice above is not the same as if we used <code>-1</code> as the <code>stop_index</code>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>pute
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>even though the same rules apply as with indexing, the slice always stops <strong>before</strong> the <code>stop_index</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use a third index when slicing as a step size:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string[start_index: stop_index: step_size]
-</code></pre></div></div>
-<p>For example, we can get every second character from a string using a step size of <code class="highlighter-rouge">2</code>:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Starting from 0:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Starting from 1:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<pre><code>string[start_index: stop_index: step_size]</code></pre>
+<p>For example, we can get every second character from a string using a step size of <code>2</code>:</p>
 
-</code></pre></div>    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting from 0: cmue
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting from 0:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting from 1:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Starting from 0: cmue
 Starting from 1: optr
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<p>The step size can be any integer. Note that by default it is set to 1. As another example lets print out every second character from <code class="highlighter-rouge">computer_string</code> starting from the first:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cpe
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
 </div>
 
-<p>The step size need not be positive. If a negative step size is used the string will be sliced backwards. For example if we want to print out the whole of <code class="highlighter-rouge">computer_string</code> backwards:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The step size can be any integer. Note that by default it is set to 1. As another example lets print out every second character from <code>computer_string</code> starting from the first:</p>
 
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>retupmoc
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
-<p>Note, when slicing with a negative step size you must ensure that <code class="highlighter-rouge">start_index</code> is greater than <code class="highlighter-rouge">stop_index</code>, otherwise your slice will be empty.</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Empty slice:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Not empty slice:'</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</code></pre></div>    </div>
-  </div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Empty slice: 
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>cpe
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The step size need not be positive. If a negative step size is used the string will be sliced backwards. For example if we want to print out the whole of <code>computer_string</code> backwards:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">computer_string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>retupmoc
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note, when slicing with a negative step size you must ensure that <code>start_index</code> is greater than <code>stop_index</code>, otherwise your slice will be empty.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Empty slice:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not empty slice:&#39;</span><span class="p">,</span> <span class="n">computer_string</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Empty slice: 
 Not empty slice: etupmo
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<p>Also notice how, in the second slice above, the <code class="highlighter-rouge">0</code> index character is not present. Even when slicing with a negative step size the <code class="highlighter-rouge">stop_index</code> is <strong>not</strong> included in the slice.</p>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Also notice how, in the second slice above, the <code>0</code> index character is not present. Even when slicing with a negative step size the <code>stop_index</code> is <strong>not</strong> included in the slice.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
 
 
-              <nav class="c-page__nav">
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/functions">
+    
+
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/functions.html">
       〈 <span class="u-margin-right-tiny"></span> Introduction to Functions
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/string-formatting">
-      String Formating <span class="u-margin-right-tiny"></span> 〉
+
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/data-structures/intro.html">
+      Data Structures <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
 
+              <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
             </div>
-          </div>
+
         </div>
       </main>
     </div>
-
   </body>
 </html>

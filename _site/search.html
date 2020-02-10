@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Search the site</title>
-  <meta name="description" content="Course notes for the NASSP Honours Computational Methods Module at the University of Cape Town.">
+  <meta name="description" content="        ">
 
   <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/search">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
@@ -16,24 +14,21 @@
   <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/search" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Search the site" />
-<meta property="og:description" content="Course notes for the NASSP Honours Computational Methods Module at the University of Cape Town." />
-<meta property="og:image"       content="" />
+<meta property="og:description" content="        " />
+<meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
+
+<meta name="twitter:card" content="summary">
 
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage":
-    "https://maystey.github.io/uct_nassp_cm/search",
-  "headline":
-    "Search the site",
-  "datePublished":
-    "2020-02-07T11:49:49+02:00",
-  "dateModified":
-    "2020-02-07T11:49:49+02:00",
-  "description":
-    "Course notes for the NASSP Honours Computational Methods Module at the University of Cape Town.",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/search",
+  "headline": "Search the site",
+  "datePublished": "2020-02-10T14:18:54+02:00",
+  "dateModified": "2020-02-10T14:18:54+02:00",
+  "description": "        ",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -58,16 +53,6 @@
 
   </script>
   <link rel="stylesheet" href="/uct_nassp_cm/assets/css/styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -80,6 +65,8 @@
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -88,35 +75,24 @@ MathJax.Hub.Config({
         processEscapes: true,
         processEnvironments: true
     },
-    CommonHTML: {
-        linebreaks: {
-            automatic: true,
-        },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
     },
+    
 });
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
 
   <!-- DOM updating function -->
-  <script>
-const runWhenDOMLoaded = cb => {
-  if (document.readyState != 'loading') {
-    cb()
-  } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', cb)
-  } else {
-    document.attachEvent('onreadystatechange', function() {
-      if (document.readyState == 'complete') cb()
-    })
-  }
-}
+  <script src="/uct_nassp_cm/assets/js/page/dom-update.js"></script>
 
-// Helper function to init things quickly
-initFunction = function(myfunc) {
-  runWhenDOMLoaded(myfunc);
-  document.addEventListener('turbolinks:load', myfunc);
-};
-</script>
+  <!-- Selectors for elements on the page -->
+  <script src="/uct_nassp_cm/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
@@ -124,18 +100,12 @@ initFunction = function(myfunc) {
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
-  <script src="/uct_nassp_cm/assets/js/anchor.min.js"  type="text/javascript"></script>
-  <script>
-
-initFunction(function () {
-    anchors.add("main h1, main h2, main h3, main h4")
-});
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
-  <script src="/uct_nassp_cm/assets/js/turbolinks.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
   <!-- Load nbinteract for widgets -->
@@ -153,13 +123,13 @@ initFunction(function () {
 
 const thebelabCellButton = id =>
   `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start interactive mode">
+    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
   </a>`
 
 
 const addThebelabButtonToCodeCells =  () => {
 
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
@@ -173,23 +143,7 @@ initFunction(addThebelabButtonToCodeCells);
 </script>
 
 
-
-<script type="text/x-thebe-config">
-    {
-      requestKernel: true,
-      binderOptions: {
-        repo: 'YOUR-ORG/YOUR-REPO',
-        ref: 'gh-pages',
-      },
-      codeMirrorConfig: {
-        theme: "abcdef"
-      },
-      kernelOptions: {
-        name: 'python3',
-      }
-    }
-</script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@latest/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks
@@ -214,20 +168,12 @@ initFunction(addThebelabButtonToCodeCells);
             const codeCells = document.querySelectorAll('.input_area pre')
             codeCells.forEach((codeCell, index) => {
                 const id = codeCellId(index)
-                codeCell.setAttribute('data-executable', 'true')
 
-                // Figure out the language it uses and add this too
-                var parentDiv = codeCell.parentElement.parentElement;
-                var arrayLength = parentDiv.classList.length;
-                for (var ii = 0; ii < arrayLength; ii++) {
-                    var parts = parentDiv.classList[ii].split('language-');
-                    if (parts.length === 2) {
-                        // If found, assign dataLanguage and break the loop
-                        var dataLanguage = parts[1];
-                        break;
-                    }
-                }
+                // Clean up the language to make it work w/ CodeMirror and add it to the cell
+                dataLanguage = ""
+                dataLanguage = detectLanguage(dataLanguage);
                 codeCell.setAttribute('data-language', dataLanguage)
+                codeCell.setAttribute('data-executable', 'true')
 
                 // If the code cell is hidden, show it
                 var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
@@ -255,6 +201,13 @@ initFunction(addThebelabButtonToCodeCells);
             outputs.forEach((output, index) => {
                 output.remove();
             });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
         }
 
         // Add event listener for the function to modify code cells
@@ -270,181 +223,28 @@ initFunction(addThebelabButtonToCodeCells);
 
     // Initialize Thebelab
     initFunction(initThebelab);
-</script>
 
-
-
-  <!-- Load the auto-generating TOC -->
-  <script src="/uct_nassp_cm/assets/js/tocbot.min.js"  type="text/javascript"></script>
-  <script>
-var initToc = function () {
-  tocbot.init({
-    tocSelector: 'nav.onthispage',
-    contentSelector: '.c-textbook__content',
-    headingSelector: 'h2, h3',
-    orderedList: false,
-    collapseDepth: 6,
-    listClass: 'toc__menu',
-    activeListItemClass: "",  // Not using
-    activeLinkClass: "", // Not using
-  });
-  tocbot.refresh();
+// Helper function to munge the language name
+var detectLanguage = (language) => {
+    if (language.indexOf('python') > -1) {
+        language = "python";
+    }
+    return language;
 }
-initFunction(initToc);
 </script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
-  <script src="/uct_nassp_cm/assets/js/ga.js" async></script>
+  
+
 
   <!-- Clipboard copy button -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-
-  <!-- Load JS that depends on site variables -->
-  <script>
-/**
- * Set up copy/paste for code blocks
- */
-const codeCellId = index => `codecell${index}`
-
-const clipboardButton = id =>
-  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/uct_nassp_cm/assets/images/copy-button.svg" alt="Copy to clipboard">
-  </a>`
-
-// Clears selected text since ClipboardJS will select the text when copying
-const clearSelection = () => {
-  if (window.getSelection) {
-    window.getSelection().removeAllRanges()
-  } else if (document.selection) {
-    document.selection.empty()
-  }
-}
-
-// Changes tooltip text for two seconds, then changes it back
-const temporarilyChangeTooltip = (el, newText) => {
-  const oldText = el.getAttribute('data-tooltip')
-  el.setAttribute('data-tooltip', newText)
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-}
-
-const addCopyButtonToCodeCells = () => {
-  // If ClipboardJS hasn't loaded, wait a bit and try again. This
-  // happens because we load ClipboardJS asynchronously.
-  if (window.ClipboardJS === undefined) {
-    setTimeout(addCopyButtonToCodeCells, 250)
-    return
-  }
-
-  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("copy-button" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
-    }
-  })
-
-  const clipboard = new ClipboardJS('.copybtn')
-  clipboard.on('success', event => {
-    clearSelection()
-    temporarilyChangeTooltip(event.trigger, 'Copied!')
-  })
-
-  clipboard.on('error', event => {
-    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
-  })
-
-  // Get rid of clipboard before the next page visit to avoid memory leak
-  document.addEventListener('turbolinks:before-visit', () =>
-    clipboard.destroy()
-  )
-}
-
-initFunction(addCopyButtonToCodeCells);
-</script>
-
-
-  <!-- Hide cell code -->
-  <script>
-    /**
-    Add buttons to hide code cells
-    */
-
-
-    var setCodeCellVisibility = function (inputField, kind) {
-        // Update the image and class for hidden
-        var id = inputField.getAttribute('data-id');
-        var codeCell = document.querySelector(`#${id} div.highlight`);
-
-        if (kind === "visible") {
-            codeCell.classList.remove('hidden');
-            inputField.checked = true;
-        } else {
-            codeCell.classList.add('hidden');
-            inputField.checked = false;
-        }
-    }
-
-    var toggleCodeCellVisibility = function (event) {
-        // The label is clicked, and now we decide what to do based on the input field's clicked status
-        if (event.target.tagName === "LABEL") {
-            var inputField = event.target.previousElementSibling;
-        } else {
-            // It is the span inside the target
-            var inputField = event.target.parentElement.previousElementSibling;
-        }
-
-        if (inputField.checked === true) {
-            setCodeCellVisibility(inputField, "visible");
-        } else {
-            setCodeCellVisibility(inputField, "hidden");
-        }
-    }
-
-
-    // Button constructor
-    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
-
-    var addHideButton = function () {
-        // If a hide button is already added, don't add another
-        if (document.querySelector('div.hidecode input') !== null) {
-            return;
-        }
-
-        // Find the input cells and add a hide button
-        document.querySelectorAll('div.input_area').forEach(function (item, index) {
-            if (!item.classList.contains("hidecode")) {
-                // Skip the cell if it doesn't have a hidecode class
-                return;
-            }
-
-            const id = codeCellId(index)
-            item.setAttribute('id', id);
-            // Insert the button just inside the end of the next div
-            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
-
-            // Set up the visibility toggle
-            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
-            hideLink.addEventListener('click', toggleCodeCellVisibility)
-        });
-    }
-
-
-    // Initialize the hide buttos
-    var initHiddenCells = function () {
-        // Add hide buttons to the cells
-        addHideButton();
-
-        // Toggle the code cells that should be hidden
-        document.querySelectorAll('div.hidecode input').forEach(function (item) {
-            setCodeCellVisibility(item, 'hidden');
-            item.checked = true;
-        })
-    }
-
-    initFunction(initHiddenCells);
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
   <script src="/uct_nassp_cm/assets/js/scripts.js" async></script>
@@ -457,7 +257,7 @@ initFunction(addCopyButtonToCodeCells);
   
 
   <!-- Lunr search code - will only be executed on the /search page -->
-  <script src="/uct_nassp_cm/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
   <script>var initQuery = function() {
   // See if we have a search box
   var searchInput = document.querySelector('input#lunr_search');
@@ -543,9 +343,68 @@ initFunction(addCopyButtonToCodeCells);
 
 initFunction(initQuery);
 </script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/uct_nassp_cm/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/uct_nassp_cm/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/uct_nassp_cm/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
 </head>
 
   <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "YOUR-ORG/YOUR-REPO",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: ""
+    }
+}
+</script>
+
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
       
@@ -553,7 +412,7 @@ initFunction(initQuery);
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="http://www.ast.uct.ac.za/ast/postgraduate/4007w"><img src="/uct_nassp_cm/images/logo/UCTcircular_logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.ast.uct.ac.za/ast/postgraduate/4007w"><img src="/uct_nassp_cm/images/logo/UCTcircular_logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">AST4007W Computational Methods</h2>
   <ul class="c-sidebar__chapters">
     
@@ -562,19 +421,29 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/intro.html"
         >
           
           Home
         </a>
-
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
 
       
     
@@ -583,26 +452,32 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="https://github.com/maystey/uct_nassp_cm">
+        <a class="c-sidebar__entry"
           href="https://github.com/maystey/uct_nassp_cm"
         >
           
           GitHub repository
         </a>
-
-        
       </li>
 
       
+      
+
+      
+
+      
+      
+
+      
+
+      
     
-      
-      
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/uct_nassp_cm/search.html">Search</a></li>
-        
       
       
         <li class="c-sidebar__divider"></li>
@@ -612,167 +487,170 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/basics/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/basics/intro.html"
         >
           
           Python Basics
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/variables.html"
-                >
-                  
-                  Variables
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/comments.html"
-                >
-                  
-                  Comments
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/types.html"
-                >
-                  
-                  Type Conversion
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/operators.html"
-                >
-                  
-                  Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/assignment-operators.html"
-                >
-                  
-                  Assignment Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/functions.html"
-                >
-                  
-                  Introduction to Functions
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/strings.html"
-                >
-                  
-                  Strings
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/string-formatting.html"
-                >
-                  
-                  String Formating
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/variables">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/variables.html"
+              >
+                
+                Variables
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/comments">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/comments.html"
+              >
+                
+                Comments
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/types">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/types.html"
+              >
+                
+                Type Conversion
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/operators.html"
+              >
+                
+                Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/assignment-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/assignment-operators.html"
+              >
+                
+                Assignment Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/functions">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/functions.html"
+              >
+                
+                Introduction to Functions
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/strings">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/strings.html"
+              >
+                
+                Strings
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -781,82 +659,94 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/data-structures/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/data-structures/intro.html"
         >
           
           Data Structures
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/tuple.html"
-                >
-                  
-                  Tuple
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/lists.html"
-                >
-                  
-                  Lists
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/dictionaries.html"
-                >
-                  
-                  Dictionaries
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/tuple">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/tuple.html"
+              >
+                
+                Tuple
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/lists">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/lists.html"
+              >
+                
+                Lists
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/dictionaries">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/dictionaries.html"
+              >
+                
+                Dictionaries
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -865,99 +755,113 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/if-statements/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/if-statements/intro.html"
         >
           
           If Statements
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/bools.html"
-                >
-                  
-                  Booleans
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/comparison-operators.html"
-                >
-                  
-                  Comparison Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/logical-operators.html"
-                >
-                  
-                  Logical Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/if.html"
-                >
-                  
-                  If Statements
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/bools">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/bools.html"
+              >
+                
+                Booleans
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/comparison-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/comparison-operators.html"
+              >
+                
+                Comparison Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/logical-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/logical-operators.html"
+              >
+                
+                Logical Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/if">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/if.html"
+              >
+                
+                If Statements
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -966,82 +870,94 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/loops/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/loops/intro.html"
         >
           
           Loops
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections u-hidden-visually">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/for.html"
-                >
-                  
-                  For Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/list-comp.html"
-                >
-                  
-                  List Comprehension
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/while.html"
-                >
-                  
-                  While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/for">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/for.html"
+              >
+                
+                For Loops
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/list-comp">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/list-comp.html"
+              >
+                
+                List Comprehension
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/while">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/while.html"
+              >
+                
+                While Loops
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -1050,24 +966,43 @@ initFunction(initQuery);
 </nav>
 
       
-      <main class="c-textbook__page" tabindex="-1">
-          <div class="o-wrapper">
-            <div class="c-sidebar-toggle">
+      <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
-  <button
-    id="js-sidebar-toggle"
-    class="hamburger hamburger--arrowalt is-active"
-  >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
-  </button>
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
 </div>
 
-            
 
-            <div class="c-textbook__content">
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/uct_nassp_cm/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/uct_nassp_cm/search.html" class="topbar-right-button" id="search-button">
+    <img src="/uct_nassp_cm/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
               <div class="search-content__inner-wrap">
     <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
     <div id="results" class="results"></div>
@@ -1078,200 +1013,176 @@ initFunction(initQuery);
     var store = [{
         "title": "Assignment Operators",
         
-        "excerpt":
-            "Compound Assignment Operators   We’ve already discussed the = operator which sets the value of a variable. There are a few more assignment operators which are mostly used for convenience. These are the compound operators : +=, -=, *=, /=.   These operators apply their respective operation between the variable being assigned to and the value on the right and assign that value to the variable. In other words:  var += 2  can be read as  var = var + 2   and  var /= 2  can be read as  var = var / 2   etc..   ",
+        "excerpt": "var operators value variable compound assignment read weve already discussed operator sets few mostly used convenience apply respective operation between being assigned right assign words etc",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/assignment-operators.html",
         "teaser":null},{
         "title": "Comments",
         
-        "excerpt":
-            "Comments Comments make it possible to write messages in our scripts that are not to be read by the computer, but fellow humans. In Python you can write an in-line comment by using the # symbol. Everything after this symbol until the end of the line will be considered a part of the comment and the computer will not read this as code. For example: print('Not a comment') # This is a comment print('Part of the comment') Not a comment Comments can be useful for explaining what a script/section of a script does or why you’ve made the choices you...",
+        "excerpt": "code line comment comments not read example want debugging add section using computer symbol end useful script does made particular commenting during headers possible messages our scripts fellow humans python everything after until considered part explaining why youve choices normally necessary explain should easy enough actual determine common practice put construct better examples too fit separate above portions sometimes temporarily remove program without deleting especially isolate snippets print statements used normal runtime need into glossary show",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/comments.html",
         "teaser":null},{
         "title": "Introduction to Functions",
         
-        "excerpt":
-            "Introduction to Using Functions In this section we shall discuss some of the details on how to use functions from the Standard Library. We have already come across a few functions, namely print() and type(). We shall cover how to define your own functions in a later section. Python functions essentially take variables or values/objects as arguments, perform a task and them return values/objects. As we seen before the syntax of a function call is: function_name(argument, argument, ...) Note that some functions return a None type when a return value isn’t necessary. For example, the print() function: print_return = print('print...",
+        "excerpt": "function input functions example string print python values docstring lets arguments return argument name user using value notebook default script following terminal section shall standard library type take objects before note none particular does jupyter enter us optional keyword examples change between put into space another important until entered used code remember introduction discuss details already across few namely cover define own later essentially variables perform task seen syntax functionname isnt necessary want quick pull ipython environment such done typing symbol after pressing shell help alternatively refer documentation docs org itself line shows description list sometimes also contain though present",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/functions.html",
         "teaser":null},{
         "title": "Python Basics",
         
-        "excerpt":
-            "Python Basics   In this chapter we shall discuss some of the basics of programming in Python, namely variables, operations and using functions.  ",
+        "excerpt": "python basics chapter shall discuss programming namely variables operations using functions",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/intro.html",
         "teaser":null},{
         "title": "Operators",
         
-        "excerpt":
-            "Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then ‘doing things’ with those variables. In this section we will look at some of the basic operators used for integers and floats. Other variable types have different operators, which we shall see later. An obvious starting point is basic arithmetic; addition, subtraction, multiplication and division: a = 2.0 b = 3.0 c = 10.0 print('a added to b is', a + b) print('a multiplied by c is', a*c) print('c divided by b is', c/b) print('a subtracted from c', c - a) a...",
+        "excerpt": "operator operators integers floats used later also returns left right mathematics operations variables section basic shall division exponential works float integer combinations modulo remainder divided well discuss function order executed numerical rename arithmatic coding simplest sense merely action assigning values doing things those variable types different obvious starting point arithmetic addition subtraction multiplication between using python version xxx below beware dividing another useful power read note expressed mod act floor result without others both special functions advanced complex involving logs trigonometry etc rely scientific packages scipy numpy stage multiple single expression though only seen operation per line combine youd want",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/operators.html",
         "teaser":null},{
-        "title": "String Formating",
-        
-        "excerpt":
-            "String Formatting Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/or values in your string, you may be better off using string formatting. We will use this technique more extensively later on. There are a few ways to format strings. We will cover one of the ways introduced in Python 3. That is using the string.format() method. This method treats everything contained in curly braces{} in the string as a replacement field, everything in and including the braces are replaced with the arguments of format in the output string. print('Hello {}, how...",
-        "categories": [],
-        "tags": [],
-        "url": "https://maystey.github.io/uct_nassp_cm/basics/string-formatting.html",
-        "teaser":null},{
         "title": "Strings",
         
-        "excerpt":
-            "Strings In this section we shall take a closer look at the string type and some of the operations associated with them. The following section makes heavy reference to online notes by Dr. Andrew N. Harrington, Hands-on Python 3 Tutorial released under the CC BY-NC-SA 4.0 license. Concatenation + For strings the + symbol is used to concatenate two strings together. For example: print('One string' + ' and another') One string and another Duplication * The duplication * operator takes a string and an integer and repeats the string as many times as the integer value: print('hello '*4) print(2*'bye ')...",
+        "excerpt": "string index slice character stopindex python example step size slicing strings startindex not take integer characters using computerstring negative used len notice before want last backwards note second section associated hands nc sa duplication value indexing its computer individual greater us where included stops beginning blank starting above same even every print shall closer type operations following makes heavy reference online notes dr andrew n harrington tutorial anh cs luc edu handsonhtml html released under cc creativecommons org licenses license concatenation symbol concatenate together operator takes repeats times seen collection based position access too large given return error function length",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/strings.html",
         "teaser":null},{
         "title": "Type Conversion",
         
-        "excerpt":
-            "Type Conversion So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable is. Sometimes we want to convert between different variable types. To do this we can use the int, float and str functions: int_var = 1 print(int_var, type(int_var)) float_var = float(int_var) print(float_var, type(float_var)) 1 &lt;class 'int'&gt; 1.0 &lt;class 'float'&gt; float_var = 5.7 print(float_var, type(float_var)) int_var = int(float_var) print(int_var, type(int_var)) 5.7 &lt;class 'float'&gt; 5 &lt;class 'int'&gt; Note that when you convert a float to an integer Python does simply discards the decimal part (if you wish to round-off a...",
+        "excerpt": "float variable type types strings convert int note integer decimal part round cannot converted conversion far looked three integers floats check sometimes want between different str functions python does simply discards wish off function link docs anything string even contain",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/types.html",
         "teaser":null},{
         "title": "Variables",
         
-        "excerpt":
-            "Variables Python receives information by means of variables. A variable is a dedicated piece of computer memory that holds some information. For example, a = 5 tells python to assign 5 (an integer number) to the variable with the variable name a. Note that the = here is used for variable assignment, it does not have the same meaning as the mathematical symbol (“assign-variable-to” rather than “is-equal-to”). If we wanted to access the value that our variable a holds, we can refer to it by it’s name. For example, if we want to print the value to terminal: print(a) 5...",
+        "excerpt": "variable using python not value names example assign strings variables type numbers blanks words case information used types letters single line last priceatopening memory holds integer name same its want any function floating point characters quotes breaks special character should while must underscores except underscore camel another var receives means dedicated piece computer tells note here assignment does meaning mathematical symbol rather equal wanted access our refer print terminal data stored needs interprated us achieve programming languages uses above int order check basic working float decimal parts str collection unicode symbols ect basically contents text file seen string represented parenthesis",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/basics/variables.html",
         "teaser":null},{
         "title": "Dictionaries",
         
-        "excerpt":
-            "Dictionaries So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence. In dictionaries, however, the objects stored are referred to by a key. Keys must be an immutable type, for example a string, number or tuple containing only immutable types. You can create a dictionary using the dict function; and assign values using the subscript notation: dictionary[key] = value d = dict() d[1] = 'a' d['lst'] = [1, 2, 3] print(d) {1: 'a', 'lst': [1, 2, 3]} You can also access dictionary values using the subscript notation: print(d[1]) a...",
+        "excerpt": "key dictionary keys using value dictionaries only sequence referred immutable dict values subscript notation exist want far looked data structures where elements position however objects stored must type example string tuple containing types create function assign introduce earlier glossary also access alternative initialize pairs much appears print output note doesnt give keyerror listing often list method check youre looking avoid error",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/data-structures/dictionaries.html",
         "teaser":null},{
         "title": "Data Structures",
         
-        "excerpt":
-            "Data Structures   In this chapter we will present a brief overview of Python’s standard data structures, namely tuples, lists and dictionaries. For a more broad overview you can refer to the documentation.  ",
+        "excerpt": "data structures overview chapter present brief pythons standard namely tuples lists dictionaries broad refer documentation docs python org tutorial datastructures html",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/data-structures/intro.html",
         "teaser":null},{
         "title": "Lists",
         
-        "excerpt":
-            "Lists Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable object or square brackets []: list1 = list((1, 2, 3)) print('list1', list1) list2 = [4, 8, 9] print('list2', list2) list1 [1, 2, 3] list2 [4, 8, 9] You can access elements of the list by indexing and slicing it: letters = ['a', 'b', 'c', 'd', 'e'] print('Letters:', letters) print('First character:', letters[0]) print('Second character:', letters[1]) print('Last character:', letters[-1]) print('Every second character:', letters[::2]) Letters: ['a', 'b', 'c', 'd', 'e'] First character: a Second character: b...",
+        "excerpt": "list lists want remove method element elements insert index tuples using function object concatenating append add specific takes retrieve used store collection objects flexible create another iterable square brackets access indexing slicing unlike alter after instancing also assign new values slices operator acts similar strings end into place arguments instance value pop particular argument talk map",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/data-structures/lists.html",
         "teaser":null},{
         "title": "Tuple",
         
-        "excerpt":
-            "Tuple Just as strings are a sequence of characters, tuples are a sequence of objects. This makes their use far more general. You can set a tuple by separating the objects using commas. For example: t = 1, 2, 3, 'a', 'b', 'c' print(t) (1, 2, 3, 'a', 'b', 'c') This is called tuple packing. You can also put brackets around the objects, which is useful if you need to instance a list and use it in the same line (for example as a function argument): print(('a', 1, 'b', 2, 'c', 3)) ('a', 1, 'b', 2, 'c', 3) Like strings,...",
+        "excerpt": "tuple strings tuples objects just sequence example also into multiple characters makes far general set separating using commas called packing put brackets around useful need instance list same line function argument indexed sliced immutable unpack variables pack values",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/data-structures/tuple.html",
         "teaser":null},{
         "title": "Booleans",
         
-        "excerpt":
-            "Booleans (bool)   The boolean data type (or bools) hold one of two values: True or False.           bool_var1 = True  print('Var 1', bool_var1, type(bool_var1))  bool_var2 = False  print('Var 2', bool_var2, type(bool_var2))                         Var 1 True &lt;class 'bool'&gt; Var 2 False &lt;class 'bool'&gt;                  ",
+        "excerpt": "booleans bool boolean data type bools hold values true false",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/if-statements/bools.html",
         "teaser":null},{
         "title": "Comparison Operators",
         
-        "excerpt":
-            "Comparison Operators Comparison operators operate on two variables and return a boolean result. Less-than &lt; and Greater-than &gt; These operators act in the same way as the mathematical objects you are familiar with. If a is less than b, then a &lt; b will return True and a &gt; b will return False. For example: print('3 &gt; 2 is', 3 &gt; 2) print('2.54 &lt; 1 is', 2.54 &lt; 1) print('1 &lt; 1 is', 1 &lt; 1) 3 &gt; 2 is True 2.54 &lt; 1 is False 1 &lt; 1 is False Note that these operators act on both integers and...",
+        "excerpt": "operators return operator used less b example equal comparison greater act mathematical objects true false related compare operate variables boolean result same familiar note both integers floats interchangeably names suggest leq assertion mathematics similarly geq equals check equality numbers similar generally non numerical values strings not returns being compared arent equivalent",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/if-statements/comparison-operators.html",
         "teaser":null},{
         "title": "If Statements",
         
-        "excerpt":
-            "If Statement The if statement is used to execute a block of code if a condition is true. The syntax of an if statement is: if condition: block of code where condition must be/evaluate to a boolean value. If condition evaluates to True then control moves to the block of code indented after the : and it is executed. If condition evaluates to False, then the block of code is skipped and control moves on to the code after the if statement. Worked Example Let’s consider the case where we want to check if one variable is greater than the...",
+        "excerpt": "condition code block statement else elif true evaluates false control executed example flow not chart lets check part conditions multiple computer where moves statements both used execute after worked case variable above another png our try only checks leave note illustrate syntax must evaluate boolean value indented language correct skipped consider want greater ran b nothing printed wanted its hand ifelse figure caption take add mutually partially exclusive annoying computationally expensive others arent still turn attempt embed better terms computational costs messy confusing luckily python gives us tool problem leaves mention through cut explanation show script even though because appears",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/if-statements/if.html",
         "teaser":null},{
         "title": "If Statements",
         
-        "excerpt":
-            "Control Flow: If Statements  Control flow dictates the order in which your lines of code are executed. In order to make complex programs, we need to make more than a list of statements to be executed sequentially. Control flow gives us tools to execute blocks of code conditionally (with if statements) and repeatedly (with loops).   In this chapter we shall cover if statements, but first we need to discuss Boolean data types and the logical operators which act on them.  ",
+        "excerpt": "statements control flow order code executed need dictates lines complex programs list sequentially gives us tools execute blocks conditionally repeatedly loops chapter shall cover discuss boolean data types logical operators act",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/if-statements/intro.html",
         "teaser":null},{
         "title": "Logical Operators",
         
-        "excerpt":
-            "Logical Operators Logical operators act on booleans and return booleans. The logical operators are and, or and not. Logical and This acts on 2 booleans. It returns True if both booleans are True and False otherwise. For example: print('True and True is', True and True) print('True and False is', True and False) print('False and True is', False and True) print('False and False is', False and False) True and True is True True and False is False False and True is False False and False is False Logical or This operator acts on 2 booleans. It returns True if at least...",
+        "excerpt": "logical booleans operators operations true not acts returns false example order brackets act just both operator single boolean although return maybe mention bitwise python doesnt expose standard library afaik aware difference otherwise add examples comparison later least opposite combining only arithmetic combined statement executed used want control execute isnt important cases above need ensure specific group",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/if-statements/logical-operators.html",
         "teaser":null},{
         "title": "Home",
         
-        "excerpt":
-            "UCT NASSP AST4007W Computational Methods  Scientific Programming in Python  By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew Steyn   This online book is intended as reference material for the UCT NASSP Honours course (AST4007W) Computational Methods module. The intended use of this book is as a first reference after the lecture pre-reading and slides.   These notes are by no means the complete picture and you are encouraged to read further in the references provided.  ",
+        "excerpt": "uct nassp astw computational methods book intended reference scientific programming python luis balona ed elson masimba paradza mayhew steyn online material honours course module after lecture pre reading slides notes means complete picture encouraged read further references provided",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/intro.html",
         "teaser":null},{
         "title": "For Loops",
         
-        "excerpt":
-            "For Loops For loops can be used to repeat a block of code by iterating through specified values. The structure of a for loop is as follows: for i in iterator: code block to be repeated where i is the iteration variable and the iterator represents a sequence of values that i will be set to each time the loop is repeated. Here i can be treated like a variable and can take on any allowed variable name. The code block to be repeated must be indented after the :. The loop repeats until i has run through all of...",
+        "excerpt": "range through loop value example sequence stop code iterator function series step block repeated starting using arguments start iterate used values variable here until n integers want index loops wanted integer achieved produces maybe produce ending before looping sequences lists dictionaries also enumerate zip repeat iterating specified structure follows where iteration represents set treated take any allowed name must indented after repeats run broken careful not alter inside being worked simple lets say print squares manually small quickly becomes tedious messy achieve same goal following made create our give detailed breakdown whats happening takes shall functions very similar slicing remove",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/loops/for.html",
         "teaser":null},{
         "title": "Loops",
         
-        "excerpt":
-            "Control Flow: Loops   As mentioned in the previous chapter, control flow is the order in which a program executes.   In this chapter we will discuss loops which are used to repeat code blocks (allowing variation each time).   In Python there are two types of loops: the for loop and the while loop.  ",
+        "excerpt": "loops control flow chapter loop mentioned previous order program executes discuss used repeat code blocks allowing variation python types while",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/loops/intro.html",
         "teaser":null},{
         "title": "List Comprehension",
         
-        "excerpt":
-            "List Comprehension There will be many times you will want to automate the creation of a list. You can use loops for this but can become impractical. A nice way to generate lists is using list comprehension: #Generating a list of integers in ascending order numbers = [i for i in range(6)] print(numbers) [0, 1, 2, 3, 4, 5] You can treat the for inside the list just like a for loop, including looping through collections: string = 'abcdefg' #Generating a list of characters from a string char_list = [char for char in string] print(char_list) ['a', 'b', 'c', 'd', 'e',...",
+        "excerpt": "list comprehension loop times want automate creation loops become impractical nice generate lists using treat inside just including looping through collections only interested itself not place also embed",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/loops/list-comp.html",
         "teaser":null},{
         "title": "While Loops",
         
-        "excerpt":
-            "While Loops For loops are useful if you know what you want to iterate over, but what if you wanted to keep looping until a certain condition is met? while loops are the tool for this job. The syntax for a while loop is: while condition: block of code to be repeated where condition is/evaluates to a boolean value. The loop will keep repeating, executing the block of code indented after the : as long as condition evaluates to True. When condition evaluates to False the loop will no longer be repeated and control will progress to the code after...",
+        "excerpt": "loop while condition loops t example code evaluates false never want looping block where true control series useful keep give problem using repeated value after consider recursive eqnarray tn n stop maximum counter maxcount chosen less convenient iterate wanted until certain met tool job isnt exactly solvable syntax boolean repeating executing indented longer progress correct term here note starts inside executed worked lets following introduce examples begin end drops below solution notice not because continues converse avoiding infinite recursion something careful doesnt break another leave sometimes iterations avoid recursions normally very large rather concrete replacing used replace bit case becomes",
         "categories": [],
         "tags": [],
         "url": "https://maystey.github.io/uct_nassp_cm/loops/while.html",
         "teaser":null},]
 </script>
-              <nav class="c-page__nav">
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
   
 
   
 </nav>
 
+              <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
             </div>
-          </div>
+
         </div>
       </main>
     </div>
-
   </body>
 </html>

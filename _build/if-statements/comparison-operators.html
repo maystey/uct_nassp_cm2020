@@ -1,0 +1,283 @@
+---
+interact_link: content/if-statements/comparison-operators.ipynb
+kernel_name: python3
+kernel_path: content/if-statements
+has_widgets: false
+title: |-
+  Comparison Operators
+pagenum: 15
+prev_page:
+  url: /if-statements/bools.html
+next_page:
+  url: /if-statements/logical-operators.html
+suffix: .ipynb
+search: operators return operator used less b example equal comparison greater act mathematical objects true false related compare operate variables boolean result same familiar note both integers floats interchangeably names suggest leq assertion mathematics similarly geq equals check equality numbers similar generally non numerical values strings not returns being compared arent equivalent
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Comparison Operators</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comparison-Operators">Comparison Operators<a class="anchor-link" href="#Comparison-Operators"> </a></h1><p>Comparison operators operate on two variables and return a boolean result.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Less-than-&lt;-and--Greater-than-&gt;">Less-than <code>&lt;</code> and  Greater-than <code>&gt;</code><a class="anchor-link" href="#Less-than-&lt;-and--Greater-than-&gt;"> </a></h2><p>These operators act in the same way as the mathematical objects you are familiar with. If <code>a</code> is less than <code>b</code>, then <code>a &lt; b</code> will return <code>True</code> and <code>a &gt; b</code> will return <code>False</code>. For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3 &gt; 2 is&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2.54 &lt; 1 is&#39;</span><span class="p">,</span> <span class="mf">2.54</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 &lt; 1 is&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3 &gt; 2 is True
+2.54 &lt; 1 is False
+1 &lt; 1 is False
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that these operators act on both integers and floats interchangeably.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Less-than-equal-to-&lt;=-and-Greater-than-equal-to-&gt;=">Less-than-equal-to <code>&lt;=</code> and Greater-than-equal-to <code>&gt;=</code><a class="anchor-link" href="#Less-than-equal-to-&lt;=-and-Greater-than-equal-to-&gt;="> </a></h2><p>As there names suggest, the <code>&lt;=</code> operator is related to the $\leq$ assertion in mathematics. Similarly <code>&gt;=</code> is related to $\geq$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3.3 &lt; 3.4 is&#39;</span><span class="p">,</span> <span class="mf">3.3</span> <span class="o">&lt;=</span> <span class="mf">3.4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 &lt;= 2 is&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 &gt;= 3.4 is&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mf">3.4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.3 &lt; 3.4 is True
+2 &lt;= 2 is True
+2 &gt;= 3.4 is False
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Equals-to-==">Equals-to <code>==</code><a class="anchor-link" href="#Equals-to-=="> </a></h2><p>The <code>==</code> operator is used to check equality. When used on numbers, this is similar to the mathematical $=$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3 == 2 is&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5.3 == 5.3 is&#39;</span><span class="p">,</span> <span class="mf">5.3</span> <span class="o">==</span> <span class="mf">5.3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;6 == 6.0 is&#39;</span><span class="p">,</span> <span class="mi">6</span> <span class="o">==</span> <span class="mf">6.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3 == 2 is False
+5.3 == 5.3 is True
+6 == 6.0 is True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>==</code> operator is used more generally to compare non-numerical values. For example, it can be used to compare two strings:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;apple&#39; == &#39;apple&#39; is&quot;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span> <span class="o">==</span> <span class="s1">&#39;apple&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;banana&#39; == &#39;apple&#39; is&quot;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span> <span class="o">==</span> <span class="s1">&#39;apple&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&quot;banana&quot; == &#39;banana&#39; is&#39;&#39;&#39;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span> <span class="o">==</span> <span class="s1">&#39;banana&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;apple&#39; == &#39;apple&#39; is True
+&#39;banana&#39; == &#39;apple&#39; is False
+&#34;banana&#34; == &#39;banana&#39; is True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Not-equal-to-!=">Not-equal-to <code>!=</code><a class="anchor-link" href="#Not-equal-to-!="> </a></h2><p>This operator returns <code>True</code> if the two objects being compared aren't equivalent (if <code>==</code> would return <code>False</code>). For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3 != 2 is&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;7.3 != 7.3 is&#39;</span><span class="p">,</span> <span class="mf">7.3</span> <span class="o">!=</span> <span class="mf">7.3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;apple&#39; != &#39;banana&#39; is&quot;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span> <span class="o">!=</span> <span class="s1">&#39;banana&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3 != 2 is True
+7.3 != 7.3 is False
+&#39;apple&#39; != &#39;banana&#39; is True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

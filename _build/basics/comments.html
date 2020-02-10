@@ -1,0 +1,224 @@
+---
+interact_link: content/basics/comments.ipynb
+kernel_name: python3
+kernel_path: content/basics
+has_widgets: false
+title: |-
+  Comments
+pagenum: 3
+prev_page:
+  url: /basics/variables.html
+next_page:
+  url: /basics/types.html
+suffix: .ipynb
+search: code line comment comments not read example want debugging add section using computer symbol end useful script does made particular commenting during headers possible messages our scripts fellow humans python everything after until considered part explaining why youve choices normally necessary explain should easy enough actual determine common practice put construct better examples too fit separate above portions sometimes temporarily remove program without deleting especially isolate snippets print statements used normal runtime need into glossary show
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Comments</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comments">Comments<a class="anchor-link" href="#Comments"> </a></h1><!--- Add a section about using comments as headers? -->
+
+<p>Comments make it possible to write messages in our scripts that are not to be read by the computer, but fellow humans.</p>
+<p>In Python you can write an in-line comment by using the <code>#</code> symbol. Everything after this symbol until the end of the line will be considered a part of the comment and the computer will not read this as code. For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not a comment&#39;</span><span class="p">)</span> <span class="c1"># This is a comment print(&#39;Part of the comment&#39;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Not a comment
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comments can be useful for explaining what a script/section of a script does or why you've made the choices you have made in a particular line. It is not normally necessary to explain what each line of code does, as it should be easy enough to read the actual code to determine this.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Commenting-on-a-Line-of-Code">Commenting on a Line of Code<a class="anchor-link" href="#Commenting-on-a-Line-of-Code"> </a></h2><p>If you want to comment about a particular line of code it is common practice to put the comment at the end of that line of code: <!--- construct better examples --></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;some code&#39;</span><span class="p">)</span> <span class="c1">#comment on code</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>some code
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If the comment is too long to fit on the line, you can write the comment on a separate line above the code:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Comment line that is too long to fit on the end of the line of code</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;some code&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>some code
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Commenting-Out-Portions-of-Code">Commenting Out Portions of Code<a class="anchor-link" href="#Commenting-Out-Portions-of-Code"> </a></h2><p>Sometimes you may want to comment out code to temporarily remove it from the program without deleting it. It is especially useful when you want to isolate code snippets during debugging or print statements used in debugging during normal runtime. For example: <!--- Need to add debugging into the glossary --> <!--- Show example of this?--></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span>
+
+<span class="c1">#print(&#39;Variable 1 is&#39;, var1)</span>
+<span class="c1">#print(&#39;Variable 2 is&#39;, var2)</span>
+
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1">#print(&#39;&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variable 1 is&#39;</span><span class="p">,</span> <span class="n">var1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variable 2 is&#39;</span><span class="p">,</span> <span class="n">var2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Variable 1 is 2
+Variable 2 is 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

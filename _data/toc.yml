@@ -32,9 +32,9 @@
   external: true
   not_numbered: true
 
-# Adds a searchbar link
-- title: Search
-  search: true
+# Adds a searchbar link #search is broken
+# - title: Search
+#   search: true
 
 # Divider for meta-pages and content page
 - divider: true
@@ -64,8 +64,8 @@
     url: /basics/functions
   - title: Strings
     url: /basics/strings
-  - title: String Formating
-    url: /basics/string-formatting
+  # - title: String Formating
+  #   url: /basics/string-formatting
 
 - title: Data Structures
   url: /data-structures/intro
