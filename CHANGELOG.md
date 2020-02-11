@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Chapter: Introduction (along with bib items)
 
 ### Changed
-- Updated Jupyter-Book to 0.6.4
+- Updated Jupyter-Book to 0.6.4 .
+- Edit Home page.
 - Edited Basics: Variables and Comments.
 - Replaced the Jupyter Book logo with the UCT logo. Still need to replace the favicon.
 - Moved the Data Structures chapter to before the If Statements chapter.
