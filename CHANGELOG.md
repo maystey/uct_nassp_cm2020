@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Chapter: Introduction
+- Chapter: Introduction (along with bib items)
 
 ### Changed
 - Updated Jupyter-Book to 0.6.4
@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replaced the Jupyter Book logo with the UCT logo. Still need to replace the favicon.
 - Moved the Data Structures chapter to before the If Statements chapter.
 - Chapter contents are no longer expanded in the sidebar. The sidebar was already too long and that was only a quarter of the contents.
+
+### Bugs
 - Search function no longer works.
 - Page titles are using toc even though they are set to none in config. Need to decide if the pages should loose their in document titles to accommodate.
 

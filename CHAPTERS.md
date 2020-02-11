@@ -14,9 +14,14 @@ Items in this section are necessary to add, but I cannot place them at the momen
 
 ### Complete
 - What is a programming language
-
-### Incomplete
 - Python, a Dynamic Programming Language
+
+### Enhancements
+- Make it more clear what the difference is between
+    - Interpreted (really what I was going for with dynamic)
+    - Dynamic vs static
+    - Dynamic Typing vs static typing
+
 
 ### Not Started
 - What is a script?
@@ -42,6 +47,7 @@ Items in this section are necessary to add, but I cannot place them at the momen
 
 ### Enhancements
 - Strings
+    - Put reference to other notes in the bibliography
     - Include section on special characters
 - Introduction to Functions
     - Mention positional arguments and keyword arguments
@@ -50,20 +56,7 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Operators
     - Make url to sections (is it possible for this to be relative?)
 
-## If Statements
 
-### Complete
-- Intro
-- Booleans
-- Comparison Operators
-- Logical Operators
-- If Statements
-
-### Enhancements
-- Logical Operators
-    - Give examples including comparison operators
-- If Statements 
-    - more examples
 
 ## Data Structures
 
@@ -82,6 +75,24 @@ Removed this from Basics. Should I put this after if?
     - Make forwards reference to looping
 - Include sets? I've never used them...
 - Make embedded structures section with some examples.
+
+
+
+## If Statements
+
+### Complete
+- Intro
+- Booleans
+- Comparison Operators
+- Logical Operators
+- If Statements
+
+### Enhancements
+- Logical Operators
+    - Give examples including comparison operators
+- If Statements 
+    - more examples
+
 
 
 ## For and While Loops
