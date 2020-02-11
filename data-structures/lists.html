@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Lists</title>
-  <meta name="description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...">
+  <meta name="description" content="        Lists    Lists Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with a...">
 
   <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/data-structures/lists.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
@@ -16,24 +14,21 @@
   <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/data-structures/lists.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Lists" />
-<meta property="og:description" content="ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob..." />
-<meta property="og:image"       content="" />
+<meta property="og:description" content="        Lists    Lists Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with a..." />
+<meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
+
+<meta name="twitter:card" content="summary">
 
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage":
-    "https://maystey.github.io/uct_nassp_cm/data-structures/lists.html",
-  "headline":
-    "Lists",
-  "datePublished":
-    "2020-01-22T12:44:08+02:00",
-  "dateModified":
-    "2020-01-22T12:44:08+02:00",
-  "description":
-    "ListsLists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with another iterable ob...",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/data-structures/lists.html",
+  "headline": "Lists",
+  "datePublished": "2020-02-11T12:09:59+02:00",
+  "dateModified": "2020-02-11T12:09:59+02:00",
+  "description": "        Lists    Lists Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the list function with a...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -58,16 +53,6 @@
 
   </script>
   <link rel="stylesheet" href="/uct_nassp_cm/assets/css/styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -80,6 +65,8 @@
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -88,35 +75,24 @@ MathJax.Hub.Config({
         processEscapes: true,
         processEnvironments: true
     },
-    CommonHTML: {
-        linebreaks: {
-            automatic: true,
-        },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
     },
+    
 });
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
 
   <!-- DOM updating function -->
-  <script>
-const runWhenDOMLoaded = cb => {
-  if (document.readyState != 'loading') {
-    cb()
-  } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', cb)
-  } else {
-    document.attachEvent('onreadystatechange', function() {
-      if (document.readyState == 'complete') cb()
-    })
-  }
-}
+  <script src="/uct_nassp_cm/assets/js/page/dom-update.js"></script>
 
-// Helper function to init things quickly
-initFunction = function(myfunc) {
-  runWhenDOMLoaded(myfunc);
-  document.addEventListener('turbolinks:load', myfunc);
-};
-</script>
+  <!-- Selectors for elements on the page -->
+  <script src="/uct_nassp_cm/assets/js/page/documentSelectors.js"></script>
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
@@ -124,18 +100,12 @@ initFunction = function(myfunc) {
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
-  <script src="/uct_nassp_cm/assets/js/anchor.min.js"  type="text/javascript"></script>
-  <script>
-
-initFunction(function () {
-    anchors.add("main h1, main h2, main h3, main h4")
-});
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/anchors.js" async></script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
-  <script src="/uct_nassp_cm/assets/js/turbolinks.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
   <!-- Load nbinteract for widgets -->
@@ -153,13 +123,13 @@ initFunction(function () {
 
 const thebelabCellButton = id =>
   `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
-    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start interactive mode">
+    <img src="/uct_nassp_cm/assets/images/edit-button.svg" alt="Start thebelab interactive mode">
   </a>`
 
 
 const addThebelabButtonToCodeCells =  () => {
 
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
@@ -173,23 +143,7 @@ initFunction(addThebelabButtonToCodeCells);
 </script>
 
 
-
-<script type="text/x-thebe-config">
-    {
-      requestKernel: true,
-      binderOptions: {
-        repo: 'YOUR-ORG/YOUR-REPO',
-        ref: 'gh-pages',
-      },
-      codeMirrorConfig: {
-        theme: "abcdef"
-      },
-      kernelOptions: {
-        name: 'python3',
-      }
-    }
-</script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@latest/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks
@@ -214,20 +168,12 @@ initFunction(addThebelabButtonToCodeCells);
             const codeCells = document.querySelectorAll('.input_area pre')
             codeCells.forEach((codeCell, index) => {
                 const id = codeCellId(index)
-                codeCell.setAttribute('data-executable', 'true')
 
-                // Figure out the language it uses and add this too
-                var parentDiv = codeCell.parentElement.parentElement;
-                var arrayLength = parentDiv.classList.length;
-                for (var ii = 0; ii < arrayLength; ii++) {
-                    var parts = parentDiv.classList[ii].split('language-');
-                    if (parts.length === 2) {
-                        // If found, assign dataLanguage and break the loop
-                        var dataLanguage = parts[1];
-                        break;
-                    }
-                }
+                // Clean up the language to make it work w/ CodeMirror and add it to the cell
+                dataLanguage = ""
+                dataLanguage = detectLanguage(dataLanguage);
                 codeCell.setAttribute('data-language', dataLanguage)
+                codeCell.setAttribute('data-executable', 'true')
 
                 // If the code cell is hidden, show it
                 var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
@@ -255,6 +201,13 @@ initFunction(addThebelabButtonToCodeCells);
             outputs.forEach((output, index) => {
                 output.remove();
             });
+
+            // Find any cells with an initialization tag and ask ThebeLab to run them when ready
+            var thebeInitCells = document.querySelectorAll('div.tag_thebelab-init');
+            thebeInitCells.forEach((cell) => {
+                console.log("Initializing ThebeLab with cell: " + cell.id);
+                cell.querySelector('.thebelab-run-button').click();
+            });
         }
 
         // Add event listener for the function to modify code cells
@@ -270,181 +223,28 @@ initFunction(addThebelabButtonToCodeCells);
 
     // Initialize Thebelab
     initFunction(initThebelab);
-</script>
 
-
-
-  <!-- Load the auto-generating TOC -->
-  <script src="/uct_nassp_cm/assets/js/tocbot.min.js"  type="text/javascript"></script>
-  <script>
-var initToc = function () {
-  tocbot.init({
-    tocSelector: 'nav.onthispage',
-    contentSelector: '.c-textbook__content',
-    headingSelector: 'h2, h3',
-    orderedList: false,
-    collapseDepth: 6,
-    listClass: 'toc__menu',
-    activeListItemClass: "",  // Not using
-    activeLinkClass: "", // Not using
-  });
-  tocbot.refresh();
+// Helper function to munge the language name
+var detectLanguage = (language) => {
+    if (language.indexOf('python') > -1) {
+        language = "python";
+    }
+    return language;
 }
-initFunction(initToc);
 </script>
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/uct_nassp_cm/assets/js/page/tocbot.js"></script>
 
   <!-- Google analytics -->
-  <script src="/uct_nassp_cm/assets/js/ga.js" async></script>
+  
+
 
   <!-- Clipboard copy button -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-
-  <!-- Load JS that depends on site variables -->
-  <script>
-/**
- * Set up copy/paste for code blocks
- */
-const codeCellId = index => `codecell${index}`
-
-const clipboardButton = id =>
-  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/uct_nassp_cm/assets/images/copy-button.svg" alt="Copy to clipboard">
-  </a>`
-
-// Clears selected text since ClipboardJS will select the text when copying
-const clearSelection = () => {
-  if (window.getSelection) {
-    window.getSelection().removeAllRanges()
-  } else if (document.selection) {
-    document.selection.empty()
-  }
-}
-
-// Changes tooltip text for two seconds, then changes it back
-const temporarilyChangeTooltip = (el, newText) => {
-  const oldText = el.getAttribute('data-tooltip')
-  el.setAttribute('data-tooltip', newText)
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-}
-
-const addCopyButtonToCodeCells = () => {
-  // If ClipboardJS hasn't loaded, wait a bit and try again. This
-  // happens because we load ClipboardJS asynchronously.
-  if (window.ClipboardJS === undefined) {
-    setTimeout(addCopyButtonToCodeCells, 250)
-    return
-  }
-
-  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("copy-button" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
-    }
-  })
-
-  const clipboard = new ClipboardJS('.copybtn')
-  clipboard.on('success', event => {
-    clearSelection()
-    temporarilyChangeTooltip(event.trigger, 'Copied!')
-  })
-
-  clipboard.on('error', event => {
-    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
-  })
-
-  // Get rid of clipboard before the next page visit to avoid memory leak
-  document.addEventListener('turbolinks:before-visit', () =>
-    clipboard.destroy()
-  )
-}
-
-initFunction(addCopyButtonToCodeCells);
-</script>
-
-
-  <!-- Hide cell code -->
-  <script>
-    /**
-    Add buttons to hide code cells
-    */
-
-
-    var setCodeCellVisibility = function (inputField, kind) {
-        // Update the image and class for hidden
-        var id = inputField.getAttribute('data-id');
-        var codeCell = document.querySelector(`#${id} div.highlight`);
-
-        if (kind === "visible") {
-            codeCell.classList.remove('hidden');
-            inputField.checked = true;
-        } else {
-            codeCell.classList.add('hidden');
-            inputField.checked = false;
-        }
-    }
-
-    var toggleCodeCellVisibility = function (event) {
-        // The label is clicked, and now we decide what to do based on the input field's clicked status
-        if (event.target.tagName === "LABEL") {
-            var inputField = event.target.previousElementSibling;
-        } else {
-            // It is the span inside the target
-            var inputField = event.target.parentElement.previousElementSibling;
-        }
-
-        if (inputField.checked === true) {
-            setCodeCellVisibility(inputField, "visible");
-        } else {
-            setCodeCellVisibility(inputField, "hidden");
-        }
-    }
-
-
-    // Button constructor
-    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
-
-    var addHideButton = function () {
-        // If a hide button is already added, don't add another
-        if (document.querySelector('div.hidecode input') !== null) {
-            return;
-        }
-
-        // Find the input cells and add a hide button
-        document.querySelectorAll('div.input_area').forEach(function (item, index) {
-            if (!item.classList.contains("hidecode")) {
-                // Skip the cell if it doesn't have a hidecode class
-                return;
-            }
-
-            const id = codeCellId(index)
-            item.setAttribute('id', id);
-            // Insert the button just inside the end of the next div
-            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
-
-            // Set up the visibility toggle
-            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
-            hideLink.addEventListener('click', toggleCodeCellVisibility)
-        });
-    }
-
-
-    // Initialize the hide buttos
-    var initHiddenCells = function () {
-        // Add hide buttons to the cells
-        addHideButton();
-
-        // Toggle the code cells that should be hidden
-        document.querySelectorAll('div.hidecode input').forEach(function (item) {
-            setCodeCellVisibility(item, 'hidden');
-            item.checked = true;
-        })
-    }
-
-    initFunction(initHiddenCells);
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
   <script src="/uct_nassp_cm/assets/js/scripts.js" async></script>
@@ -457,7 +257,7 @@ initFunction(addCopyButtonToCodeCells);
   
 
   <!-- Lunr search code - will only be executed on the /search page -->
-  <script src="/uct_nassp_cm/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
   <script>var initQuery = function() {
   // See if we have a search box
   var searchInput = document.querySelector('input#lunr_search');
@@ -543,9 +343,68 @@ initFunction(addCopyButtonToCodeCells);
 
 initFunction(initQuery);
 </script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/uct_nassp_cm/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/uct_nassp_cm/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/uct_nassp_cm/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
 </head>
 
   <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "YOUR-ORG/YOUR-REPO",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: "content/data-structures"
+    }
+}
+</script>
+
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
       
@@ -553,7 +412,7 @@ initFunction(initQuery);
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://jupyter.org/jupyter-book/"><img src="/uct_nassp_cm/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <a href="http://www.ast.uct.ac.za/ast/postgraduate/4007w"><img src="/uct_nassp_cm/images/logo/UCTcircular_logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">AST4007W Computational Methods</h2>
   <ul class="c-sidebar__chapters">
     
@@ -562,26 +421,63 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/intro.html"
         >
           
           Home
         </a>
-
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
 
       
     
       
       
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/uct_nassp_cm/search.html">Search</a></li>
-        
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="https://github.com/maystey/uct_nassp_cm">
+        <a class="c-sidebar__entry"
+          href="https://github.com/maystey/uct_nassp_cm"
+        >
+          
+          GitHub repository
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
       
       
         <li class="c-sidebar__divider"></li>
@@ -591,167 +487,201 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/intro/intro">
+        <a class="c-sidebar__entry"
+          href="/uct_nassp_cm/intro/intro.html"
+        >
+          
+          Introduction
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/basics/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/basics/intro.html"
         >
           
           Python Basics
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/variables.html"
-                >
-                  
-                  Variables
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/comments.html"
-                >
-                  
-                  Comments
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/types.html"
-                >
-                  
-                  Type Conversion
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/operators.html"
-                >
-                  
-                  Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/assignment-operators.html"
-                >
-                  
-                  Assignment Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/functions.html"
-                >
-                  
-                  Introduction to Functions
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/strings.html"
-                >
-                  
-                  Strings
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/basics/string-formatting.html"
-                >
-                  
-                  String Formating
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/variables">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/variables.html"
+              >
+                
+                Variables
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/comments">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/comments.html"
+              >
+                
+                Comments
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/types">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/types.html"
+              >
+                
+                Type Conversion
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/operators.html"
+              >
+                
+                Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/assignment-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/assignment-operators.html"
+              >
+                
+                Assignment Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/functions">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/functions.html"
+              >
+                
+                Introduction to Functions
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/basics/strings">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/basics/strings.html"
+              >
+                
+                Strings
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -760,183 +690,94 @@ initFunction(initQuery);
 
       
       
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
-          href="/uct_nassp_cm/if-statements/intro.html"
-        >
-          
-          If Statements
-        </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/bools.html"
-                >
-                  
-                  Booleans
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/comparison-operators.html"
-                >
-                  
-                  Comparison Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/logical-operators.html"
-                >
-                  
-                  Logical Operators
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/if-statements/if.html"
-                >
-                  
-                  If Statements
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
-      </li>
-
-      
-    
       
       
 
       
       
-
-      
-      
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/data-structures/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/data-structures/intro.html"
         >
           
           Data Structures
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/tuple.html"
-                >
-                  
-                  Tuple
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry c-sidebar__entry--active"
-                  href="/uct_nassp_cm/data-structures/lists.html"
-                >
-                  
-                  Lists
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/data-structures/dictionaries.html"
-                >
-                  
-                  Dictionaries
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/tuple">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/tuple.html"
+              >
+                
+                Tuple
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/lists">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/lists.html"
+              >
+                
+                Lists
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-structures/dictionaries">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/data-structures/dictionaries.html"
+              >
+                
+                Dictionaries
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -945,82 +786,209 @@ initFunction(initQuery);
 
       
       
+      
+      
 
       
       
-      <li class="c-sidebar__chapter">
-        <a class="c-sidebar__entry "
+      <li class="c-sidebar__chapter" data-url="/if-statements/intro">
+        <a class="c-sidebar__entry"
+          href="/uct_nassp_cm/if-statements/intro.html"
+        >
+          
+          If Statements
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/bools">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/bools.html"
+              >
+                
+                Booleans
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/comparison-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/comparison-operators.html"
+              >
+                
+                Comparison Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/logical-operators">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/logical-operators.html"
+              >
+                
+                Logical Operators
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/if-statements/if">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/if-statements/if.html"
+              >
+                
+                If Statements
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/loops/intro">
+        <a class="c-sidebar__entry"
           href="/uct_nassp_cm/loops/intro.html"
         >
           
           Loops
         </a>
-
-        
-
-          
-          
-          
-          
-
-          
-
-          <ul class="c-sidebar__sections ">
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/for.html"
-                >
-                  
-                  For Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/list-comp.html"
-                >
-                  
-                  List Comprehension
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-              
-              
-
-              <li class="c-sidebar__section">
-                <a class="c-sidebar__entry "
-                  href="/uct_nassp_cm/loops/while.html"
-                >
-                  
-                  While Loops
-                </a>
-
-                
-                
-
-              </li>
-              
-            
-          </ul>
-        
       </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections u-hidden-visually">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/for">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/for.html"
+              >
+                
+                For Loops
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/list-comp">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/list-comp.html"
+              >
+                
+                List Comprehension
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/loops/while">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/loops/while.html"
+              >
+                
+                While Loops
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
 
       
     
@@ -1029,295 +997,552 @@ initFunction(initQuery);
 </nav>
 
       
-      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
-      <aside class="sidebar__right">
-          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
-          <nav class="onthispage">
-          </nav>
-      </aside>
-      
-      <main class="c-textbook__page" tabindex="-1">
-          <div class="o-wrapper">
-            <div class="c-sidebar-toggle">
+      <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
-  <button
-    id="js-sidebar-toggle"
-    class="hamburger hamburger--arrowalt is-active"
-  >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
-  </button>
-</div>
-
-            
-<div class="buttons">
-<a href="/uct_nassp_cm/content/data-structures/lists.ipynb" download>
-<button id="interact-button-download" class="interact-button">Download</button>
-</a>
-
-<button id="interact-button-thebelab" class="interact-button">Thebelab</button>
-
-
-
-
-
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        <a href="/uct_nassp_cm/content/data-structures/lists.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
 </div>
 
 
-            <div class="c-textbook__content">
-              <h1 id="lists">Lists</h1>
-<p>Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the <code class="highlighter-rouge">list</code> function with another iterable object or square brackets <code class="highlighter-rouge">[]</code>:</p>
+  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list1'</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+  
+  
+  
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/uct_nassp_cm/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/uct_nassp_cm/search.html" class="topbar-right-button" id="search-button">
+    <img src="/uct_nassp_cm/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Lists</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lists">Lists<a class="anchor-link" href="#Lists"> </a></h1><p>Lists are used to store a collection of objects but are more flexible than tuples. You can create lists using the <code>list</code> function with another iterable object or square brackets <code>[]</code>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list1&#39;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
 
 <span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'list2'</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list2&#39;</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
+</pre></div>
 
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list1 [1, 2, 3]
-list2 [4, 8, 9]
-</code></pre></div>      </div>
     </div>
-  </div>
+</div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>list1 [1, 2, 3]
+list2 [4, 8, 9]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>You can access elements of the list by indexing and slicing it:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Letters:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'First character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Last character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Every second character:'</span><span class="p">,</span> <span class="n">letters</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+</div>
+</div>
+</div>
+</div>
 
-</code></pre></div>    </div>
-  </div>
+<div class="jb_cell">
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Letters: ['a', 'b', 'c', 'd', 'e']
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Letters:&#39;</span><span class="p">,</span> <span class="n">letters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First character:&#39;</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Second character:&#39;</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last character:&#39;</span><span class="p">,</span> <span class="n">letters</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Every second character:&#39;</span><span class="p">,</span> <span class="n">letters</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Letters: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
 First character: a
 Second character: b
 Last character: e
-Every second character: ['a', 'c', 'e']
-</code></pre></div>      </div>
-    </div>
-  </div>
+Every second character: [&#39;a&#39;, &#39;c&#39;, &#39;e&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Unlike tuples you can alter the elements of a list after instancing it:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the third character'</span><span class="p">)</span>
-
-<span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">'z'</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
-Changing the third character
-['a', 'b', 'z', 'd', 'e']
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Changing the third character&#39;</span><span class="p">)</span>
+
+<span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+Changing the third character
+[&#39;a&#39;, &#39;b&#39;, &#39;z&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>You can also assign new values to slices:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</div>
+</div>
+</div>
+</div>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Changing the first three characters'</span><span class="p">)</span>
-<span class="n">letters</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">,</span> <span class="s">'z'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<div class="jb_cell">
 
-</code></pre></div>    </div>
-  </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Changing the first three characters&#39;</span><span class="p">)</span>
+<span class="n">letters</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
 Changing the first three characters
-['x', 'y', 'z', 'd', 'e']
-</code></pre></div>      </div>
-    </div>
-  </div>
+[&#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h2 id="concatenating-lists">Concatenating Lists</h2>
-
-<p>The <code class="highlighter-rouge">+</code> operator acts on lists in a similar way to strings, concatenating the two lists:</p>
-
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span><span class="p">)</span>
-
-</code></pre></div>    </div>
-  </div>
-
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 'a', 'b', 'c']
-</code></pre></div>      </div>
-    </div>
-  </div>
+</div>
 </div>
 
-<h2 id="listappend"><code class="highlighter-rouge">list.append()</code></h2>
+<div class="jb_cell">
 
-<p>You can add elements to the end of the list using the <code class="highlighter-rouge">.append()</code> method:</p>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Concatenating-Lists">Concatenating Lists<a class="anchor-link" href="#Concatenating-Lists"> </a></h2><p>The <code>+</code> operator acts on lists in a similar way to strings, concatenating the two lists:</p>
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</div>
+</div>
+</div>
+</div>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Appending an additional letter'</span><span class="p">)</span>
+<div class="jb_cell">
 
-<span class="n">letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'f'</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-</code></pre></div>    </div>
-  </div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a', 'b', 'c', 'd', 'e']
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list.append()"><code>list.append()</code><a class="anchor-link" href="#list.append()"> </a></h2><p>You can add elements to the end of the list using the <code>.append()</code> method:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Appending an additional letter&#39;</span><span class="p">)</span>
+
+<span class="n">letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
 Appending an additional letter
-['a', 'b', 'c', 'd', 'e', 'f']
-</code></pre></div>      </div>
-    </div>
-  </div>
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h2 id="listinsert"><code class="highlighter-rouge">list.insert()</code></h2>
+</div>
+</div>
 
-<p>If you want to insert an element into a specific place in the list you can use the <code class="highlighter-rouge">.insert()</code> method. This takes the index and the object you want to add as the arguments:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list.insert()"><code>list.insert()</code><a class="anchor-link" href="#list.insert()"> </a></h2><p>If you want to insert an element into a specific place in the list you can use the <code>.insert()</code> method. This takes the index and the object you want to add as the arguments:</p>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Inserting number 3 at index 2'</span><span class="p">)</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Inserting number 3 at index 2&#39;</span><span class="p">)</span>
 
 <span class="n">numbers</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
 
-</code></pre></div>    </div>
-  </div>
+    </div>
+</div>
+</div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 4, 5, 6]
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 4, 5, 6]
 Inserting number 3 at index 2
 [1, 2, 3, 4, 5, 6]
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h2 id="listsremove">‘lists.remove()’</h2>
+</div>
+</div>
 
-<p>If you want to remove the first instance of an element of a list with a specific value you can use the <code class="highlighter-rouge">.remove()</code> method:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="'lists.remove()'">'lists.remove()'<a class="anchor-link" href="#'lists.remove()'"> </a></h2><p>If you want to remove the first instance of an element of a list with a specific value you can use the <code>.remove()</code> method:</p>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Removing first 1 from numbers'</span><span class="p">)</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removing first 1 from numbers&#39;</span><span class="p">)</span>
 
 <span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
 
-</code></pre></div>    </div>
-  </div>
+    </div>
+</div>
+</div>
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 1, 3, 4]
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 1, 3, 4]
 Removing first 1 from numbers
 [2, 1, 3, 4]
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h2 id="listpop"><code class="highlighter-rouge">list.pop()</code></h2>
+</div>
+</div>
 
-<p>If you want to retrieve and remove an element at a particular index you can use the  <code class="highlighter-rouge">.remove()</code> method, which takes the index of the element you want to retrieve as the argument:</p>
+<div class="jb_cell">
 
-<div class="cell code_cell">
-  <div class="input_area">
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list.pop()"><code>list.pop()</code><a class="anchor-link" href="#list.pop()"> </a></h2><p>If you want to retrieve and remove an element at a particular index you can use the  <code>.remove()</code> method, which takes the index of the element you want to retrieve as the argument:</p>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'Retrieving number at index 2:'</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</div>
+</div>
+</div>
+</div>
 
-<span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<div class="jb_cell">
 
-</code></pre></div>    </div>
-  </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-  <div class="output_wrapper">
-    <div class="output_subarea">
-      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5]
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Retrieving number at index 2:&#39;</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
 Retrieving number at index 2: 3
 [1, 2, 4, 5]
-</code></pre></div>      </div>
-    </div>
-  </div>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <!--- Talk about the map function?-->
+</div>
+</div>
+</div>
+</div>
+
+ 
 
 
-              <nav class="c-page__nav">
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
   
     
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/data-structures/tuple">
+    
+
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/data-structures/tuple.html">
       〈 <span class="u-margin-right-tiny"></span> Tuple
     </a>
   
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/data-structures/dictionaries">
+
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/data-structures/dictionaries.html">
       Dictionaries <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
 
+              <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
             </div>
-          </div>
+
         </div>
       </main>
     </div>
-
   </body>
 </html>

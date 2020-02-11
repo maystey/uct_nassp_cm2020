@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Type Conversion</title>
-  <meta name="description" content="        Type Conversion    Type Conversion So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable...">
+  <title>Introduction</title>
+  <meta name="description" content="        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/types.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/intro/intro.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/types.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/intro/intro.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Type Conversion" />
-<meta property="og:description" content="        Type Conversion    Type Conversion So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable..." />
+<meta property="og:title"       content="Introduction" />
+<meta property="og:description" content="        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/types.html",
-  "headline": "Type Conversion",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/intro/intro.html",
+  "headline": "Introduction",
   "datePublished": "2020-02-11T12:09:59+02:00",
   "dateModified": "2020-02-11T12:09:59+02:00",
-  "description": "        Type Conversion    Type Conversion So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable...",
+  "description": "        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: "content/basics"
+    path: ""
     }
 }
 </script>
@@ -1012,20 +1012,10 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/basics/types.ipynb" download>
-        <button id="interact-button-download" class="interact-button">.ipynb</button>
-        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
     </div>
 </div>
-
-
-  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
-
-  
-  
-  
 
 
 </div>
@@ -1045,304 +1035,40 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Type Conversion</div>
+    <div id="page-info"><div id="page-title">Introduction</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Type-Conversion">Type Conversion<a class="anchor-link" href="#Type-Conversion"> </a></h1><p>So far we have looked at three variable types: integers, floats and strings; and how to check what type a variable is.</p>
-<p>Sometimes we want to convert between different variable types. To do this we can use the <code>int</code>, <code>float</code> and <code>str</code> functions:</p>
+<h1 id="Programming-and-Python-in-a-Nutshell">Programming and Python in a Nutshell<a class="anchor-link" href="#Programming-and-Python-in-a-Nutshell"> </a></h1><p>In this chapter we will go over a brief overview of programming languages and Python. While important, not having a full grasp of this chapter should not hinder your ability to program using Python.</p>
+<h2 id="What-is-a-programming-language?">What is a programming language?<a class="anchor-link" href="#What-is-a-programming-language?"> </a></h2><p>Programming is, in essence, writing a series of instructions for the computer to execute. This is done using a programming language, which can be understood or translated to a form that can be understood by the computer.</p>
+<p>At the lowest level the language of computers is called machine code. This language is used to communicate with the computers CPU through binary or hexadecimal instructions (which is not easy for humans to read).
+Machine code is dependent on the computer hardware being used and is not easy to understand as humans. A step up from this is 
+an assembly language, which uses some human language, but is still difficult to understand and dependent on the computer architecture <a class="citation" href="#wikipedia_machine_code">(“Machine Code — Wikipedia, The Free Encyclopedia,” n.d.; “Assembly Language — Wikipedia, The Free Encyclopedia,” n.d.)</a>.</p>
+<p>Hardware dependence could be a big problem. Programs written for one computer would not necessarily work on another computer, they would have to be translated (by a human) first. To bridge this difference between hardware specifications high level programming languages were developed.</p>
+<p>Most of the programming languages you are likely to use these days are high-level programming languages. These languages are designed to be readable by humans. They also allow for programs to be written independently (to some degree) from the hardware in question. At some level these languages will need to be compiled (translated from one language to another <a class="citation" href="#wikipedia_compiler">(contributors, n.d.)</a>)
+to machine code <a class="citation" href="#wikipedia_machine_code">(“Machine Code — Wikipedia, The Free Encyclopedia,” n.d.)</a>.</p>
+<h2 id="What-is-a-Script?">What is a Script?<a class="anchor-link" href="#What-is-a-Script?"> </a></h2><p>A script is a text file containing source code (instructions for the computer) written in a programming language. Programs can be composed of a single script, or many scripts working together.</p>
+<p>Generally scripts for a specific language are given a specific file suffix. Relevant to us, Python scripts end with a <code>.py</code>.</p>
+<h2 id="Python,-a-Dynamic-Programming-Language.">Python, a Dynamic Programming Language.<a class="anchor-link" href="#Python,-a-Dynamic-Programming-Language."> </a></h2><p>Python is a high level language and thus needs to eventually be translated into machine code. <!--- Python is a dynamic programming language. --></p>
+<p>Many high level programming languages' source code (the instructions written in the programming language) is compiled to machine code once, and then can be executed in this form. These are called static programming languages (C is an example).</p>
+<p>Dynamic programming languages are languages where operations that would normally take place at compile-time (when the code is compiled) can instead be done at run-time (when the program is executed) <a class="citation" href="#mozilla_dynamic">(“Dynaimc Programming Language — MDN Web Docs,” n.d.)</a>. Python is a dynamic programming language.</p>
+<p>When you run a python script it is compiled to byte code (if necessary). This byte code is a lower-level, platform independent representation of your source code <!--- sic -->. <a class="citation" href="#ned_python_interp">(Batchelder, n.d.; “Compiling and Linking in Python — Net-informations.com,” n.d.)</a>.</p>
+<p>Byte code is similar to the CPU specific assembly code, but is instead executed by software called a virtual machine (which simulates a CPU environment). <a class="citation" href="#ned_python_interp">(Batchelder, n.d.)</a> The Python Virtual Machine is always present in the Python system and is the last step of the Python Interpreter <a class="citation" href="#net-info_compiling_python">(“Compiling and Linking in Python — Net-informations.com,” n.d.)</a>. <!-- Too much jargon invoked? --></p>
+<!--- These virtual machines can be written in any language. (missing reference) -->
+
+<!-- Briefly mention dynamic typing? -->
+
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p><ol class="bibliography"><li><span id="wikipedia_machine_code">Machine Code — Wikipedia, The Free Encyclopedia. Retrieved from https://en.wikipedia.org/wiki/Machine_code</span></li>
+<li><span id="wikipedia_assembly">Assembly Language — Wikipedia, The Free Encyclopedia. Retrieved from https://en.wikipedia.org/wiki/Assembly_language</span></li>
+<li><span id="wikipedia_compiler">contributors, W. Compiler — Wikipedia, The Free Encyclopedia. Retrieved from https://en.wikipedia.org/wiki/Compiler</span></li>
+<li><span id="mozilla_dynamic">Dynaimc Programming Language — MDN Web Docs. Retrieved from https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_programming_language</span></li>
+<li><span id="ned_python_interp">Batchelder, N. Is Python interpreted or compiled? Yes. — Ned Batchelder. Retrieved from https://nedbatchelder.com/blog/201803/is_python_interpreted_or_compiled_yes.html</span></li>
+<li><span id="net-info_compiling_python">Compiling and Linking in Python — Net-informations.com. Retrieved from http://net-informations.com/python/iq/linking.htm</span></li></ol></p>
 
 </div>
 </div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">int_var</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
-
-<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">int_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 &lt;class &#39;int&#39;&gt;
-1.0 &lt;class &#39;float&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">float_var</span> <span class="o">=</span> <span class="mf">5.7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
-
-<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">float_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5.7 &lt;class &#39;float&#39;&gt;
-5 &lt;class &#39;int&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that when you convert a float to an integer Python does simply discards the decimal part (if you wish to round-off a float you can use the <code>round</code> function).<!--- link docs?--></p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str_var</span> <span class="o">=</span> <span class="s1">&#39;1.43&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
-
-<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.43 &lt;class &#39;str&#39;&gt;
-1.43 &lt;class &#39;float&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str_var</span> <span class="o">=</span> <span class="s1">&#39;12&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
-
-<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12 &lt;class &#39;str&#39;&gt;
-12 &lt;class &#39;int&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that anything other than a number cannot be converted from a string to a float or int:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str_var</span> <span class="o">=</span> <span class="s1">&#39;not a number&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
-
-<span class="n">float_var</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">float_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>not a number &lt;class &#39;str&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-9-4224f055b9d6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>float_var <span class="ansi-blue-fg">=</span> float<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>float_var<span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>float_var<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;not a number&#39;</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Even strings that contain a number with a decimal part cannot be converted to an integer:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str_var</span> <span class="o">=</span> <span class="s1">&#39;4.563&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">str_var</span><span class="p">))</span>
-
-<span class="n">int_var</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">str_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">int_var</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>4.563 &lt;class &#39;str&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-a3094efdeb44&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>int_var <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>str_var<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>int_var<span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>int_var<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;4.563&#39;</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1359,8 +1085,8 @@ initFunction(initPrint)
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/comments.html">
-      〈 <span class="u-margin-right-tiny"></span> Comments
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/intro.html">
+      〈 <span class="u-margin-right-tiny"></span> Home
     </a>
   
 
@@ -1368,8 +1094,8 @@ initFunction(initPrint)
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/operators.html">
-      Operators <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/intro.html">
+      Python Basics <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
