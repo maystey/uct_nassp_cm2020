@@ -43,6 +43,11 @@
 # - header: Demo textbook
 
 # A chapter w/ a collection of sections beneath it
+- title: Introduction
+  url: /intro/intro
+  expand_sections: false
+
+
 - title: Python Basics
   url: /basics/intro
   not_numbered: true

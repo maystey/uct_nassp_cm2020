@@ -10,7 +10,16 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Checking if object in collection using `in`
 - *list to unpack
 
-## Introduction - Not Started
+## Introduction
+
+### Complete
+- What is a programming language
+
+### Incomplete
+- Python, a Dynamic Programming Language
+
+### Not Started
+- What is a script?
 
 ## Basics
 
