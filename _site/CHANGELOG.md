@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Edited Intro and Basics:Variables,Functions,Strings (fixed broken tables)
+
+### Bugs Fixed
+- Table in Basics:Variables now renders properly (now embedded html)
+
+
+## [0.5.0] - 2020-02-11
+
 ### Added
 - Chapter: Introduction (along with bib items)
 

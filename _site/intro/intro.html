@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/intro/intro.html",
   "headline": "Introduction",
-  "datePublished": "2020-02-11T12:09:59+02:00",
-  "dateModified": "2020-02-11T12:09:59+02:00",
+  "datePublished": "2020-02-13T09:54:37+02:00",
+  "dateModified": "2020-02-13T09:54:37+02:00",
   "description": "        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo...",
   "author": {
     "@type": "Person",
@@ -1043,19 +1043,20 @@ initFunction(initPrint)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programming-and-Python-in-a-Nutshell">Programming and Python in a Nutshell<a class="anchor-link" href="#Programming-and-Python-in-a-Nutshell"> </a></h1><p>In this chapter we will go over a brief overview of programming languages and Python. While important, not having a full grasp of this chapter should not hinder your ability to program using Python.</p>
 <h2 id="What-is-a-programming-language?">What is a programming language?<a class="anchor-link" href="#What-is-a-programming-language?"> </a></h2><p>Programming is, in essence, writing a series of instructions for the computer to execute. This is done using a programming language, which can be understood or translated to a form that can be understood by the computer.</p>
-<p>At the lowest level the language of computers is called machine code. This language is used to communicate with the computers CPU through binary or hexadecimal instructions (which is not easy for humans to read).
+<p>At the lowest level the language of computers is called machine code. This language is used to communicate with the computer's CPU through binary or hexadecimal instructions.
 Machine code is dependent on the computer hardware being used and is not easy to understand as humans. A step up from this is 
 an assembly language, which uses some human language, but is still difficult to understand and dependent on the computer architecture <a class="citation" href="#wikipedia_machine_code">(“Machine Code — Wikipedia, The Free Encyclopedia,” n.d.; “Assembly Language — Wikipedia, The Free Encyclopedia,” n.d.)</a>.</p>
 <p>Hardware dependence could be a big problem. Programs written for one computer would not necessarily work on another computer, they would have to be translated (by a human) first. To bridge this difference between hardware specifications high level programming languages were developed.</p>
-<p>Most of the programming languages you are likely to use these days are high-level programming languages. These languages are designed to be readable by humans. They also allow for programs to be written independently (to some degree) from the hardware in question. At some level these languages will need to be compiled (translated from one language to another <a class="citation" href="#wikipedia_compiler">(contributors, n.d.)</a>)
+<p>Most of the programming languages you are likely to use these days are high-level programming languages. Besides being CPU independent, these languages are designed to be readable by humans. <!--They also allow for programs to be written independently (to some degree) from the hardware in question. --> 
+At some level these languages will need to be compiled (translated <a class="citation" href="#wikipedia_compiler">(contributors, n.d.)</a>)
 to machine code <a class="citation" href="#wikipedia_machine_code">(“Machine Code — Wikipedia, The Free Encyclopedia,” n.d.)</a>.</p>
 <h2 id="What-is-a-Script?">What is a Script?<a class="anchor-link" href="#What-is-a-Script?"> </a></h2><p>A script is a text file containing source code (instructions for the computer) written in a programming language. Programs can be composed of a single script, or many scripts working together.</p>
-<p>Generally scripts for a specific language are given a specific file suffix. Relevant to us, Python scripts end with a <code>.py</code>.</p>
-<h2 id="Python,-a-Dynamic-Programming-Language.">Python, a Dynamic Programming Language.<a class="anchor-link" href="#Python,-a-Dynamic-Programming-Language."> </a></h2><p>Python is a high level language and thus needs to eventually be translated into machine code. <!--- Python is a dynamic programming language. --></p>
-<p>Many high level programming languages' source code (the instructions written in the programming language) is compiled to machine code once, and then can be executed in this form. These are called static programming languages (C is an example).</p>
+<p>Generally scripts for a particular language are given a specific file suffix. Relevant to us, Python scripts end with a <code>.py</code>.</p>
+<h2 id="Python,-a-Dynamic-Programming-Language.">Python, a Dynamic Programming Language.<a class="anchor-link" href="#Python,-a-Dynamic-Programming-Language."> </a></h2><p>Python is a high level language and thus needs to eventually be compiled down. <!-- translated into machine code. <!--- Python is a dynamic programming language. --></p>
+<p>Many high level programming languages' source code is compiled to machine code once, and then can be executed in this form. These are called static programming languages (C is an example).</p>
 <p>Dynamic programming languages are languages where operations that would normally take place at compile-time (when the code is compiled) can instead be done at run-time (when the program is executed) <a class="citation" href="#mozilla_dynamic">(“Dynaimc Programming Language — MDN Web Docs,” n.d.)</a>. Python is a dynamic programming language.</p>
-<p>When you run a python script it is compiled to byte code (if necessary). This byte code is a lower-level, platform independent representation of your source code <!--- sic -->. <a class="citation" href="#ned_python_interp">(Batchelder, n.d.; “Compiling and Linking in Python — Net-informations.com,” n.d.)</a>.</p>
-<p>Byte code is similar to the CPU specific assembly code, but is instead executed by software called a virtual machine (which simulates a CPU environment). <a class="citation" href="#ned_python_interp">(Batchelder, n.d.)</a> The Python Virtual Machine is always present in the Python system and is the last step of the Python Interpreter <a class="citation" href="#net-info_compiling_python">(“Compiling and Linking in Python — Net-informations.com,” n.d.)</a>. <!-- Too much jargon invoked? --></p>
+<p>When you run a python script it is compiled to byte code (if it hasn't been already). This byte code is a lower-level, platform independent representation of your source code <!--- sic -->. <a class="citation" href="#ned_python_interp">(Batchelder, n.d.; “Compiling and Linking in Python — Net-informations.com,” n.d.)</a>.</p>
+<p>Byte code is similar to the CPU <!--- Necessary repeatition?--> specific assembly code, but is instead executed by software called a virtual machine (which simulates a CPU environment). <a class="citation" href="#ned_python_interp">(Batchelder, n.d.)</a> The Python Virtual Machine is always present in the Python system and is the last step of the Python Interpreter <a class="citation" href="#net-info_compiling_python">(“Compiling and Linking in Python — Net-informations.com,” n.d.)</a>. <!-- Too much jargon invoked? --></p>
 <!--- These virtual machines can be written in any language. (missing reference) -->
 
 <!-- Briefly mention dynamic typing? -->
