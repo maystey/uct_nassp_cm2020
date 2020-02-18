@@ -114,6 +114,9 @@ The remaining sections here are not a priority
 - For loop examples
 - While loop examples
 
+### Enhancements
+- breaking out of loops - show practical examples
+
 ## NumPy - Not Started
 
 ## File I/O - Not Started

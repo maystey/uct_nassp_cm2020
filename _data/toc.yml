@@ -114,7 +114,7 @@
     url: /loops/while
   # - title: While Loop Examples
   #   url: /loops/while-examples
-  # - title: Breaking Out of Loops
-  #   url: /loops/break
-  # - title: Else Statement and Loops
-  #   url: /loops/else
+  - title: Breaking Out of Loops
+    url: /loops/break
+  - title: Else Statement and Loops
+    url: /loops/else
