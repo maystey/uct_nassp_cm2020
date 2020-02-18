@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Introduction to Functions</title>
-  <meta name="description" content="        Introduction to Functions    Introduction to Using Functions In this section we shall discuss some of the details on how to use functions from the St...">
+  <title>Else Statement and Loops</title>
+  <meta name="description" content="        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/functions.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/loops/else.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/functions.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/loops/else.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Introduction to Functions" />
-<meta property="og:description" content="        Introduction to Functions    Introduction to Using Functions In this section we shall discuss some of the details on how to use functions from the St..." />
+<meta property="og:title"       content="Else Statement and Loops" />
+<meta property="og:description" content="        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/functions.html",
-  "headline": "Introduction to Functions",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/loops/else.html",
+  "headline": "Else Statement and Loops",
   "datePublished": "2020-02-18T10:35:32+02:00",
   "dateModified": "2020-02-18T10:35:32+02:00",
-  "description": "        Introduction to Functions    Introduction to Using Functions In this section we shall discuss some of the details on how to use functions from the St...",
+  "description": "        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: "content/basics"
+    path: "content/loops"
     }
 }
 </script>
@@ -1050,7 +1050,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/basics/functions.ipynb" download>
+        <a href="/uct_nassp_cm/content/loops/else.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1083,17 +1083,13 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Introduction to Functions</div>
+    <div id="page-info"><div id="page-title">Else Statement and Loops</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction-to-Using-Functions">Introduction to Using Functions<a class="anchor-link" href="#Introduction-to-Using-Functions"> </a></h1><p>In this section we shall discuss some of the details on how to use functions from the Standard Library. We have already come across a few functions, namely <code>print()</code> and <code>type()</code>. We shall cover how to define your own functions in a later section.</p>
-<p>Python functions essentially take variables or values/objects as arguments, perform a task and them return values/objects. As we have seen before the syntax of a function call is:</p>
-
-<pre><code>function_name(argument, argument, ...)</code></pre>
-<p>Note that some functions return a <code>None</code> type when a return value isn't necessary. For example, the <code>print()</code> function:</p>
+<h1 id="Else-Statement-and-Loops">Else Statement and Loops<a class="anchor-link" href="#Else-Statement-and-Loops"> </a></h1><p>You can use an else statement after a <code>for</code> or <code>while</code> loop. The code in this <code>else</code> statement is executed if the loop completed without being terminated.</p>
 
 </div>
 </div>
@@ -1107,9 +1103,10 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_return</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;print out&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;print function return:&#39;</span><span class="p">,</span> <span class="n">print_return</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop completed&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1123,8 +1120,10 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>print out
-print function return: None
+<pre>0
+1
+2
+Loop completed
 </pre>
 </div>
 </div>
@@ -1139,7 +1138,7 @@ print function return: None
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you want to know what a particular function does or how to use it, a quick way to find out is to pull up the docstring. In an IPython environment (such as a Jupyter notebook) this can be done by typing a <code>?</code> symbol after the function name and pressing enter. For example:</p>
+<p>The only time the <code>else</code> part will not be executed is if you <code>break</code> out of a loop:</p>
 
 </div>
 </div>
@@ -1153,119 +1152,13 @@ print function return: None
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>print<span class="o">?</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea ">
-<pre><span class="ansi-red-fg">Docstring:</span>
-print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
-
-Prints the values to a stream, or to sys.stdout by default.
-Optional keyword arguments:
-file:  a file-like object (stream); defaults to the current sys.stdout.
-sep:   string inserted between values, default a space.
-end:   string appended after the last value, default a newline.
-flush: whether to forcibly flush the stream.
-<span class="ansi-red-fg">Type:</span>      builtin_function_or_method
-</pre>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In a default Python shell or script you can print out the docstring using the <code>help()</code> function. For example:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on built-in function print in module builtins:
-
-print(...)
-    print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     
-    Prints the values to a stream, or to sys.stdout by default.
-    Optional keyword arguments:
-    file:  a file-like object (stream); defaults to the current sys.stdout.
-    sep:   string inserted between values, default a space.
-    end:   string appended after the last value, default a newline.
-    flush: whether to forcibly flush the stream.
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Alternatively you can refer to the <a href="https://docs.python.org/3/">Python documentation</a>.</p>
-<p>Now, let's take a look at the <code>print()</code> docstring itself. The first line of the docstring shows us the function name; and the name of the function arguments and their default values (if they have). Following this is a description of what the function does. Following this is a list of optional keyword arguments.</p>
-<p>Sometimes a docstring will also contain examples on how to use the function, though none are present in this one.</p>
-<p>We will see more examples of how optional keyword arguments work (in particular in the Chapter discussing Matplotlib...), for now let's use one of them. Let's change the argument <code>sep</code>, which is the string inserted between the values you put into the <code>print()</code> function. As we can see, it's default value is a space <code>' '</code>. As a first example, let's change the separation to an empty string (no space):</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;spaces&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop completed&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1279,7 +1172,10 @@ print(...)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Therearenospaces
+<pre>0
+1
+2
+3
 </pre>
 </div>
 </div>
@@ -1294,7 +1190,7 @@ print(...)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As another example, let's put commas (<code>','</code>) in between the values:</p>
+<h3 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h3><p>A common use for this structure is if you're searching for an object. Consider this example where we are trying to find a <code>'fish'</code> in a list:</p>
 
 </div>
 </div>
@@ -1308,7 +1204,14 @@ print(...)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;commas&#39;</span><span class="p">,</span> <span class="s1">&#39;between&#39;</span><span class="p">,</span> <span class="s1">&#39;values&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zebra&#39;</span><span class="p">,</span> <span class="s1">&#39;cow&#39;</span><span class="p">,</span> <span class="s1">&#39;crow&#39;</span><span class="p">,</span> <span class="s1">&#39;eel&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">animal</span> <span class="o">==</span> <span class="s1">&#39;fish&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1322,7 +1225,46 @@ print(...)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>There,are,commas,between,values
+<pre>We did not catch a fish.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span> <span class="s1">&#39;bear&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">,</span> <span class="s1">&#39;squid&#39;</span><span class="p">,</span> <span class="s1">&#39;crab&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">animal</span> <span class="o">==</span> <span class="s1">&#39;fish&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>We caught a fish!
 </pre>
 </div>
 </div>
@@ -1337,19 +1279,7 @@ print(...)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-input()-Function">The <code>input()</code> Function<a class="anchor-link" href="#The-input()-Function"> </a></h2>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Another important function in the Python Standard Library is the <code>input()</code> function. This function allows us to collect user inputs from the terminal.</p>
-<p><code>input()</code> takes a string as an argument, this gets printed to the terminal and the script is halted until the user has entered a string and pressed enter. This string that the user has entered is returned by the <code>input()</code> function; and can, therefore, be used in the rest of the script.</p>
-<p>As a first example, consider the following code that asks the user for their name:</p>
+<p>Of course, finding a particular object in a list is quicker and simpler using:</p>
 
 </div>
 </div>
@@ -1363,9 +1293,12 @@ print(...)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name?&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span> <span class="s1">&#39;bear&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">,</span> <span class="s1">&#39;squid&#39;</span><span class="p">,</span> <span class="s1">&#39;crab&#39;</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="s1">&#39;, nice to meet you!&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;fish&#39;</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1378,14 +1311,8 @@ print(...)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello Mayhew , nice to meet you!
+<pre>We caught a fish!
 </pre>
 </div>
 </div>
@@ -1400,121 +1327,10 @@ print(...)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Remember that the program will wait for your input before it continues. If you are using a Jupyter Notebook, this means that other cells from the notebook will not run until the code has been fully executed or terminated.</p>
-<p>Now, something that is important to note is that the return value from input is a string, even when a number is typed into the terminal:</p>
+<p>but for more complex procedures this may not be an option.</p>
 
 </div>
 </div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">user_number</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">user_number</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12 &lt;class &#39;str&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you intend for the input to be used as a number, you must remember to convert it to one (an <code>int</code> or <code>float</code>):</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entered:&#39;</span><span class="p">,</span> <span class="n">user_int</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">user_int</span><span class="p">))</span>
-
-<span class="n">user_float</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Entered:&#39;</span><span class="p">,</span> <span class="n">user_float</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">user_float</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Entered: 6 &lt;class &#39;int&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Entered: 57.5 &lt;class &#39;float&#39;&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1531,8 +1347,8 @@ print(...)
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/assignment-operators.html">
-      〈 <span class="u-margin-right-tiny"></span> Assignment Operators
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/loops/break.html">
+      〈 <span class="u-margin-right-tiny"></span> Breaking Out of Loops
     </a>
   
 
@@ -1540,8 +1356,8 @@ print(...)
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/strings.html">
-      Strings <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
