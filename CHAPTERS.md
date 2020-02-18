@@ -102,13 +102,12 @@ Removed this from Basics. Should I put this after if?
 - For Loops
 - List Comprehension
 - While Loops
-
-### Incomplete
 - Breaking Out of Loops
+- Else Statement and Loops
+### Incomplete
 
 ### Not Started
-- Else Statement and Loops
-- Embedded Loops
+- Nested Loops
 
 The remaining sections here are not a priority
 - For loop examples
