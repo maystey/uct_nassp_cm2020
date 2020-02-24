@@ -118,3 +118,13 @@
     url: /loops/break
   - title: Else Statement and Loops
     url: /loops/else
+
+- title: Packages
+  url: /packages/intro
+  expand_sections: false
+
+- title: NumPy
+  url: /numpy/intro
+  sections:
+  - title: Arrays
+    url: /numpy/arrays
