@@ -2,33 +2,39 @@
 
 The current status of the chapters are recorded in this file.
 
-## Misc.
+## Corrections
+
+- Change every occurrence where object attributes are referred to as properties.
+
+## Misc
+
 Change all instances where I use the word collection to sequence.
 
 Items in this section are necessary to add, but I cannot place them at the moment.
+
 - Checking object types using `is`
 - Checking if object in collection using `in`
 - *list to unpack
+- `map()` function
 
 ## Introduction
 
 ### Complete
+
 - What is a programming language
 - Python, a Dynamic Programming Language
 
 ### Enhancements
+
 - Make it more clear what the difference is between
-    - Interpreted (really what I was going for with dynamic)
-    - Dynamic vs static
-    - Dynamic Typing vs static typing
+  - Interpreted (really what I was going for with dynamic)
+  - Dynamic vs static
+  - Dynamic Typing vs static typing
 
-
-### Not Started
-- What is a script?
-
-## Basics
+## Python Basics
 
 ### Complete
+
 - Intro
 - Variables
 - Comments
@@ -38,14 +44,13 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Introduction to Functions
 - Strings
 
-### Incomplete
-
 ### Not Started
 
 - Execution priority
 - Tips and tricks
 
 ### Enhancements
+
 - Strings
     - Put reference to other notes in the bibliography
     - Include section on special characters
@@ -56,31 +61,35 @@ Items in this section are necessary to add, but I cannot place them at the momen
 - Operators
     - Make url to sections (is it possible for this to be relative?)
 
-
-
 ## Data Structures
 
 Removed this from Basics. Should I put this after if?
 
 ### Complete
+
 - Intro
 - Tuples
 - Lists
 - Dictionaries
 
-### Enhancements
+### Incomplete
+
 - Lists
-    - Should I make a forwards reference to list comprehension?
+    - Operations (concatenation, duplication)
+
+### Enhancements
+
+- Lists
+  - Should I make a forwards reference to list comprehension?
 - Dictionaries
-    - Make forwards reference to looping
+  - Make forwards reference to looping
 - Include sets? I've never used them...
 - Make embedded structures section with some examples.
-
-
 
 ## If Statements
 
 ### Complete
+
 - Intro
 - Booleans
 - Comparison Operators
@@ -88,36 +97,68 @@ Removed this from Basics. Should I put this after if?
 - If Statements
 
 ### Enhancements
+
 - Logical Operators
-    - Give examples including comparison operators
-- If Statements 
-    - more examples
-
-
+  - Give examples including comparison operators
+- If Statements
+  - more examples
 
 ## For and While Loops
 
 ### Complete
+
 - Intro
 - For Loops
 - List Comprehension
 - While Loops
-
-### Incomplete
 - Breaking Out of Loops
+- Else Statement and Loops
 
 ### Not Started
-- Else Statement and Loops
-- Embedded Loops
+
+- Nested Loops
 
 The remaining sections here are not a priority
 - For loop examples
 - While loop examples
 
 ### Enhancements
+
 - breaking out of loops - show practical examples
 
-## NumPy - Not Started
+## OOP - Not Started
+
+## Packages
+
+### In Progress
+
+- Intro
+
+### Not Started
+
+- Scientific Packages
+- Installing Packages with pip
+- Installing Packages with conda
+
+## Benchmarking
+
+### In Progress
+
+- Time
+- Uncertainty
+
+## NumPy
+
+### Complete
+
+- Intro
+- Arrays
+
+### Not Started
+
+- Special functions
+- 2D Arrays and Matrices
+- Random numbers
 
 ## File I/O - Not Started
 

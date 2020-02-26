@@ -1,0 +1,268 @@
+---
+interact_link: content/numpy/array-methods.ipynb
+kernel_name: python3
+kernel_path: content/numpy
+has_widgets: false
+title: |-
+  Array Methods and Attributes
+pagenum: 29
+prev_page:
+  url: /numpy/arrays.html
+next_page:
+  url: 
+suffix: .ipynb
+search: array arrays methods functions attributes not example get elements gives us len minimum maximum values standard statistical mean section complete list rather highlighting things useful lets start off creating fairly large collection human height measurements size attribute dimensional same value using multidimensional return total min max respectively again similar results library only option higher dimensions numpy provides basic box arithmetic average std deviation
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Array Methods and Attributes</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Array-Methods-and-Attributes">Array Methods and Attributes<a class="anchor-link" href="#Array-Methods-and-Attributes"> </a></h1><p>In this section we will look at some methods and attributes that arrays have. This is not a complete list, but rather highlighting things you may find useful.</p>
+<p>Let's start off by creating a fairly large array, for example a collection of human height measurements:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">heights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+      <span class="p">[</span> <span class="mf">2.13159377</span><span class="p">,</span>  <span class="mf">1.8864508</span> <span class="p">,</span>  <span class="mf">1.63504183</span><span class="p">,</span>  <span class="mf">1.71173878</span><span class="p">,</span>  <span class="mf">1.78826872</span><span class="p">,</span>
+        <span class="mf">1.60621813</span><span class="p">,</span>  <span class="mf">1.74630706</span><span class="p">,</span>  <span class="mf">2.11123384</span><span class="p">,</span>  <span class="mf">1.54212979</span><span class="p">,</span>  <span class="mf">1.39184441</span><span class="p">,</span>
+        <span class="mf">1.7919224</span> <span class="p">,</span>  <span class="mf">1.80299245</span><span class="p">,</span>  <span class="mf">1.73770464</span><span class="p">,</span>  <span class="mf">1.95233673</span><span class="p">,</span>  <span class="mf">1.47179093</span><span class="p">,</span>
+        <span class="mf">1.70506609</span><span class="p">,</span>  <span class="mf">1.41194434</span><span class="p">,</span>  <span class="mf">2.05643464</span><span class="p">,</span>  <span class="mf">1.8262583</span> <span class="p">,</span>  <span class="mf">1.47764985</span><span class="p">,</span>
+        <span class="mf">1.61362183</span><span class="p">,</span>  <span class="mf">1.65600316</span><span class="p">,</span>  <span class="mf">1.42078883</span><span class="p">,</span>  <span class="mf">1.78059602</span><span class="p">,</span>  <span class="mf">1.80600655</span><span class="p">,</span>
+        <span class="mf">1.91634004</span><span class="p">,</span>  <span class="mf">1.82746488</span><span class="p">,</span>  <span class="mf">1.82688072</span><span class="p">,</span>  <span class="mf">1.82053352</span><span class="p">,</span>  <span class="mf">1.84882458</span><span class="p">,</span>
+        <span class="mf">1.80672297</span><span class="p">,</span>  <span class="mf">1.4646136</span> <span class="p">,</span>  <span class="mf">1.71033286</span><span class="p">,</span>  <span class="mf">1.83272236</span><span class="p">,</span>  <span class="mf">1.97074545</span><span class="p">,</span>
+        <span class="mf">1.96265325</span><span class="p">,</span>  <span class="mf">1.39817665</span><span class="p">,</span>  <span class="mf">1.55933323</span><span class="p">,</span>  <span class="mf">1.59111903</span><span class="p">,</span>  <span class="mf">1.53108805</span><span class="p">,</span>
+        <span class="mf">1.33635392</span><span class="p">,</span>  <span class="mf">1.74971951</span><span class="p">,</span>  <span class="mf">1.56885338</span><span class="p">,</span>  <span class="mf">1.6614742</span> <span class="p">,</span>  <span class="mf">1.70868504</span><span class="p">,</span>
+        <span class="mf">1.58476337</span><span class="p">,</span>  <span class="mf">1.69233894</span><span class="p">,</span>  <span class="mf">1.73520641</span><span class="p">,</span>  <span class="mf">1.71248418</span><span class="p">,</span>  <span class="mf">1.75484377</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To get the number of elements in an array, we can use the <code>size</code> attribute:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The size of the heights array:&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The size of the heights array: 50
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For 1 dimensional arrays this is gives us the same value as using <code>len()</code>, but for multidimensional arrays, <code>len()</code> will not return the total number of elements.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Minimum-and-Maximum-Values">Minimum and Maximum Values<a class="anchor-link" href="#Minimum-and-Maximum-Values"> </a></h2><p>You can use the <code>min()</code> and <code>max()</code> methods to get the minimum and maximum values of an array respectively.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Minimum height:&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum height&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Minimum height: 1.33635392
+Maximum height 2.13159377
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again, this gives you similar results to the functions in the Standard Library, but is the only option for arrays of higher dimensions.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Statistical-Functions">Statistical Functions<a class="anchor-link" href="#Statistical-Functions"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy provides us with some basic statistical functions out of the box. For example the <code>mean()</code> (arithmetic mean or average) and <code>std()</code> (standard deviation).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average height: &#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of heights: &#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Average height:  1.712684356
+Standard deviation of heights:  0.18476698650385862
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of heights:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mimimum height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Average height: 1.712684356
+Standard deviation of heights: 0.18476698650385862
+Maximum height: 2.13159377
+Mimimum height: 1.33635392
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

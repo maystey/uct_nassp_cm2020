@@ -1,0 +1,198 @@
+---
+interact_link: content/benchmarking/time.ipynb
+kernel_name: python3
+kernel_path: content/benchmarking
+has_widgets: false
+title: |-
+  Measuring Time in Python
+pagenum: 26
+prev_page:
+  url: /benchmarking/intro.html
+next_page:
+  url: /numpy/intro.html
+suffix: .ipynb
+search: code timing system us block n using loop also dont perfcounter module perform our keep benchmarking functions function particular point only take after example compare sum numpy times method very run fluctuate runs taken limit running those print calls benchmarks specialized modules exist course simple gives access computers clocks well converting formats documentation found here docs python org library html importance uses precise wide clock available return seconds starting timer arbitrary dependent differences sure directly before worked lets say want takes frac array note both looping similar every values wildly makes difficult performance solutions solution problem question quote total execute
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Measuring Time in Python</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Timing-With-time.perf_counter">Timing With <code>time.perf_counter</code><a class="anchor-link" href="#Timing-With-time.perf_counter"> </a></h1><p>We will use the <code>time</code> module to perform our benchmarks. More specialized modules exist, but for this course we will keep benchmarking simple.</p>
+<p>The <code>time</code> module gives access to the computers system clocks, as well as 
+functions for converting time formats.</p>
+<p>The documentation for <code>time</code> can be found <a href="https://docs.python.org/3/library/time.html">here</a>.</p>
+<p>The function that is of particular importance to us is <code>perf_counter()</code> :</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">perf_counter</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It uses the most precise system wide clock available to it to return a time in seconds. The starting point of the timer is arbitrary and system dependent, so only time differences are of use to us. When timing a block of code make sure to take the time directly before and after the block.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's say we want to compare the time it takes to perform the sum</p>
+$$
+\sum_{n = 1}^{1000} \frac{(-1)^{n}}{n}
+$$<p>using a for loop to using NumPy array functions.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Timing the use of a loop</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1001</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="o">/</span><span class="n">n</span>
+
+<span class="n">loop_time</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using a loop:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of the sum is:&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time taken to compute the sum is:&#39;</span><span class="p">,</span> <span class="n">loop_time</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Using a loop:
+The value of the sum is: -0.6926474305598223
+The time taken to compute the sum is: 0.0018592540000099689
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Timing the use of numpy functions</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+<span class="n">n_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1001</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">n_arr</span><span class="o">/</span><span class="n">n_arr</span> <span class="p">)</span>
+
+<span class="n">np_time</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using NumPy:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of the sum is:&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time taken to compute the sum is:&#39;</span><span class="p">,</span> <span class="n">np_time</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Using NumPy:
+The value of the sum is: -0.6926474305598204
+The time taken to compute the sum is: 0.001659153999753471
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the times for both the looping method and NumPy method are very similar. Every time the code is run the values also fluctuate wildly. This makes it difficult to compare the performance of these solutions.</p>
+<p>As a solution to this problem, we can take many runs of the code block in question and quote the total time taken to execute all of them. This will limit the effects of the fluctuation on our measurement and it will also make it less likely for us to run into floating point errors (the times of individual code runs can be very small).</p>
+<p>Something to keep in mind when running a benchmark is to limit the number of background processes you have running on your computer, in particular those who's resource requirements fluctuate.</p>
+<p>Don't time what you don't intend to measure, only time the code you are interested in benchmarking. If you use a loop to repeat measurements (i.e. it isn't an essential part of the code you're testing) don't include the overhead from the loop in your timing. If you are using print function calls for debugging purposes, you should also exclude those from the timing (in the example above the print calls were performed <strong>after</strong> the time was taken).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

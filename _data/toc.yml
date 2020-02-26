@@ -119,12 +119,20 @@
   - title: Else Statement and Loops
     url: /loops/else
 
-- title: Packages
-  url: /packages/intro
-  expand_sections: false
+# - title: Packages
+#   url: /packages/intro
+#   expand_sections: false
+
+- title: Benchmarking
+  url: /benchmarking/intro
+  sections:
+  - title: Measuring Time in Python
+    url: /benchmarking/time
 
 - title: NumPy
   url: /numpy/intro
   sections:
   - title: Arrays
     url: /numpy/arrays
+  - title: Array Methods and Attributes
+    url: /numpy/array-methods

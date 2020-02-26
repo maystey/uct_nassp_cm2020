@@ -2,11 +2,16 @@
 
 The current status of the chapters are recorded in this file.
 
-## Misc.
+## Corrections
+
+- Change every occurrence where object attributes are referred to as properties.
+
+## Misc
 
 Change all instances where I use the word collection to sequence.
 
 Items in this section are necessary to add, but I cannot place them at the moment.
+
 - Checking object types using `is`
 - Checking if object in collection using `in`
 - *list to unpack
@@ -22,9 +27,9 @@ Items in this section are necessary to add, but I cannot place them at the momen
 ### Enhancements
 
 - Make it more clear what the difference is between
-    - Interpreted (really what I was going for with dynamic)
-    - Dynamic vs static
-    - Dynamic Typing vs static typing
+  - Interpreted (really what I was going for with dynamic)
+  - Dynamic vs static
+  - Dynamic Typing vs static typing
 
 ## Python Basics
 
@@ -75,13 +80,11 @@ Removed this from Basics. Should I put this after if?
 ### Enhancements
 
 - Lists
-    - Should I make a forwards reference to list comprehension?
+  - Should I make a forwards reference to list comprehension?
 - Dictionaries
-    - Make forwards reference to looping
+  - Make forwards reference to looping
 - Include sets? I've never used them...
 - Make embedded structures section with some examples.
-
-
 
 ## If Statements
 
@@ -96,9 +99,9 @@ Removed this from Basics. Should I put this after if?
 ### Enhancements
 
 - Logical Operators
-    - Give examples including comparison operators
+  - Give examples including comparison operators
 - If Statements
-    - more examples
+  - more examples
 
 ## For and While Loops
 
@@ -136,6 +139,13 @@ The remaining sections here are not a priority
 - Scientific Packages
 - Installing Packages with pip
 - Installing Packages with conda
+
+## Benchmarking
+
+### In Progress
+
+- Time
+- Uncertainty
 
 ## NumPy
 
