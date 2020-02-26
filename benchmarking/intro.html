@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Home</title>
-  <meta name="description" content="        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o...">
+  <title>Benchmarking</title>
+  <meta name="description" content="        Benchmarking    Benchmarking In the computation industry, benchmarking is an umbrella term for comparing the performance of different hardware, softw...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/intro.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/benchmarking/intro.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/intro.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/benchmarking/intro.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Home" />
-<meta property="og:description" content="        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o..." />
+<meta property="og:title"       content="Benchmarking" />
+<meta property="og:description" content="        Benchmarking    Benchmarking In the computation industry, benchmarking is an umbrella term for comparing the performance of different hardware, softw..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/intro.html",
-  "headline": "Home",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/benchmarking/intro.html",
+  "headline": "Benchmarking",
   "datePublished": "2020-02-26T09:55:20+02:00",
   "dateModified": "2020-02-26T09:55:20+02:00",
-  "description": "        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o...",
+  "description": "        Benchmarking    Benchmarking In the computation industry, benchmarking is an umbrella term for comparing the performance of different hardware, softw...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: ""
+    path: "content/benchmarking"
     }
 }
 </script>
@@ -1185,10 +1185,20 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
+        <a href="/uct_nassp_cm/content/benchmarking/intro.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
     </div>
 </div>
+
+
+  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
+
+  
+  
+  
 
 
 </div>
@@ -1208,17 +1218,26 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Home</div>
+    <div id="page-info"><div id="page-title">Benchmarking</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="UCT-NASSP-AST4007W-Computational-Methods">UCT NASSP AST4007W Computational Methods<a class="anchor-link" href="#UCT-NASSP-AST4007W-Computational-Methods"> </a></h1><h2 id="Scientific-Programming-in-Python">Scientific Programming in Python<a class="anchor-link" href="#Scientific-Programming-in-Python"> </a></h2><p><strong>By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew Steyn</strong></p>
-<p>This online book is intended as reference material for the UCT NASSP Honours course (AST4007W) Computational Methods module. The intended use of this book is as a reference after the lecture pre-reading and slides unless directly referred to.</p>
-<p>These notes are by no means the complete picture and you are encouraged to read further in the references provided.</p>
-<p>If you find any errors (factual, grammatical or otherwise) feel free to contact Mayhew via <a href="mailto:mayhrunes@gmail.com">email</a> or create an issue on <a href="https://github.com/maystey/uct_nassp_cm/issues">GitHub</a>.</p>
-<p>Please note that this book is not yet complete. Material will be added as the semester progresses and edits may be made to existing content.</p>
+<h1 id="Benchmarking">Benchmarking<a class="anchor-link" href="#Benchmarking"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the computation industry, benchmarking is an umbrella term for comparing the performance of different hardware, software solutions, program segments, algorithms, etc..</p>
+<p>For hardware and software solutions, benchmarking is often used to draw comparisons with competing solutions. In developing a program or software solution benchmarking can also be used to make decisions, either to decide between two different solutions to the same problem, or to find which parts of the program need optimization (there's no use spending time to optimize a part of the program that has no impact on performance).</p>
+<p>There are many aspects of performance that one can monitor. For example, when benchmarking software or code, one could monitor the memory use, execution time, etc.</p>
+<p>In this course we will be focusing on simple benchmarks of our Python code. In particular we will be looking at the time taken for code segments to execute.</p>
 
 </div>
 </div>
@@ -1238,8 +1257,8 @@ initFunction(initPrint)
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
-      〈 <span class="u-margin-right-tiny"></span> 
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/loops/else.html">
+      〈 <span class="u-margin-right-tiny"></span> Else Statement and Loops
     </a>
   
 
@@ -1247,8 +1266,8 @@ initFunction(initPrint)
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/intro/intro.html">
-      Introduction <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/benchmarking/time.html">
+      Measuring Time in Python <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

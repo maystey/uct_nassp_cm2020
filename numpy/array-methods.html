@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Home</title>
-  <meta name="description" content="        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o...">
+  <title>Array Methods and Attributes</title>
+  <meta name="description" content="        Array Methods and Attributes    Array Methods and Attributes In this section we will look at some methods and attributes that arrays have. This is no...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/intro.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/numpy/array-methods.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/intro.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/numpy/array-methods.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Home" />
-<meta property="og:description" content="        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o..." />
+<meta property="og:title"       content="Array Methods and Attributes" />
+<meta property="og:description" content="        Array Methods and Attributes    Array Methods and Attributes In this section we will look at some methods and attributes that arrays have. This is no..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/intro.html",
-  "headline": "Home",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/numpy/array-methods.html",
+  "headline": "Array Methods and Attributes",
   "datePublished": "2020-02-26T09:55:20+02:00",
   "dateModified": "2020-02-26T09:55:20+02:00",
-  "description": "        Home    UCT NASSP AST4007W Computational Methods Scientific Programming in Python By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew SteynThis o...",
+  "description": "        Array Methods and Attributes    Array Methods and Attributes In this section we will look at some methods and attributes that arrays have. This is no...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: ""
+    path: "content/numpy"
     }
 }
 </script>
@@ -1185,10 +1185,20 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
+        <a href="/uct_nassp_cm/content/numpy/array-methods.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
     </div>
 </div>
+
+
+  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
+
+  
+  
+  
 
 
 </div>
@@ -1208,20 +1218,247 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Home</div>
+    <div id="page-info"><div id="page-title">Array Methods and Attributes</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="UCT-NASSP-AST4007W-Computational-Methods">UCT NASSP AST4007W Computational Methods<a class="anchor-link" href="#UCT-NASSP-AST4007W-Computational-Methods"> </a></h1><h2 id="Scientific-Programming-in-Python">Scientific Programming in Python<a class="anchor-link" href="#Scientific-Programming-in-Python"> </a></h2><p><strong>By Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew Steyn</strong></p>
-<p>This online book is intended as reference material for the UCT NASSP Honours course (AST4007W) Computational Methods module. The intended use of this book is as a reference after the lecture pre-reading and slides unless directly referred to.</p>
-<p>These notes are by no means the complete picture and you are encouraged to read further in the references provided.</p>
-<p>If you find any errors (factual, grammatical or otherwise) feel free to contact Mayhew via <a href="mailto:mayhrunes@gmail.com">email</a> or create an issue on <a href="https://github.com/maystey/uct_nassp_cm/issues">GitHub</a>.</p>
-<p>Please note that this book is not yet complete. Material will be added as the semester progresses and edits may be made to existing content.</p>
+<h1 id="Array-Methods-and-Attributes">Array Methods and Attributes<a class="anchor-link" href="#Array-Methods-and-Attributes"> </a></h1><p>In this section we will look at some methods and attributes that arrays have. This is not a complete list, but rather highlighting things you may find useful.</p>
+<p>Let's start off by creating a fairly large array, for example a collection of human height measurements:</p>
 
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">heights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+      <span class="p">[</span> <span class="mf">2.13159377</span><span class="p">,</span>  <span class="mf">1.8864508</span> <span class="p">,</span>  <span class="mf">1.63504183</span><span class="p">,</span>  <span class="mf">1.71173878</span><span class="p">,</span>  <span class="mf">1.78826872</span><span class="p">,</span>
+        <span class="mf">1.60621813</span><span class="p">,</span>  <span class="mf">1.74630706</span><span class="p">,</span>  <span class="mf">2.11123384</span><span class="p">,</span>  <span class="mf">1.54212979</span><span class="p">,</span>  <span class="mf">1.39184441</span><span class="p">,</span>
+        <span class="mf">1.7919224</span> <span class="p">,</span>  <span class="mf">1.80299245</span><span class="p">,</span>  <span class="mf">1.73770464</span><span class="p">,</span>  <span class="mf">1.95233673</span><span class="p">,</span>  <span class="mf">1.47179093</span><span class="p">,</span>
+        <span class="mf">1.70506609</span><span class="p">,</span>  <span class="mf">1.41194434</span><span class="p">,</span>  <span class="mf">2.05643464</span><span class="p">,</span>  <span class="mf">1.8262583</span> <span class="p">,</span>  <span class="mf">1.47764985</span><span class="p">,</span>
+        <span class="mf">1.61362183</span><span class="p">,</span>  <span class="mf">1.65600316</span><span class="p">,</span>  <span class="mf">1.42078883</span><span class="p">,</span>  <span class="mf">1.78059602</span><span class="p">,</span>  <span class="mf">1.80600655</span><span class="p">,</span>
+        <span class="mf">1.91634004</span><span class="p">,</span>  <span class="mf">1.82746488</span><span class="p">,</span>  <span class="mf">1.82688072</span><span class="p">,</span>  <span class="mf">1.82053352</span><span class="p">,</span>  <span class="mf">1.84882458</span><span class="p">,</span>
+        <span class="mf">1.80672297</span><span class="p">,</span>  <span class="mf">1.4646136</span> <span class="p">,</span>  <span class="mf">1.71033286</span><span class="p">,</span>  <span class="mf">1.83272236</span><span class="p">,</span>  <span class="mf">1.97074545</span><span class="p">,</span>
+        <span class="mf">1.96265325</span><span class="p">,</span>  <span class="mf">1.39817665</span><span class="p">,</span>  <span class="mf">1.55933323</span><span class="p">,</span>  <span class="mf">1.59111903</span><span class="p">,</span>  <span class="mf">1.53108805</span><span class="p">,</span>
+        <span class="mf">1.33635392</span><span class="p">,</span>  <span class="mf">1.74971951</span><span class="p">,</span>  <span class="mf">1.56885338</span><span class="p">,</span>  <span class="mf">1.6614742</span> <span class="p">,</span>  <span class="mf">1.70868504</span><span class="p">,</span>
+        <span class="mf">1.58476337</span><span class="p">,</span>  <span class="mf">1.69233894</span><span class="p">,</span>  <span class="mf">1.73520641</span><span class="p">,</span>  <span class="mf">1.71248418</span><span class="p">,</span>  <span class="mf">1.75484377</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To get the number of elements in an array, we can use the <code>size</code> attribute:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The size of the heights array:&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The size of the heights array: 50
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For 1 dimensional arrays this is gives us the same value as using <code>len()</code>, but for multidimensional arrays, <code>len()</code> will not return the total number of elements.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Minimum-and-Maximum-Values">Minimum and Maximum Values<a class="anchor-link" href="#Minimum-and-Maximum-Values"> </a></h2><p>You can use the <code>min()</code> and <code>max()</code> methods to get the minimum and maximum values of an array respectively.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Minimum height:&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum height&#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Minimum height: 1.33635392
+Maximum height 2.13159377
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again, this gives you similar results to the functions in the Standard Library, but is the only option for arrays of higher dimensions.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Statistical-Functions">Statistical Functions<a class="anchor-link" href="#Statistical-Functions"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy provides us with some basic statistical functions out of the box. For example the <code>mean()</code> (arithmetic mean or average) and <code>std()</code> (standard deviation).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average height: &#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of heights: &#39;</span><span class="p">,</span> <span class="n">heights</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Average height:  1.712684356
+Standard deviation of heights:  0.18476698650385862
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of heights:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mimimum height:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">heights</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Average height: 1.712684356
+Standard deviation of heights: 0.18476698650385862
+Maximum height: 2.13159377
+Mimimum height: 1.33635392
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1238,8 +1475,8 @@ initFunction(initPrint)
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
-      〈 <span class="u-margin-right-tiny"></span> 
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/numpy/arrays.html">
+      〈 <span class="u-margin-right-tiny"></span> Arrays
     </a>
   
 
@@ -1247,8 +1484,8 @@ initFunction(initPrint)
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/intro/intro.html">
-      Introduction <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
