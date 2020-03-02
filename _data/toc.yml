@@ -69,8 +69,8 @@
     url: /basics/functions
   - title: Strings
     url: /basics/strings
-  # - title: String Formating
-  #   url: /basics/string-formatting
+  - title: String Formatting
+    url: /basics/string-formatting
 
 - title: Data Structures
   url: /data-structures/intro

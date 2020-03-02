@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Else Statement and Loops</title>
-  <meta name="description" content="        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec...">
+  <title>String Formatting</title>
+  <meta name="description" content="        String Formatting    String Formatting Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/o...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/loops/else.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/string-formatting.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/loops/else.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/string-formatting.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Else Statement and Loops" />
-<meta property="og:description" content="        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec..." />
+<meta property="og:title"       content="String Formatting" />
+<meta property="og:description" content="        String Formatting    String Formatting Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/o..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/loops/else.html",
-  "headline": "Else Statement and Loops",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/string-formatting.html",
+  "headline": "String Formatting",
   "datePublished": "2020-03-02T10:53:29+02:00",
   "dateModified": "2020-03-02T10:53:29+02:00",
-  "description": "        Else Statement and Loops    Else Statement and Loops You can use an else statement after a for or while loop. The code in this else statement is exec...",
+  "description": "        String Formatting    String Formatting Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/o...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: "content/loops"
+    path: "content/basics"
     }
 }
 </script>
@@ -1262,7 +1262,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/loops/else.ipynb" download>
+        <a href="/uct_nassp_cm/content/basics/string-formatting.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1295,13 +1295,15 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Else Statement and Loops</div>
+    <div id="page-info"><div id="page-title">String Formatting</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Else-Statement-and-Loops">Else Statement and Loops<a class="anchor-link" href="#Else-Statement-and-Loops"> </a></h1><p>You can use an else statement after a <code>for</code> or <code>while</code> loop. The code in this <code>else</code> statement is executed if the loop completed without being terminated.</p>
+<h1 id="String-Formatting">String Formatting<a class="anchor-link" href="#String-Formatting"> </a></h1><p>Concatenating strings can sometimes be cumbersome and hard to automate. If you need to include variables and/or values in your string, you may be better off using string formatting. We will use this technique more extensively later on.</p>
+<p>There are a few ways to format strings. We will cover one of the ways introduced in Python 3. That is using the <code>string.format()</code> method.</p>
+<p>This method treats everything contained in curly braces<code>{}</code> in the string as a replacement field, everything in and including the braces are replaced with the arguments of format in the output string.</p>
 
 </div>
 </div>
@@ -1315,10 +1317,7 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop completed&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello </span><span class="si">{}</span><span class="s1">, how are you?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1332,10 +1331,7 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-Loop completed
+<pre>Hello world, how are you?
 </pre>
 </div>
 </div>
@@ -1350,7 +1346,19 @@ Loop completed
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The only time the <code>else</code> part will not be executed is if you <code>break</code> out of a loop:</p>
+<p>As you can see above, the blank curly braces were replaced with the string argument <code>'world'</code>.</p>
+<p>Note that the method does not change the string itself but returns a new string.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can make multiple replacements at a time if you have a string with multiple replacement fields:</p>
 
 </div>
 </div>
@@ -1364,13 +1372,7 @@ Loop completed
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="k">break</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop completed&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1384,10 +1386,7 @@ Loop completed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
+<pre>1, 2, 3
 </pre>
 </div>
 </div>
@@ -1402,7 +1401,18 @@ Loop completed
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h3><p>A common use for this structure is if you're searching for an object. Consider this example where we are trying to find a <code>'fish'</code> in a list:</p>
+<p>Sometimes you will want more control over how the arguments of format are placed into the string. There is a specific syntax for formatting which you can read in the <a href="https://docs.python.org/3.4/library/string.html#format-string-syntax">documentation</a>. We will cover a few examples.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Specify-Arguments-by-Position">Specify Arguments by Position<a class="anchor-link" href="#Specify-Arguments-by-Position"> </a></h2><p>If you want to specify the order in which the arguments of format are placed into the string, you can put numbers in the replacement fields to reference the positional arguments:</p>
 
 </div>
 </div>
@@ -1416,14 +1426,7 @@ Loop completed
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zebra&#39;</span><span class="p">,</span> <span class="s1">&#39;cow&#39;</span><span class="p">,</span> <span class="s1">&#39;crow&#39;</span><span class="p">,</span> <span class="s1">&#39;eel&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">animal</span> <span class="o">==</span> <span class="s1">&#39;fish&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{2}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1437,46 +1440,7 @@ Loop completed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>We did not catch a fish.
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span> <span class="s1">&#39;bear&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">,</span> <span class="s1">&#39;squid&#39;</span><span class="p">,</span> <span class="s1">&#39;crab&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">animal</span> <span class="o">==</span> <span class="s1">&#39;fish&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>We caught a fish!
+<pre>1, 3, 2
 </pre>
 </div>
 </div>
@@ -1491,7 +1455,7 @@ Loop completed
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Of course, finding a particular object in a list is quicker and simpler using:</p>
+<p>Note that this also allows you to repeat elements:</p>
 
 </div>
 </div>
@@ -1505,12 +1469,7 @@ Loop completed
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span> <span class="s1">&#39;bear&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">,</span> <span class="s1">&#39;squid&#39;</span><span class="p">,</span> <span class="s1">&#39;crab&#39;</span><span class="p">]</span>
-
-<span class="k">if</span> <span class="s1">&#39;fish&#39;</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We caught a fish!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We did not catch a fish.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{2}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">, </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1524,7 +1483,7 @@ Loop completed
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>We caught a fish!
+<pre>1, 3, 2, 3
 </pre>
 </div>
 </div>
@@ -1539,7 +1498,317 @@ Loop completed
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>but for more complex procedures this may not be an option.</p>
+<h2 id="Specify-Arguments-by-Name">Specify Arguments by Name<a class="anchor-link" href="#Specify-Arguments-by-Name"> </a></h2><p>You can also specify arguments by name, the arguments must then be presented as keyword arguments:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You can find the point at position (</span><span class="si">{x}</span><span class="s1">, </span><span class="si">{y}</span><span class="s1">).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span><span class="p">))</span> <span class="c1">#Arguments with names &#39;x&#39; and &#39;y&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You can find the point at position (2, 6).
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Specifying-Numerical-Types-and-Precision">Specifying Numerical Types and Precision<a class="anchor-link" href="#Specifying-Numerical-Types-and-Precision"> </a></h2><p>To put it simply, when formatting numerical arguments the format specifier (to be placed in the replacement field) is of the structure:
+<code>[argument_reference]:[width][.precision][type]</code></p>
+<p>Where</p>
+<ul>
+<li><code>argument_reference</code> is the position of or name of the argument. </li>
+<li><code>width</code> specifies the minimum width that a replacement will take (look to the docs for alignment options)</li>
+<li>For floats <code>precision</code> can be seen as the number of decimal places.</li>
+<li><code>type</code> specifies what type you want to display the number as. Multiple types exist for both integers and floats, but the most commonly used types are <code>d</code> for decimal integer and <code>f</code> for fixed point number (which you can use for floats)</li>
+</ul>
+<p>Each of these parts of the format specifier are optional.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As a first example, lets display an integer:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, lets see how the width affects the output:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:1d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:2d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:3d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#minimum width of 3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+5
+ 5
+  5
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see the first 2 outputs are the same. That is because the output is of length 1.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you want to display a float to 2 decimal places, specify precision:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.232435455</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.23
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you want to specify the position of the argument, include a reference to the argument position:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{1:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.232435455</span><span class="p">,</span> <span class="mf">5.35362</span><span class="p">))</span> <span class="c1">#argument position of 1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5.354
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Alternative-Syntax">Alternative Syntax<a class="anchor-link" href="#Alternative-Syntax"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead of using the <code>.format()</code> method on a string, you could alternatively use an f-string for formatting (f prefixed before a  string literal).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;World&#39;</span>
+<span class="n">time</span> <span class="o">=</span> <span class="s1">&#39;today&#39;</span>
+
+<span class="n">f</span><span class="s1">&#39;Hello </span><span class="si">{subject}</span><span class="s1">! How are you doing </span><span class="si">{time}</span><span class="s1">?&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello World! How are you doing today?&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This simplifies things substantially, but has less range of applicability than <code>.format()</code>.</p>
 
 </div>
 </div>
@@ -1559,8 +1828,8 @@ Loop completed
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/loops/break.html">
-      〈 <span class="u-margin-right-tiny"></span> Breaking Out of Loops
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/strings.html">
+      〈 <span class="u-margin-right-tiny"></span> Strings
     </a>
   
 
@@ -1568,8 +1837,8 @@ Loop completed
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/functions/intro.html">
-      Functions <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/data-structures/intro.html">
+      Data Structures <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
