@@ -119,11 +119,11 @@
   - title: Else Statement and Loops
     url: /loops/else
 
-  - title: Functions
-    url: /functions/intro
-    sections:
-    - title: Recursive Functions
-      url: /functions/recursive
+- title: Functions
+  url: /functions/intro
+  sections:
+  - title: Recursive Functions
+    url: /functions/recursive
 # - title: Packages
 #   url: /packages/intro
 #   expand_sections: false
