@@ -133,6 +133,8 @@
   sections:
   - title: Measuring Time in Python
     url: /benchmarking/time
+  - title: Uncertainty
+    url: /benchmarking/uncertainty
 
 - title: NumPy
   url: /numpy/intro

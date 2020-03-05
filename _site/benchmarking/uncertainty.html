@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Introduction</title>
-  <meta name="description" content="        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo...">
+  <title>Uncertainty</title>
+  <meta name="description" content="        Uncertainty    Measurement and Uncertainty This section is a summary of some key points that are relevant to this course taken from the UCT Physics l...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/intro/intro.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/benchmarking/uncertainty.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/intro/intro.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/benchmarking/uncertainty.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Introduction" />
-<meta property="og:description" content="        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo..." />
+<meta property="og:title"       content="Uncertainty" />
+<meta property="og:description" content="        Uncertainty    Measurement and Uncertainty This section is a summary of some key points that are relevant to this course taken from the UCT Physics l..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/intro/intro.html",
-  "headline": "Introduction",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/benchmarking/uncertainty.html",
+  "headline": "Uncertainty",
   "datePublished": "2020-03-05T11:12:29+02:00",
   "dateModified": "2020-03-05T11:12:29+02:00",
-  "description": "        Introduction    Programming and Python in a Nutshell In this chapter we will go over a brief overview of programming languages and Python. While impo...",
+  "description": "        Uncertainty    Measurement and Uncertainty This section is a summary of some key points that are relevant to this course taken from the UCT Physics l...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: ""
+    path: "content/benchmarking"
     }
 }
 </script>
@@ -1281,10 +1281,20 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
+        <a href="/uct_nassp_cm/content/benchmarking/uncertainty.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
         
         <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
     </div>
 </div>
+
+
+  <button id="interact-button-thebelab" class="interact-button">Thebelab</button>
+
+  
+  
+  
 
 
 </div>
@@ -1304,38 +1314,528 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Introduction</div>
+    <div id="page-info"><div id="page-title">Uncertainty</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programming-and-Python-in-a-Nutshell">Programming and Python in a Nutshell<a class="anchor-link" href="#Programming-and-Python-in-a-Nutshell"> </a></h1><p>In this chapter we will go over a brief overview of programming languages and Python. While important, not having a full grasp of this chapter should not hinder your ability to program using Python.</p>
-<h2 id="What-is-a-programming-language?">What is a programming language?<a class="anchor-link" href="#What-is-a-programming-language?"> </a></h2><p>Programming is, in essence, writing a series of instructions for the computer to execute. This is done using a programming language, which can be understood or translated to a form that can be understood by the computer.</p>
-<p>At the lowest level the language of computers is called machine code. This language is used to communicate with the computer's CPU through binary or hexadecimal instructions.
-Machine code is dependent on the computer hardware being used and is not easy to understand as humans. A step up from this is 
-an assembly language, which uses some human language, but is still difficult to understand and dependent on the computer architecture <a class="citation" href="#wikipedia_machine_code">(Wikipedia contributors, n.d.; Wikipedia contributors, n.d.)</a>.</p>
-<p>Hardware dependence could be a big problem. Programs written for one computer would not necessarily work on another computer, they would have to be translated (by a human) first. To bridge this difference between hardware specifications high level programming languages were developed.</p>
-<p>Most of the programming languages you are likely to use these days are high-level programming languages. Besides being CPU independent, these languages are designed to be readable by humans. <!--They also allow for programs to be written independently (to some degree) from the hardware in question. --> 
-At some level these languages will need to be compiled (translated <a class="citation" href="#wikipedia_compiler">(Wikipedia contributors, n.d.)</a>)
-to machine code <a class="citation" href="#wikipedia_machine_code">(Wikipedia contributors, n.d.)</a>.</p>
-<h2 id="What-is-a-Script?">What is a Script?<a class="anchor-link" href="#What-is-a-Script?"> </a></h2><p>A script is a text file containing source code (instructions for the computer) written in a programming language. Programs can be composed of a single script, or many scripts working together.</p>
-<p>Generally scripts for a particular language are given a specific file suffix. Relevant to us, Python scripts end with a <code>.py</code>.</p>
-<h2 id="Python,-a-Dynamic-Programming-Language.">Python, a Dynamic Programming Language.<a class="anchor-link" href="#Python,-a-Dynamic-Programming-Language."> </a></h2><p>Python is a high level language and thus needs to eventually be compiled down. <!-- translated into machine code. <!--- Python is a dynamic programming language. --></p>
-<p>Many high level programming languages' source code is compiled to machine code once, and then can be executed in this form. These are called static programming languages (C is an example).</p>
-<p>Dynamic programming languages are languages where operations that would normally take place at compile-time (when the code is compiled) can instead be done at run-time (when the program is executed) <a class="citation" href="#mozilla_dynamic">(<i>Dynaimc Programming Language — MDN Web Docs</i>, n.d.)</a>. Python is a dynamic programming language.</p>
-<p>When you run a python script it is compiled to byte code (if it hasn't been already). This byte code is a lower-level, platform independent representation of your source code <!--- sic -->. <a class="citation" href="#ned_python_interp">(Batchelder, n.d.; <i>Compiling and Linking in Python — Net-informations.com</i>, n.d.)</a>.</p>
-<p>Byte code is similar to the CPU <!--- Necessary repeatition?--> specific assembly code, but is instead executed by software called a virtual machine (which simulates a CPU environment). <a class="citation" href="#ned_python_interp">(Batchelder, n.d.)</a> The Python Virtual Machine is always present in the Python system and is the last step of the Python Interpreter <a class="citation" href="#net-info_compiling_python">(<i>Compiling and Linking in Python — Net-informations.com</i>, n.d.)</a>. <!-- Too much jargon invoked? --></p>
-<!--- These virtual machines can be written in any language. (missing reference) -->
+<h1 id="Measurement-and-Uncertainty">Measurement and Uncertainty<a class="anchor-link" href="#Measurement-and-Uncertainty"> </a></h1><p>This section is a summary of some key points that are relevant to this course taken from the UCT Physics laboratory manual <a class="citation" href="#phy-gum">(Buffler et al., 2009)</a>.</p>
 
-<!-- Briefly mention dynamic typing? -->
+</div>
+</div>
+</div>
+</div>
 
-<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p><ol class="bibliography"><li><span id="wikipedia_machine_code">Wikipedia contributors. <i>Machine Code — Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/wiki/Machine_code</span></li>
-<li><span id="wikipedia_assembly">Wikipedia contributors. <i>Assembly Language — Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/wiki/Assembly_language</span></li>
-<li><span id="wikipedia_compiler">Wikipedia contributors. <i>Compiler — Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/wiki/Compiler</span></li>
-<li><span id="mozilla_dynamic"><i>Dynaimc Programming Language — MDN Web Docs</i>. https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_programming_language</span></li>
-<li><span id="ned_python_interp">Batchelder, N. <i>Is Python interpreted or compiled? Yes. — Ned Batchelder</i>. https://nedbatchelder.com/blog/201803/is_python_interpreted_or_compiled_yes.html</span></li>
-<li><span id="net-info_compiling_python"><i>Compiling and Linking in Python — Net-informations.com</i>. http://net-informations.com/python/iq/linking.htm</span></li></ol></p>
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Measurements">Measurements<a class="anchor-link" href="#Measurements"> </a></h2><p>When taking a physical measurement of a quantity (the <strong>measurand</strong>), the value you acquire is only a best approximation of the "true value" of the quantity (if that even exists for the given measurement).</p>
+<p>Many factors, from the precision of your apparatus to random or systematic noise, introduce some form of <strong>uncertainty</strong> to your measurand. That is a quantifiable measure of the interval in which the "true value" for your measurand may lie with knowledge of the probability of it lying in that interval. <!--- Needs editing ---></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sources-of-Uncertainty-in-Computing">Sources of Uncertainty in Computing<a class="anchor-link" href="#Sources-of-Uncertainty-in-Computing"> </a></h2><p>Seeing as we are working with computers, we don't have measurement apparatus to worry about. There are, however, other sources to consider.</p>
+<h3 id="Precision-of-Data-Values">Precision of Data Values<a class="anchor-link" href="#Precision-of-Data-Values"> </a></h3><p>Floating point numbers can only approximately represent a real numbers and have a finite precision due to having finite memory available.</p>
+<p>Although we generally won't have to worry about the precision of our floats in this course. Be careful when preforming numerical operations (especially division) that intermediate values don't become too small. <!--- ellaborate: enlarge inaccuracies by multiplying etc --></p>
+<h3 id="Background-Processes">Background Processes<a class="anchor-link" href="#Background-Processes"> </a></h3><p>If you are using a personal computer with an operating system there are always going to be background processes being preformed. These processes (however light they may be) are competing with your programs for resources.</p>
+<p>This is especially relevant when you are running benchmarks for your code (time it takes to complete execution, memory use, etc.).</p>
+<p>This form of uncertainty can be quite noisy and thus treated as <strong>Type A</strong> uncertainty (see the section below).<!--- Type A --></p>
+<h3 id="Error-or-Approximations-in-Numerical-Solutions">Error or Approximations in Numerical Solutions<a class="anchor-link" href="#Error-or-Approximations-in-Numerical-Solutions"> </a></h3><p>Every numerical solution or simulation contains some approximation. This leads to uncertainty in the results you've acquired. How you handle this uncertainty depends on the particular method in question.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Type-A-Uncertainty">Type A Uncertainty<a class="anchor-link" href="#Type-A-Uncertainty"> </a></h2><p>Sometimes you encounter fluctuation in your measurements of a single measurand. If this dispersion is unavoidable, the recommended approach is to take a data set of repeated measurements.</p>
+<p>In many cases, given enough data points, the data will appear to follow a Gaussian probability distribution function (plot the data in a histogram if you're not sure).</p>
+<p>Here we will denote the data set as ${x_i}$ where $i = 1, 2, 3, \dots, N$ (there are $N$ data points). <!--- Show a typical histogram for this data ---></p>
+<p>The Gaussian probability distribution function is:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+p(x) = \frac{1}{\sigma \sqrt{2 \pi}}~\exp\bigg(-\frac{1}{2}\Big(\frac{x - \mu}{\sigma}\Big)^2\bigg)
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>where $\exp$ is the natural exponential function, $x$ is a possible value of a data point, $\mu$ is the first moment of the distribution and $\sigma^2$ is the second moment of the distribution.</p>
+<!--- Mention the approximation using data later  or rather that the histogram should roughly match this-->
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/benchmarking/uncertainty_6_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see illustrated in the figure above, the Gaussian peaks around $x = \mu$. We could say the most likely value of $x$ lies in an interval around $\mu$ (continuous probability distribution functions represent probability densities).</p>
+<!---
+In our histogram of the data we expect the bin with the highest frequency to contain $\mu$.
+--->
+
+<p>For Gaussian distributed data, such as ${x_i}$, we can approximate $\mu$ using the arithmetic mean, $\bar{x}$:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+\bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This value will be taken as our <strong>best approximation</strong> of the value of the measurand.</p>
+<p>$\sigma^2$ can be approximated by the variance of the data:</p>
+$$
+\frac{1}{N-1}\sum_{i=1}^{N} (x - \bar{x})^2
+$$<p>The variance gives us a measure of the spread of the data (it is essentially the average square distance of each data point from the mean). Note the division by $N-1$ and not $N$.</p>
+<p>Of more immediate use to us is the square root of the variance, or the <strong>experimental standard deviation</strong> $s(d)$:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+s(x) = \sqrt{\frac{1}{N-1} \sum_{i = 1}^{N} (x - \bar{x})^2}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But how do we use $s(x)$, a measure of the spread of our data ${x_i}$, to determine the uncertainty of our best approximation of the value of the measurand $\bar{x}$?</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Coverage-Probability">Coverage Probability<a class="anchor-link" href="#Coverage-Probability"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we need to consider the uncertainty of this best approximation. The uncertainty will represent an interval around our best approximation of the value of the measurand in which we have some confidence that the "true value" lies.</p>
+<p>We can quantify this interval by looking back at our pdf. If we take the area under $p(x)$ for a given interval that tells us the probability of finding $x$ in that interval.</p>
+<p>For example, taking an interval of $[\mu - \sigma, \mu + \sigma]$ (or $\mu \pm \sigma$) gives us a probability of $68\%$ (or rather the value of the area is 0.68). That is the probability of finding any $x$ value inside that interval. <!--- Show gaussians with different sigmas to illustrate how it characterises the spread of data ---></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/benchmarking/uncertainty_14_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This interval is often used for quoting the coverage probability of a measured variable $x$. Sometimes an interval of $\mu \pm 2\sigma$ is used, which gives us a coverage probability of $95%$ (though normally the narrower interval of $1\sigma$ is preferred).</p>
+<p>Note that, for a Gaussian distribution, $100\%$ coverage requires an infinitely large interval and is thus meaningless.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Remember that $\sigma$ characterizes the width of the Gaussian, so this interval is also an indication of the spread of the measured data (illustrated below, each region has an area of 0.68 and the scale is maintained):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/benchmarking/uncertainty_17_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So how do we turn an interval with a coverage probability of $68\%$ into an uncertainty?</p>
+<p>Firstly, for our data set of measured $x_i$ values, the value of our measurand is approximated as the arithmetic mean of the data, $\bar{x}$. We are, therefore, not interested in the spread of the $x_i$ values, but rather the spread in possible values of $\bar{x}$.</p>
+<p>If we want to quote the interval with a coverage probability of $68\%$  (the standard uncertainty) for $\bar{x}$, we will need to calculate $s(\bar{x})$ (an approximation of $\sigma$ for the distribution of possible $\bar{x}$ values). This can be calculated using the relationship:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+s(\bar{x}) = \frac{s(x)}{\sqrt{N}}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<!--- where $N$ is the number of data values in our data set. --->
+
+<p>This result is derived by taking samples of the data set and calculating the variance of the mean values of the samples. The derivation is not included in these notes.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="In-Summary">In Summary<a class="anchor-link" href="#In-Summary"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For a data set ${x_i}$ where $i = 1, 2, 3, \dots, N$ of measured values, if the data is Gaussian distributed, the <strong>best approximation</strong> for the value of the <strong>measurand</strong> is the <strong>arithmetic mean</strong>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+\bar{x} = \frac{1}{N} \sum_{i = 1}^{N}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>standard uncertainty</strong> for the mean value is given by the <strong>experimental standard deviation of the mean</strong>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+u(\bar{x}) = s(\bar{x}) = \frac{s(x)}{\sqrt{N}}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>which gives us a $68\%$ probability coverage.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$s(x)$ is the <strong>experimental standard deviation</strong> of the data:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+s(x) = \sqrt{\frac{1}{N-1} \sum_{i = 1}^{N} (x - x_i)^2}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(Note: when using <code>numpy.std()</code> to calculate $s(x)$, make sure to set the keyword argument <code>ddof = 1</code>, as the divisor is given by <code>N - ddof</code>. See the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.std.html">documentation</a> for more.)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Quoting-a-Measurement-With-It's-Uncertainty">Quoting a Measurement With It's Uncertainty<a class="anchor-link" href="#Quoting-a-Measurement-With-It's-Uncertainty"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You have a measurand $Y$ (that is a quantity you wish to measure). You've found that the best approximation for the value of that measurand is $y$ and you've determined an uncertainty of that value $u(y)$ with a coverage probability of $P\%$.</p>
+<p>When quoting the results of the measurement, make sure all of this data is present and clearly stated.</p>
+<p>One way to quote your data is:<br>
+$Y ~ = ~ y ~ \pm ~ u(y)$ units ($P\%$ coverage probability)</p>
+<p>or in a body of text, you can use something along the lines of:<br>
+"The best approximation of the measurand $Y$ was found to be $y ~ \pm u(y)$ units ($P\%$ coverage probability)"</p>
+<p><strong>Don't forget to quote your units!</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Significant-Figures">Significant Figures<a class="anchor-link" href="#Significant-Figures"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your approximation of the value of the measurand will likely carry a lengthy decimal part (potentially up to floating point precision). You select the number of decimal places to quote by looking at your uncertainty.</p>
+<p>You should generally quote your uncertainty within <strong>two</strong> significant figures and round your measurand value to match that. Significant figures are the first non-zero figures in a value.</p>
+<p>For example, the measurement (with coverage probability omitted):</p>
+<p>$L ~ = ~ 14.567354536267\dots ~ \pm ~ 0.00346735838\dots$cm</p>
+<p>should be rounded to:</p>
+<p>$L ~ = ~ 14.5674 ~ \pm ~ 0.0035$cm</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Comparing-Different-Measurements">Comparing Different Measurements<a class="anchor-link" href="#Comparing-Different-Measurements"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we have a way of quoting measurements, let's discuss how to compare measurements.</p>
+<p>Consider the figure below, where measurements A, B and C are compared. The best approximation of the value of the measurand is represented by the dots and the uncertainty intervals are represented by the capped lines.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/benchmarking/uncertainty_36_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this case we can say that the results of measurements A and B <strong>agree within their stated experimental uncertainties</strong>, as do B and C, however B and C <strong>do not agree</strong> with each other.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p><ol class="bibliography"><li><span id="phy-gum">Buffler, A., Allie, S., Lubben, F., &amp; Campbell, B. (2009). <i>Introduction to Measurement in the Physics Laboratory. A probabilistic approach.</i> (Version 3.5). Department of Physics, University of Cape Town, South Africa and Science Education Group, Department of Educational Studies, University of York, UK. http://www.phy.uct.ac.za/phy/people/academic/buffler/downloads/labmanual</span></li></ol></p>
 
 </div>
 </div>
@@ -1355,8 +1855,8 @@ to machine code <a class="citation" href="#wikipedia_machine_code">(Wikipedia co
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/intro.html">
-      〈 <span class="u-margin-right-tiny"></span> Home
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/benchmarking/time.html">
+      〈 <span class="u-margin-right-tiny"></span> Measuring Time in Python
     </a>
   
 
@@ -1364,8 +1864,8 @@ to machine code <a class="citation" href="#wikipedia_machine_code">(Wikipedia co
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/intro.html">
-      Python Basics <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/numpy/intro.html">
+      NumPy <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
