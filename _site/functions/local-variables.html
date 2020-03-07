@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Booleans</title>
-  <meta name="description" content="        Booleans    Booleans (bool) The boolean data type (or bools) hold one of two values: True or False.    bool_var1 = Trueprint(&#39;Var 1&#39;, bool_va...">
+  <title>Local Variables</title>
+  <meta name="description" content="        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/if-statements/bools.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/functions/local-variables.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/if-statements/bools.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/functions/local-variables.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Booleans" />
-<meta property="og:description" content="        Booleans    Booleans (bool) The boolean data type (or bools) hold one of two values: True or False.    bool_var1 = Trueprint(&#39;Var 1&#39;, bool_va..." />
+<meta property="og:title"       content="Local Variables" />
+<meta property="og:description" content="        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/if-statements/bools.html",
-  "headline": "Booleans",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/functions/local-variables.html",
+  "headline": "Local Variables",
   "datePublished": "2020-03-07T13:28:57+02:00",
   "dateModified": "2020-03-07T13:28:57+02:00",
-  "description": "        Booleans    Booleans (bool) The boolean data type (or bools) hold one of two values: True or False.    bool_var1 = Trueprint(&#39;Var 1&#39;, bool_va...",
+  "description": "        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -399,8 +399,8 @@ initFunction(initPrint)
     mode: "python"
     },
     kernelOptions: {
-    kernelName: "python3",
-    path: "content/if-statements"
+    kernelName: "python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf",
+    path: "content/functions"
     }
 }
 </script>
@@ -1338,7 +1338,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/if-statements/bools.ipynb" download>
+        <a href="/uct_nassp_cm/content/functions/local-variables.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1371,13 +1371,23 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Booleans</div>
+    <div id="page-info"><div id="page-title">Local Variables</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Booleans-(bool)">Booleans (<code>bool</code>)<a class="anchor-link" href="#Booleans-(bool)"> </a></h1><p>The boolean data type (or bools) hold one of two values: <code>True</code> or <code>False</code>.</p>
+<h1 id="Local-Variables">Local Variables<a class="anchor-link" href="#Local-Variables"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Variables defined in the main body of a script are called <strong>global</strong> variables. <!--- Fact check! --> These variables are accessible inside of functions:</p>
 
 </div>
 </div>
@@ -1391,13 +1401,178 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bool_var1</span> <span class="o">=</span> <span class="kc">True</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Var 1&#39;</span><span class="p">,</span> <span class="n">bool_var1</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">bool_var1</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">get_x</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
 
-<span class="n">bool_var2</span> <span class="o">=</span> <span class="kc">False</span>
+    </div>
+</div>
+</div>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Var 2&#39;</span><span class="p">,</span> <span class="n">bool_var2</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">bool_var2</span><span class="p">))</span>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_x</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The arguments parsed into and the variables defined inside the function are <strong>local variables</strong>. They only exist in a particular instance of a function. <!--- namespace ---></p>
+<p>In other words, these variables are not accessable from outside the function. For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_var</span><span class="p">():</span>
+    <span class="n">func_var</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">return</span> <span class="n">func_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">make_var</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-96e608aeebf3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>func_var
+
+<span class="ansi-red-fg">NameError</span>: name &#39;func_var&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we were to define <code>func_var</code> as a global variable, <code>make_var</code> will instance a local variable instead of reassigning the global variable:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func_var</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before function&#39;</span><span class="p">,</span> <span class="n">func_var</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function return&#39;</span><span class="p">,</span> <span class="n">make_var</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After function&#39;</span><span class="p">,</span> <span class="n">func_var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1411,10 +1586,87 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Var 1 True &lt;class &#39;bool&#39;&gt;
-Var 2 False &lt;class &#39;bool&#39;&gt;
+<pre>Before function 6
+Function return 4
+After function 6
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that when referencing a variable, Python will check the local namespace <strong>before</strong> the global namespace (i.e. local variables are given preference).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As stated above, function arguments can also be treated as local variables.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arg_var</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">arg_var</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
 </div>
 </div>
 </div>
@@ -1436,8 +1688,8 @@ Var 2 False &lt;class &#39;bool&#39;&gt;
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/if-statements/intro.html">
-      〈 <span class="u-margin-right-tiny"></span> If Statements
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/functions/arguments.html">
+      〈 <span class="u-margin-right-tiny"></span> Arguments
     </a>
   
 
@@ -1445,8 +1697,8 @@ Var 2 False &lt;class &#39;bool&#39;&gt;
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/if-statements/comparison-operators.html">
-      Comparison Operators <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/functions/recursive.html">
+      Recursive Functions <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

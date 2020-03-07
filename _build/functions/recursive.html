@@ -5,13 +5,13 @@ kernel_path: content/functions
 has_widgets: false
 title: |-
   Recursive Functions
-pagenum: 26
+pagenum: 30
 prev_page:
-  url: /functions/intro.html
+  url: /functions/local-variables.html
 next_page:
   url: /benchmarking/intro.html
 suffix: .ipynb
-search: function n recursive times base class functions solution factorial align important return its recursion calls themselves used place loops though python dont necessarily provide efficient problems elegant convenient worked example famous implementations implement begin dots end achieved using recurrence relation solves note aspect value called without never finish putting into action illustration works mentioned earlier must least state doesnt another also sure eventually reaches designing
+search: function n recursive times factorial base class functions solution align important return its recursion flow calls themselves used place loops though python dont necessarily provide efficient problems elegant convenient worked example famous implementations implement begin dots end achieved using recurrence relation solves note aspect value called without never finish putting into action illustration works inner workings fairly subtle informal diagram below illustrates chart functionrecursionfactorial png mentioned earlier must least state doesnt another also sure eventually reaches designing
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -79,9 +79,13 @@ $$<p>The recursive function which solves this is:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n must be an integer&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n must be greater than or equal to 0&#39;</span><span class="p">)</span>
         <span class="k">return</span>
+    
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     
@@ -129,6 +133,38 @@ $$<p>The recursive function which solves this is:</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>n must be greater than or equal to 0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>n must be an integer
 </pre>
 </div>
 </div>
@@ -279,7 +315,9 @@ $$<p>The recursive function which solves this is:</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Illustration-of-How-a-Function-Call-Works">Illustration of How a Function Call Works<a class="anchor-link" href="#Illustration-of-How-a-Function-Call-Works"> </a></h3>
+<p>The inner workings of this <code>factorial()</code> function are fairly subtle. The (informal) flow diagram below illustrates the function call for <code>factorial(5)</code>:</p>
+<p><img src="function_recursion_factorial.png" alt="Factorial flow chart"></p>
+
 </div>
 </div>
 </div>

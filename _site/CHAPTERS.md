@@ -126,6 +126,25 @@ The remaining sections here are not a priority
 
 - breaking out of loops - show practical examples
 
+## Functions
+
+### Completed
+
+- Intro
+- Return
+- Arguments
+- Local variables
+- Recursive functions
+
+### Enhancements
+
+- Recursive functions
+  - The diagram is bad :(
+
+### Not started
+
+- Protected variables
+
 ## OOP - Not Started
 
 ## Packages
@@ -142,8 +161,9 @@ The remaining sections here are not a priority
 
 ## Benchmarking
 
-### In Progress
+### Complete
 
+- Intro
 - Time
 - Uncertainty
 
@@ -153,6 +173,7 @@ The remaining sections here are not a priority
 
 - Intro
 - Arrays
+- Array methods and attributes
 
 ### Not Started
 
@@ -163,8 +184,6 @@ The remaining sections here are not a priority
 ## File I/O - Not Started
 
 ## Debugging - Not Started
-
-## Functions - Not Started
 
 ## Least Squares/ Chi Squared Regression - Not Started
 
