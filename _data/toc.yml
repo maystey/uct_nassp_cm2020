@@ -122,8 +122,16 @@
 - title: Functions
   url: /functions/intro
   sections:
+  - title: Return Statement
+    url: /functions/return
+  - title: Arguments
+    url: /functions/arguments
+  - title: Local Variables
+    url: /functions/local-variables
   - title: Recursive Functions
     url: /functions/recursive
+
+
 # - title: Packages
 #   url: /packages/intro
 #   expand_sections: false
