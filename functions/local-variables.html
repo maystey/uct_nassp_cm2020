@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Operators</title>
-  <meta name="description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...">
+  <title>Local Variables</title>
+  <meta name="description" content="        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/operators.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/functions/local-variables.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/operators.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/functions/local-variables.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Operators" />
-<meta property="og:description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t..." />
+<meta property="og:title"       content="Local Variables" />
+<meta property="og:description" content="        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/operators.html",
-  "headline": "Operators",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/functions/local-variables.html",
+  "headline": "Local Variables",
   "datePublished": "2020-03-09T12:28:24+02:00",
   "dateModified": "2020-03-09T12:28:24+02:00",
-  "description": "        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...",
+  "description": "        Local Variables    Local Variables Variables defined in the main body of a script are called global variables.  These variables are accessible inside...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -399,8 +399,8 @@ initFunction(initPrint)
     mode: "python"
     },
     kernelOptions: {
-    kernelName: "python3",
-    path: "content/basics"
+    kernelName: "python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf",
+    path: "content/functions"
     }
 }
 </script>
@@ -1376,7 +1376,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/basics/operators.ipynb" download>
+        <a href="/uct_nassp_cm/content/functions/local-variables.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1409,13 +1409,13 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Operators</div>
+    <div id="page-info"><div id="page-title">Local Variables</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numerical-Operators">Numerical Operators<a class="anchor-link" href="#Numerical-Operators"> </a></h1><!--- Rename to arithmatic operators? -->
+<h1 id="Local-Variables">Local Variables<a class="anchor-link" href="#Local-Variables"> </a></h1>
 </div>
 </div>
 </div>
@@ -1425,9 +1425,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with those variables.</p>
-<p>In this section we will look at some of the basic operators used for integers and floats. Other variable types have different operators, which we shall see later.</p>
-<p>An obvious starting point is basic arithmetic; addition, subtraction, multiplication and division:</p>
+<p>Variables defined in the main body of a script are called <strong>global</strong> variables. <!--- Fact check! --> These variables are accessible inside of functions:</p>
 
 </div>
 </div>
@@ -1441,14 +1439,178 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mf">10.0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a added to b is&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a multiplied by c is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c divided by b is&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a subtracted from c&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_x</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_x</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The arguments parsed into and the variables defined inside the function are <strong>local variables</strong>. They only exist in a particular instance of a function. <!--- namespace ---></p>
+<p>In other words, these variables are not accessable from outside the function. For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_var</span><span class="p">():</span>
+    <span class="n">func_var</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">return</span> <span class="n">func_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">make_var</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-96e608aeebf3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>func_var
+
+<span class="ansi-red-fg">NameError</span>: name &#39;func_var&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we were to define <code>func_var</code> as a global variable, <code>make_var</code> will instance a local variable instead of reassigning the global variable:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">func_var</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before function&#39;</span><span class="p">,</span> <span class="n">func_var</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function return&#39;</span><span class="p">,</span> <span class="n">make_var</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After function&#39;</span><span class="p">,</span> <span class="n">func_var</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1462,10 +1624,9 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a added to b is 5.0
-a multiplied by c is 20.0
-c divided by b is 3.3333333333333335
-a subtracted from c 8.0
+<pre>Before function 6
+Function return 4
+After function 6
 </pre>
 </div>
 </div>
@@ -1480,7 +1641,18 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>These operators can also be used for integers:</p>
+<p>Note that when referencing a variable, Python will check the local namespace <strong>before</strong> the global namespace (i.e. local variables are given preference).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As stated above, function arguments can also be treated as local variables.</p>
 
 </div>
 </div>
@@ -1494,39 +1666,14 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 multiplied by 3 is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arg_var</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 multiplied by 3 is 6
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and between integers and floats:</p>
-
-</div>
-</div>
 </div>
 </div>
 
@@ -1537,7 +1684,9 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1.5 multiplied by 2 is&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">arg_var</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1550,363 +1699,17 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.5 multiplied by 2 is 3.0
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you are using Python version 2.xxx or below, beware of dividing by integers...</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Exponential-Operator-**">The Exponential Operator <code>**</code><a class="anchor-link" href="#The-Exponential-Operator-**"> </a></h2><p>Another useful operator is the exponential operator <code>**</code>. This returns the left number to the power of the right:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>which can be read as $2^3$.</p>
-<p>Note that this operator also works on floats and float-integer combinations:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">#square root of 4</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2.0
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Modulo-Operator-%">The Modulo Operator <code>%</code><a class="anchor-link" href="#The-Modulo-Operator-%"> </a></h2><p>The modulo operator returns the remainder of the left number divided by the right:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">%</span><span class="k">3</span>)
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In mathematics this would be expressed as</p>
-<p>$16$ mod $3$.</p>
-<p>This operator can also act on floats and integer-float combinations:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">16.3</span><span class="o">%</span><span class="k">3</span>)
-</pre></div>
 
-    </div>
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.3000000000000007
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Floor-Division-Operator-//">The Floor Division Operator <code>//</code><a class="anchor-link" href="#The-Floor-Division-Operator-//"> </a></h2><p>This returns the result of the left number divided by the right, but without the remainder:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Like the others this works for both integers and floats.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Special-Functions-and-Advanced-Mathematics">Special Functions and Advanced Mathematics<a class="anchor-link" href="#Special-Functions-and-Advanced-Mathematics"> </a></h2><p>For more complex mathematics involving logs, trigonometry, etc. we'll rely on the scientific packages SciPy and NumPy. We'll discuss these at a later stage.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Multiple-Operations-in-a-Single-Expression">Multiple Operations in a Single Expression<a class="anchor-link" href="#Multiple-Operations-in-a-Single-Expression"> </a></h2><p>Though we have only seen one operation or function used per line, you can combine as many as you'd like:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you want to group or control the order in which operations are executed use brackets. For example:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">17</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span> <span class="p">)</span>
-</pre></div>
 
-    </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>100000
-</pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>where the <code>//</code> is applied first, then the <code>+</code> and lastly the <code>**</code>. We shall discuss the order in which operations and function calls are executed later. <!--- in Section.... Make a url --></p>
-
-</div>
-</div>
 </div>
 </div>
 
@@ -1923,8 +1726,8 @@ a subtracted from c 8.0
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/types.html">
-      〈 <span class="u-margin-right-tiny"></span> Type Conversion
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/functions/arguments.html">
+      〈 <span class="u-margin-right-tiny"></span> Arguments
     </a>
   
 
@@ -1932,8 +1735,8 @@ a subtracted from c 8.0
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/assignment-operators.html">
-      Assignment Operators <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/functions/recursive.html">
+      Recursive Functions <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

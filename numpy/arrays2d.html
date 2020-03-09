@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Operators</title>
-  <meta name="description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...">
+  <title>2D Arrays and Matrices</title>
+  <meta name="description" content="        2D Arrays and Matrices        import numpy as np    2D Arrays and Matrices NumPy arrays can have any number of dimensions, but in this course we will...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/operators.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/numpy/arrays2d.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/operators.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/numpy/arrays2d.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Operators" />
-<meta property="og:description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t..." />
+<meta property="og:title"       content="2D Arrays and Matrices" />
+<meta property="og:description" content="        2D Arrays and Matrices        import numpy as np    2D Arrays and Matrices NumPy arrays can have any number of dimensions, but in this course we will..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/operators.html",
-  "headline": "Operators",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/numpy/arrays2d.html",
+  "headline": "2D Arrays and Matrices",
   "datePublished": "2020-03-09T12:28:24+02:00",
   "dateModified": "2020-03-09T12:28:24+02:00",
-  "description": "        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...",
+  "description": "        2D Arrays and Matrices        import numpy as np    2D Arrays and Matrices NumPy arrays can have any number of dimensions, but in this course we will...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: "content/basics"
+    path: "content/numpy"
     }
 }
 </script>
@@ -1376,7 +1376,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/basics/operators.ipynb" download>
+        <a href="/uct_nassp_cm/content/numpy/arrays2d.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1409,13 +1409,30 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Operators</div>
+    <div id="page-info"><div id="page-title">2D Arrays and Matrices</div>
 </div>
     <div class="jb_cell">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numerical-Operators">Numerical Operators<a class="anchor-link" href="#Numerical-Operators"> </a></h1><!--- Rename to arithmatic operators? -->
+<h1 id="2D-Arrays-and-Matrices">2D Arrays and Matrices<a class="anchor-link" href="#2D-Arrays-and-Matrices"> </a></h1>
 </div>
 </div>
 </div>
@@ -1425,9 +1442,8 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with those variables.</p>
-<p>In this section we will look at some of the basic operators used for integers and floats. Other variable types have different operators, which we shall see later.</p>
-<p>An obvious starting point is basic arithmetic; addition, subtraction, multiplication and division:</p>
+<p>NumPy arrays can have any number of dimensions, but in this course we will only go up to 2. 2D arrays are quite common if you are working with images or running certain simulations of 3D systems.</p>
+<p>You can created 2D arrays from a nested sequence using the <code>np.array()</code> function:</p>
 
 </div>
 </div>
@@ -1441,14 +1457,12 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mf">10.0</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a added to b is&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a multiplied by c is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c divided by b is&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a subtracted from c&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+<span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1462,10 +1476,9 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a added to b is 5.0
-a multiplied by c is 20.0
-c divided by b is 3.3333333333333335
-a subtracted from c 8.0
+<pre>[[ 1 22 45  6  3  2]
+ [34  2 56  2  7  2]
+ [ 2 35 64 11  1  5]]
 </pre>
 </div>
 </div>
@@ -1480,7 +1493,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>These operators can also be used for integers:</p>
+<p>When you are doing this, make sure that your dimensions are correct, otherwise you will end up with an array of sequences:</p>
 
 </div>
 </div>
@@ -1494,7 +1507,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 multiplied by 3 is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]))</span>
 </pre></div>
 
     </div>
@@ -1508,7 +1521,7 @@ a subtracted from c 8.0
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2 multiplied by 3 is 6
+<pre>[list([1, 2, 3]) list([4, 5])]
 </pre>
 </div>
 </div>
@@ -1523,7 +1536,17 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and between integers and floats:</p>
+<h2 id="Shape-and-Size">Shape and Size<a class="anchor-link" href="#Shape-and-Size"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now would be a good time to talk about the distinction between the <code>shape</code> and <code>size</code> attributes of an array.</p>
 
 </div>
 </div>
@@ -1537,28 +1560,16 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1.5 multiplied by 2 is&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> 
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.5 multiplied by 2 is 3.0
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1566,18 +1577,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you are using Python version 2.xxx or below, beware of dividing by integers...</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Exponential-Operator-**">The Exponential Operator <code>**</code><a class="anchor-link" href="#The-Exponential-Operator-**"> </a></h2><p>Another useful operator is the exponential operator <code>**</code>. This returns the left number to the power of the right:</p>
+<p>The <code>size</code> of the array is a count of how many elements the array contains.</p>
 
 </div>
 </div>
@@ -1591,7 +1591,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">size</span>
 </pre></div>
 
     </div>
@@ -1604,10 +1604,12 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -1620,8 +1622,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>which can be read as $2^3$.</p>
-<p>Note that this operator also works on floats and float-integer combinations:</p>
+<p>The <code>shape</code> of an array is a tuple which tells you the length of each axis:</p>
 
 </div>
 </div>
@@ -1635,7 +1636,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">#square root of 4</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
     </div>
@@ -1648,10 +1649,12 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2.0
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3, 2)</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -1664,7 +1667,28 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Modulo-Operator-%">The Modulo Operator <code>%</code><a class="anchor-link" href="#The-Modulo-Operator-%"> </a></h2><p>The modulo operator returns the remainder of the left number divided by the right:</p>
+<p>Note that <strong>axis 0</strong> (the first value in the tuple) corresponds to the "rows" and <strong>axis 1</strong> (the second value in the tuple) corresponds to the "columns" of the 2D array (this makes more sense when thinking about matrices).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generating-2D-Arrays">Generating 2D Arrays<a class="anchor-link" href="#Generating-2D-Arrays"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also generate 2D arrays quickly by using the <code>np.ones()</code> and <code>np.zeros()</code> functions by specifying the shape the array instead of the size:</p>
 
 </div>
 </div>
@@ -1678,7 +1702,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">%</span><span class="k">3</span>)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1691,10 +1715,52 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1.]])</pre>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0., 0.],
+       [0., 0.],
+       [0., 0.],
+       [0., 0.],
+       [0., 0.]])</pre>
+</div>
+
 </div>
 </div>
 </div>
@@ -1707,9 +1773,31 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In mathematics this would be expressed as</p>
-<p>$16$ mod $3$.</p>
-<p>This operator can also act on floats and integer-float combinations:</p>
+<p>Remember that the shape is a <strong>tuple</strong>. It is a common mistake to enter each axis as a separate argument.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Indexing-and-Slicing">Indexing and Slicing<a class="anchor-link" href="#Indexing-and-Slicing"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To index a multidimensional array you specify the index you want for each axis:</p>
+<div class="highlight"><pre><span></span><span class="n">array</span><span class="p">[</span><span class="n">axis0_index</span><span class="p">,</span> <span class="n">axis1_index</span><span class="p">,</span> <span class="n">axis2_index</span><span class="p">,</span> <span class="o">...</span> <span class="p">]</span>
+</pre></div>
+<p>Note the use of commas to separate each axis. For example, let's index the 2D array:</p>
 
 </div>
 </div>
@@ -1723,7 +1811,28 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">16.3</span><span class="o">%</span><span class="k">3</span>)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1736,10 +1845,46 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.3000000000000007
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7</pre>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>12</pre>
+</div>
+
 </div>
 </div>
 </div>
@@ -1752,7 +1897,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Floor-Division-Operator-//">The Floor Division Operator <code>//</code><a class="anchor-link" href="#The-Floor-Division-Operator-//"> </a></h2><p>This returns the result of the left number divided by the right, but without the remainder:</p>
+<p>You can slice multidimensional arrays by separating the slice along each axis by commas:</p>
 
 </div>
 </div>
@@ -1766,7 +1911,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1779,26 +1924,19 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 2,  3],
+       [ 6,  7],
+       [10, 11]])</pre>
 </div>
+
 </div>
 </div>
 </div>
 </div>
 
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Like the others this works for both integers and floats.</p>
-
-</div>
-</div>
 </div>
 </div>
 
@@ -1806,18 +1944,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Special-Functions-and-Advanced-Mathematics">Special Functions and Advanced Mathematics<a class="anchor-link" href="#Special-Functions-and-Advanced-Mathematics"> </a></h2><p>For more complex mathematics involving logs, trigonometry, etc. we'll rely on the scientific packages SciPy and NumPy. We'll discuss these at a later stage.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Multiple-Operations-in-a-Single-Expression">Multiple Operations in a Single Expression<a class="anchor-link" href="#Multiple-Operations-in-a-Single-Expression"> </a></h2><p>Though we have only seen one operation or function used per line, you can combine as many as you'd like:</p>
+<p>You can extract individual rows and columns by slicing along one axis and indexing the other. For example:</p>
 
 </div>
 </div>
@@ -1831,7 +1958,8 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Slicing the first row</span>
+<span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
     </div>
@@ -1844,10 +1972,82 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 2, 3, 4])</pre>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Slicing the third column</span>
+<span class="n">arr</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 3,  7, 11])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Slicing the last column</span>
+<span class="n">arr</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 4,  8, 12])</pre>
+</div>
+
 </div>
 </div>
 </div>
@@ -1860,7 +2060,17 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you want to group or control the order in which operations are executed use brackets. For example:</p>
+<h2 id="Transpose">Transpose<a class="anchor-link" href="#Transpose"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can use the <code>.T</code> attribute of an array (or matrix) to get the transpose (swap the rows and columns):</p>
 
 </div>
 </div>
@@ -1874,7 +2084,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">17</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 
     </div>
@@ -1887,10 +2097,15 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>100000
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 1,  5,  9],
+       [ 2,  6, 10],
+       [ 3,  7, 11],
+       [ 4,  8, 12]])</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -1903,10 +2118,485 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>where the <code>//</code> is applied first, then the <code>+</code> and lastly the <code>**</code>. We shall discuss the order in which operations and function calls are executed later. <!--- in Section.... Make a url --></p>
+<h2 id="Matrices">Matrices<a class="anchor-link" href="#Matrices"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy's matrices are similar to 2D arrays, except for some matrix specific attributes, methods and operations.</p>
+<p>You can create a matrix by using the <code>np.matrix()</code> function with a sequence argument:</p>
 
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[1, 2],
+        [3, 4],
+        [5, 6]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To generate large, structured matrices, you can use some of the array generating functions:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[1., 1., 1.],
+        [1., 1., 1.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Slicing-and-Indexing">Slicing and Indexing<a class="anchor-link" href="#Slicing-and-Indexing"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Slicing and indexing matrices is the same as for 2D arrays.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Matrix-Operations">Matrix Operations<a class="anchor-link" href="#Matrix-Operations"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Consider the 2 by 3 matrix <code>mat1</code> and the 3 by 2 matrix <code>mat2</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">))</span>
+<span class="n">mat2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
+                  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> 
+                  <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Addition</strong>, <strong>subtraction</strong> and <strong>division</strong> between matrices are the same as for arrays (vectorized):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat1</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="n">mat2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[2., 3.],
+        [4., 5.],
+        [6., 7.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat1</span><span class="o">.</span><span class="n">T</span><span class="o">/</span><span class="n">mat2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[1.        , 0.5       ],
+        [0.33333333, 0.25      ],
+        [0.2       , 0.16666667]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(<code>mat1</code> has been transposed to ensure the matrices shape's match)</p>
+<p><strong>Multiplication</strong> is matrix multiplication:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat1</span><span class="o">*</span><span class="n">mat2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[ 9., 12.],
+        [ 9., 12.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat2</span><span class="o">*</span><span class="n">mat1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[ 3.,  3.,  3.],
+        [ 7.,  7.,  7.],
+        [11., 11., 11.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inverse">Inverse<a class="anchor-link" href="#Inverse"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can use the <code>.I</code> attribute to get the multiplicative inverse of a matrix.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat</span><span class="o">.</span><span class="n">I</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[ 2.,  0., -1.],
+        [ 0.,  1.,  0.],
+        [-1.,  0.,  1.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat</span><span class="o">*</span><span class="n">mat</span><span class="o">.</span><span class="n">I</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[1., 0., 0.],
+        [0., 1., 0.],
+        [0., 0., 1.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mat</span><span class="o">.</span><span class="n">I</span><span class="o">*</span><span class="n">mat</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>matrix([[1., 0., 0.],
+        [0., 1., 0.],
+        [0., 0., 1.]])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1923,8 +2613,8 @@ a subtracted from c 8.0
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/types.html">
-      〈 <span class="u-margin-right-tiny"></span> Type Conversion
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/numpy/array-methods.html">
+      〈 <span class="u-margin-right-tiny"></span> Array Methods and Attributes
     </a>
   
 
@@ -1932,8 +2622,8 @@ a subtracted from c 8.0
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/assignment-operators.html">
-      Assignment Operators <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/numpy/random.html">
+      Random Sampling <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
