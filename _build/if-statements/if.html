@@ -5,13 +5,13 @@ kernel_path: content/if-statements
 has_widgets: false
 title: |-
   If Statements
-pagenum: 18
+pagenum: 19
 prev_page:
   url: /if-statements/logical-operators.html
 next_page:
   url: /loops/intro.html
 suffix: .ipynb
-search: condition code block statement else elif true evaluates false control executed example flow not chart lets check part conditions multiple computer where moves statements both used execute after worked case variable above another png our try only checks leave note illustrate syntax must evaluate boolean value indented language correct skipped consider want greater ran b nothing printed wanted its hand ifelse figure caption take add mutually partially exclusive annoying computationally expensive others arent still turn attempt embed better terms computational costs messy confusing luckily python gives us tool problem leaves mention through cut explanation show script even though because appears
+search: condition code block else statement elif true evaluates false statements control executed example flow not chart where lets check conditions computer multiple moves part both used execute after worked variable above png our job checks leave nested only note illustrate syntax must evaluate boolean value indented language correct skipped consider case want greater ran b nothing printed wanted another its hand ifelse figure caption take add mutually partially exclusive here leaves section explanation confusing alternative using quite messy general rule thumb python avoid nesting possible certain scenarios desired however never annoying computationally expensive others arent still turn script even though
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -206,16 +206,17 @@ else:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Elif">Elif<a class="anchor-link" href="#Elif"> </a></h2><p>Now, what if you have more than 2 mutually/partially exclusive conditions? You could try multiple <code>if</code> statements:</p>
+<h2 id="Elif">Elif<a class="anchor-link" href="#Elif"> </a></h2><p>Now, what if you have more than 2 mutually/partially exclusive conditions? This is a job for <code>elif</code> statements:</p>
 
 <pre><code>if condition_1:
     code block 1
-if (not condition_1) and condition_2:
+elif condition_2:
     code block 2
-if (not condition_1) and (not condition_2) and condition_3:
+elif condition_3:
     code block 3</code></pre>
-<p>but not only is this annoying to write, it is computationally expensive. If one of these conditions is true, then the others aren't, but the computer will still check each condition in turn.</p>
-<p>Another attempt could be to embed the if statements:</p>
+<p>Here computer first checks <code>condition_1</code>. If <code>condition_1</code> evaluates <code>True</code> then <code>code block 1</code> is executed and control moves leaves the if statement. If <code>condition_1</code> evaluates as <code>False</code> then the computer will check <code>condition_2</code>, if this evaluates as <code>True</code> then <code>code block 2</code> will be executed and control will leave the if statement. If both <code>condition_1</code> and <code>condition_2</code> are both <code>False</code>, then the computer will check <code>condition_3</code>, if this evaluates to <code>True</code> <code>code block 3</code> will be executed and control will leave the if statement.</p>
+<p>See the flow chart in the <strong><code>else</code> and <code>elif</code></strong> section if this explanation was confusing.</p>
+<p>An alternative to using <code>elif</code> statements is nested <code>if</code>/<code>else</code> statements:</p>
 
 <pre><code>if condition_1:
     code block 1
@@ -225,16 +226,16 @@ else:
     else:
         if condition_3:
             code block 3</code></pre>
-<p>this is better in terms of computational costs, but is messy and confusing. Luckily Python gives us a tool for this problem, the <code>elif</code> part of the <code>if</code> statement:</p>
+<p>This is quite messy. A general rule of thumb for Python is to avoid nesting where possible. There are certain scenarios where nested <code>if</code> statements are desired, however.</p>
+<p>Never use multiple <code>if</code> statements to do the job of <code>elif</code> statements:</p>
 
 <pre><code>if condition_1:
     code block 1
-elif condition_2:
+if (not condition_1) and condition_2:
     code block 2
-elif condition_3:
+if (not condition_1) and (not condition_2) and condition_3:
     code block 3</code></pre>
-<p>The computer first checks <code>condition_1</code>. If <code>condition_1</code> evaluates <code>True</code> then <code>code block 1</code> is executed and control moves leaves the if statement. If <code>condition_1</code> evaluates as <code>False</code> then the computer will check <code>condition_2</code>, if this evaluates as <code>True</code> then <code>code block 2</code> will be executed and control will leave the if statement. If both <code>condition_1</code> and <code>condition_2</code> are both <code>False</code>, then the computer will check <code>condition_3</code>, if this evaluates to <code>True</code> <code>code block 3</code> will be executed and control will leave the if statement. <!--- mention case where all through are false--> <!--- try to cut down this explanation-->
-<!--- show flow chart for this?--></p>
+<p>this is not only annoying to write, it is computationally expensive. If one of these conditions is true, then the others aren't, but the computer will still check each condition in turn.</p>
 
 </div>
 </div>

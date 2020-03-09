@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Operators</title>
-  <meta name="description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...">
+  <title>Random Sampling</title>
+  <meta name="description" content="        Random Sampling    NumPy Random Module The numpy.random module provides us with random number generators (RNG). You can find the documentation here. ...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/basics/operators.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/numpy/random.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/basics/operators.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/numpy/random.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Operators" />
-<meta property="og:description" content="        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t..." />
+<meta property="og:title"       content="Random Sampling" />
+<meta property="og:description" content="        Random Sampling    NumPy Random Module The numpy.random module provides us with random number generators (RNG). You can find the documentation here. ..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/basics/operators.html",
-  "headline": "Operators",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/numpy/random.html",
+  "headline": "Random Sampling",
   "datePublished": "2020-03-09T12:28:24+02:00",
   "dateModified": "2020-03-09T12:28:24+02:00",
-  "description": "        Operators    Numerical Operators Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with t...",
+  "description": "        Random Sampling    NumPy Random Module The numpy.random module provides us with random number generators (RNG). You can find the documentation here. ...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -400,7 +400,7 @@ initFunction(initPrint)
     },
     kernelOptions: {
     kernelName: "python3",
-    path: "content/basics"
+    path: "content/numpy"
     }
 }
 </script>
@@ -1376,7 +1376,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/basics/operators.ipynb" download>
+        <a href="/uct_nassp_cm/content/numpy/random.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1409,13 +1409,13 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Operators</div>
+    <div id="page-info"><div id="page-title">Random Sampling</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numerical-Operators">Numerical Operators<a class="anchor-link" href="#Numerical-Operators"> </a></h1><!--- Rename to arithmatic operators? -->
+<h1 id="NumPy-Random-Module">NumPy Random Module<a class="anchor-link" href="#NumPy-Random-Module"> </a></h1>
 </div>
 </div>
 </div>
@@ -1425,9 +1425,28 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Coding, in the simplest sense, is merely the action of assigning values to variables, and then 'doing things' with those variables.</p>
-<p>In this section we will look at some of the basic operators used for integers and floats. Other variable types have different operators, which we shall see later.</p>
-<p>An obvious starting point is basic arithmetic; addition, subtraction, multiplication and division:</p>
+<p>The <code>numpy.random</code> module provides us with random number generators (RNG). You can find the documentation <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html">here</a>. As there name suggests, random number generators produce random numbers. In this section we highlight a few essential functions from the module:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="np.random.random()"><code>np.random.random()</code><a class="anchor-link" href="#np.random.random()"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This function produces random floating point numbers from a uniform probability distribution function (PDF) on the interval $[0, 1)$ ($1$ is excluded). If no arguments are provided a single number is generated:</p>
 
 </div>
 </div>
@@ -1441,14 +1460,7 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mf">10.0</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a added to b is&#39;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a multiplied by c is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c divided by b is&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a subtracted from c&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -1461,13 +1473,12 @@ initFunction(initPrint)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>a added to b is 5.0
-a multiplied by c is 20.0
-c divided by b is 3.3333333333333335
-a subtracted from c 8.0
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.12055240311517734</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -1480,7 +1491,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>These operators can also be used for integers:</p>
+<p>If the length or shape is specified, <code>random()</code> returns an array of random numbers:</p>
 
 </div>
 </div>
@@ -1494,7 +1505,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 multiplied by 3 is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1507,10 +1518,47 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 multiplied by 3 is 6
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.08250099, 0.6587371 , 0.53175303, 0.67709712, 0.1558734 ])</pre>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0.59302342, 0.84327141, 0.05504497],
+       [0.98913576, 0.63069964, 0.73478334]])</pre>
+</div>
+
 </div>
 </div>
 </div>
@@ -1523,7 +1571,11 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and between integers and floats:</p>
+<p>If you want to produce uniformly distributed random numbers $R$ on the interval $[a, b)$, you can use random numbers $r$ from the interval $[0, 1)$ by scaling and shifting them:
+    $$
+    R = a + r*(b-a)
+    $$</p>
+<p>For example, to generate uniform random numbers on the interval $[18, 30)$:</p>
 
 </div>
 </div>
@@ -1537,7 +1589,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1.5 multiplied by 2 is&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">30</span> <span class="o">-</span><span class="mi">18</span><span class="p">)</span> <span class="o">+</span> <span class="mi">18</span>
 </pre></div>
 
     </div>
@@ -1550,26 +1602,17 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.5 multiplied by 2 is 3.0
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([28.90915681, 26.98028702, 29.02897959, 20.18055287])</pre>
 </div>
+
 </div>
 </div>
 </div>
 </div>
 
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you are using Python version 2.xxx or below, beware of dividing by integers...</p>
-
-</div>
-</div>
 </div>
 </div>
 
@@ -1577,7 +1620,29 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Exponential-Operator-**">The Exponential Operator <code>**</code><a class="anchor-link" href="#The-Exponential-Operator-**"> </a></h2><p>Another useful operator is the exponential operator <code>**</code>. This returns the left number to the power of the right:</p>
+<p>To read more about <code>numpy.random.random()</code>, see the <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.random.random.html#numpy.random.random">documentation</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="np.random.randint()"><code>np.random.randint()</code><a class="anchor-link" href="#np.random.randint()"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This function produces random integers sampled from a uniform probability distribution on a <strong>specified</strong> interval.</p>
+<p>The interval is defined by the first 2 arguments of <code>randint()</code>, the end of the interval (second number) is not included in the interval:</p>
 
 </div>
 </div>
@@ -1591,7 +1656,8 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Random numbers from 1 up to 10</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1604,10 +1670,12 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9</pre>
 </div>
+
 </div>
 </div>
 </div>
@@ -1620,8 +1688,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>which can be read as $2^3$.</p>
-<p>Note that this operator also works on floats and float-integer combinations:</p>
+<p>Again, you can specify a size or shape of the output array:</p>
 
 </div>
 </div>
@@ -1635,7 +1702,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">#square root of 4</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1648,26 +1715,17 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2.0
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([7, 9, 7])</pre>
 </div>
+
 </div>
 </div>
 </div>
 </div>
 
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Modulo-Operator-%">The Modulo Operator <code>%</code><a class="anchor-link" href="#The-Modulo-Operator-%"> </a></h2><p>The modulo operator returns the remainder of the left number divided by the right:</p>
-
-</div>
-</div>
 </div>
 </div>
 
@@ -1678,7 +1736,7 @@ a subtracted from c 8.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">%</span><span class="k">3</span>)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1691,55 +1749,13 @@ a subtracted from c 8.0
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-</pre>
-</div>
-</div>
-</div>
-</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[5, 8, 7, 1],
+       [9, 4, 9, 7]])</pre>
 </div>
 
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In mathematics this would be expressed as</p>
-<p>$16$ mod $3$.</p>
-<p>This operator can also act on floats and integer-float combinations:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">16.3</span><span class="o">%</span><span class="k">3</span>)
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.3000000000000007
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -1752,51 +1768,7 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Floor-Division-Operator-//">The Floor Division Operator <code>//</code><a class="anchor-link" href="#The-Floor-Division-Operator-//"> </a></h2><p>This returns the result of the left number divided by the right, but without the remainder:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">16</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Like the others this works for both integers and floats.</p>
-
+<h2 id="Random-Numbers-From-Other-Distributions">Random Numbers From Other Distributions<a class="anchor-link" href="#Random-Numbers-From-Other-Distributions"> </a></h2>
 </div>
 </div>
 </div>
@@ -1806,104 +1778,9 @@ a subtracted from c 8.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Special-Functions-and-Advanced-Mathematics">Special Functions and Advanced Mathematics<a class="anchor-link" href="#Special-Functions-and-Advanced-Mathematics"> </a></h2><p>For more complex mathematics involving logs, trigonometry, etc. we'll rely on the scientific packages SciPy and NumPy. We'll discuss these at a later stage.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Multiple-Operations-in-a-Single-Expression">Multiple Operations in a Single Expression<a class="anchor-link" href="#Multiple-Operations-in-a-Single-Expression"> </a></h2><p>Though we have only seen one operation or function used per line, you can combine as many as you'd like:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you want to group or control the order in which operations are executed use brackets. For example:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">17</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span> <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>100000
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>where the <code>//</code> is applied first, then the <code>+</code> and lastly the <code>**</code>. We shall discuss the order in which operations and function calls are executed later. <!--- in Section.... Make a url --></p>
+<p><code>numpy.random</code> provides us with many more RNG functions that sample from many of the most popular PDFs. You can see the full list <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html#distributions">in the documentation</a>.</p>
+<p>For example, the <code>np.random.norm()</code> function produces random numbers sampled from the normal (Gaussian) distribution. Parameters like the mean and standard deviation (or first 2 moments) can be specified.</p>
+<p>All of these functions can generate array outputs</p>
 
 </div>
 </div>
@@ -1923,8 +1800,8 @@ a subtracted from c 8.0
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/basics/types.html">
-      〈 <span class="u-margin-right-tiny"></span> Type Conversion
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/numpy/arrays2d.html">
+      〈 <span class="u-margin-right-tiny"></span> 2D Arrays and Matrices
     </a>
   
 
@@ -1932,8 +1809,8 @@ a subtracted from c 8.0
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/basics/assignment-operators.html">
-      Assignment Operators <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
