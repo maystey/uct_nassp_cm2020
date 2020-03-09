@@ -151,3 +151,7 @@
     url: /numpy/arrays
   - title: Array Methods and Attributes
     url: /numpy/array-methods
+  - title: 2D Arrays and Matrices
+    url: /numpy/arrays2d
+  - title: Random Sampling
+    url: /numpy/random
