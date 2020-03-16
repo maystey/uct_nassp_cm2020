@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>For Loops</title>
-  <meta name="description" content="        For Loops    For Loops For loops can be used to repeat a block of code by iterating through specified values.The structure of a for loop is as follow...">
+  <title>Array Conditional Statements and numpy.where()</title>
+  <meta name="description" content="        Array Conditional Statements and numpy.where()    Array Conditional Statements and numpy.where() Comparison and Bitwise Operations on Arrays We can a...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/loops/for.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/numpy/where.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/loops/for.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/numpy/where.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="For Loops" />
-<meta property="og:description" content="        For Loops    For Loops For loops can be used to repeat a block of code by iterating through specified values.The structure of a for loop is as follow..." />
+<meta property="og:title"       content="Array Conditional Statements and numpy.where()" />
+<meta property="og:description" content="        Array Conditional Statements and numpy.where()    Array Conditional Statements and numpy.where() Comparison and Bitwise Operations on Arrays We can a..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/loops/for.html",
-  "headline": "For Loops",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/numpy/where.html",
+  "headline": "Array Conditional Statements and numpy.where()",
   "datePublished": "2020-03-16T19:03:48+02:00",
   "dateModified": "2020-03-16T19:03:48+02:00",
-  "description": "        For Loops    For Loops For loops can be used to repeat a block of code by iterating through specified values.The structure of a for loop is as follow...",
+  "description": "        Array Conditional Statements and numpy.where()    Array Conditional Statements and numpy.where() Comparison and Bitwise Operations on Arrays We can a...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -399,8 +399,8 @@ initFunction(initPrint)
     mode: "python"
     },
     kernelOptions: {
-    kernelName: "python3",
-    path: "content/loops"
+    kernelName: "python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf",
+    path: "content/numpy"
     }
 }
 </script>
@@ -1395,7 +1395,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/loops/for.ipynb" download>
+        <a href="/uct_nassp_cm/content/numpy/where.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -1428,21 +1428,13 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">For Loops</div>
+    <div id="page-info"><div id="page-title">Array Conditional Statements and numpy.where()</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops"> </a></h1><p>For loops can be used to repeat a block of code by iterating through specified values.</p>
-<p>The structure of a for loop is as follows:</p>
-
-<pre><code>for i in iterator:
-    code block to be repeated</code></pre>
-<p>where <code>i</code> is the iteration variable and the iterator represents a sequence of values that <code>i</code> will be set to each time the loop is repeated. Here <code>i</code> can be treated like a variable and can take on any allowed variable name.</p>
-<p>The code block to be repeated must be indented after the <code>:</code>. The loop repeats until <code>i</code> has run through all of the values in the iterator, or until the loop is broken.</p>
-<p>Be careful not to alter the iterator inside the code block being repeated.</p>
-
+<h1 id="Array-Conditional-Statements-and-numpy.where()">Array Conditional Statements and <code>numpy.where()</code><a class="anchor-link" href="#Array-Conditional-Statements-and-numpy.where()"> </a></h1>
 </div>
 </div>
 </div>
@@ -1452,8 +1444,17 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h3><p>As a simple example, let's say we wanted to print out the first $n$ integer squares starting with 0.</p>
-<p>This can be achieved manually for small $n$, for example $n = 5$:</p>
+<h2 id="Comparison-and-Bitwise-Operations-on-Arrays">Comparison and Bitwise Operations on Arrays<a class="anchor-link" href="#Comparison-and-Bitwise-Operations-on-Arrays"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can apply comparison operators to arrays:</p>
 
 </div>
 </div>
@@ -1467,12 +1468,485 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0 squared is&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 squared is&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 squared is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3 squared is&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;4 squared is&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 squared is&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">a1</span> <span class="o">&lt;</span> <span class="n">a2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ True, False,  True,  True, False])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see this gives us an array of booleans, each element representing the outcome of comparing the corresponding element of <code>a1</code> to <code>a2</code>.</p>
+<p>What if we wanted to combine the boolean arrays with a logical operator? For example, if we want an array of booleans for the condition <code>a1</code> is less-than <code>a2</code> and greater than <code>2</code>. Unfortunately the boolean comparison operators we used in the <a href="/if-statements/comparison-operators">If Statements</a> won't work, for example using <code>and</code>:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a1</span> <span class="o">&lt;</span> <span class="n">a2</span> <span class="ow">and</span> <span class="n">a1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-53-74cb81b02f02&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a1 <span class="ansi-blue-fg">&lt;</span> a2 <span class="ansi-green-fg">and</span> a1 <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">2</span>
+
+<span class="ansi-red-fg">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to combine boolean arrays (without a loop) we need to use <strong>bitwise</strong> operators.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bitwise operators treat numbers as a string of bits and act on them bit by bit. In the case of a boolean array, the operator acts on it element by element. The bitwise operators we are interested are:</p>
+<table>
+    <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Analogous boolean operator</th>
+    </tr>
+    <tr>
+        <td><code>&</code></td>
+        <td>Bitwise and</td>
+        <td><code>and</code></td>
+    </tr>
+    <tr>
+        <td><code>|</code></td>
+        <td>Bitwise or</td>
+        <td><code>or</code></td>
+    </tr>
+    <tr>
+        <td><code>~</code></td>
+        <td>Bitwise complement</td>
+        <td><code>not</code></td>
+    </tr>
+</table><p>(See <a href="https://wiki.python.org/moin/BitwiseOperators">https://wiki.python.org/moin/BitwiseOperators</a> for a more comprehensive list and explanation of bitwise operations.)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Returning to our original example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">a1</span> <span class="o">&lt;</span> <span class="n">a2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([False, False,  True,  True, False])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the comparisons must be grouped in brackets for this to work:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a1</span> <span class="o">&lt;</span> <span class="n">a2</span> <span class="o">&amp;</span> <span class="n">a1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-56-c3606bc24b97&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a1 <span class="ansi-blue-fg">&lt;</span> a2 <span class="ansi-blue-fg">&amp;</span> a1 <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">2</span>
+
+<span class="ansi-red-fg">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example---Random-Points-in-a-Region">Example - Random Points in a Region<a class="anchor-link" href="#Example---Random-Points-in-a-Region"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use <code>np.where()</code> to check which points in an array lie inside or outside of region.</p>
+<p>First let's generate an array of 50 random points in 2D space:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/numpy/where_14_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that axis 0 of <code>points</code> is used to represent the x and y values, and axis 1 represents points. i.e. for the points $(x_0, y_0), (x_1, y_1), \dots, (x_{49}, y_{49})$, <code>points</code> is:</p>
+<table>
+    <tr>
+        <td>x0</td>
+        <td>x1</td>
+        <td>x2</td>
+        <td>x3</td>
+        <td>x4</td>
+        <td>...</td>
+        <td>x48</td>
+        <td>x49</td>
+    </tr>
+    <tr>
+        <td>y0</td>
+        <td>y1</td>
+        <td>y2</td>
+        <td>y3</td>
+        <td>y4</td>
+        <td>...</td>
+        <td>y48</td>
+        <td>y49</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, let's plot the points which lie to the left of 0.5 as blue and the others as red:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_left</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="c1">#True where left of 0.5</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">is_left</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_left</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">~</span> <span class="p">(</span><span class="n">is_left</span><span class="p">)],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">~</span> <span class="n">is_left</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0, 0.5, &#39;y&#39;)</pre>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/numpy/where_17_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that, in the example above, we have used an array of booleans to <strong>slice the elements of the array which are true</strong>. We have also use the <strong>bitwise compliment</strong> to get the complement of our comparison result, there is no need to recalculate it.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, lets plot the points right of 0.5 and above 0.5 (the top left square) as red and the rest as blue (remember the <strong>bitwise and</strong>):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#True if in top left square</span>
+<span class="n">is_top_left</span> <span class="o">=</span> <span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">is_top_left</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_top_left</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">~</span> <span class="p">(</span><span class="n">is_top_left</span><span class="p">)],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">~</span> <span class="n">is_top_left</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0, 0.5, &#39;y&#39;)</pre>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/numpy/where_20_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="numpy.where()"><code>numpy.where()</code><a class="anchor-link" href="#numpy.where()"> </a></h2><p><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.where.html">Documentation</a></p>
+<div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">condition</span><span class="p">[,</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
+</pre></div>
+<p>Returns elements chosen from <code>x</code> or <code>y</code> depending on the condition. If no <code>x</code> or <code>y</code> arguments are provided it returns and array of indices.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">arr_where</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;arr1:&#39;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Indices where arr1 is greater than 15:&#39;</span><span class="p">,</span> <span class="n">arr_where</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sub-array of arr1 that is greater than 15:&#39;</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">arr1_where</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -1486,12 +1960,9 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0 squared is 0
-1 squared is 1
-2 squared is 4
-3 squared is 9
-4 squared is 16
-5 squared is 25
+<pre>arr1: [10 11 12 13 14 15 16 17 18 19]
+Indices where arr1 is greater than 15: (array([6, 7, 8, 9]),)
+The sub-array of arr1 that is greater than 15: [16 17 18 19]
 </pre>
 </div>
 </div>
@@ -1506,7 +1977,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This quickly becomes tedious and produces messy code. To achieve the same goal using a <code>for</code> loop we can do the following:</p>
+<p>If both <code>x</code> and <code>y</code> is specified, the elements of the returned array come from <code>x</code> if <code>condition</code> is true, or from <code>y</code> if <code>condition</code> is false.</p>
 
 </div>
 </div>
@@ -1520,8 +1991,16 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;squared is&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="c1">#y = np.linspace(-5, -1, 5)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span>
+
+<span class="n">condition</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x:&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y:&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Condition:&#39;</span><span class="p">,</span> <span class="n">condition</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x where True, y where False:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">condition</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -1535,12 +2014,10 @@ initFunction(initPrint)
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0 squared is 0
-1 squared is 1
-2 squared is 4
-3 squared is 9
-4 squared is 16
-5 squared is 25
+<pre>x: [1. 2. 3. 4. 5.]
+y: [-1. -2. -3. -4. -5.]
+Condition: [True, False, True, True, False]
+x where True, y where False: [ 1. -2.  3.  4. -5.]
 </pre>
 </div>
 </div>
@@ -1555,8 +2032,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we have made use of the <code>range</code> function to create our iterator.</p>
-<!--- Give a more detailed breakdown of what's happening -->
+<h3 id="Example---Piecewise-defined-functions">Example - Piecewise defined functions<a class="anchor-link" href="#Example---Piecewise-defined-functions"> </a></h3>
 </div>
 </div>
 </div>
@@ -1566,17 +2042,86 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-range()-Function">The <code>range()</code> Function<a class="anchor-link" href="#The-range()-Function"> </a></h2><p>The <code>range()</code> function takes integer arguments and produces a series of integers. As we shall see, the <code>range()</code> function's arguments are very similar to slicing.
-<!--- Maybe remove the latter sentence --></p>
-<p>In the example above we used it with one argument,</p>
+<p>One use for <code>np.where()</code> is to define a piecewise defined function that works on arrays.</p>
+<p>As a first example, let's use <code>np.where()</code> to plot the absolute value function (you should really use <code>np.abs()</code> for this):</p>
+$$
+y =
+\begin{cases}
+-x &amp; \text{if $x &lt; 0$}\\
+x &amp; \text{if $x \geq 0$}\\
+\end{cases}
+$$
+</div>
+</div>
+</div>
+</div>
 
-<pre><code>range(stop)</code></pre>
-<p>Here <code>range()</code> will produce a series of integers starting at zero and ending just before the <code>stop</code> value.</p>
-<p>If we were to use range with 2 arguments:</p>
+<div class="jb_cell">
 
-<pre><code>range(start, stop)</code></pre>
-<p><code>range()</code> will produce a series of integers starting with the <code>start</code> value and ending with the <code>stop</code> value.</p>
-<p>For example:</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/numpy/where_27_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that, in the plot above, the line does not reach zero, but flattens out to a value above it. This is because the array <code>x</code> does not contain the value 0, but values around it.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, consider the piecewise function:</p>
+$$
+f(x) =
+\begin{cases}
+-(x + 1)^2 + 1 &amp; \text{if $x &lt; -1$}\\
+- x &amp; \text{if $-1 \leq x \geq 1$}\\
+(x - 1)^3 - 1 &amp; \text{if $x &gt; 1$}
+\end{cases}
+$$<p>where there are three regions. To handle this we can use 2 <code>np.where()</code> calls:</p>
 
 </div>
 </div>
@@ -1590,8 +2135,19 @@ initFunction(initPrint)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#Left condition</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Right condition</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -1604,468 +2160,13 @@ initFunction(initPrint)
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-3
-4
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Lastly if we were to use <code>range()</code> with 3 arguments:</p>
-
-<pre><code>range(start, stop, step)</code></pre>
-<p><code>range()</code> returns a series starting with the <code>start</code> value and with step sizes of <code>step</code> in between each value until it reaches the value before <code>stop</code>.</p>
-<p>For example:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-5
-8
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The default value for <code>step</code> is 1. If you want the series to descend, you can use a negative step size:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>11
-9
-7
-5
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Looping-Through-Sequences">Looping Through Sequences<a class="anchor-link" href="#Looping-Through-Sequences"> </a></h2><!--- I need to introduce lists somewhere else! Maybe in basics along with dictionaries? -->
-
-<p>Sequences such as tuples, lists and strings can also be used as iterators. For example:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s1">&#39;This string&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>T
-h
-i
-s
- 
-s
-t
-r
-i
-n
-g
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>and</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-a
-b
-c
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="enumerate()-To-Iterate-Through-Sequence-and-Index"><code>enumerate()</code> To Iterate Through Sequence and Index<a class="anchor-link" href="#enumerate()-To-Iterate-Through-Sequence-and-Index"> </a></h3><p>Sometimes you want to loop through a sequence but also want to keep track of the index. This can be achieved by using range:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;string&#39;</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 s
-1 t
-2 r
-3 i
-4 n
-5 g
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>but there is a far more convenient way using the <code>enumerate()</code> function:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">char</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 s
-1 t
-2 r
-3 i
-4 n
-5 g
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="zip()-To-Iterate-Through-More-Than-One-Sequence-Simultaneously"><code>zip()</code> To Iterate Through More Than One Sequence Simultaneously<a class="anchor-link" href="#zip()-To-Iterate-Through-More-Than-One-Sequence-Simultaneously"> </a></h3><p>If you wanted to loop through more than one sequence at a time you could iterate through the index:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_a</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">list_b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 a
-2 b
-3 c
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>but there is a cleaner way using the <code>zip</code> function:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 a
-2 b
-3 c
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that the loop will only iterate as much as the shortest sequence.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Looping-Through-Dictionaries">Looping Through Dictionaries<a class="anchor-link" href="#Looping-Through-Dictionaries"> </a></h2><p>To loop through the key-value pairs of a dictionary you can use the <code>dict.items()</code> method:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">54</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mi">754</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mi">42</span><span class="p">}</span>
 
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-</pre></div>
 
-    </div>
+<div class="output_png output_subarea ">
+<img src="../images/numpy/where_30_0.png"
+>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
 
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>a 54
-b 754
-c 42
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -2087,8 +2188,8 @@ c 42
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/loops/intro.html">
-      〈 <span class="u-margin-right-tiny"></span> Loops
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/numpy/random.html">
+      〈 <span class="u-margin-right-tiny"></span> Random Sampling
     </a>
   
 
@@ -2096,8 +2197,8 @@ c 42
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/loops/list-comp.html">
-      List Comprehension <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="">
+       <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

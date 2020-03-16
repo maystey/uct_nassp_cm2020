@@ -174,12 +174,13 @@ The remaining sections here are not a priority
 - Intro
 - Arrays
 - Array methods and attributes
+- 2D Arrays and Matrices
+- Random numbers
+- Array comparisons and where()
 
 ### Not Started
 
 - Special functions
-- 2D Arrays and Matrices
-- Random numbers
 
 ## File I/O - Not Started
 
