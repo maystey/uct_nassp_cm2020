@@ -131,7 +131,14 @@
   - title: Recursive Functions
     url: /functions/recursive
 
-
+- title: File I/O
+  url: /file-io/intro
+  sections:
+  - title: File I/O
+    url: /file-io/file-io
+  - title: Data Files
+    url: /file-io/data
+      
 # - title: Packages
 #   url: /packages/intro
 #   expand_sections: false
@@ -155,3 +162,25 @@
     url: /numpy/arrays2d
   - title: Random Sampling
     url: /numpy/random
+  - title: Array Conditional Statements and numpy.where()
+    url: /numpy/where
+
+- title: Matplotlib
+  url: /matplotlib/intro
+  sections:
+  - title: Simple Plots With Pyplot
+    url: /matplotlib/simple
+  - title: Subplots
+    url: /matplotlib/subplots
+
+- title: Regression and SciPy
+  url: /regression/intro
+  sections:
+  - title: Linear Least Squares Minimization
+    url: /regression/least-squares
+  - title: Linear Chi Squared Minimization
+    url: /regression/chi-squared
+  - title: Multivariate Linear Least Squares Minimization
+    url: /regression/multivariate-least-squares
+  - title: Nonlinear Least Squares Minimization with scipy.optimize.leastsq
+    url: /regression/scipy

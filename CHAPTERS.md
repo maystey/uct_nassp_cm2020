@@ -5,10 +5,9 @@ The current status of the chapters are recorded in this file.
 ## Corrections
 
 - Change every occurrence where object attributes are referred to as properties.
+- Change all instances where I use the word collection to sequence.
 
 ## Misc
-
-Change all instances where I use the word collection to sequence.
 
 Items in this section are necessary to add, but I cannot place them at the moment.
 
@@ -19,11 +18,6 @@ Items in this section are necessary to add, but I cannot place them at the momen
 
 ## Introduction
 
-### Complete
-
-- What is a programming language
-- Python, a Dynamic Programming Language
-
 ### Enhancements
 
 - Make it more clear what the difference is between
@@ -33,17 +27,6 @@ Items in this section are necessary to add, but I cannot place them at the momen
 
 ## Python Basics
 
-### Complete
-
-- Intro
-- Variables
-- Comments
-- Type Conversion
-- Operators
-- Assignment Operators
-- Introduction to Functions
-- Strings
-
 ### Not Started
 
 - Execution priority
@@ -52,25 +35,18 @@ Items in this section are necessary to add, but I cannot place them at the momen
 ### Enhancements
 
 - Strings
-    - Put reference to other notes in the bibliography
-    - Include section on special characters
+  - Put reference to other notes in the bibliography
+  - Include section on special characters
 - Introduction to Functions
-    - Mention positional arguments and keyword arguments
+  - Mention positional arguments and keyword arguments
 - Comments
-    - Needs better examples
+  - Needs better examples
 - Operators
-    - Make url to sections (is it possible for this to be relative?)
+  - Make url to sections (is it possible for this to be relative?)
 
 ## Data Structures
 
 Removed this from Basics. Should I put this after if?
-
-### Complete
-
-- Intro
-- Tuples
-- Lists
-- Dictionaries
 
 ### Incomplete
 
@@ -88,14 +64,6 @@ Removed this from Basics. Should I put this after if?
 
 ## If Statements
 
-### Complete
-
-- Intro
-- Booleans
-- Comparison Operators
-- Logical Operators
-- If Statements
-
 ### Enhancements
 
 - Logical Operators
@@ -104,15 +72,6 @@ Removed this from Basics. Should I put this after if?
   - more examples
 
 ## For and While Loops
-
-### Complete
-
-- Intro
-- For Loops
-- List Comprehension
-- While Loops
-- Breaking Out of Loops
-- Else Statement and Loops
 
 ### Not Started
 
@@ -125,16 +84,9 @@ The remaining sections here are not a priority
 ### Enhancements
 
 - breaking out of loops - show practical examples
+- Diagrams and rewrite. Emphasize that for is a foreach loop
 
 ## Functions
-
-### Completed
-
-- Intro
-- Return
-- Arguments
-- Local variables
-- Recursive functions
 
 ### Enhancements
 
@@ -159,35 +111,26 @@ The remaining sections here are not a priority
 - Installing Packages with pip
 - Installing Packages with conda
 
-## Benchmarking
-
-### Complete
-
-- Intro
-- Time
-- Uncertainty
+## Benchmarking - Complete
 
 ## NumPy
-
-### Complete
-
-- Intro
-- Arrays
-- Array methods and attributes
-- 2D Arrays and Matrices
-- Random numbers
 
 ### Not Started
 
 - Special functions
+- File I/O
 
-## File I/O - Not Started
+## File I/O - Complete
+
+## Regression and SciPy - Complete
+
+Should I rename this to "Least Squares Minimization and SciPy?"
 
 ## Debugging - Not Started
 
-## Least Squares/ Chi Squared Regression - Not Started
-
 ## SciPy - Not Started
+
+This is distributed throughout the other sections
 
 ## ODEs - Not Started
 

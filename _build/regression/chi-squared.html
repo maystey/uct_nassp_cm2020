@@ -1,0 +1,111 @@
+---
+interact_link: content/regression/chi-squared.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/regression
+has_widgets: false
+title: |-
+  Linear Chi Squared Minimization
+pagenum: 48
+prev_page:
+  url: /regression/least-squares.html
+next_page:
+  url: /regression/multivariate-least-squares.html
+suffix: .ipynb
+search: sigmai n sum frac error yi chi uncertainty bigg xi data want variables y points x align minimization least measurement uncertainties value epsiloni where left right d squares deviation model fit total our given minimizing begin end squared assumed contained accounted not quantified furthermore gave term equal importance minimized measurements lets characterize using standard weight contribution gives ideally within fraction confidence means prioritize low conversely suppress high solve minimize weighted dividing note constant wed dealing multiplicative factor drop returning scenario modeled functional relation set measured values dots written respect yield xiyi
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Linear Chi Squared Minimization</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Chi-Squared-Minimization">Chi Squared Minimization<a class="anchor-link" href="#Chi-Squared-Minimization"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the least squares minimization we assumed that one of the variables ($y$) contained error that accounted for the deviation of the data from the model we want to fit it to.</p>
+<p>This error was not quantified by the measurement, furthermore we gave each error term equal importance in the total error to be minimized.</p>
+<p>What if we had a measurement for the uncertainty of each of our $y$ measurements? Let's characterize these uncertainties using the standard deviation of each $y_i$ measurement: $\sigma_i$.</p>
+<p>We now want to weight the contribution that each error value $\epsilon_i$ gives to the total error by the uncertainties $\sigma_i$. Ideally we want the model to fit within the uncertainties of the data points (or at least the fraction of the data points given by the confidence of the uncertainty). This means that we want to prioritize minimizing the error given by points with low uncertainty, or conversely we want to suppress the points with high uncertainty. To solve this we will minimize the $\chi^2$ value of the data:</p>
+$$
+\chi^2  = \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma_i} \bigg)
+$$<p>where each error value is weighted by dividing it by the uncertainty. Note that if all of the $\sigma_i$ where constant, we'd be dealing with least squares (the multiplicative factor will drop out in the minimization)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="With-2-Variables">With 2 Variables<a class="anchor-link" href="#With-2-Variables"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Returning to our scenario with two variables $x$ and $y$, modeled by the functional relation:</p>
+$$
+y = a_0 + a_1 x
+$$<p>with a data set of measured $x_i$ and $y_i$ variables, with $\sigma_i$ as the uncertainty of the $y_i$ values for $i = 1, \dots, N$, $\chi^2$ can now be written as:</p>
+$$
+\begin{align*}
+\chi^2  &amp;= \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma_i} \bigg)\\
+        &amp;= \sum_{i = 1}^{n} \bigg(\frac{a_0 + a_1 x_i - y_i}{\sigma_i}\bigg)^2\\
+\end{align*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Minimizing $\chi^2$ with respect to $a_0$ and $a_1$, will yield:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+\begin{align*}
+a_0 &amp;= \left( \sum_{i = 1}^N \frac{y_i}{\sigma_i^2} \sum_{i = 1}^N \frac{x_i^2}{\sigma_i^2} - \sum_{i = 1}^N \frac{x_i}{\sigma_i^2} \sum_{i = 1}^N \frac{x_iy_i}{\sigma_i^2} \right)/ D\\
+a_1 &amp;= \left(\sum_{i = 1}^N \frac{1}{\sigma_i^2} \sum_{i = 1}^N \frac{x_i y_i}{\sigma_i^2} - \sum_{i = 1}^N \frac{x_i}{\sigma_i^2} \sum_{i = 1}^N \frac{y_i}{\sigma_i^2} \right)/ D\\
+\end{align*}
+$$<p>where</p>
+$$
+D = \sum_{i = 1}^N \frac{1}{\sigma_i^2} \sum_{i = 1}^N \frac{x^2}{\sigma_i^2} - \left(\sum_{i = 1}^N \frac{x}{\sigma_i^2}\right)^2
+$$
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

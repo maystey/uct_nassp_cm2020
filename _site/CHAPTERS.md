@@ -174,18 +174,26 @@ The remaining sections here are not a priority
 - Intro
 - Arrays
 - Array methods and attributes
+- 2D Arrays and Matrices
+- Random numbers
+- Array comparisons and where()
 
 ### Not Started
 
 - Special functions
-- 2D Arrays and Matrices
-- Random numbers
+- File I/O
 
-## File I/O - Not Started
+## File I/O
+
+### Complete
+
+- Intro
+- File I/O
+- Structured Data Files
 
 ## Debugging - Not Started
 
-## Least Squares/ Chi Squared Regression - Not Started
+## Least Squares/ Chi Squared Regression - In Progress
 
 ## SciPy - Not Started
 

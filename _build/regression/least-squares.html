@@ -1,0 +1,352 @@
+---
+interact_link: content/regression/least-squares.ipynb
+kernel_name: python3
+kernel_path: content/regression
+has_widgets: false
+title: |-
+  Linear Least Squares Minimization
+pagenum: 47
+prev_page:
+  url: /regression/intro.html
+next_page:
+  url: /regression/chi-squared.html
+suffix: .ipynb
+search: langle rangle x xi data yi n y error align relation sum end s between epsiloni frac solution measurements font color our points us values begin partial linear variables unknown terms determine errors above variance stars m p least squares constants measure pairs sort dispersion measured assume red center note yet magnitude give xy equations worked example cepheid log standard distances known file cepheiddata csv minimization problem propose functional measurable where wish coefficients practice assuming display set dots free introduce e doesnt follow exactly term represented point introduced represent difference expected plugged into seen means soon done away need metric
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Linear Least Squares Minimization</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Linear-Least-Squares-Minimization">Linear Least Squares Minimization<a class="anchor-link" href="#Linear-Least-Squares-Minimization"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-Problem">The Problem<a class="anchor-link" href="#The-Problem"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We propose a linear functional relation between 2 measurable variables, $x$ and $y$:
+$$
+y = a_0 + a_1 x
+$$</p>
+<p>where $a_0$ and $a_1$ are <strong>unknown</strong> constants. We wish to find these constants.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-Solution">The Solution<a class="anchor-link" href="#The-Solution"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To find these unknown coefficients in practice we measure many $x$, $y$ pairs (assuming the measurements display some sort of dispersion). We now have a set of measured $(x_i, y_i)$ pairs for $i = 1, 2, 3, \dots, N$.</p>
+<p>If we assume that the $x_i$ are free of error, we can introduce error terms <font color = "red"> $\epsilon_i$ </font> to the $y_i$ data to make up for the dispersion of the data (i.e. that it doesn't follow the linear relation exactly).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/regression/least-squares_5_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With this error term, the relation between our data points can be represented as:</p>
+<center> $y_i +$ <font color = "red"> $\epsilon_i$ </font> $= a_0 + a_1 x_i$ </center><p>Note that, at this point the error terms we have introduced are unknown to us. They represent the difference between the measured $y_i$ values and the expected values if we plugged $x_i$ into our relation (for which we have yet to determine $a_0$ and $a_1$). The error terms can be seen as a means to an end and will soon be done away with.</p>
+<p>Now, we need some sort of metric to tell us how much error we have. We can use the sum of the errors squared for this:</p>
+$$
+S = \sum_{i=1}^{N} \epsilon_i^2
+$$<p>We use the squares of the error as it is the magnitude of the errors we are concerned about, and with the errors ranging between positive and negative values will end up canceling each other out (these are illustrated as points above and below the lines in the figure above).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use the relation between our data points to replace the $\epsilon_i^2$:</p>
+$$
+S = \sum_{i=1}^{N} (a_0 + a_1 x_i - y_i)^2
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, we want our choice of $a_0$ and $a_1$ to give us the least amount of error possible, or rather to give us the minimum value of $S$. To achieve this we minimize $S$ with respect to $a_0$:</p>
+$$
+\begin{align*}
+ \frac{\partial S}{\partial a_0} &amp;= 2\sum_{i = 1}^{n} (a_0 + a_1 x_i - y_i) = 0\\
+                                 &amp;= \\
+ a_0 + a_1 \langle x \rangle     &amp;= \langle y \rangle \\
+\end{align*}
+$$<p>and $a_1$:</p>
+$$
+\begin{align*}
+ \frac{\partial S}{\partial a_1} &amp;= 2\sum_{i = 1}^{n} (a_0 + a_1 x_i - y_i)x_i = 0\\
+                                 &amp;= \\
+ a_0 \langle x \rangle + a_1 \langle x^2 \rangle &amp;= \langle xy \rangle\\
+\end{align*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To solve this system of equations we could use a matrix equation and let the computer determine the solution to that numerically, but with only two equations and unknowns, an analytic solution is easy enough to find:</p>
+$$
+\begin{align*}
+a_1 &amp;= \frac{\langle xy \rangle - \langle x \rangle\langle y \rangle}{\langle x^2 \rangle - \langle x \rangle^2}\\
+a_0 &amp;= \langle y \rangle - a_1 \langle x \rangle\\
+\end{align*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Variance-of-$y$">Variance of $y$<a class="anchor-link" href="#Variance-of-$y$"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we assume that the $y_i$ data points are distributed around the "true" $y$ values for the given $x_i$ by a Gaussian distribution with constant variance, we can calculate that variance as:</p>
+$$
+\begin{align*}
+\sigma^2  &amp; = \frac{1}{N}\sum_{i=1}^N \epsilon_i^2\\
+&amp; = \frac{1}{N} \sum_{i=1}^N (a_0 + a_1 x_i - y_i)^2\\
+\end{align*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Worked-Example---Cepheid-Variables">Worked Example - Cepheid Variables<a class="anchor-link" href="#Worked-Example---Cepheid-Variables"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For this worked example we will use data from Cepheid variables. These are pulsating stars with their luminosity (or magnitude $M$) related to the period ($P$) of their pulsations:</p>
+$$
+M = a_0 + a_1 \log P
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the relation above is can be made more accurate by including the color or temperature of the  star, which we shall use later in the chapter.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As this relation is consistent across all specimens, these stars can be used as a standard candle for measuring distances, all that is needed are measurements from stars with known distances from Earth to determine $a_0$ and $a_1$.</p>
+<p>The standard is to measure Cepheids in the Large Magellanic Cloud, whose distance is known. A few of these measurements can be found in the data file 'cepheid_data.csv' provided on Vula (Resources/Exercises/Data/Exercise10/) or on <a href="https://raw.githubusercontent.com/maystey/uct_nassp_cm/gh-pages/regression/data/cepheid_data.csv">GitHub</a>. The data file contains measurements of:</p>
+<ul>
+<li>$\log P$</li>
+<li>$M$</li>
+<li>$B - V$ (color, not using yet)</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h3><!--- Come back and unpack this -->
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">least_square</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">mean_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">mean_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">expect_xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">expect_xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="n">a1</span> <span class="o">=</span> <span class="p">(</span><span class="n">expect_xy</span> <span class="o">-</span> <span class="n">mean_x</span><span class="o">*</span><span class="n">mean_y</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">expect_xx</span> <span class="o">-</span> <span class="n">mean_x</span><span class="o">*</span><span class="n">mean_x</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">mean_y</span> <span class="o">-</span> <span class="n">a1</span><span class="o">*</span><span class="n">mean_x</span><span class="p">,</span> <span class="n">a1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_sigma</span><span class="p">(</span><span class="n">a0</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">a0</span> <span class="o">+</span> <span class="n">a1</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;./data/cepheid_data.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">a0</span> <span class="p">,</span> <span class="n">a1</span> <span class="o">=</span> <span class="n">least_square</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># error in M</span>
+<span class="n">b0</span><span class="p">,</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">least_square</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#error in logP</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">y_M</span> <span class="o">=</span> <span class="n">a0</span> <span class="o">+</span> <span class="n">a1</span><span class="o">*</span><span class="n">x</span>
+<span class="n">y_P</span> <span class="o">=</span> <span class="o">-</span><span class="n">b0</span><span class="o">/</span><span class="n">b1</span> <span class="o">+</span> <span class="n">x</span><span class="o">/</span><span class="n">b1</span>
+
+<span class="n">fig_ceph</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_M</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Error in M&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="n">linewidth</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_P</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Error in logP&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="n">linewidth</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;logP&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="n">fontsize</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="n">fontsize</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="n">fontsize</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/regression/least-squares_18_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
