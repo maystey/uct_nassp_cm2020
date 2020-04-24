@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Chapter: File I/O
+- Chapter: File I/O, Linear Regression
 - Section: Numpy:Array Conditional Statements and numpy.where()
 
 ## [0.8.0] - 2020-03-09
