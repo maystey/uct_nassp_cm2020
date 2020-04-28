@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/regression/chi-squared.html",
   "headline": "Linear Chi Squared Minimization",
-  "datePublished": "2020-04-24T18:10:41+02:00",
-  "dateModified": "2020-04-24T18:10:41+02:00",
+  "datePublished": "2020-04-28T10:59:56+02:00",
+  "dateModified": "2020-04-28T10:59:56+02:00",
   "description": "        Linear Chi Squared Minimization    Chi Squared Minimization For the least squares minimization we assumed that one of the variables ($y$) contained e...",
   "author": {
     "@type": "Person",
@@ -1544,7 +1544,7 @@ initFunction(initPrint)
           href="/uct_nassp_cm/regression/intro.html"
         >
           
-          Regression
+          Regression and SciPy
         </a>
       </li>
 
@@ -1596,6 +1596,25 @@ initFunction(initPrint)
               >
                 
                 Linear Chi Squared Minimization
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/regression/multivariate-least-squares">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/regression/multivariate-least-squares.html"
+              >
+                
+                Multivariate Linear Least Squares Minimization
               </a>
             </li>
             
@@ -1680,7 +1699,7 @@ initFunction(initPrint)
 <p>What if we had a measurement for the uncertainty of each of our $y$ measurements? Let's characterize these uncertainties using the standard deviation of each $y_i$ measurement: $\sigma_i$.</p>
 <p>We now want to weight the contribution that each error value $\epsilon_i$ gives to the total error by the uncertainties $\sigma_i$. Ideally we want the model to fit within the uncertainties of the data points (or at least the fraction of the data points given by the confidence of the uncertainty). This means that we want to prioritize minimizing the error given by points with low uncertainty, or conversely we want to suppress the points with high uncertainty. To solve this we will minimize the $\chi^2$ value of the data:</p>
 $$
-\chi^2  = \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma} \bigg)
+\chi^2  = \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma_i} \bigg)
 $$<p>where each error value is weighted by dividing it by the uncertainty. Note that if all of the $\sigma_i$ where constant, we'd be dealing with least squares (the multiplicative factor will drop out in the minimization)</p>
 
 </div>
@@ -1708,7 +1727,7 @@ y = a_0 + a_1 x
 $$<p>with a data set of measured $x_i$ and $y_i$ variables, with $\sigma_i$ as the uncertainty of the $y_i$ values for $i = 1, \dots, N$, $\chi^2$ can now be written as:</p>
 $$
 \begin{align*}
-\chi^2  &amp;= \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma} \bigg)\\
+\chi^2  &amp;= \sum_{i = 1}^{n} \bigg( \frac{\epsilon_i}{\sigma_i} \bigg)\\
         &amp;= \sum_{i = 1}^{n} \bigg(\frac{a_0 + a_1 x_i - y_i}{\sigma_i}\bigg)^2\\
 \end{align*}
 $$
@@ -1768,8 +1787,8 @@ $$
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/regression/multivariate-least-squares.html">
+      Multivariate Linear Least Squares ... <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
