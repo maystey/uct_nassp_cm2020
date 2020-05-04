@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/regression/multivariate-least-squares.html",
   "headline": "Multivariate Linear Least Squares Minimization",
-  "datePublished": "2020-04-28T10:59:56+02:00",
-  "dateModified": "2020-04-28T10:59:56+02:00",
+  "datePublished": "2020-05-05T00:49:24+02:00",
+  "dateModified": "2020-05-05T00:49:24+02:00",
   "description": "        Multivariate Linear Least Squares Minimization    Multivariate Linear Least Squares Minimization In Linear Least Squares Minimization, we considered ...",
   "author": {
     "@type": "Person",
@@ -1620,6 +1620,25 @@ initFunction(initPrint)
             
             
           
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/regression/scipy">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/regression/scipy.html"
+              >
+                
+                Nonlinear Least Squares Minimization with scipy.optimize.leastsq
+              </a>
+            </li>
+            
+            
+          
         </ul>
       
 
@@ -1737,14 +1756,14 @@ S &amp;= \sum_{i = 1}^N \epsilon_i^2 \\
 \end{align*}
 $$<p>We want to minimize $S$ with respect to each of the constants, $a_0$, $a_1$ and $a_2$:</p>
 $$
-\frac{\partial S}{\partial a_0} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{21} - y_i) = 0
+\frac{\partial S}{\partial a_0} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i) = 0
 $$<p>,
 $$
-\frac{\partial S}{\partial a_1} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{21} - y_i)x_{1i} = 0
+\frac{\partial S}{\partial a_1} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{1i} = 0
 $$
 and
 $$
-\frac{\partial S}{\partial a_2} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{21} - y_i)x_{2i} = 0
+\frac{\partial S}{\partial a_2} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{2i} = 0
 $$</p>
 
 </div>
@@ -2640,8 +2659,8 @@ $$<p>To achieve this numerically, we simply take the inverse of <code>X</code>, 
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/regression/scipy.html">
+      Nonlinear Least Squares Minimizati... <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
