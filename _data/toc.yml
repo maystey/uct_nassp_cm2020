@@ -184,3 +184,13 @@
     url: /regression/multivariate-least-squares
   - title: Nonlinear Least Squares Minimization with scipy.optimize.leastsq
     url: /regression/scipy
+
+- title: Numerical Solutions to ODEs
+  url: /ode/intro
+  sections:
+  - title: Euler's Method
+    url: /ode/euler
+  - title: Truncation Error in Euler's Method
+    url: /ode/euler-error
+  - title: Solving Higher Order ODEs
+    url: /ode/higher-order  
