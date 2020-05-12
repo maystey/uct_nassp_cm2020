@@ -8,8 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Chapter: File I/O, Linear Regression
+- Chapter: ODE
+
+## [0.11.0] - 2020-05-06
+
+### Added
+
+- Chapter: File I/O, Matplotlib, Regression and Scipy
 - Section: Numpy:Array Conditional Statements and numpy.where()
+
+### Changed
+
+- Edited CHAPTERS, removing the completed sections for the sake of readability
 
 ## [0.8.0] - 2020-03-09
 

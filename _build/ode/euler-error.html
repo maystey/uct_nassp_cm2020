@@ -1,0 +1,134 @@
+---
+interact_link: content/ode/euler-error.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/ode
+has_widgets: false
+title: |-
+  Truncation Error in Euler's Method
+pagenum: 53
+prev_page:
+  url: /ode/euler.html
+next_page:
+  url: /ode/higher-order.html
+suffix: .ipynb
+search: h error truncation global order terms mathcal reducing eulers method numerical methods higher local prime notation integration steps size final x systemic introduced discard taylor expansion thus e n tfrac y xn unfamiliar big o case stands where lowest term relevant associated single step far useful however consider accumulated multiple cite efferson derivation bounds beyond scope course approximately scales linearly generally reduce illustrate relationship between directly looking magnitude same value different values limit much help too small introduce floating point errors operations require precision afforded float data type also means integrate increases computational references bibliography cited
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Truncation Error in Euler's Method</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Euler's-Method:-Truncation-Error">Euler's Method: Truncation Error<a class="anchor-link" href="#Euler's-Method:-Truncation-Error"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Like all numerical methods, Euler's method has systemic error. This is introduced when we discard the higher order terms in the Taylor expansion. The <strong>local</strong> truncation error is thus:</p>
+$$
+E_{n+1} = \tfrac{1}{2} y^{\prime\prime}(x_n) h^2 + \mathcal(h^3)
+$$<p>If you are unfamiliar with the notation for $\mathcal(h^3)$ (big O notation), in this case it stands for all the terms where the lowest order of $h$ is 3. The $h^3$ term is more relevant than higher order terms for $0 &lt; h &lt; 1$.</p>
+<p>The <strong>local</strong> truncation error is associated with a single integration step. It is far more useful, however, to consider the <strong>global</strong> truncation error, which is the error accumulated over multiple integration steps. The global truncation error is $\mathcal(h)$ {% cite efferson-numerical-methods %}. The derivation for the bounds of the error are beyond the scope of the course. As this error approximately scales linearly with $h$, reducing the size of $h$ will generally reduce the global error:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/ode/euler-error_2_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can illustrate the relationship between the global error and $h$ directly by looking at the magnitude of error at the same final $x$ value for different $h$ values:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/ode/euler-error_4_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There is a limit to how much reducing $h$ will help you. If $h$ is too small you could introduce floating point errors, that is when operations require more precision than afforded by the float data type. Reducing the size of $h$ also means that you will have more steps to integrate to a final $x$, which increases the computational time.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p>{% bibliography --cited %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
