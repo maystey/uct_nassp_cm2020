@@ -1,0 +1,492 @@
+---
+interact_link: content/ode/runge-kutta.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/ode
+has_widgets: false
+title: |-
+  Runge-Kutta Methods
+pagenum: 55
+prev_page:
+  url: /ode/higher-order.html
+next_page:
+  url: 
+suffix: .ipynb
+search: y k h x vec xi f tfrac yi j n frac dots dx alpha c d method order end left right begin interval align pmatrix runge kutta value l methods using values prime eulers not gradient vdots yj where approximate solution fj big ode error popular particular derivation steps shall start initial choice approx equation midpoint mathcal example consider odes m step fairly th outline weighted average numerical second solve condition calculating inside hand gives us free rule yields accumulated fourth rk worked differential exact previous page complicated note variables thus change need array e aforementioned simplest single solving
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Runge-Kutta Methods</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Runge-Kutta-Methods">Runge-Kutta Methods<a class="anchor-link" href="#Runge-Kutta-Methods"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The aforementioned Euler's method is the simplest single step ODE solving method, but has a fairly large error. The Runge-Kutta methods are more popular due to their improved accuracy, in particular 4th and 5th order methods.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Outline-of-the-Derivation">Outline of the Derivation<a class="anchor-link" href="#Outline-of-the-Derivation"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The idea behind Runge-Kutta is to perform integration steps using a weighted average of Euler-like steps. The following outline {% cite efferson-numerical-methods %} is not a full derivation of the method, as this requires theorems outside the scope of this course.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Second-Order-Runge-Kutta">Second Order Runge-Kutta<a class="anchor-link" href="#Second-Order-Runge-Kutta"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall start by looking at second order Runge-Kutta methods. We want to solve an ODE of the form</p>
+$$
+\frac{dy}{dx} = f(x, y)
+$$<p>on the interval $[x_i, x_{i+1}]$, where $x_{i+1} = x_i + h$, with a given initial condition $y(x = x_i) = y_i$. That is we wish to determine the value of $y(x_{i+1}) = y_{i+1}$. We start by calculating the gradient of $y$ at 2 places:</p>
+<ul>
+<li>The start of the interval: $(x_i, y_i)$</li>
+<li>A point inside the interval, for which we approximate the $y$ value using Euler's method: $(x_i + \alpha h, y_i + \alpha h f(x_i, y_i))$, for some choice of $\alpha$.</li>
+</ul>
+<p><!--- Not necessarily inside the interval though... --->
+We then approximate the value of $y_{i+1}$ using Euler's method with each of these gradients:</p>
+<ul>
+<li>$y_{i+1} \approx y_i + h f(x_i, y_i)$</li>
+<li>$y_{i+1} \approx y_i + h f(x_i + \alpha h, y_i + \alpha h f(x_i, y_i))$</li>
+</ul>
+<p>The final approximation of $y_{i+1}$ is calculated by taking a weighted average of these two approximations:</p>
+$$
+y_{i+1} \approx y_i + c_1 h f(x_i, y_i) + c_2 h f(x_i + \alpha h, y_i + \alpha h f(x_i, y_i) )
+$$<p>where $c_1 + c_2 = 1$ is required.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/ode/runge-kutta_6_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, how do we go about choosing good values for $c_1$, $c_2$ and $\alpha$? If we Taylor expand the left-hand side of the equation above, and the last term on the right-hand side gives us the relation:</p>
+$$
+\alpha = \frac{1}{2 c_2}
+$$<p>This still gives us a free choice of one of the parameters. Two popular choices are:</p>
+<p><strong>The trapezoid rule:</strong> $c1 = c2 = \tfrac{1}{2}$ and $\alpha = 1$, which yields:</p>
+$$
+y_{i+1} = y_i + \tfrac{1}{2} h \left[ f(x_i, y_i) + f(x_i + h, y_i + h f(x_i, y_i)) \right]
+$$<p><strong>The midpoint rule:</strong> $c1 = 0$, $c2 = 1$ and $\alpha = \tfrac{1}{2}$, which yields:</p>
+$$
+y_{i+1} = y_i + hf\left(x_i + \tfrac{1}{2} h, y_i + \tfrac{1}{2} h f(x_i, y_i) \right)
+$$<p>Both of these methods have an accumulated error of $\mathcal(h^2)$, as opposed to Euler's method with $\mathcal(h)$</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fourth-Order-Runge-Kutta-(RK4)">Fourth Order Runge-Kutta (RK4)<a class="anchor-link" href="#Fourth-Order-Runge-Kutta-(RK4)"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As mentioned, the more popular Runge-Kutta method is the fourth order (for which we will not cover the derivation):</p>
+$$
+y_{i+1} = y_i + \tfrac{1}{6} h~ (k_1 + 2 k_2 + 2 k_3 + k_4)
+$$<p>where the $k$ values are the slopes:</p>
+$$
+\begin{align*}
+k_1 &amp;= f(x_i, y_i)\\
+k_2 &amp;= f\left(x_i + \tfrac{1}{2}h, y_i + \tfrac{1}{2} h k_1 \right)\\
+k_3 &amp;= f\left(x_i + \tfrac{1}{2}h, y_i + \tfrac{1}{2} h k_2\right)\\
+k_4 &amp;= f(x_i + h, y_i + k_3)
+\end{align*}
+$$<p>$k_1$ is gradient value at the left of the interval. $k_2$ is the gradient at the midpoint of the interval, approximated using $k_1$. The $k_3$ value is the gradient at the midpoint of the interval using $k_2$ to approximate it. $k_4$ is the value of the gradient at the right end of the interval using $k_3$ to approximate it.</p>
+<!--- Give interpretation for the the different k terms --->
+
+<p>This method has an accumulated error of $\mathcal(h^4)$</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Consider the ordinary differential equation:</p>
+$$
+\frac{d y}{dx} = \frac{1}{1 + x^2}
+$$<p>with the initial condition $y = 1$ at $x = 0$.</p>
+<p>This has the exact solution:</p>
+$$
+y = 1 + \arctan(x)
+$$<p>which we can compare are results to.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="c1">#initial conditions</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">x_end</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1">#Differential equation</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Exact solution</span>
+<span class="k">def</span> <span class="nf">y_exact</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Constructing the arrays:</span>
+<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_end</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="c1">#make sure it goes up to and including x_end</span>
+
+<span class="n">y_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">x_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">y_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y0</span>
+
+<span class="c1">#Runge-Kutta method</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+    
+    <span class="c1">#k values</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">k1</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">k2</span><span class="p">)</span>
+    <span class="n">k4</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+    
+    <span class="c1">#update</span>
+    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span>
+    
+
+<span class="c1">#Plotting the solution</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_arr</span><span class="p">,</span> <span class="n">y_exact</span><span class="p">(</span><span class="n">x_arr</span><span class="p">),</span> <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Exact solution&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_arr</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">,</span> <span class="s1">&#39;--k&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;RK4 solution&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/ode/runge-kutta_12_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="High-Order-ODEs">High Order ODEs<a class="anchor-link" href="#High-Order-ODEs"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we have discussed in a previous page, higher order ODEs can be reduced to a collection of coupled first order ODEs, for example:</p>
+\begin{align}
+\frac{d y_0}{dx} &amp;= f_0(x, y_0, y_1, \dots, y_{n-1})\\
+\frac{d y_1}{dx} &amp;= f_1(x, y_0, y_1, \dots, y_{n-1})\\
+\frac{d y_2}{dx} &amp;= f_2(x, y_0, y_1, \dots, y_{n-1})\\
+                 &amp;\vdots \\
+\frac{d y_{n-1}}{dx} &amp;= f_{n-1}(x, y_0, y_1, \dots, y_{n-1})
+\end{align}<p>As we have seen, the Euler's method solution for this is fairly simple. For the RK4 method, things are slightly more complicated. We must decide how to calculate the $k$ values.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+y_{j, i+1} = y_{j, i} + \tfrac{h}{6} (k_{1, j} + 2 k_{2, j} + 2 k_{3, j} + k_{4, j} )
+$$<p>Note that the $y_j$ variables are not explicitly dependent on each other, but on the independant variable $x$. Thus we do not have free choice over which $y_j$ values to use when examining another for a particular value of $x$. For any change in $x$, we expect simultenous change in all of the $y_j$. For this reason, when calculating the $k_j$ values for a particular $y_j$, we need to consider the changes in the other $y_l$.</p>
+$$
+\begin{array}{l l l l l l l}
+k_{1, j} &amp;= f_j (x_i, &amp;y_{0, i}~, &amp;\dots, &amp;y_{j, i}~, &amp;\dots, &amp;~y_{n-1, i}~)\\
+k_{2, j} &amp;= f_j \big(x_i + \tfrac{1}{2}h, &amp;y_{0, i}~ + \tfrac{1}{2} k_{1, 0}~, &amp;\dots, &amp;y_{j, i}~ + \tfrac{1}{2} k_{1, j}, &amp;\dots, &amp;y_{n-1, i}~ + \tfrac{1}{2} k_{1, n-1}~ \big)\\
+k_{3, j} &amp;= f_j \big(x_i + \tfrac{1}{2}h, &amp;y_{0, i}~ + \tfrac{1}{2} k_{2, 0}~, &amp;\dots, &amp;y_{j, i}~ + \tfrac{1}{2} k_{2, j}, &amp;\dots, &amp;y_{n-1, i}~ + \tfrac{1}{2} k_{2, n-1}~\big)\\
+k_{4, j} &amp;= f_j ( x_i + h, &amp;y_{0, i}~ + k_{3, 0}~, &amp;\dots, &amp;y_{j, i}~ + k_{3, j}, &amp;\dots, &amp;y_{n-1, i}~ + k_{3, n-1} )\\
+\end{array}
+$$<p>This looks more complicated then it is to apply in practice. All we need to do is vectorize the solution, as on the previous page. We can represent all the $y_j$ as a vector $\vec{y}$, i.e</p>
+$$
+\vec{y} = \begin{pmatrix} y_0 \\ y_1 \\ \vdots \\ y_{n-1} \end{pmatrix}
+$$<p>the ODE can thus be represented as:</p>
+$$
+\frac{d \vec{y}}{dx} = \vec{f}(x, \vec{y}) = \begin{pmatrix} f_0 (x, \vec{y}) \\ f_1 (x, \vec{y}) \\ \vdots \\ f_{n-1} (x, \vec{y}) \end{pmatrix}
+$$<p>and an update step as:</p>
+$$
+\vec{y}_{i+1} = \vec{y}_i + \tfrac{1}{6} h (\vec{k_1} + 2 \vec{k_2} + 2 \vec{k_3} + \vec{k_4})
+$$<p>where:</p>
+$$
+\vec{k_m} = \begin{pmatrix} k_{0, m} \\ k_{1, m} \\ \vdots \\ k_{n-1, m} \end{pmatrix}
+$$<p>Note that we can write:</p>
+$$
+\begin{pmatrix}
+y_{0, i}~ + \tfrac{1}{2} h k_{1, 0} \\\vdots \\y_{j, i}~ + \tfrac{1}{2} h k_{1, j} \\ \dots \\ y_{n-1, i}~ + \tfrac{1}{2} h k_{1, n-1}
+\end{pmatrix}
+= \vec{y}_i + \tfrac{1}{2} h \vec{k1}
+$$<p>with this in mind, we can simply write the $k$ values as:</p>
+\begin{align*}
+\vec{k_1} &amp;= \vec{f}(x_i, \vec{y}_i)\\
+\vec{k_2} &amp;= \vec{f}\left(x_i + \tfrac{1}{2} h, \vec{y}_i + \tfrac{1}{2} h ~ \vec{k_1} \right)\\
+\vec{k_3} &amp;= \vec{f}\left(x_i + \tfrac{1}{2} h, \vec{y}_i + \tfrac{1}{2} h ~ \vec{k_2} \right)\\
+\vec{k_4} &amp; = \vec{f}\left(x_i + h, \vec{y}_i + h ~ \vec{k_3} \right)
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Worked-Example">Worked Example<a class="anchor-link" href="#Worked-Example"> </a></h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Consider the third order differential equation:</p>
+$$
+\frac{d^{4}y}{dx^4} = -12 x y - 4 x^2 \frac{d y}{dx}
+$$<p>with the initial conditions: $y(x = 0) = 0$, $y^\prime(0) = 0$ and $y^{\prime\prime}(0) = 2$.</p>
+<p>This has an exact solution of:</p>
+$$
+y(x) = e^{-x^2}
+$$<p>which we shall use to test our numerical result.</p>
+<p>We shall solve this up to $x = 5$ with steps of size $h = 0.1$.</p>
+<p>First we reduce this to a system of first order equations by introducing the variables $y_0(x) = y(x)$, $y_1(x) = y^\prime(x)$ and $y_2(x) = y^{\prime\prime}(x)$:</p>
+\begin{align*}
+\frac{d y_0}{dx} &amp;= y_1\\
+\frac{d y_1}{dx} &amp;= y_2\\
+\frac{d y_2}{dx} &amp;= -12 x y_0 - 4 x^2 y_1
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1">#initial conditions</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">x_end</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1">#Important! This must return an array!</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+        <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+        <span class="o">-</span><span class="mi">12</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">y_exact</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Constructing the arrays:</span>
+<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_end</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="c1">#make sure it goes up to and including x_end</span>
+
+<span class="n">y_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">x_arr</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y0</span><span class="p">)))</span>
+<span class="n">y_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">y0</span>
+
+<span class="c1">#Runge-Kutta method</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+    
+    <span class="c1">#k values</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">k1</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">k2</span><span class="p">)</span>
+    <span class="n">k4</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">k3</span><span class="p">)</span>
+    
+    <span class="c1">#update</span>
+    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span>
+    
+
+<span class="c1">#Plotting the solution</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_arr</span><span class="p">,</span> <span class="n">y_exact</span><span class="p">(</span><span class="n">x_arr</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_arr</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/ode/runge-kutta_18_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p>{% bibliography --cited %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

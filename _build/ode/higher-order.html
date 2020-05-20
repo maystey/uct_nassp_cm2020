@@ -9,7 +9,7 @@ pagenum: 54
 prev_page:
   url: /ode/euler-error.html
 next_page:
-  url: 
+  url: /ode/runge-kutta.html
 suffix: .ipynb
 search: y frac dx v x dy d n order align equations ode dt prime begin dv end initial conditions f system coupled t variables dots second differential solve introducing example sin solution store values higher odes wish left right transform gives us depends integrated simultaneously worked consider start practical tfrac solving general form problem notation into variable need firstly lets rearrange equation subject reduce above used separate below shall single array extend technique creating arbitrary dn xn set vdots subscripts suggest vi vector given introduce python
 
@@ -306,7 +306,7 @@ $$<p>The solution in Python is:</p>
 
 <span class="c1">#Performing the Euler method, note we don&#39;t use the last x value in the update calculations</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
 
     
 <span class="c1">##Plotting the solution for y(x) only</span>
