@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/ode/higher-order.html",
   "headline": "Solving Higher Order ODEs",
-  "datePublished": "2020-05-12T11:47:52+02:00",
-  "dateModified": "2020-05-12T11:47:52+02:00",
+  "datePublished": "2020-05-20T02:47:53+02:00",
+  "dateModified": "2020-05-20T02:47:53+02:00",
   "description": "        Solving Higher Order ODEs    Solving Higher Order ODEs Second Order Differential Equations In general, if we wish to solve an ODE of the form$$\frac{...",
   "author": {
     "@type": "Person",
@@ -1735,6 +1735,25 @@ initFunction(initPrint)
             
             
           
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/ode/runge-kutta">
+              <a class="c-sidebar__entry"
+                href="/uct_nassp_cm/ode/runge-kutta.html"
+              >
+                
+                Runge-Kutta Methods
+              </a>
+            </li>
+            
+            
+          
         </ul>
       
 
@@ -2082,7 +2101,7 @@ $$<p>The solution in Python is:</p>
 
 <span class="c1">#Performing the Euler method, note we don&#39;t use the last x value in the update calculations</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:])</span>
 
     
 <span class="c1">##Plotting the solution for y(x) only</span>
@@ -2168,8 +2187,8 @@ $$<p>The solution in Python is:</p>
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="">
-       <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/ode/runge-kutta.html">
+      Runge-Kutta Methods <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
