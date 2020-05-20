@@ -194,3 +194,5 @@
     url: /ode/euler-error
   - title: Solving Higher Order ODEs
     url: /ode/higher-order  
+  - title: Runge-Kutta Methods
+    url: /ode/runge-kutta
