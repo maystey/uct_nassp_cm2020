@@ -154,7 +154,7 @@ def secant_plot(f, x1, x2, i, xlims, fs = 16, lw =2,
     y_plot = np.array([f(x1), f(x2), 0])
 
     ax.plot(x_plot[order], y_plot[order], 'k:', lw= lw)
-
+    ax.plot(x3, 0, 'ko', fillstyle = 'none')
     return fig, ax
 
 def newton_plot(f, fprime, x, i, xlims, fs = 16, lw = 2, figsize = [9, 6]):
@@ -164,6 +164,7 @@ def newton_plot(f, fprime, x, i, xlims, fs = 16, lw = 2, figsize = [9, 6]):
     x1 = x - f(x)/fprime(x)
 
     ax.plot([x, x1], [f(x), 0], 'k:', lw = lw)
+    ax.plot(x1, 0, 'ko', fillstyle = 'none')
 
     _add_xticks(ax, [x1], [r'$x_{{{}}}$'.format(i+1)], fs)
 
