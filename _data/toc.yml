@@ -196,3 +196,15 @@
     url: /ode/higher-order  
   - title: Runge-Kutta Methods
     url: /ode/runge-kutta
+
+- title: Numerical Root Finding Techniques
+  url: /root-finding/intro
+  sections:
+  - title: Bisection Method
+    url: /root-finding/bisection
+  - title: Secant Method
+    url: /root-finding/secant
+  - title: Newton-Raphson Method
+    url: /root-finding/newton
+  - title: Comparing the Methods
+    url: /root-finding/comparison
