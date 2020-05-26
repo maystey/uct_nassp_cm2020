@@ -1,0 +1,197 @@
+---
+interact_link: content/root-finding/secant.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/root-finding
+has_widgets: false
+title: |-
+  Secant Method
+pagenum: 58
+prev_page:
+  url: /root-finding/bisection.html
+next_page:
+  url: /root-finding/newton.html
+suffix: .ipynb
+search: x n f method line xn root secant points point precision frac solution between where intersects axis new closer not close continue while constructed y align bisection possible required achieve given tolerance converge construct running curve assumed justification behind beyond scope course note starting values bracket though need should choose desire especially function multiple roots fashion constructing finding using last getting illustrated following figures calculate intersection previous equation intercept begin therefore end general converges far faster however predict iterations determined measuring convergence reached text practically loop instability unlike isnt always guaranteed depending characteristics example stationary gradient approaches become nearly horizontal
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Secant Method</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Secant-Method">Secant Method<a class="anchor-link" href="#Secant-Method"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the secant method we construct a line running between two points on the curve $(x_0, f(x_0))$ and $(x_1, f(x_1))$, and find where it intersects with the $x$-axis: $x_2$:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/secant_2_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is assumed that the new point is closer to the root. The justification behind this is beyond the scope of this course.</p>
+<p>Note that the starting values $x_0$ and $x_1$ can bracket the root, though they need not. You should choose points that are close to the root you desire to find, especially if the function has multiple roots.</p>
+<p>We can continue in this fashion, constructing a line between $(x_1, f(x_1))$ and $(x_2, f(x_2))$, and finding the point where this line intersects with the $x$-axis, $x_3$. We can continue using the last two points to find the new one, all the while getting closer to the root with each point, as illustrated with the following figures:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/secant_4_0.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/secant_4_1.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/secant_4_2.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To calculate the intersection $x_n$ for the line constructed from the previous two points $(x_{n-2}, f(x_{n-2}))$ and $(x_{n-2}, f(x_{n-2}))$ we find the equation of the line:</p>
+$$
+y = \frac{f(x_{n-1}) - f(x_{n-2})}{x_{n-1} - x_{n-2}}(x - x_{n-1}) + f(x_{n-1})
+$$<p>At the $x$-intercept $y=0$ and $x = x_n$:</p>
+\begin{align*}
+0 &amp;= \frac{f(x_{n-1}) - f(x_{n-2})}{x_{n-1} - x_{n-2}}(x_n - x_{n-1}) + f(x_{n-1})\\
+\therefore x_n &amp;= x_{n-1} - f(x_{n-1}) \frac{x_{n-1} - x_{n-2}}{f(x_{n-1}) - f(x_{n-2})}
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Precision">Precision<a class="anchor-link" href="#Precision"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In general the secant method converges far faster than the bisection method, however it is not possible to predict how many iterations are required to achieve a given precision. The precision of the solution can be determined by measuring the convergence of you solution. For a given tolerance, you have reached your required precision when:</p>
+$$
+|x_n - x_{n-1}| &lt; \text{tolerance}
+$$<p>Practically you can use a <code>while</code> loop to achieve this.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Instability">Instability<a class="anchor-link" href="#Instability"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Unlike the bisection method, the secant method isn't always guaranteed to converge, depending on the characteristics of $f(x)$. For example, if there is a stationary point, or if the gradient of $f(x)$ approaches 0 the constructed line can become nearly horizontal, causing the next value of $x_n$ to diverge.</p>
+<p>It is also possible for the solution to converge to a different root if they are in close proximity.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

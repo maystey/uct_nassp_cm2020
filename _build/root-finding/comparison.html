@@ -1,0 +1,156 @@
+---
+interact_link: content/root-finding/comparison.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/root-finding
+has_widgets: false
+title: |-
+  Comparing the Methods
+pagenum: 60
+prev_page:
+  url: /root-finding/newton.html
+next_page:
+  url: 
+suffix: .ipynb
+search: method root td converge tr th interval bisection possible function secant not f points newton raphson colspan convergence precision tolerance calculate iterations only requires near off converges also nearby derivative table comparing methods lets compare three finding algorithms covered starts known contain size halved iteration improving desired take continuous contains changes signs passes through guaranteed found start generally quicker although its need given especially case where gradient becomes shallow cause calculated shoot different rhaphson similar except makes faster another summary thbisection thsecant thnewton thconvergence tdwill always inside well behaved stationary neighboring roots thrate tdrelatively slow fast thcomplexity must simply return
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Comparing the Methods</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comparing-the-Methods">Comparing the Methods<a class="anchor-link" href="#Comparing-the-Methods"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's compare the three root finding algorithms we have covered to each other.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bisection-Method">Bisection Method<a class="anchor-link" href="#Bisection-Method"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The bisection method starts with an interval that is known to contain the root. The size of this interval is halved with each iteration (improving the precision. For a desired tolerance (or precision), it is possible to calculate how many iterations the Bisection method will take.</p>
+<p>If $f$ is continuous on the interval, the interval only contains one root, and the function changes signs as it passes through the root, then the root is guaranteed to be found.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Secant-Method">Secant Method<a class="anchor-link" href="#Secant-Method"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Secant method requires two points near the root to start off with. If it will converge to the root, then it generally converges quicker than the bisection method, although it's not possible to calculate how many iterations the method will need for a given tolerance.</p>
+<p>It is possible for this method not to converge, especially in the case where the gradient of $f$ becomes shallow, which would cause one of the calculated points to shoot off.</p>
+<p>It is also possible for this method to converge on a different root if there is one nearby.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Newton-Raphson-Method">Newton-Raphson Method<a class="anchor-link" href="#Newton-Raphson-Method"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Newton-Rhaphson method is similar to the secant method, except it makes use of the derivative of $f$.</p>
+<p>As for the secant method, the Newton-Raphson method converges to the root faster than the bisection method. Also like the secant method, it is possible the method not to converge, or to converge on another nearby root.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-Summary">In Summary<a class="anchor-link" href="#In-Summary"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+    <tr>
+        <th></th>
+        <th>Bisection</th>
+        <th>Secant</th>
+        <th>Newton-Raphson</th>
+    </tr>
+    <tr>
+        <th>Convergence</th>
+        <td>Will always converge to a root inside the interval, as long as the function is well behaved.</td>
+        <td colspan="2">May not converge to a root if the function has stationary points near it. May converge on neighboring roots.</td>
+    </tr>
+    <tr>
+        <th>Rate of Convergence</th>
+        <td>Relatively slow convergence.</td>
+        <td colspan="2">Fast convergence</td>
+    </tr>
+    <tr>
+        <th>Complexity</th>
+        <td colspan="2">Only requires the function, which must simply return values for arguments on the interval.</td>
+        <td>Requires knowledge of the first derivative of the function.</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

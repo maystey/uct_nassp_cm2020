@@ -1,0 +1,227 @@
+---
+interact_link: content/root-finding/bisection.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/root-finding
+has_widgets: false
+title: |-
+  Bisection Method
+pagenum: 57
+prev_page:
+  url: /root-finding/intro.html
+next_page:
+  url: /root-finding/secant.html
+suffix: .ipynb
+search: interval root f xm method xr our xl contains b n tolerance bisection sign bracket precision solution note technique steps iterations error step text frac finding not rather chosen midpoint keep end depth starting half figure value check product times negative right left last size length given after required align therefore loop known bracketing must turning point does change passes through only summarized start around halve introducing giving brackets discard doesnt repeat process until satisfied approximation itself also always converge exists lets choosing such divide intruding tfrac calculating need checking function changes signs ends e opposite easy changed choose above
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Bisection Method</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Bisection-Method">Bisection Method<a class="anchor-link" href="#Bisection-Method"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The bisection method is what is known as a bracketing root finding method. To use this method the root must not be a turning point of $f$, or rather $f$ does not change sign as it passes through the root, and that there is only one root in the chosen interval.</p>
+<p>The method can be summarized as:</p>
+<ul>
+<li>Start with a bracket $[x_L, x_R]$ around the root.</li>
+<li>Halve the bracket, introducing the midpoint $x_M$, giving you two brackets: $[x_L, x_M]$ and $[x_M, x_R]$</li>
+<li>Keep the bracket that contains the root and discard the one that doesn't</li>
+<li>Repeat the process until you are satisfied with the precision of your solution</li>
+</ul>
+<p>Note that with this technique you end up with an interval that contains the root, rather than an approximation for the root itself. Also note that this method will always converge on a root if one exists in the interval.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-Depth">In Depth<a class="anchor-link" href="#In-Depth"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's look at the steps of the method more in depth, starting with choosing our interval such that it contains the root:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/bisection_4_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We now divide the interval in half by intruding the midpoint $x_M = \tfrac{1}{2} (x_L + x_R)$ and calculating $f(x_M)$:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/bisection_6_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we need to figure out which interval contains the root. We can do this by checking if the function value changes signs at the ends of the interval, i.e. which of $f(x_L)$ and $f(x_R)$ is the opposite sign of $f(x_M)$? An easy way to check this is to check if the product of $f(x_L) \times f(x_M)$ or $f(x_M) \times f(x_R)$ is negative. If the product is negative then the sign has changed in that interval and it is the one we choose.</p>
+<p>In the figure above, the right interval $[x_M, x_R]$ contains the root.</p>
+<p>If we want a more precise answer we can keep applying this technique to our chosen interval. Each time we are left with an interval that was half as big as the last, improving the precision of our solution.</p>
+<p>Subsequent iterations of the bisection method are illustrated in the figures below.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/bisection_8_0.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/bisection_8_1.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/bisection_8_2.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Precision-of-The-Result">Precision of The Result<a class="anchor-link" href="#Precision-of-The-Result"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The error of our solution is the size of the last interval. Because the length of our interval is halved every step, we can calculate how many steps are needed to achieve a particular accuracy, given the length of our initial interval. After the first step the error is ${|b - a|}/{2}$ and after the $n$-th step the error is ${|b-a|}/{2^n}$. Thus, for a specified tolerance, the number of steps required is:</p>
+\begin{align*}
+\text{tolerance} &amp;= \frac{|b-a|}{2^n}\\
+\therefore 2^n &amp;= \frac{|b -a|}{\text{tolerance}} \\
+\therefore n &amp;= \log_2 \left(\frac{|b-a|}{\text{tolerance}}\right) \\
+\end{align*}<p>This value is rounded up to an integer.</p>
+<p>As we know the number of iterations required to reach a given tolerance, we can use a <code>for</code> loop instead of a <code>while</code> loop (though both are perfectly acceptable). Note that the number of iterations depends on the size of the starting interval, so it helps to narrow this down before relying on the root finding technique.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

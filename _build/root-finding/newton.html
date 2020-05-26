@@ -1,0 +1,183 @@
+---
+interact_link: content/root-finding/newton.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/root-finding
+has_widgets: false
+title: |-
+  Newton-Raphson Method
+pagenum: 59
+prev_page:
+  url: /root-finding/secant.html
+next_page:
+  url: /root-finding/comparison.html
+suffix: .ipynb
+search: x n f method point xn newton raphson prime secant line frac through y align precision tolerance similar except here construct straight passes gradient tangent next intersection axis before process repeated rest points after converging closer root further iterations illustrated following figures calculate using previous start constructing running intercept begin therefore end similarly set given finding such text instability suffers much same issues
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Newton-Raphson Method</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Newton-Raphson-Method">Newton-Raphson Method<a class="anchor-link" href="#Newton-Raphson-Method"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Newton-Raphson method is similar to the secant method, except here we construct a straight line that passes through a point $(x_0, f(x_0))$ with a gradient of $f^\prime (x_0)$, the tangent of $f(x)$ at that point. The next point, $x_1$, is the intersection of this line with the $x$-axis:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/newton_2_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As before, this process can be repeated with $x_1$, and the rest of the points after it, converging closer to the root. Further iterations are illustrated in the following figures:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/newton_4_0.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/root-finding/newton_4_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To calculate the point $x_n$ using the previous point $x_{n-1}$, we start by constructing the line running through $(x_{n-1}, f(x_{n-1}))$:</p>
+$$
+\frac{y - f(x_{n-1})}{x - x_{n-1}} = f^\prime (x_{n-1})
+$$<p>at the $x$-intercept, $y = 0$ and $x = x_n$:</p>
+$$
+\begin{align*}
+\frac{0 - f(x_{n-1})}{x_n - x_{n-1}} &amp;= f^\prime(x_{n-1})\\
+\therefore x_n &amp;= x_{n-1} - \frac{f(x_{n-1})}{f^\prime(x_{n-1})}\\
+\end{align*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Precision">Precision<a class="anchor-link" href="#Precision"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Similarly to the secant method, the precision for the Newton-Raphson method can be set for a given tolerance by finding $n$ such that:</p>
+$$
+|x_n - x_{n-1}| &lt; \text{tolerance}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Instability">Instability<a class="anchor-link" href="#Instability"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Newton-Raphson method suffers from much the same issues as the secant method.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

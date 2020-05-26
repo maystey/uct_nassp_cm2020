@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Chapter: ODE
+- Chapter: Numerical Solutions to ODEs, Numerical Root Finding
 
 ## [0.11.0] - 2020-05-06
 

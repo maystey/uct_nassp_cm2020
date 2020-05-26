@@ -128,13 +128,13 @@ Should I rename this to "Least Squares Minimization and SciPy?"
 
 ## Debugging - Not Started
 
-## SciPy - Not Started
+## ODEs - Complete
 
-This is distributed throughout the other sections
+### Not Started
 
-## ODEs - Not Started
+- Using SciPy ode 45
 
-## Numerical Root Finding - Not Started
+## Numerical Root Finding - Complete
 
 ## Numerical Integration - Not Started
 
