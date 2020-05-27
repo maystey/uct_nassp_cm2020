@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jupyterpdfbook}[2020/03/17 Commands used by the jupyter-pdfbook tool when building the latex for the book.]
+
+\RequirePackage{hyperref}
+\RequirePackage{pdfpages}
+
+%TOC formatting commands
+%TODO: Is camel case acceptable? I don't like lower case...
+\newcommand{\jpbTOCHeader}[4]{%title, label, section_level, title_size
+    \pagebreak
+    \phantomsection%
+    \noindent \addcontentsline{toc}{#3}{#1}{#4 #1 \label{#2}}\\
+
+}
+
+\newcommand{\jpbTOCHeaderNoLabel}[2]{%title, title_size
+    \pagebreak
+    \noindent {#2 #1}\\
+
+}
+
+\newcommand{\jpbAddHeaderToTOC}[2]{%title, title_size}
+    \textbf{ #2 #1}\\
+}
+
+\newcommand{\jpbAddDividerToTOC}{
+    \rule{\textwidth}{0.6pt}\\
+}
+
+\newcommand{\jpbAddExternalUrlToTOC}[3]{%title, url, text_size
+    \href{#2}{#3 #1}\\
+}
+
+\newcommand{\jpbAddPageToTOC}[3]{%title, label, text_size
+    \hyperref[#2]{#3 #1 \dotfill\pageref*{#2}}\\
+}
+
+%Body commands
+\newcommand{\jpbAddPageNoTOC}[1]{%filepath
+    \includepdf[pages=-]{\detokenize{#1}}
+}
+
+\newcommand{\jpbAddPage}[4]{%filepath, title, label, level
+    \pagebreak
+    \phantomsection%
+    \label{#3}%
+    \includepdf[pages=-,
+                addtotoc = {1, #4, 1, #2, #3}
+                ]{\detokenize{#1}}
+}

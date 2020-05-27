@@ -1,0 +1,53 @@
+((= 
+Python cells not exporting nicely, investigate the different
+cell style options, could be that basic uses a different
+default to article
+
+Experimental:
+- glob dictionary stores global variables as suggested by Eric at:
+https://stackoverflow.com/questions/17925674/jinja2-local-global-variable
+
+Bugs:
+- geometry package not being removed
+
+((* set glob = {}*))
+=))
+
+
+((* set cell_style = 'style_ipython.tplx' *))
+((* extends 'article.tplx' *))
+
+((* block docclass *))
+\documentclass{beamer}
+((* endblock docclass *))
+
+
+
+((* block  packages *))
+((( 
+        super()|replace("\\usepackage{titling}", 
+                "%removed package 'titling' for beamer")|
+                replace("\\usepackage[inline]{enumitem}",
+                "%removed package 'enumerate' for beamer")
+)))
+((* endblock packages *))
+
+
+
+((* block margins *))
+
+((* endblock margins *))
+
+
+((* block maketitle *))
+((* endblock maketitle *))
+
+
+((* block markdowncell *))
+(((
+        super()|replace("\\section{", "\\textbf{\\Large ")|
+                replace("\\subsection{", "\\textbf{\\Large ")|
+                replace("\\subsubsection{", "\\textbf{\\large ")|
+                replace("\\paragraph", "\\textbf")
+)))
+((* endblock markdowncell *))

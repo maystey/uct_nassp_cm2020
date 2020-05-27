@@ -1,0 +1,345 @@
+\documentclass[11pt]{report}
+\usepackage{nbconvert}
+
+\usepackage{jupyterpdfbook}
+\title{AST4007W Computational Methods}
+\author{Luis A. Balona, Ed Elson, Masimba Paradza and Mayhew Steyn}
+
+\begin{document}
+%This is temporary, I'm lazy. Make your own coverpage!
+\maketitle
+\pagebreak
+
+
+\jpbTOCHeaderNoLabel{Contents}{\huge}
+\jpbAddPageToTOC{Home}{-Home}{\small}
+\jpbAddExternalUrlToTOC{GitHub repository}{https://github.com/maystey/uct_nassp_cm}{\small}\jpbAddDividerToTOC
+\jpbAddPageToTOC{Introduction}{-Introduction}{\small}
+\jpbAddPageToTOC{Python Basics}{-Python Basics}{\small}
+\jpbAddPageToTOC{Data Structures}{-Data Structures}{\small}
+\jpbAddPageToTOC{If Statements}{-If Statements}{\small}
+\jpbAddPageToTOC{Loops}{-Loops}{\small}
+\jpbAddPageToTOC{Functions}{-Functions}{\small}
+\jpbAddPageToTOC{File I/O}{-File I/O}{\small}
+\jpbAddPageToTOC{Benchmarking}{-Benchmarking}{\small}
+\jpbAddPageToTOC{NumPy}{-NumPy}{\small}
+\jpbAddPageToTOC{Matplotlib}{-Matplotlib}{\small}
+\jpbAddPageToTOC{Regression and SciPy}{-Regression and SciPy}{\small}
+\jpbAddPageToTOC{Numerical Solutions to ODEs}{-Numerical Solutions to ODEs}{\small}
+\jpbAddPageToTOC{Numerical Root Finding Techniques}{-Numerical Root Finding Techniques}{\small}
+
+\jpbAddPage{./contents/intro.pdf}{Home}{-Home}{chapter}
+
+%Home, -Home, 0
+
+\jpbAddPage{./contents/intro/intro.pdf}{Introduction}{-Introduction}{chapter}
+
+%Introduction, -Introduction, 0
+
+\jpbTOCHeader{Python Basics}{-Python Basics}{chapter}{\huge}
+\jpbAddPageToTOC{Variables}{-Python Basics-Variables}{\Large}
+\jpbAddPageToTOC{Comments}{-Python Basics-Comments}{\Large}
+\jpbAddPageToTOC{Type Conversion}{-Python Basics-Type Conversion}{\Large}
+\jpbAddPageToTOC{Operators}{-Python Basics-Operators}{\Large}
+\jpbAddPageToTOC{Assignment Operators}{-Python Basics-Assignment Operators}{\Large}
+\jpbAddPageToTOC{Introduction to Functions}{-Python Basics-Introduction to Functions}{\Large}
+\jpbAddPageToTOC{Strings}{-Python Basics-Strings}{\Large}
+\jpbAddPageToTOC{String Formatting}{-Python Basics-String Formatting}{\Large}
+
+\jpbAddPageNoTOC{./contents/basics/intro.pdf}
+
+%Python Basics, None, 0
+
+\jpbAddPage{./contents/basics/variables.pdf}{Variables}{-Python Basics-Variables}{section}
+
+%Variables, -Python Basics-Variables, 1
+
+\jpbAddPage{./contents/basics/comments.pdf}{Comments}{-Python Basics-Comments}{section}
+
+%Comments, -Python Basics-Comments, 1
+
+\jpbAddPage{./contents/basics/types.pdf}{Type Conversion}{-Python Basics-Type Conversion}{section}
+
+%Type Conversion, -Python Basics-Type Conversion, 1
+
+\jpbAddPage{./contents/basics/operators.pdf}{Operators}{-Python Basics-Operators}{section}
+
+%Operators, -Python Basics-Operators, 1
+
+\jpbAddPage{./contents/basics/assignment-operators.pdf}{Assignment Operators}{-Python Basics-Assignment Operators}{section}
+
+%Assignment Operators, -Python Basics-Assignment Operators, 1
+
+\jpbAddPage{./contents/basics/functions.pdf}{Introduction to Functions}{-Python Basics-Introduction to Functions}{section}
+
+%Introduction to Functions, -Python Basics-Introduction to Functions, 1
+
+\jpbAddPage{./contents/basics/strings.pdf}{Strings}{-Python Basics-Strings}{section}
+
+%Strings, -Python Basics-Strings, 1
+
+\jpbAddPage{./contents/basics/string-formatting.pdf}{String Formatting}{-Python Basics-String Formatting}{section}
+
+%String Formatting, -Python Basics-String Formatting, 1
+
+\jpbTOCHeader{Data Structures}{-Data Structures}{chapter}{\huge}
+\jpbAddPageToTOC{Tuple}{-Data Structures-Tuple}{\Large}
+\jpbAddPageToTOC{Lists}{-Data Structures-Lists}{\Large}
+\jpbAddPageToTOC{Dictionaries}{-Data Structures-Dictionaries}{\Large}
+
+\jpbAddPageNoTOC{./contents/data-structures/intro.pdf}
+
+%Data Structures, None, 0
+
+\jpbAddPage{./contents/data-structures/tuple.pdf}{Tuple}{-Data Structures-Tuple}{section}
+
+%Tuple, -Data Structures-Tuple, 1
+
+\jpbAddPage{./contents/data-structures/lists.pdf}{Lists}{-Data Structures-Lists}{section}
+
+%Lists, -Data Structures-Lists, 1
+
+\jpbAddPage{./contents/data-structures/dictionaries.pdf}{Dictionaries}{-Data Structures-Dictionaries}{section}
+
+%Dictionaries, -Data Structures-Dictionaries, 1
+
+\jpbTOCHeader{If Statements}{-If Statements}{chapter}{\huge}
+\jpbAddPageToTOC{Booleans}{-If Statements-Booleans}{\Large}
+\jpbAddPageToTOC{Comparison Operators}{-If Statements-Comparison Operators}{\Large}
+\jpbAddPageToTOC{Logical Operators}{-If Statements-Logical Operators}{\Large}
+\jpbAddPageToTOC{If Statements}{-If Statements-If Statements}{\Large}
+
+\jpbAddPageNoTOC{./contents/if-statements/intro.pdf}
+
+%If Statements, None, 0
+
+\jpbAddPage{./contents/if-statements/bools.pdf}{Booleans}{-If Statements-Booleans}{section}
+
+%Booleans, -If Statements-Booleans, 1
+
+\jpbAddPage{./contents/if-statements/comparison-operators.pdf}{Comparison Operators}{-If Statements-Comparison Operators}{section}
+
+%Comparison Operators, -If Statements-Comparison Operators, 1
+
+\jpbAddPage{./contents/if-statements/logical-operators.pdf}{Logical Operators}{-If Statements-Logical Operators}{section}
+
+%Logical Operators, -If Statements-Logical Operators, 1
+
+\jpbAddPage{./contents/if-statements/if.pdf}{If Statements}{-If Statements-If Statements}{section}
+
+%If Statements, -If Statements-If Statements, 1
+
+\jpbTOCHeader{Loops}{-Loops}{chapter}{\huge}
+\jpbAddPageToTOC{For Loops}{-Loops-For Loops}{\Large}
+\jpbAddPageToTOC{List Comprehension}{-Loops-List Comprehension}{\Large}
+\jpbAddPageToTOC{While Loops}{-Loops-While Loops}{\Large}
+\jpbAddPageToTOC{Breaking Out of Loops}{-Loops-Breaking Out of Loops}{\Large}
+\jpbAddPageToTOC{Else Statement and Loops}{-Loops-Else Statement and Loops}{\Large}
+
+\jpbAddPageNoTOC{./contents/loops/intro.pdf}
+
+%Loops, None, 0
+
+\jpbAddPage{./contents/loops/for.pdf}{For Loops}{-Loops-For Loops}{section}
+
+%For Loops, -Loops-For Loops, 1
+
+\jpbAddPage{./contents/loops/list-comp.pdf}{List Comprehension}{-Loops-List Comprehension}{section}
+
+%List Comprehension, -Loops-List Comprehension, 1
+
+\jpbAddPage{./contents/loops/while.pdf}{While Loops}{-Loops-While Loops}{section}
+
+%While Loops, -Loops-While Loops, 1
+
+\jpbAddPage{./contents/loops/break.pdf}{Breaking Out of Loops}{-Loops-Breaking Out of Loops}{section}
+
+%Breaking Out of Loops, -Loops-Breaking Out of Loops, 1
+
+\jpbAddPage{./contents/loops/else.pdf}{Else Statement and Loops}{-Loops-Else Statement and Loops}{section}
+
+%Else Statement and Loops, -Loops-Else Statement and Loops, 1
+
+\jpbTOCHeader{Functions}{-Functions}{chapter}{\huge}
+\jpbAddPageToTOC{Return Statement}{-Functions-Return Statement}{\Large}
+\jpbAddPageToTOC{Arguments}{-Functions-Arguments}{\Large}
+\jpbAddPageToTOC{Local Variables}{-Functions-Local Variables}{\Large}
+\jpbAddPageToTOC{Recursive Functions}{-Functions-Recursive Functions}{\Large}
+
+\jpbAddPageNoTOC{./contents/functions/intro.pdf}
+
+%Functions, None, 0
+
+\jpbAddPage{./contents/functions/return.pdf}{Return Statement}{-Functions-Return Statement}{section}
+
+%Return Statement, -Functions-Return Statement, 1
+
+\jpbAddPage{./contents/functions/arguments.pdf}{Arguments}{-Functions-Arguments}{section}
+
+%Arguments, -Functions-Arguments, 1
+
+\jpbAddPage{./contents/functions/local-variables.pdf}{Local Variables}{-Functions-Local Variables}{section}
+
+%Local Variables, -Functions-Local Variables, 1
+
+\jpbAddPage{./contents/functions/recursive.pdf}{Recursive Functions}{-Functions-Recursive Functions}{section}
+
+%Recursive Functions, -Functions-Recursive Functions, 1
+
+\jpbTOCHeader{File I/O}{-File I/O}{chapter}{\huge}
+\jpbAddPageToTOC{File I/O}{-File I/O-File I/O}{\Large}
+\jpbAddPageToTOC{Data Files}{-File I/O-Data Files}{\Large}
+
+\jpbAddPageNoTOC{./contents/file-io/intro.pdf}
+
+%File I/O, None, 0
+
+\jpbAddPage{./contents/file-io/file-io.pdf}{File I/O}{-File I/O-File I/O}{section}
+
+%File I/O, -File I/O-File I/O, 1
+
+\jpbAddPage{./contents/file-io/data.pdf}{Data Files}{-File I/O-Data Files}{section}
+
+%Data Files, -File I/O-Data Files, 1
+
+\jpbTOCHeader{Benchmarking}{-Benchmarking}{chapter}{\huge}
+\jpbAddPageToTOC{Measuring Time in Python}{-Benchmarking-Measuring Time in Python}{\Large}
+\jpbAddPageToTOC{Uncertainty}{-Benchmarking-Uncertainty}{\Large}
+
+\jpbAddPageNoTOC{./contents/benchmarking/intro.pdf}
+
+%Benchmarking, None, 0
+
+\jpbAddPage{./contents/benchmarking/time.pdf}{Measuring Time in Python}{-Benchmarking-Measuring Time in Python}{section}
+
+%Measuring Time in Python, -Benchmarking-Measuring Time in Python, 1
+
+\jpbAddPage{./contents/benchmarking/uncertainty.pdf}{Uncertainty}{-Benchmarking-Uncertainty}{section}
+
+%Uncertainty, -Benchmarking-Uncertainty, 1
+
+\jpbTOCHeader{NumPy}{-NumPy}{chapter}{\huge}
+\jpbAddPageToTOC{Arrays}{-NumPy-Arrays}{\Large}
+\jpbAddPageToTOC{Array Methods and Attributes}{-NumPy-Array Methods and Attributes}{\Large}
+\jpbAddPageToTOC{2D Arrays and Matrices}{-NumPy-2D Arrays and Matrices}{\Large}
+\jpbAddPageToTOC{Random Sampling}{-NumPy-Random Sampling}{\Large}
+\jpbAddPageToTOC{Array Conditional Statements and numpy.where()}{-NumPy-Array Conditional Statements and numpy.where()}{\Large}
+
+\jpbAddPageNoTOC{./contents/numpy/intro.pdf}
+
+%NumPy, None, 0
+
+\jpbAddPage{./contents/numpy/arrays.pdf}{Arrays}{-NumPy-Arrays}{section}
+
+%Arrays, -NumPy-Arrays, 1
+
+\jpbAddPage{./contents/numpy/array-methods.pdf}{Array Methods and Attributes}{-NumPy-Array Methods and Attributes}{section}
+
+%Array Methods and Attributes, -NumPy-Array Methods and Attributes, 1
+
+\jpbAddPage{./contents/numpy/arrays2d.pdf}{2D Arrays and Matrices}{-NumPy-2D Arrays and Matrices}{section}
+
+%2D Arrays and Matrices, -NumPy-2D Arrays and Matrices, 1
+
+\jpbAddPage{./contents/numpy/random.pdf}{Random Sampling}{-NumPy-Random Sampling}{section}
+
+%Random Sampling, -NumPy-Random Sampling, 1
+
+\jpbAddPage{./contents/numpy/where.pdf}{Array Conditional Statements and numpy.where()}{-NumPy-Array Conditional Statements and numpy.where()}{section}
+
+%Array Conditional Statements and numpy.where(), -NumPy-Array Conditional Statements and numpy.where(), 1
+
+\jpbTOCHeader{Matplotlib}{-Matplotlib}{chapter}{\huge}
+\jpbAddPageToTOC{Simple Plots With Pyplot}{-Matplotlib-Simple Plots With Pyplot}{\Large}
+\jpbAddPageToTOC{Subplots}{-Matplotlib-Subplots}{\Large}
+
+\jpbAddPageNoTOC{./contents/matplotlib/intro.pdf}
+
+%Matplotlib, None, 0
+
+\jpbAddPage{./contents/matplotlib/simple.pdf}{Simple Plots With Pyplot}{-Matplotlib-Simple Plots With Pyplot}{section}
+
+%Simple Plots With Pyplot, -Matplotlib-Simple Plots With Pyplot, 1
+
+\jpbAddPage{./contents/matplotlib/subplots.pdf}{Subplots}{-Matplotlib-Subplots}{section}
+
+%Subplots, -Matplotlib-Subplots, 1
+
+\jpbTOCHeader{Regression and SciPy}{-Regression and SciPy}{chapter}{\huge}
+\jpbAddPageToTOC{Linear Least Squares Minimization}{-Regression and SciPy-Linear Least Squares Minimization}{\Large}
+\jpbAddPageToTOC{Linear Chi Squared Minimization}{-Regression and SciPy-Linear Chi Squared Minimization}{\Large}
+\jpbAddPageToTOC{Multivariate Linear Least Squares Minimization}{-Regression and SciPy-Multivariate Linear Least Squares Minimization}{\Large}
+\jpbAddPageToTOC{Nonlinear Least Squares Minimization with scipy.optimize.leastsq}{-Regression and SciPy-Nonlinear Least Squares Minimization with scipy.optimize.leastsq}{\Large}
+
+\jpbAddPageNoTOC{./contents/regression/intro.pdf}
+
+%Regression and SciPy, None, 0
+
+\jpbAddPage{./contents/regression/least-squares.pdf}{Linear Least Squares Minimization}{-Regression and SciPy-Linear Least Squares Minimization}{section}
+
+%Linear Least Squares Minimization, -Regression and SciPy-Linear Least Squares Minimization, 1
+
+\jpbAddPage{./contents/regression/chi-squared.pdf}{Linear Chi Squared Minimization}{-Regression and SciPy-Linear Chi Squared Minimization}{section}
+
+%Linear Chi Squared Minimization, -Regression and SciPy-Linear Chi Squared Minimization, 1
+
+\jpbAddPage{./contents/regression/multivariate-least-squares.pdf}{Multivariate Linear Least Squares Minimization}{-Regression and SciPy-Multivariate Linear Least Squares Minimization}{section}
+
+%Multivariate Linear Least Squares Minimization, -Regression and SciPy-Multivariate Linear Least Squares Minimization, 1
+
+\jpbAddPage{./contents/regression/scipy.pdf}{Nonlinear Least Squares Minimization with scipy.optimize.leastsq}{-Regression and SciPy-Nonlinear Least Squares Minimization with scipy.optimize.leastsq}{section}
+
+%Nonlinear Least Squares Minimization with scipy.optimize.leastsq, -Regression and SciPy-Nonlinear Least Squares Minimization with scipy.optimize.leastsq, 1
+
+\jpbTOCHeader{Numerical Solutions to ODEs}{-Numerical Solutions to ODEs}{chapter}{\huge}
+\jpbAddPageToTOC{Euler's Method}{-Numerical Solutions to ODEs-Euler's Method}{\Large}
+\jpbAddPageToTOC{Truncation Error in Euler's Method}{-Numerical Solutions to ODEs-Truncation Error in Euler's Method}{\Large}
+\jpbAddPageToTOC{Solving Higher Order ODEs}{-Numerical Solutions to ODEs-Solving Higher Order ODEs}{\Large}
+\jpbAddPageToTOC{Runge-Kutta Methods}{-Numerical Solutions to ODEs-Runge-Kutta Methods}{\Large}
+
+\jpbAddPageNoTOC{./contents/ode/intro.pdf}
+
+%Numerical Solutions to ODEs, None, 0
+
+\jpbAddPage{./contents/ode/euler.pdf}{Euler's Method}{-Numerical Solutions to ODEs-Euler's Method}{section}
+
+%Euler's Method, -Numerical Solutions to ODEs-Euler's Method, 1
+
+\jpbAddPage{./contents/ode/euler-error.pdf}{Truncation Error in Euler's Method}{-Numerical Solutions to ODEs-Truncation Error in Euler's Method}{section}
+
+%Truncation Error in Euler's Method, -Numerical Solutions to ODEs-Truncation Error in Euler's Method, 1
+
+\jpbAddPage{./contents/ode/higher-order.pdf}{Solving Higher Order ODEs}{-Numerical Solutions to ODEs-Solving Higher Order ODEs}{section}
+
+%Solving Higher Order ODEs, -Numerical Solutions to ODEs-Solving Higher Order ODEs, 1
+
+\jpbAddPage{./contents/ode/runge-kutta.pdf}{Runge-Kutta Methods}{-Numerical Solutions to ODEs-Runge-Kutta Methods}{section}
+
+%Runge-Kutta Methods, -Numerical Solutions to ODEs-Runge-Kutta Methods, 1
+
+\jpbTOCHeader{Numerical Root Finding Techniques}{-Numerical Root Finding Techniques}{chapter}{\huge}
+\jpbAddPageToTOC{Bisection Method}{-Numerical Root Finding Techniques-Bisection Method}{\Large}
+\jpbAddPageToTOC{Secant Method}{-Numerical Root Finding Techniques-Secant Method}{\Large}
+\jpbAddPageToTOC{Newton-Raphson Method}{-Numerical Root Finding Techniques-Newton-Raphson Method}{\Large}
+\jpbAddPageToTOC{Comparing the Methods}{-Numerical Root Finding Techniques-Comparing the Methods}{\Large}
+
+\jpbAddPageNoTOC{./contents/root-finding/intro.pdf}
+
+%Numerical Root Finding Techniques, None, 0
+
+\jpbAddPage{./contents/root-finding/bisection.pdf}{Bisection Method}{-Numerical Root Finding Techniques-Bisection Method}{section}
+
+%Bisection Method, -Numerical Root Finding Techniques-Bisection Method, 1
+
+\jpbAddPage{./contents/root-finding/secant.pdf}{Secant Method}{-Numerical Root Finding Techniques-Secant Method}{section}
+
+%Secant Method, -Numerical Root Finding Techniques-Secant Method, 1
+
+\jpbAddPage{./contents/root-finding/newton.pdf}{Newton-Raphson Method}{-Numerical Root Finding Techniques-Newton-Raphson Method}{section}
+
+%Newton-Raphson Method, -Numerical Root Finding Techniques-Newton-Raphson Method, 1
+
+\jpbAddPage{./contents/root-finding/comparison.pdf}{Comparing the Methods}{-Numerical Root Finding Techniques-Comparing the Methods}{section}
+
+%Comparing the Methods, -Numerical Root Finding Techniques-Comparing the Methods, 1
+\end{document}

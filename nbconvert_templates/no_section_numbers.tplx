@@ -1,0 +1,17 @@
+((* extends 'article.tplx' *))
+
+((* block maketitle *))
+((* endblock maketitle *))
+
+((* block markdowncell *))
+
+((( 
+    super()|replace("\\section", "\\section*")|
+    replace("\\subsection", "\\subsection*")|
+    replace("\\subsubsection", "\\subsubsection*")
+)))
+
+((* endblock markdowncell *))
+
+((* block  bibliography *))
+((* endblock bibliography *))
