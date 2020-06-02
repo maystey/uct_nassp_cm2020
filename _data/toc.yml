@@ -208,3 +208,13 @@
     url: /root-finding/newton
   - title: Comparing the Methods
     url: /root-finding/comparison
+
+- title: Numerical Integration Techniques
+  url: /integration/intro
+  sections:
+  - title: Midpoint Rule
+    url: /integration/midpoint
+  - title: Trapezoidal Rule
+    url: /integration/trapezoidal
+  - title: Simpson's Rule
+    url: /integration/simpson
