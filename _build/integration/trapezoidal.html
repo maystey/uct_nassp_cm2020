@@ -1,0 +1,220 @@
+---
+interact_link: content/integration/trapezoidal.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/integration
+has_widgets: false
+title: |-
+  Trapezoidal Rule
+pagenum: 63
+prev_page:
+  url: /integration/midpoint.html
+next_page:
+  url: /integration/simpson.html
+suffix: .ipynb
+search: f b x n xi tfrac sum rule dx approx trapezoidal text yi approximate integral area trapezoid where align intab composite xn frac interval above left right data set trapezium given triangle rectangle case begin end equal approximation int delta constructing below calculating its illustrate figure give same general break into sub intervals arrive illustrated diagrams follow calculate specified subintervals sizes therefore note repeated twice except only feature once discrete again consider dots wanted using apply individually values evenly spaced constant formula section y yn
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Trapezoidal Rule</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Trapezoidal-Rule">Trapezoidal Rule<a class="anchor-link" href="#Trapezoidal-Rule"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the trapezoidal rule we approximate the integral of $f(x)$ on the interval $[a-b]$ by constructing the trapezium below:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/integration/trapezoidal_2_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and calculating it's area.</p>
+<p>The area of the trapezium is given by:
+<!--- Illustrate the triangle and rectangle in the figure --->
+$$
+A_\text{trapezoid} = A_{\text{rectangle}} + A_{\text{triangle}}
+$$</p>
+<p>In the case where $f(a) &lt; f(b)$, this area is given by:</p>
+\begin{align*}
+A_\text{trapezoid}  &amp;= (b - a)f(a) + \tfrac{1}{2} (b - a) [f(b) - f(a)]\\
+                    &amp;= \tfrac{1}{2}(b - a) [f(a) + f(b)]
+\end{align*}<p>In the case where $f(a) &gt; f(b)$, the area is give by:</p>
+\begin{align*}
+A_\text{trapezoid}  &amp;= (b - a)f(b) + \tfrac{1}{2} (b - a) [f(a) - f(b)]\\
+                    &amp;= \tfrac{1}{2}(b - a) [f(a) + f(b)]
+\end{align*}<p>which is the same as above, so in general we can approximate the integral as:</p>
+$$
+\int_a^b f(x)~ dx \approx \tfrac{1}{2} (b - a) [f(a) + f(b)]
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Composite-Trapezoid-Rule">Composite Trapezoid Rule<a class="anchor-link" href="#Composite-Trapezoid-Rule"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, if we were to break up this interval into $n$ equal sub-intervals, and approximate the integral on each of these, we arrive at the composite trapezoidal rule (illustrated in the diagrams that follow).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_remove_input">
+
+<div class="cell border-box-sizing code_cell rendered tag_remove_input">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/integration/trapezoidal_6_0.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/integration/trapezoidal_6_1.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/integration/trapezoidal_6_2.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To calculate this we use the sum:</p>
+$$
+\int_a^b f(x)~ dx \approx \sum_{i=1}^n \tfrac{1}{2} (x_i - x_{i-1}) [f(x_{i-1}) + f(x_i)]
+$$<p>where $x_0 = a$ and $x_n = b$. As we have specified that each of the $n$ subintervals are of equal sizes, we have that:</p>
+$$
+x_{i} - x_{i - 1} = \frac{b- a}{n}
+$$<p>we can therefore write the approximation as:</p>
+$$
+\int_a^b f(x)~ dx \approx \frac{b -a}{2 n} \sum_{i=1}^n [f(x_{i-1}) + f(x_i)]
+$$<p>note how each $f(x_i)$ in the sum above is repeated twice, except for $f(x_0)$ and $f(x_n)$, which only feature once each. We can now write the approximation as:</p>
+$$
+\int_a^b f(x)~ dx \approx \frac{b -a}{2 n} \left[f(a) + 2 \sum_{i=1}^{n-1} f(x_i) + f(b)\right]
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Composite-Trapezoidal-Rule-with-a-Discrete-Data-Set">Composite Trapezoidal Rule with a Discrete Data Set<a class="anchor-link" href="#Composite-Trapezoidal-Rule-with-a-Discrete-Data-Set"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again, consider the data set $(x_i, y_i)$ for $i = 0, \dots, n$, where</p>
+$$
+f(x_i) = y_i
+$$<p>If we wanted to approximate the integral of this data set using the trapezoidal rule, we can apply this to each interval individually:</p>
+$$
+\int_{x_0}^{x_n} f(x)~ dx \approx \tfrac{1}{2} \sum_{i = 1}^n (x_i - x_{i-1}) \left[y_i + y_i\right]
+$$<p>If the $x_i$ values are evenly spaced, with $x_i - x_{i-1} = \Delta x$ constant, then we can use the composite formula from the section above:</p>
+$$
+\int_{x_0}^{x_n} f(x)~ dx \approx \frac{\Delta x}{2} \left[ y_0 + 2 \sum_{i=1}^{n-1} y_i + y_n \right]
+$$
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
