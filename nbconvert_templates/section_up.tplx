@@ -1,8 +1,0 @@
-
-((* block any_cell *))
-
-\begin{frame}[fragile]
-((( super() )))
-\end{frame} ((= this is not true for every case =))
-
-((* endblock any_cell *))

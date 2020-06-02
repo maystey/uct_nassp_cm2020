@@ -136,7 +136,7 @@ Should I rename this to "Least Squares Minimization and SciPy?"
 
 ## Numerical Root Finding - Complete
 
-## Numerical Integration - Not Started
+## Numerical Integration - Complete
 
 ## Generating Random Numbers - Not Started
 
