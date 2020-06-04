@@ -141,7 +141,7 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For $n$ subdivisions:</p>
 $$
-\int_a^b f(x)~ dx \approx \sum_{i=1}^n (x_i - x_{i-1}) f\left(\frac{x_i - x_{i-1}}{2}\right)
+\int_a^b f(x)~ dx \approx \sum_{i=1}^n (x_i - x_{i-1}) f\left(\frac{x_i + x_{i-1}}{2}\right)
 $$
 </div>
 </div>
@@ -157,7 +157,7 @@ $$
 x_i - x_{i-1} = \frac{b - a}{n}
 $$<p>which makes the approximation:</p>
 $$
-\int_a^b f(x) ~dx \approx \frac{b - a}{n} \sum_{i=1}^n f\left(\frac{x_i - x_{i-1}}{2}\right)
+\int_a^b f(x) ~dx \approx \frac{b - a}{n} \sum_{i=1}^n f\left(\frac{x_i + x_{i-1}}{2}\right)
 $$
 </div>
 </div>
