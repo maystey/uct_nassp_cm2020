@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/integration/midpoint.html",
   "headline": "Midpoint Rule",
-  "datePublished": "2020-06-02T06:46:17+02:00",
-  "dateModified": "2020-06-02T06:46:17+02:00",
+  "datePublished": "2020-06-04T07:48:31+02:00",
+  "dateModified": "2020-06-04T07:48:31+02:00",
   "description": "        Midpoint Rule    Midpoint Rule In the midpoint rule you approximate the area under the curve as a rectangle with the height as the function value at ...",
   "author": {
     "@type": "Person",
@@ -2147,7 +2147,7 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For $n$ subdivisions:</p>
 $$
-\int_a^b f(x)~ dx \approx \sum_{i=1}^n (x_i - x_{i-1}) f\left(\frac{x_i - x_{i-1}}{2}\right)
+\int_a^b f(x)~ dx \approx \sum_{i=1}^n (x_i - x_{i-1}) f\left(\frac{x_i + x_{i-1}}{2}\right)
 $$
 </div>
 </div>
@@ -2163,7 +2163,7 @@ $$
 x_i - x_{i-1} = \frac{b - a}{n}
 $$<p>which makes the approximation:</p>
 $$
-\int_a^b f(x) ~dx \approx \frac{b - a}{n} \sum_{i=1}^n f\left(\frac{x_i - x_{i-1}}{2}\right)
+\int_a^b f(x) ~dx \approx \frac{b - a}{n} \sum_{i=1}^n f\left(\frac{x_i + x_{i-1}}{2}\right)
 $$
 </div>
 </div>
