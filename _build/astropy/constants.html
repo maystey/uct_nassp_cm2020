@@ -1,0 +1,339 @@
+---
+interact_link: content/astropy/constants.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/astropy
+has_widgets: false
+title: |-
+  Constants
+pagenum: 67
+prev_page:
+  url: /astropy/units.html
+next_page:
+  url: 
+suffix: .ipynb
+search: e m constant mass kg s nominal constants j k radius solar vacuum w earth parameter jupiter astropy gravitational unit g mol bohr standard c electron planck boltzmann luminosity equatorial module contains measured physical example treated quantities documentation docs org en stable index html list available name value description na avogadros r gas ryd rydberg alpha fine structure atm pa atmosphere bwien wien wavelength displacement law speed light charge eps f electric permittivity acceleration gravity h hbar reduced kb me mn neutron mp proton mu n magnetic permeability mub t magneton sigmat thomson scattering cross section sigmasb stefan u atomic
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Constants</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Constants">Constants<a class="anchor-link" href="#Constants"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>astropy.constants</code> module contains measured physical constants, for example the gravitational constant:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>  Name   = Gravitational constant
+  Value  = 6.6743e-11
+  Uncertainty  = 1.5e-15
+  Unit  = m3 / (kg s2)
+  Reference = CODATA 2018
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These constants can be treated as quantities.</p>
+<p>See the <a href="https://docs.astropy.org/en/stable/constants/index.html">documentation</a> for the list of constants available:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Value</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G</td>
+<td>6.6743e-11</td>
+<td>m3 / (kg s2)</td>
+<td>Gravitational constant</td>
+</tr>
+<tr>
+<td>N_A</td>
+<td>6.02214076e+23</td>
+<td>1 / (mol)</td>
+<td>Avogadro’s number</td>
+</tr>
+<tr>
+<td>R</td>
+<td>8.31446262</td>
+<td>J / (K mol)</td>
+<td>Gas constant</td>
+</tr>
+<tr>
+<td>Ryd</td>
+<td>10973731.6</td>
+<td>1 / (m)</td>
+<td>Rydberg constant</td>
+</tr>
+<tr>
+<td>a0</td>
+<td>5.29177211e-11</td>
+<td>m</td>
+<td>Bohr radius</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>0.00729735257</td>
+<td>Fine-structure constant</td>
+</tr>
+<tr>
+<td>atm</td>
+<td>101325</td>
+<td>Pa</td>
+<td>Standard atmosphere</td>
+</tr>
+<tr>
+<td>b_wien</td>
+<td>0.00289777196</td>
+<td>m K</td>
+<td>Wien wavelength displacement law constant</td>
+</tr>
+<tr>
+<td>c</td>
+<td>299792458</td>
+<td>m / (s)</td>
+<td>Speed of light in vacuum</td>
+</tr>
+<tr>
+<td>e</td>
+<td>1.60217663e-19</td>
+<td>C</td>
+<td>Electron charge</td>
+</tr>
+<tr>
+<td>eps0</td>
+<td>8.85418781e-12</td>
+<td>F/m</td>
+<td>Vacuum electric permittivity</td>
+</tr>
+<tr>
+<td>g0</td>
+<td>9.80665</td>
+<td>m / s2</td>
+<td>Standard acceleration of gravity</td>
+</tr>
+<tr>
+<td>h</td>
+<td>6.62607015e-34</td>
+<td>J s</td>
+<td>Planck constant</td>
+</tr>
+<tr>
+<td>hbar</td>
+<td>1.05457182e-34</td>
+<td>J s</td>
+<td>Reduced Planck constant</td>
+</tr>
+<tr>
+<td>k_B</td>
+<td>1.380649e-23</td>
+<td>J / (K)</td>
+<td>Boltzmann constant</td>
+</tr>
+<tr>
+<td>m_e</td>
+<td>9.1093837e-31</td>
+<td>kg</td>
+<td>Electron mass</td>
+</tr>
+<tr>
+<td>m_n</td>
+<td>1.6749275e-27</td>
+<td>kg</td>
+<td>Neutron mass</td>
+</tr>
+<tr>
+<td>m_p</td>
+<td>1.67262192e-27</td>
+<td>kg</td>
+<td>Proton mass</td>
+</tr>
+<tr>
+<td>mu0</td>
+<td>1.25663706e-06</td>
+<td>N/A2</td>
+<td>Vacuum magnetic permeability</td>
+</tr>
+<tr>
+<td>muB</td>
+<td>9.27401008e-24</td>
+<td>J/T</td>
+<td>Bohr magneton</td>
+</tr>
+<tr>
+<td>sigma_T</td>
+<td>6.65245873e-29</td>
+<td>m2</td>
+<td>Thomson scattering cross-section</td>
+</tr>
+<tr>
+<td>sigma_sb</td>
+<td>5.67037442e-08</td>
+<td>W / (K4 m2)</td>
+<td>Stefan-Boltzmann constant</td>
+</tr>
+<tr>
+<td>u</td>
+<td>1.66053907e-27</td>
+<td>kg</td>
+<td>Atomic mass</td>
+</tr>
+<tr>
+<td>GM_earth</td>
+<td>3.986004e+14</td>
+<td>m3 / (s2)</td>
+<td>Nominal Earth mass parameter</td>
+</tr>
+<tr>
+<td>GM_jup</td>
+<td>1.2668653e+17</td>
+<td>m3 / (s2)</td>
+<td>Nominal Jupiter mass parameter</td>
+</tr>
+<tr>
+<td>GM_sun</td>
+<td>1.3271244e+20</td>
+<td>m3 / (s2)</td>
+<td>Nominal solar mass parameter</td>
+</tr>
+<tr>
+<td>L_bol0</td>
+<td>3.0128e+28</td>
+<td>W</td>
+<td>Luminosity for absolute bolometric magnitude 0</td>
+</tr>
+<tr>
+<td>L_sun</td>
+<td>3.828e+26</td>
+<td>W</td>
+<td>Nominal solar luminosity</td>
+</tr>
+<tr>
+<td>M_earth</td>
+<td>5.97216787e+24</td>
+<td>kg</td>
+<td>Earth mass</td>
+</tr>
+<tr>
+<td>M_jup</td>
+<td>1.8981246e+27</td>
+<td>kg</td>
+<td>Jupiter mass</td>
+</tr>
+<tr>
+<td>M_sun</td>
+<td>1.98840987e+30</td>
+<td>kg</td>
+<td>Solar mass</td>
+</tr>
+<tr>
+<td>R_earth</td>
+<td>6378100</td>
+<td>m</td>
+<td>Nominal Earth equatorial radius</td>
+</tr>
+<tr>
+<td>R_jup</td>
+<td>71492000</td>
+<td>m</td>
+<td>Nominal Jupiter equatorial radius</td>
+</tr>
+<tr>
+<td>R_sun</td>
+<td>695700000</td>
+<td>m</td>
+<td>Nominal solar radius</td>
+</tr>
+<tr>
+<td>au</td>
+<td>1.49597871e+11</td>
+<td>m</td>
+<td>Astronomical Unit</td>
+</tr>
+<tr>
+<td>kpc</td>
+<td>3.08567758e+19</td>
+<td>m</td>
+<td>Kiloparsec</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>3.08567758e+16</td>
+<td>m</td>
+<td>Parsec</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

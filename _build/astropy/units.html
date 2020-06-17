@@ -1,0 +1,1205 @@
+---
+interact_link: content/astropy/units.ipynb
+kernel_name: python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf
+kernel_path: content/astropy
+has_widgets: false
+title: |-
+  Units and Quantities
+pagenum: 66
+prev_page:
+  url: /astropy/intro.html
+next_page:
+  url: /astropy/constants.html
+suffix: .ipynb
+search: units example quantities astropy us unit also force equivalent base decompose lets convert gives work set own into si above equivalencies energy h fractional such kilograms conversion define its consider mass kg converting converted within system systems cgs numpy arrays compose our standard dimensionless sometimes need not e lambda nu context fraction fortnight module tools values paired documentation found here docs org en stable class used represent measurement meters seconds ect manipulated determine factors another either standalone composing together possible created multiplying float integer value quantity accessed separately combined mathematically combine accordingly calculated newtons still dynes convenient between without requiring
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Units and Quantities</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Units-and-Quantities">Units and Quantities<a class="anchor-link" href="#Units-and-Quantities"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>astropy.units</code> module gives us the tools to work with units and quantities (values paired with units). The documentation can be found <a href="https://docs.astropy.org/en/stable/units/">here</a>.</p>
+<p>The <code>astropy.units.Unit</code> class is used to represent base units of measurement, such as meters, seconds, kilograms, ect). These units can be manipulated, for example to determine conversion factors from one set of units to another.</p>
+<p>You can also define your own units, either as standalone base units or by composing other units together. It is also possible to decompose units into its base units.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As an example, consider the SI unit for mass : kilograms (kg)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="n">u</span><span class="o">.</span><span class="n">kg</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$\mathrm{kg}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Quantities">Quantities<a class="anchor-link" href="#Quantities"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quantities are created by multiplying a float/integer with units, for example a mass:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mass</span> <span class="o">=</span> <span class="mf">3.0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
+<span class="n">mass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$3 \; \mathrm{kg}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>value</code> and <code>unit</code> of the quantity can be accessed separately:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mass</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mass</span><span class="o">.</span><span class="n">unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$\mathrm{kg}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quantities can be combined mathematically, the units combine accordingly. For example, consider the force:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">acceleration</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">force</span> <span class="o">=</span> <span class="n">mass</span><span class="o">*</span><span class="n">acceleration</span>
+<span class="n">force</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$12 \; \mathrm{\frac{kg\,m}{s^{2}}}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Converting-Units">Converting Units<a class="anchor-link" href="#Converting-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Units can be converted to like units. For example, let's convert the force calculated above into Newtons:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force_N</span> <span class="o">=</span> <span class="n">force</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
+<span class="n">force_N</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$12 \; \mathrm{N}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The conversion above is still within the SI system. We can also convert to units from other systems. For example, converting the force to dynes from the cgs system:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force_dyn</span> <span class="o">=</span> <span class="n">force</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dyn</span><span class="p">)</span>
+<span class="n">force_dyn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$1200000 \; \mathrm{dyn}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Astropy gives us a more convenient way to convert between unit systems without requiring us to do any book keeping. Again, lets convert the force in SI units to the cgs units:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force_cgs</span> <span class="o">=</span> <span class="n">force</span><span class="o">.</span><span class="n">cgs</span>
+<span class="n">force_cgs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$1200000 \; \mathrm{dyn}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Quantities-and-NumPy-Arrays">Quantities and NumPy Arrays<a class="anchor-link" href="#Quantities-and-NumPy-Arrays"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Astropy quantities support NumPy arrays. The whole array will have the same units.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">distances</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$[1,~2,~3,~4] \; \mathrm{m}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">distances</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$[100,~200,~300,~400] \; \mathrm{cm}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">distances</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$[1,~2,~3,~4] \; \mathrm{\frac{m}{s}}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Compose-Units">Compose Units<a class="anchor-link" href="#Compose-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Above we converted our force from kg.m.s$^{-2}$ to N directly. We can let Astropy compose those units for us:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">compose</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[Unit(&#34;N&#34;), Unit(&#34;100000 dyn&#34;)]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see this gives us all the standard options available.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Decompose-Units">Decompose Units<a class="anchor-link" href="#Decompose-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also decompose units back into base units:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force_N</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$12 \; \mathrm{\frac{kg\,m}{s^{2}}}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dimensionless-Quantities">Dimensionless Quantities<a class="anchor-link" href="#Dimensionless-Quantities"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Astropy understands dimensionless quantities. For example, lets take the ratio of 2 lengths:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+
+<span class="n">r1</span> <span class="o">/</span> <span class="n">r2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$5 \; \mathrm{}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sometimes you will need to decompose units first:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force1</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">N</span>
+<span class="n">force2</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
+
+<span class="n">force_ratio</span> <span class="o">=</span> <span class="n">force1</span> <span class="o">/</span> <span class="n">force2</span>
+<span class="n">force_ratio</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$0.5 \; \mathrm{\frac{s^{2}\,N}{kg\,m}}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">force_ratio</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$0.5 \; \mathrm{}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Find-Equivalent-Units">Find Equivalent Units<a class="anchor-link" href="#Find-Equivalent-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can find equivalent units by using the <code>find_equivalent_units()</code> method. For example, for miliseconds (ms):</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">ms</span><span class="o">.</span><span class="n">find_equivalent_units</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table style="width:50%"><tr><th>Primary name</th><th>Unit definition</th><th>Aliases</th></tr><tr><td>a</td><td>3.15576e+07 s</td><td>annum</td></tr><tr><td>d</td><td>86400 s</td><td>day</td></tr><tr><td>fortnight</td><td>1.2096e+06 s</td><td></td></tr><tr><td>h</td><td>3600 s</td><td>hour, hr</td></tr><tr><td>min</td><td>60 s</td><td>minute</td></tr><tr><td>s</td><td>irreducible</td><td>second</td></tr><tr><td>sday</td><td>86164.1 s</td><td></td></tr><tr><td>wk</td><td>604800 s</td><td>week</td></tr><tr><td>yr</td><td>3.15576e+07 s</td><td>year</td></tr></table>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Set-Equivalencies">Set Equivalencies<a class="anchor-link" href="#Set-Equivalencies"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In some contexts we want to use certain units interchangeably, that are not actually equivalent.</p>
+<p>For example, the energy of a photon ($E$) is related to it's wavelength ($\lambda$) and frequency ($\nu$) as:</p>
+$$
+E = h \nu = h c / \lambda
+$$<p>where $h$ is Planck's constant. Radio astronomers refer to the energy of an emission line of neutral hydrogen being 1420 MHz or 21 cm. These units are obviously not that of energy, but in this context they can be treated as such.</p>
+<p>Astropy allows for this kind of treatment of our units:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wavelength</span> <span class="o">=</span> <span class="mf">21.106</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+
+<span class="n">wavelength</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">MHz</span><span class="p">,</span> <span class="n">equivalencies</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$1420.4134 \; \mathrm{MHz}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Finding-Equivalent-Units-with-Set-Equivalencies">Finding Equivalent Units with Set Equivalencies<a class="anchor-link" href="#Finding-Equivalent-Units-with-Set-Equivalencies"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also find equivalent within the context of the equivalencies:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
+
+<span class="n">freq</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">find_equivalent_units</span><span class="p">(</span><span class="n">equivalencies</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table style="width:50%"><tr><th>Primary name</th><th>Unit definition</th><th>Aliases</th></tr><tr><td>AU</td><td>1.49598e+11 m</td><td>au, astronomical_unit</td></tr><tr><td>Angstrom</td><td>1e-10 m</td><td>AA, angstrom</td></tr><tr><td>Bq</td><td>1 / s</td><td>becquerel</td></tr><tr><td>Ci</td><td>3.7e+10 / s</td><td>curie</td></tr><tr><td>Hz</td><td>1 / s</td><td>Hertz, hertz</td></tr><tr><td>J</td><td>kg m2 / s2</td><td>Joule, joule</td></tr><tr><td>Ry</td><td>2.17987e-18 kg m2 / s2</td><td>rydberg</td></tr><tr><td>cm</td><td>0.01 m</td><td>centimeter</td></tr><tr><td>eV</td><td>1.60218e-19 kg m2 / s2</td><td>electronvolt</td></tr><tr><td>earthRad</td><td>6.3781e+06 m</td><td>R_earth, Rearth</td></tr><tr><td>erg</td><td>1e-07 kg m2 / s2</td><td></td></tr><tr><td>jupiterRad</td><td>7.1492e+07 m</td><td>R_jup, Rjup, R_jupiter, Rjupiter</td></tr><tr><td>k</td><td>100 / m</td><td>Kayser, kayser</td></tr><tr><td>lyr</td><td>9.46073e+15 m</td><td>lightyear</td></tr><tr><td>m</td><td>irreducible</td><td>meter</td></tr><tr><td>micron</td><td>1e-06 m</td><td></td></tr><tr><td>pc</td><td>3.08568e+16 m</td><td>parsec</td></tr><tr><td>solRad</td><td>6.957e+08 m</td><td>R_sun, Rsun</td></tr></table>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fractional-Units">Fractional Units<a class="anchor-link" href="#Fractional-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sometimes we'll need to work with fractional units (units with a fractional power). Floats can work for this, but it is better to use the Standard Library's <code>fraction.Fraction</code> objects:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="mf">3000.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span>
+<span class="n">T</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$3000 \; \mathrm{K}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">**</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$164316.77 \; \mathrm{K^{3/2}}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Defining-Your-Own-Units">Defining Your Own Units<a class="anchor-link" href="#Defining-Your-Own-Units"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can define your own units derived from other units. For example, lets make a unit called a baker's fortnight (bf), which is a fortnight (14 days) and an extra day:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bakers_fortnight</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">def_unit</span><span class="p">(</span><span class="s1">&#39;bf&#39;</span><span class="p">,</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+
+<span class="n">bakers_fortnight</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$\mathrm{bf}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">bakers_fortnight</span>
+<span class="n">time</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$3 \; \mathrm{bf}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$45 \; \mathrm{d}$
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
