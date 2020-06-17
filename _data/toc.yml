@@ -218,3 +218,11 @@
     url: /integration/trapezoidal
   - title: Simpson's Rule
     url: /integration/simpson
+
+- title: Astropy
+  url: /astropy/intro
+  sections:
+  - title: Units and Quantities
+    url: /astropy/units
+  - title: Constants
+    url: /astropy/constants
