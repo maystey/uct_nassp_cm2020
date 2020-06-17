@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Dictionaries</title>
-  <meta name="description" content="        Dictionaries    Dictionaries So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence...">
+  <title>Astropy</title>
+  <meta name="description" content="        Astropy    Astropy In this final chapter we introduce the Astropy package. In this module we only provide a bried introduction, but you will be makin...">
 
-  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/data-structures/dictionaries.html">
+  <link rel="canonical" href="https://maystey.github.io/uct_nassp_cm/astropy/intro.html">
   <link rel="alternate" type="application/rss+xml" title="AST4007W Computational Methods" href="https://maystey.github.io/uct_nassp_cm/feed.xml">
 
-  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/data-structures/dictionaries.html" />
+  <meta property="og:url"         content="https://maystey.github.io/uct_nassp_cm/astropy/intro.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Dictionaries" />
-<meta property="og:description" content="        Dictionaries    Dictionaries So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence..." />
+<meta property="og:title"       content="Astropy" />
+<meta property="og:description" content="        Astropy    Astropy In this final chapter we introduce the Astropy package. In this module we only provide a bried introduction, but you will be makin..." />
 <meta property="og:image"       content="https://maystey.github.io/uct_nassp_cm/images/logo/UCTcircular_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/data-structures/dictionaries.html",
-  "headline": "Dictionaries",
+  "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/astropy/intro.html",
+  "headline": "Astropy",
   "datePublished": "2020-06-17T14:58:38+02:00",
   "dateModified": "2020-06-17T14:58:38+02:00",
-  "description": "        Dictionaries    Dictionaries So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence...",
+  "description": "        Astropy    Astropy In this final chapter we introduce the Astropy package. In this module we only provide a bried introduction, but you will be makin...",
   "author": {
     "@type": "Person",
     "name": "Mayhew Steyn"
@@ -399,8 +399,8 @@ initFunction(initPrint)
     mode: "python"
     },
     kernelOptions: {
-    kernelName: "python3",
-    path: "content/data-structures"
+    kernelName: "python37364bitbaseconda97808f46a65a4f1e9dfdbcff18a07fbf",
+    path: "content/astropy"
     }
 }
 </script>
@@ -2067,7 +2067,7 @@ initFunction(initPrint)
 <div class="download-buttons-dropdown">
     <button id="dropdown-button-trigger" class="interact-button"><img src="/uct_nassp_cm/assets/images/download-solid.svg" alt="Download" /></button>
     <div class="download-buttons">
-        <a href="/uct_nassp_cm/content/data-structures/dictionaries.ipynb" download>
+        <a href="/uct_nassp_cm/content/astropy/intro.ipynb" download>
         <button id="interact-button-download" class="interact-button">.ipynb</button>
         </a>
         
@@ -2100,203 +2100,13 @@ initFunction(initPrint)
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
                   <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Dictionaries</div>
+    <div id="page-info"><div id="page-title">Astropy</div>
 </div>
     <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries"> </a></h1><p>So far we have only looked at sequence data structures, where elements are referred to by their position in the sequence. In dictionaries, however, the objects stored are referred to by a key. Keys must be an immutable type, for example a string, number or tuple containing only immutable types.</p>
-<p>You can create a dictionary using the <code>dict</code> function; and assign values using the subscript notation: <!--- Look this up. Introduce earlier. Make a glossary! --></p>
-
-<pre><code>dictionary[key] = value</code></pre>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-
-<span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
-<span class="n">d</span><span class="p">[</span><span class="s1">&#39;lst&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{1: &#39;a&#39;, &#39;lst&#39;: [1, 2, 3]}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You can also access dictionary values using the subscript notation:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>a
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>An alternative way to initialize a dictionary with key-value pairs is:</p>
-
-<pre><code>{key1 : value1, key2 : value2}</code></pre>
-<p>much like it appears in the print output:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span> <span class="p">:</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="s1">&#39;lst&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{1: &#39;a&#39;, &#39;lst&#39;: [1, 2, 3]}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that using a key that doesn't exist in the dictionary will give you a <code>KeyError</code>:</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-c8f93a31d4a2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>d<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyError</span>: 2</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<!--- Add section on get -->
+<h1 id="Astropy">Astropy<a class="anchor-link" href="#Astropy"> </a></h1>
 </div>
 </div>
 </div>
@@ -2306,42 +2116,12 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Listing-the-Keys-Which-Exist">Listing the Keys Which Exist<a class="anchor-link" href="#Listing-the-Keys-Which-Exist"> </a></h2><p>Often you will want a list of the keys which a dictionary has. For this you can use the <code>dict.keys()</code> method:</p>
+<p>In this final chapter we introduce the Astropy package. In this module we only provide a bried introduction, but you will be making more use of the package later in the AST4007W course.</p>
+<p>Astropy is an open-source and community-developed Python package. It contains core astronomy-related functionality. It was started in 2011 to bring together developers across the field of astronomy in order to coordinate the development of a common set of Python tools for astronomers.</p>
+<p>The website can be found at <a href="https://www.astropy.org/">https://www.astropy.org/</a>, which also contains links to examples, tutorials and the documentation.</p>
 
 </div>
 </div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>dict_keys([1, &#39;lst&#39;])
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2349,8 +2129,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One use for this is to check if a dictionary has the key you're looking for if you want to avoid an error:</p>
-
+<h2 id="Supported-File-Formats">Supported File Formats<a class="anchor-link" href="#Supported-File-Formats"> </a></h2>
 </div>
 </div>
 </div>
@@ -2358,36 +2137,23 @@ initFunction(initPrint)
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Astropy provides support for domain-specific file formats such as:</p>
+<ul>
+<li>Flexible Image Transport System (FITS) files</li>
+<li>Virtual Observatory (VO) tables</li>
+<li>common ASCII table formats,</li>
+<li>unit and physical quantity conversions</li>
+<li>physical constants specific to astronomy</li>
+<li>celestial coordinate and time transformations,</li>
+<li>world coordinate system (WCS) support</li>
+<li>e.t.c</li>
+</ul>
+<p>We cover working with the FITS files in the final tutorial.</p>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;not a key in d&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 not a key in d
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2404,8 +2170,8 @@ initFunction(initPrint)
     
     
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/data-structures/lists.html">
-      〈 <span class="u-margin-right-tiny"></span> Lists
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/uct_nassp_cm/integration/simpson.html">
+      〈 <span class="u-margin-right-tiny"></span> Simpson's Rule
     </a>
   
 
@@ -2413,8 +2179,8 @@ initFunction(initPrint)
     
 
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/if-statements/intro.html">
-      If Statements <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/uct_nassp_cm/astropy/units.html">
+      Units and Quantities <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>

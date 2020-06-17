@@ -138,6 +138,8 @@ Should I rename this to "Least Squares Minimization and SciPy?"
 
 ## Numerical Integration - Complete
 
+## Astropy - Complete
+
 ## Generating Random Numbers - Not Started
 
 This material may not be included
