@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://maystey.github.io/uct_nassp_cm/regression/multivariate-least-squares.html",
   "headline": "Multivariate Linear Least Squares Minimization",
-  "datePublished": "2020-06-17T14:58:38+02:00",
-  "dateModified": "2020-06-17T14:58:38+02:00",
+  "datePublished": "2020-08-05T17:18:36+02:00",
+  "dateModified": "2020-08-05T17:18:36+02:00",
   "description": "        Multivariate Linear Least Squares Minimization    Multivariate Linear Least Squares Minimization In Linear Least Squares Minimization, we considered ...",
   "author": {
     "@type": "Person",
@@ -2149,7 +2149,7 @@ $$<p>where $a_0$, $a_1$ and $a_2$ are unknown coefficients.</p>
 $$
 \begin{align*}
 y_i + \epsilon_i &amp;= a_0 + a_1 x_{1 i} + a_2 x_{2 i}\\
-\therefore \epsilon_i = a_0 + a_1 x_{1 i} + a_2 x_{2 i} - y_i\\
+\therefore \epsilon_i &amp;= a_0 + a_1 x_{1 i} + a_2 x_{2 i} - y_i\\
 \end{align*}
 $$<p>The sum of errors squared is given by:</p>
 $$
@@ -2159,14 +2159,14 @@ S &amp;= \sum_{i = 1}^N \epsilon_i^2 \\
 \end{align*}
 $$<p>We want to minimize $S$ with respect to each of the constants, $a_0$, $a_1$ and $a_2$:</p>
 $$
-\frac{\partial S}{\partial a_0} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i) = 0
+\frac{\partial S}{\partial a_0} = 2 \sum_{i=1}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i) = 0
 $$<p>,
 $$
-\frac{\partial S}{\partial a_1} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{1i} = 0
+\frac{\partial S}{\partial a_1} = 2 \sum_{i=1}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{1i} = 0
 $$
 and
 $$
-\frac{\partial S}{\partial a_2} = 2 \sum_{i=0}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{2i} = 0
+\frac{\partial S}{\partial a_2} = 2 \sum_{i=1}^n (a_0 + a_1x_{1i} + a_2x_{2i} - y_i)x_{2i} = 0
 $$</p>
 
 </div>
